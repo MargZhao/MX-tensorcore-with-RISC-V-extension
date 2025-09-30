@@ -1,0 +1,551 @@
+m255
+K4
+z2
+Z0 !s99 nomlopt
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+!s11f vlog 2022.4 2022.10, Oct 18 2022
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+d/users/micas/scuycken/no_backup/Invited_paper/Bugfixed_Combined_system_FPX_ours_old
+T_opt
+!s110 1756906659
+VW;fC>]mfJ6U6iQ^PIIQIl2
+04 18 4 work tb_Bock_PE_wrapper fast 0
+=8-001a4a169912-68b844a3-9a0c5-7ced3
+R0
+!s12b OEM100
+!s124 OEM100
+o-quiet -auto_acc_if_foreign -work work +acc
+Z1 tCvgOpt 0
+n@_opt
+OL;O;2022.4;75
+vaccum_add_EA
+Z2 DXx6 sv_std 3 std 0 22 9oUSJO;AeEaW`l:M@^WG92
+Z3 !s110 1756906124
+!i10b 1
+!s100 V61daP8KN616EEOo7PIOY0
+Ia85SP91KQhOfPF5e6RX[@2
+S1
+Z4 d/users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/src
+Z5 w1756905143
+Z6 8/users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/src/L2_EA_no_latch.sv
+Z7 F/users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/src/L2_EA_no_latch.sv
+!i122 26
+L0 279 82
+Z8 VDg1SIo80bB@j0V0VzS_@n1
+Z9 OL;L;2022.4;75
+r1
+!s85 0
+31
+Z10 !s108 1756906124.000000
+Z11 !s107 /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/src/L2_EA_no_latch.sv|
+Z12 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|/users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/src/L2_EA_no_latch.sv|
+!i113 0
+Z13 o-work work -sv -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R1
+naccum_add_@e@a
+vBlock_PE
+R2
+R3
+!i10b 1
+!s100 _<gV`NPU=<XeM24B3^fPG2
+If9j=MVZo[FDTe2m]0dgS_2
+S1
+R4
+w1756220536
+8/users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/src/Block_PE.sv
+F/users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/src/Block_PE.sv
+!i122 23
+L0 1 110
+R8
+R9
+r1
+!s85 0
+31
+R10
+!s107 /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/src/Block_PE.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|/users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/src/Block_PE.sv|
+!i113 0
+R13
+R1
+n@block_@p@e
+vBlock_PE_wrapper
+R2
+R3
+!i10b 1
+!s100 1K11Po`@5V296bKe4L9:R1
+I246ZDB7Zg6Wd9lM;LI0BA1
+S1
+R4
+w1756120922
+8/users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/src/Block_PE_wrapper.sv
+F/users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/src/Block_PE_wrapper.sv
+!i122 24
+L0 1 207
+R8
+R9
+r1
+!s85 0
+31
+R10
+!s107 /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/src/Block_PE_wrapper.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|/users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/src/Block_PE_wrapper.sv|
+!i113 0
+R13
+R1
+n@block_@p@e_wrapper
+vexp_bias_v5_EA
+R2
+R3
+!i10b 1
+!s100 ]:OTOGIem:8ME>m?f:<XZ3
+IA:H>ccaZhCla3nMeIcbJI0
+S1
+R4
+R5
+R6
+R7
+!i122 26
+L0 241 37
+R8
+R9
+r1
+!s85 0
+31
+R10
+R11
+R12
+!i113 0
+R13
+R1
+nexp_bias_v5_@e@a
+vextend_v1_EA
+R2
+R3
+!i10b 1
+!s100 ^=FNCPV^B3?dR9G1=@0zQ0
+I20]AmG@>Sn[>I?K0NVLTV2
+S1
+R4
+R5
+R6
+R7
+!i122 26
+L0 75 35
+R8
+R9
+r1
+!s85 0
+31
+R10
+R11
+R12
+!i113 0
+R13
+R1
+nextend_v1_@e@a
+vhigh_exp_v1_EA
+R2
+R3
+!i10b 1
+!s100 Cmc;Qg[X;h[o6ld2=Nc6z2
+I?nnck9zN^_B16hIVCbGKi2
+S1
+R4
+R5
+R6
+R7
+!i122 26
+L0 111 32
+R8
+R9
+r1
+!s85 0
+31
+R10
+R11
+R12
+!i113 0
+R13
+R1
+nhigh_exp_v1_@e@a
+vL1
+R2
+R3
+!i10b 1
+!s100 MG_C3@2jfV3=QQS^oj`fe1
+IJ8G5NT<i@2Y2:2XOz4i8I0
+S1
+R4
+Z14 w1755937732
+8/users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/src/L1.sv
+F/users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/src/L1.sv
+!i122 25
+L0 1 64
+R8
+R9
+r1
+!s85 0
+31
+R10
+!s107 /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/src/L1.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|/users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/src/L1.sv|
+!i113 0
+R13
+R1
+n@l1
+vL2_EA_no_latch
+R2
+R3
+!i10b 1
+!s100 Rzm=i]C;gamFdFRb^@MWn3
+Ik^z[FDW[aW[UX:PYK=CGf2
+S1
+R4
+R5
+R6
+R7
+!i122 26
+L0 1 72
+R8
+R9
+r1
+!s85 0
+31
+R10
+R11
+R12
+!i113 0
+R13
+R1
+n@l2_@e@a_no_latch
+vlvl1_adders
+R2
+R3
+!i10b 1
+!s100 1:2gJMR^9k^KETO;BJi[A2
+IPQ5OM]n`z_;MZC`HoKLLj0
+S1
+R4
+Z15 w1756905068
+Z16 8/users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/src/ST_mul_EA.sv
+Z17 F/users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/src/ST_mul_EA.sv
+!i122 31
+L0 426 56
+R8
+R9
+r1
+!s85 0
+31
+R10
+Z18 !s107 /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/src/ST_mul_EA.sv|
+Z19 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|/users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/src/ST_mul_EA.sv|
+!i113 0
+R13
+R1
+vmant_add_v1_EA
+R2
+R3
+!i10b 1
+!s100 [[zGEm76Ai=ZQj[oH[`3U1
+I9i?=G?Zo=8D;UPoaDR;n?1
+S1
+R4
+R5
+R6
+R7
+!i122 26
+L0 208 31
+R8
+R9
+r1
+!s85 0
+31
+R10
+R11
+R12
+!i113 0
+R13
+R1
+nmant_add_v1_@e@a
+vmul_2bit
+R2
+R3
+!i10b 1
+!s100 7C3E`[ajVfLZb_5a2<4aM1
+IaWb=izhW1_mn[002Wgb3A0
+S1
+R4
+R14
+8/users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/src/mul_2bit.sv
+F/users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/src/mul_2bit.sv
+!i122 27
+L0 1 10
+R8
+R9
+r1
+!s85 0
+31
+R10
+!s107 /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/src/mul_2bit.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|/users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/src/mul_2bit.sv|
+!i113 0
+R13
+R1
+vmultiplication
+R2
+R3
+!i10b 1
+!s100 HjP;iUhAlLN@Xc@hNW5Wi2
+IYYV>QZ;4K[6`I:7Me>Ja[2
+S1
+R4
+R15
+R16
+R17
+!i122 31
+L0 359 64
+R8
+R9
+r1
+!s85 0
+31
+R10
+R18
+R19
+!i113 0
+R13
+R1
+vMX_MAC_EA_BPE
+R2
+R3
+!i10b 1
+!s100 >W56]FA=LJ;<9]D?>hPb01
+ImRa:?CKS6QW9M;=4HQkCW3
+S1
+R4
+Z20 w1756122261
+Z21 8/users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/src/MX_MAC_EA_BPE.sv
+Z22 F/users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/src/MX_MAC_EA_BPE.sv
+!i122 28
+L0 1 65
+R8
+R9
+r1
+!s85 0
+31
+R10
+Z23 !s107 /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/src/MX_MAC_EA_BPE.sv|
+Z24 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|/users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/src/MX_MAC_EA_BPE.sv|
+!i113 0
+R13
+R1
+n@m@x_@m@a@c_@e@a_@b@p@e
+vnormalize_v1_EA
+R2
+R3
+!i10b 1
+!s100 ?MO;@lADk7DHcmh]JAGgm0
+InD4B7EoKG7;2?>NOaPj?V1
+S1
+R4
+R5
+R6
+R7
+!i122 26
+L0 363 27
+R8
+R9
+r1
+!s85 0
+31
+R10
+R11
+R12
+!i113 0
+R13
+R1
+nnormalize_v1_@e@a
+vnormalize_v5_EA
+R2
+R3
+!i10b 1
+!s100 J^a@51Ddni0O27kE^7l6]1
+Ido]^?nkFQhYj:UXZD6]3R2
+S1
+R4
+R5
+R6
+R7
+!i122 26
+L0 391 230
+R8
+R9
+r1
+!s85 0
+31
+R10
+R11
+R12
+!i113 0
+R13
+R1
+nnormalize_v5_@e@a
+vouter_wrapper
+R2
+R3
+!i10b 1
+!s100 7L_L0nDHa<g0mRN7lhjoN1
+I^NEBGz5PYUM@>O_a94F_A3
+S1
+R4
+w1756151578
+8/users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/src/outer_wrapper.sv
+F/users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/src/outer_wrapper.sv
+!i122 29
+L0 1 106
+R8
+R9
+r1
+!s85 0
+31
+R10
+!s107 /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/src/outer_wrapper.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|/users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/src/outer_wrapper.sv|
+!i113 0
+R13
+R1
+vpreprocessing
+R2
+R3
+!i10b 1
+!s100 R4=RA79SFKWWFVTc6NRH62
+IZkPhdUF9gDm_M7YXCH;TK0
+S1
+R4
+R15
+R16
+R17
+!i122 31
+L0 70 286
+R8
+R9
+r1
+!s85 0
+31
+R10
+R18
+R19
+!i113 0
+R13
+R1
+vregister
+R2
+R3
+!i10b 1
+!s100 Sm]B]?DahG5bW:5Ne5aJl1
+IZjU[m:2GMi@CFN6XO6d3F1
+S1
+R4
+R20
+R21
+R22
+!i122 28
+L0 68 29
+R8
+R9
+r1
+!s85 0
+31
+R10
+R23
+R24
+!i113 0
+R13
+R1
+vrequantization_unit
+R2
+R3
+!i10b 1
+!s100 D`_8geG:A7cFmKRTUHQ=82
+I@S@:deY4eho2hkCYg@e:H2
+S1
+R4
+w1756906118
+8/users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/src/requantization_unit.sv
+F/users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/src/requantization_unit.sv
+!i122 30
+L0 1 188
+R8
+R9
+r1
+!s85 0
+31
+R10
+!s107 /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/src/requantization_unit.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|/users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/src/requantization_unit.sv|
+!i113 0
+R13
+R1
+vST_mul_EA
+R2
+R3
+!i10b 1
+!s100 :C_e7;T9a=ePL2nf842zZ0
+IF1R9Y[Ea`=_f@D<Pbk]4g3
+S1
+R4
+R15
+R16
+R17
+!i122 31
+L0 1 67
+R8
+R9
+r1
+!s85 0
+31
+R10
+R18
+R19
+!i113 0
+R13
+R1
+n@s@t_mul_@e@a
+vtb_Bock_PE_wrapper
+R2
+!s110 1756906657
+!i10b 1
+!s100 :?d@Z4i<FWgDJRjlT>[T@3
+I19Jzn??8R_zJAK9L4D0N61
+S1
+R4
+w1756906654
+8/users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv
+F/users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv
+!i122 36
+L0 1 404
+R8
+R9
+r1
+!s85 0
+31
+!s108 1756906657.000000
+!s107 /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|/users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv|
+!i113 0
+R13
+R1
+ntb_@bock_@p@e_wrapper

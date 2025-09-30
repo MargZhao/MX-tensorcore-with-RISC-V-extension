@@ -1,0 +1,6 @@
+read_verilog -sv -formal -overwrite {workspace}/MX_SNAX_integration-master/mul_2bit.sv
+read_verilog -sv -formal -overwrite {workspace}/MX_SNAX_integration-master/L1.sv
+read_verilog -sv -formal -overwrite {workspace}/MX_SNAX_integration-master/L2_EA_no_latch.sv
+read_verilog -sv -formal -overwrite {workspace}/rtl_SNAX_integration/rtl/src/ST_mul_EA.sv
+design -reset-vlog; proc;
+write_json {workspace}/netlist/ST_mul_EA.json

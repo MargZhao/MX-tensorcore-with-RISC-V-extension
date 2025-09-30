@@ -1,0 +1,10 @@
+/esat/micas-data/data/design/gf022/Synopsys/v-logic_in_gf22fdx_sc8t_104cpp_base_csc20l/GF22FDX_SC8T_104CPP_BASE_CSC20L_FDK_RELV06R50/model/verilog/GF22FDX_SC8T_104CPP_BASE_CSC20L.v
+/esat/micas-data/data/design/gf022/Synopsys/v-logic_in_gf22fdx_sc8t_104cpp_base_csc20l/GF22FDX_SC8T_104CPP_BASE_CSC20L_FDK_RELV06R50/model/verilog/prim.v
+/esat/micas-data/data/design/gf022/Synopsys/v-logic_in_gf22fdx_sc8t_104cpp_base_csc20sl/GF22FDX_SC8T_104CPP_BASE_CSC20SL_FDK_RELV06R50/model/verilog/GF22FDX_SC8T_104CPP_BASE_CSC20SL.v
+/esat/micas-data/data/design/gf022/Synopsys/v-logic_in_gf22fdx_sc8t_104cpp_base_csc20sl/GF22FDX_SC8T_104CPP_BASE_CSC20SL_FDK_RELV06R50/model/verilog/prim.v
+/esat/micas-data/data/design/gf022/Synopsys/v-logic_in_gf22fdx_sc8t_104cpp_lpk_csl/GF22FDX_SC8T_104CPP_LPK_CSL_FDK_RELV03R40/model/verilog/GF22FDX_SC8T_104CPP_LPK_CSL.v
+/esat/micas-data/data/design/gf022/Synopsys/v-logic_in_gf22fdx_sc8t_104cpp_lpk_csl/GF22FDX_SC8T_104CPP_LPK_CSL_FDK_RELV03R40/model/verilog/prim.v
+/esat/micas-data/data/design/gf022/Synopsys/v-logic_in_gf22fdx_sc8t_104cpp_lpk_cssl/GF22FDX_SC8T_104CPP_LPK_CSSL_FDK_RELV03R40/model/verilog/GF22FDX_SC8T_104CPP_LPK_CSSL.v
+/esat/micas-data/data/design/gf022/Synopsys/v-logic_in_gf22fdx_sc8t_104cpp_lpk_cssl/GF22FDX_SC8T_104CPP_LPK_CSSL_FDK_RELV03R40/model/verilog/prim.v
+/users/micas/xyi/no_backup/snax_pd/MX_tensor_core/outputs/Block_PE_wrapper_mapped.v
+./tb_Block_PE_wrapper.sv

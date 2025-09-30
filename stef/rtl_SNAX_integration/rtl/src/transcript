@@ -1,0 +1,2824 @@
+# //  Questa Sim-64
+# //  Version 2022.4 linux_x86_64 Oct 18 2022
+# //
+# //  Copyright 1991-2022 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  QuestaSim and its associated documentation contain trade
+# //  secrets and commercial or financial information that are the property of
+# //  Mentor Graphics Corporation and are privileged, confidential,
+# //  and exempt from disclosure under the Freedom of Information Act,
+# //  5 U.S.C. Section 552. Furthermore, this information
+# //  is prohibited from disclosure under the Trade Secrets Act,
+# //  18 U.S.C. Section 1905.
+# //
+# Loading project test_extra_wrapper
+# Compile of Block_PE.sv was successful with warnings.
+# Compile of Block_PE_wrapper.sv was successful with warnings.
+# Compile of L1.sv was successful.
+# Compile of L2_EA_no_latch.sv was successful.
+# Compile of mul_2bit.sv was successful.
+# Compile of MX_MAC_EA_BPE.sv was successful.
+# Compile of outer_wrapper.sv was successful with warnings.
+# Compile of requantization_unit.sv was successful with warnings.
+# Compile of ST_mul_EA.sv was successful.
+# Compile of tb_Block_PE_wrapper.sv was successful.
+# 10 compiles, 0 failed with no errors.
+vsim work.tb_Bock_PE_wrapper -voptargs=+acc
+# vsim work.tb_Bock_PE_wrapper -voptargs="+acc" 
+# Start time: 15:26:59 on Sep 03,2025
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility.
+# ** Warning: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/src/Block_PE.sv(9): (vopt-13314) Defaulting port 'a_mant0' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+# ** Warning: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/src/Block_PE.sv(10): (vopt-13314) Defaulting port 'a_mant1' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+# ** Warning: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/src/Block_PE.sv(11): (vopt-13314) Defaulting port 'a_mant2' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+# ** Warning: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/src/Block_PE.sv(12): (vopt-13314) Defaulting port 'a_mant3' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+# ** Warning: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/src/Block_PE.sv(13): (vopt-13314) Defaulting port 'b_mant0' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+# ** Warning: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/src/Block_PE.sv(14): (vopt-13314) Defaulting port 'b_mant1' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+# ** Warning: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/src/Block_PE.sv(15): (vopt-13314) Defaulting port 'b_mant2' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+# ** Warning: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/src/Block_PE.sv(16): (vopt-13314) Defaulting port 'b_mant3' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+# ** Warning: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/src/Block_PE.sv(17): (vopt-13314) Defaulting port 'a_exp_in0' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+# ** Warning: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/src/Block_PE.sv(18): (vopt-13314) Defaulting port 'a_exp_in1' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+# ** Warning: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/src/Block_PE.sv(19): (vopt-13314) Defaulting port 'a_exp_in2' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+# ** Warning: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/src/Block_PE.sv(20): (vopt-13314) Defaulting port 'a_exp_in3' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+# ** Warning: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/src/Block_PE.sv(21): (vopt-13314) Defaulting port 'b_exp_in0' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+# ** Warning: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/src/Block_PE.sv(22): (vopt-13314) Defaulting port 'b_exp_in1' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+# ** Warning: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/src/Block_PE.sv(23): (vopt-13314) Defaulting port 'b_exp_in2' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+# ** Warning: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/src/Block_PE.sv(24): (vopt-13314) Defaulting port 'b_exp_in3' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+# ** Warning: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/src/Block_PE.sv(25): (vopt-13314) Defaulting port 'a_sign_in0' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+# ** Warning: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/src/Block_PE.sv(26): (vopt-13314) Defaulting port 'a_sign_in1' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+# ** Warning: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/src/Block_PE.sv(27): (vopt-13314) Defaulting port 'a_sign_in2' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+# ** Warning: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/src/Block_PE.sv(28): (vopt-13314) Defaulting port 'a_sign_in3' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+# ** Warning: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/src/Block_PE.sv(29): (vopt-13314) Defaulting port 'b_sign_in0' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+# ** Warning: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/src/Block_PE.sv(30): (vopt-13314) Defaulting port 'b_sign_in1' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+# ** Warning: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/src/Block_PE.sv(31): (vopt-13314) Defaulting port 'b_sign_in2' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+# ** Warning: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/src/Block_PE.sv(32): (vopt-13314) Defaulting port 'b_sign_in3' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+# ** Warning: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/src/requantization_unit.sv(9): (vopt-13314) Defaulting port 'unq_block' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=26.
+# Loading sv_std.std
+# Loading work.tb_Bock_PE_wrapper(fast)
+# Loading work.outer_wrapper(fast)
+# Loading work.Block_PE_wrapper(fast)
+# Loading work.Block_PE(fast)
+# Loading work.MX_MAC_EA_BPE(fast)
+# Loading work.ST_mul_EA(fast)
+# Loading work.preprocessing(fast)
+# Loading work.multiplication(fast)
+# Loading work.mul_2bit(fast)
+# Loading work.lvl1_adders(fast)
+# Loading work.L1(fast)
+# Loading work.L2_EA_no_latch(fast)
+# Loading work.extend_v1_EA(fast)
+# Loading work.high_exp_v1_EA(fast)
+# Loading work.mant_add_v1_EA(fast)
+# Loading work.exp_bias_v5_EA(fast)
+# Loading work.accum_add_EA(fast)
+# Loading work.normalize_v1_EA(fast)
+# Loading work.register(fast)
+# Loading work.requantization_unit(fast)
+run
+# 00000000
+#   0
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 110
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 111
+# 00000000
+#   0
+# ** Error: Assertion error.
+#    Time: 50100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 148
+# ** Error: Assertion error.
+#    Time: 50100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 149
+# 01111000
+# 248
+# ** Error: Assertion error.
+#    Time: 74100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 197
+# ** Error: Assertion error.
+#    Time: 74100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 198
+# 01111000
+# 248
+# ** Error: Assertion error.
+#    Time: 98100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 233
+# ** Error: Assertion error.
+#    Time: 98100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 234
+run
+# 01110000
+# 252
+# ** Error: Assertion error.
+#    Time: 122100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 274
+# ** Error: Assertion error.
+#    Time: 122100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 275
+# 01111100
+# 240
+# ** Error: Assertion error.
+#    Time: 146100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 315
+# ** Error: Assertion error.
+#    Time: 146100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 316
+# 00000000
+#   0
+# ** Error: Assertion error.
+#    Time: 166100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 355
+# ** Error: Assertion error.
+#    Time: 166100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 356
+# 01100000
+# 254
+# ** Error: Assertion error.
+#    Time: 190100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 405
+# Test ends.
+# ** Note: $finish    : /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv(415)
+#    Time: 198 ns  Iteration: 1  Instance: /tb_Bock_PE_wrapper
+# 1
+# Break in Module tb_Bock_PE_wrapper at /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv line 415
+# Compile of Block_PE.sv was successful with warnings.
+# Compile of Block_PE_wrapper.sv was successful with warnings.
+# Compile of L1.sv was successful.
+# Compile of L2_EA_no_latch.sv was successful.
+# Compile of mul_2bit.sv was successful.
+# Compile of MX_MAC_EA_BPE.sv was successful.
+# Compile of outer_wrapper.sv was successful with warnings.
+# Compile of requantization_unit.sv was successful with warnings.
+# Compile of ST_mul_EA.sv was successful.
+# Compile of tb_Block_PE_wrapper.sv was successful.
+# 10 compiles, 0 failed with no errors.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility.
+# ** Warning: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/src/requantization_unit.sv(9): (vopt-13314) Defaulting port 'unq_block' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=2.
+# Loading sv_std.std
+# Loading work.tb_Bock_PE_wrapper(fast)
+# Loading work.outer_wrapper(fast)
+# Loading work.Block_PE_wrapper(fast)
+# Loading work.Block_PE(fast)
+# Loading work.MX_MAC_EA_BPE(fast)
+# Loading work.ST_mul_EA(fast)
+# Loading work.preprocessing(fast)
+# Loading work.multiplication(fast)
+# Loading work.mul_2bit(fast)
+# Loading work.lvl1_adders(fast)
+# Loading work.L1(fast)
+# Loading work.L2_EA_no_latch(fast)
+# Loading work.extend_v1_EA(fast)
+# Loading work.high_exp_v1_EA(fast)
+# Loading work.mant_add_v1_EA(fast)
+# Loading work.exp_bias_v5_EA(fast)
+# Loading work.accum_add_EA(fast)
+# Loading work.normalize_v1_EA(fast)
+# Loading work.register(fast)
+# Loading work.requantization_unit(fast)
+run
+# 00101100
+# 121
+# 11010100
+# 121
+# 01111010
+# 113
+# 11111010
+# 113
+# 01111000
+# 125
+# 01111101
+# 120
+# 01111000
+# 125
+# 01100000
+# 130
+# Test ends.
+# ** Note: $finish    : /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv(415)
+#    Time: 198 ns  Iteration: 1  Instance: /tb_Bock_PE_wrapper
+# 1
+# Break in Module tb_Bock_PE_wrapper at /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv line 415
+# Compile of tb_Block_PE_wrapper.sv was successful.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# Loading sv_std.std
+# Loading work.tb_Bock_PE_wrapper(fast)
+# Loading work.outer_wrapper(fast)
+# Loading work.Block_PE_wrapper(fast)
+# Loading work.Block_PE(fast)
+# Loading work.MX_MAC_EA_BPE(fast)
+# Loading work.ST_mul_EA(fast)
+# Loading work.preprocessing(fast)
+# Loading work.multiplication(fast)
+# Loading work.mul_2bit(fast)
+# Loading work.lvl1_adders(fast)
+# Loading work.L1(fast)
+# Loading work.L2_EA_no_latch(fast)
+# Loading work.extend_v1_EA(fast)
+# Loading work.high_exp_v1_EA(fast)
+# Loading work.mant_add_v1_EA(fast)
+# Loading work.exp_bias_v5_EA(fast)
+# Loading work.accum_add_EA(fast)
+# Loading work.normalize_v1_EA(fast)
+# Loading work.register(fast)
+# Loading work.requantization_unit(fast)
+run
+# i = 0, j = 0
+# 00101100
+# 121
+# i = 0, j = 1
+# 00101100
+# 121
+# i = 0, j = 2
+# 00101100
+# 121
+# i = 0, j = 3
+# 00101100
+# 121
+# i = 0, j = 4
+# 00101100
+# 121
+# i = 0, j = 5
+# 00101100
+# 121
+# i = 0, j = 6
+# 00101100
+# 121
+# i = 0, j = 7
+# 00101100
+# 121
+# i = 1, j = 0
+# 00101100
+# 121
+# i = 1, j = 1
+# 00101100
+# 121
+# i = 1, j = 2
+# 00101100
+# 121
+# i = 1, j = 3
+# 00101100
+# 121
+# i = 1, j = 4
+# 00101100
+# 121
+# i = 1, j = 5
+# 00101100
+# 121
+# i = 1, j = 6
+# 00101100
+# 121
+# i = 1, j = 7
+# 00101100
+# 121
+# i = 2, j = 0
+# 00101100
+# 121
+# i = 2, j = 1
+# 00101100
+# 121
+# i = 2, j = 2
+# 00101100
+# 121
+# i = 2, j = 3
+# 00101100
+# 121
+# i = 2, j = 4
+# 00101100
+# 121
+# i = 2, j = 5
+# 00101100
+# 121
+# i = 2, j = 6
+# 00101100
+# 121
+# i = 2, j = 7
+# 00101100
+# 121
+# i = 3, j = 0
+# 00101100
+# 121
+# i = 3, j = 1
+# 00101100
+# 121
+# i = 3, j = 2
+# 00101100
+# 121
+# i = 3, j = 3
+# 00101100
+# 121
+# i = 3, j = 4
+# 00101100
+# 121
+# i = 3, j = 5
+# 00101100
+# 121
+# i = 3, j = 6
+# 00101100
+# 121
+# i = 3, j = 7
+# 00101100
+# 121
+# i = 4, j = 0
+# 00101100
+# 121
+# i = 4, j = 1
+# 00101100
+# 121
+# i = 4, j = 2
+# 00101100
+# 121
+# i = 4, j = 3
+# 00101100
+# 121
+# i = 4, j = 4
+# 00101100
+# 121
+# i = 4, j = 5
+# 00101100
+# 121
+# i = 4, j = 6
+# 00101100
+# 121
+# i = 4, j = 7
+# 00101100
+# 121
+# i = 5, j = 0
+# 00101100
+# 121
+# i = 5, j = 1
+# 00101100
+# 121
+# i = 5, j = 2
+# 00101100
+# 121
+# i = 5, j = 3
+# 00101100
+# 121
+# i = 5, j = 4
+# 00101100
+# 121
+# i = 5, j = 5
+# 00101100
+# 121
+# i = 5, j = 6
+# 00101100
+# 121
+# i = 5, j = 7
+# 00101100
+# 121
+# i = 6, j = 0
+# 00101100
+# 121
+# i = 6, j = 1
+# 00101100
+# 121
+# i = 6, j = 2
+# 00101100
+# 121
+# i = 6, j = 3
+# 00101100
+# 121
+# i = 6, j = 4
+# 00101100
+# 121
+# i = 6, j = 5
+# 00101100
+# 121
+# i = 6, j = 6
+# 00101100
+# 121
+# i = 6, j = 7
+# 00101100
+# 121
+# i = 7, j = 0
+# 00101100
+# 121
+# i = 7, j = 1
+# 00101100
+# 121
+# i = 7, j = 2
+# 00101100
+# 121
+# i = 7, j = 3
+# 00101100
+# 121
+# i = 7, j = 4
+# 00101100
+# 121
+# i = 7, j = 5
+# 00101100
+# 121
+# i = 7, j = 6
+# 00101100
+# 121
+# i = 7, j = 7
+# 00101100
+# 121
+# Test ends.
+# ** Note: $finish    : /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv(398)
+#    Time: 26100 ps  Iteration: 0  Instance: /tb_Bock_PE_wrapper
+# 1
+# Break in Module tb_Bock_PE_wrapper at /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv line 398
+# Compile of tb_Block_PE_wrapper.sv was successful.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# Loading sv_std.std
+# Loading work.tb_Bock_PE_wrapper(fast)
+# Loading work.outer_wrapper(fast)
+# Loading work.Block_PE_wrapper(fast)
+# Loading work.Block_PE(fast)
+# Loading work.MX_MAC_EA_BPE(fast)
+# Loading work.ST_mul_EA(fast)
+# Loading work.preprocessing(fast)
+# Loading work.multiplication(fast)
+# Loading work.mul_2bit(fast)
+# Loading work.lvl1_adders(fast)
+# Loading work.L1(fast)
+# Loading work.L2_EA_no_latch(fast)
+# Loading work.extend_v1_EA(fast)
+# Loading work.high_exp_v1_EA(fast)
+# Loading work.mant_add_v1_EA(fast)
+# Loading work.exp_bias_v5_EA(fast)
+# Loading work.accum_add_EA(fast)
+# Loading work.normalize_v1_EA(fast)
+# Loading work.register(fast)
+# Loading work.requantization_unit(fast)
+run
+# i = 0, j = 0
+# 00000000
+# 135
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 106
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 107
+# i = 0, j = 1
+# 00000000
+# 135
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 106
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 107
+# i = 0, j = 2
+# 00000000
+# 135
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 106
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 107
+# i = 0, j = 3
+# 00000000
+# 135
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 106
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 107
+# i = 0, j = 4
+# 00000000
+# 135
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 106
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 107
+# i = 0, j = 5
+# 00000000
+# 135
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 106
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 107
+# i = 0, j = 6
+# 00000000
+# 135
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 106
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 107
+# i = 0, j = 7
+# 00000000
+# 135
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 106
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 107
+# i = 1, j = 0
+# 00000000
+# 135
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 106
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 107
+# i = 1, j = 1
+# 00000000
+# 135
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 106
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 107
+# i = 1, j = 2
+# 00000000
+# 135
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 106
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 107
+# i = 1, j = 3
+# 00000000
+# 135
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 106
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 107
+# i = 1, j = 4
+# 00000000
+# 135
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 106
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 107
+# i = 1, j = 5
+# 00000000
+# 135
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 106
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 107
+# i = 1, j = 6
+# 00000000
+# 135
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 106
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 107
+# i = 1, j = 7
+# 00000000
+# 135
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 106
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 107
+# i = 2, j = 0
+# 00000000
+# 135
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 106
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 107
+# i = 2, j = 1
+# 00000000
+# 135
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 106
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 107
+# i = 2, j = 2
+# 00000000
+# 135
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 106
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 107
+# i = 2, j = 3
+# 00000000
+# 135
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 106
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 107
+# i = 2, j = 4
+# 00000000
+# 135
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 106
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 107
+# i = 2, j = 5
+# 00000000
+# 135
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 106
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 107
+# i = 2, j = 6
+# 00000000
+# 135
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 106
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 107
+# i = 2, j = 7
+# 00000000
+# 135
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 106
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 107
+# i = 3, j = 0
+# 00000000
+# 135
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 106
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 107
+# i = 3, j = 1
+# 00000000
+# 135
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 106
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 107
+# i = 3, j = 2
+# 00000000
+# 135
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 106
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 107
+# i = 3, j = 3
+# 00000000
+# 135
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 106
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 107
+# i = 3, j = 4
+# 00000000
+# 135
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 106
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 107
+# i = 3, j = 5
+# 00000000
+# 135
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 106
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 107
+# i = 3, j = 6
+# 00000000
+# 135
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 106
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 107
+# i = 3, j = 7
+# 00000000
+# 135
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 106
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 107
+# i = 4, j = 0
+# 00000000
+# 135
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 106
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 107
+# i = 4, j = 1
+# 00000000
+# 135
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 106
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 107
+# i = 4, j = 2
+# 00000000
+# 135
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 106
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 107
+# i = 4, j = 3
+# 00000000
+# 135
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 106
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 107
+# i = 4, j = 4
+# 00000000
+# 135
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 106
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 107
+# i = 4, j = 5
+# 00000000
+# 135
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 106
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 107
+# i = 4, j = 6
+# 00000000
+# 135
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 106
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 107
+# i = 4, j = 7
+# 00000000
+# 135
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 106
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 107
+# i = 5, j = 0
+# 00000000
+# 135
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 106
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 107
+# i = 5, j = 1
+# 00000000
+# 135
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 106
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 107
+# i = 5, j = 2
+# 00000000
+# 135
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 106
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 107
+# i = 5, j = 3
+# 00000000
+# 135
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 106
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 107
+# i = 5, j = 4
+# 00000000
+# 135
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 106
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 107
+# i = 5, j = 5
+# 00000000
+# 135
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 106
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 107
+# i = 5, j = 6
+# 00000000
+# 135
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 106
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 107
+# i = 5, j = 7
+# 00000000
+# 135
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 106
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 107
+# i = 6, j = 0
+# 00000000
+# 135
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 106
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 107
+# i = 6, j = 1
+# 00000000
+# 135
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 106
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 107
+# i = 6, j = 2
+# 00000000
+# 135
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 106
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 107
+# i = 6, j = 3
+# 00000000
+# 135
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 106
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 107
+# i = 6, j = 4
+# 00000000
+# 135
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 106
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 107
+# i = 6, j = 5
+# 00000000
+# 135
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 106
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 107
+# i = 6, j = 6
+# 00000000
+# 135
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 106
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 107
+# i = 6, j = 7
+# 00000000
+# 135
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 106
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 107
+# i = 7, j = 0
+# xxxxxxxx
+# 135
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 106
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 107
+# i = 7, j = 1
+# xxxxxxxx
+# 135
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 106
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 107
+# i = 7, j = 2
+# xxxxxxxx
+# 135
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 106
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 107
+# i = 7, j = 3
+# xxxxxxxx
+# 135
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 106
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 107
+# i = 7, j = 4
+# xxxxxxxx
+# 135
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 106
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 107
+# i = 7, j = 5
+# xxxxxxxx
+# 135
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 106
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 107
+# i = 7, j = 6
+# xxxxxxxx
+# 135
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 106
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 107
+# i = 7, j = 7
+# xxxxxxxx
+# 135
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 106
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 107
+# Test ends.
+# ** Note: $finish    : /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv(400)
+#    Time: 26100 ps  Iteration: 0  Instance: /tb_Bock_PE_wrapper
+# 1
+# Break in Module tb_Bock_PE_wrapper at /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv line 400
+add wave -position insertpoint  \
+sim:/tb_Bock_PE_wrapper/outer_wrapper0/Block_PE_wrapper0/Block_PE0/requantization_unit0/unq_block
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-8009) Loading existing optimized design _opt
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# Loading work.tb_Bock_PE_wrapper(fast)
+# Loading work.outer_wrapper(fast)
+# Loading work.Block_PE_wrapper(fast)
+# Loading work.Block_PE(fast)
+# Loading work.MX_MAC_EA_BPE(fast)
+# Loading work.ST_mul_EA(fast)
+# Loading work.preprocessing(fast)
+# Loading work.multiplication(fast)
+# Loading work.mul_2bit(fast)
+# Loading work.lvl1_adders(fast)
+# Loading work.L1(fast)
+# Loading work.L2_EA_no_latch(fast)
+# Loading work.extend_v1_EA(fast)
+# Loading work.high_exp_v1_EA(fast)
+# Loading work.mant_add_v1_EA(fast)
+# Loading work.exp_bias_v5_EA(fast)
+# Loading work.accum_add_EA(fast)
+# Loading work.normalize_v1_EA(fast)
+# Loading work.register(fast)
+# Loading work.requantization_unit(fast)
+run
+# i = 0, j = 0
+# 00000000
+# 135
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 106
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 107
+# i = 0, j = 1
+# 00000000
+# 135
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 106
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 107
+# i = 0, j = 2
+# 00000000
+# 135
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 106
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 107
+# i = 0, j = 3
+# 00000000
+# 135
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 106
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 107
+# i = 0, j = 4
+# 00000000
+# 135
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 106
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 107
+# i = 0, j = 5
+# 00000000
+# 135
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 106
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 107
+# i = 0, j = 6
+# 00000000
+# 135
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 106
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 107
+# i = 0, j = 7
+# 00000000
+# 135
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 106
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 107
+# i = 1, j = 0
+# 00000000
+# 135
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 106
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 107
+# i = 1, j = 1
+# 00000000
+# 135
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 106
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 107
+# i = 1, j = 2
+# 00000000
+# 135
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 106
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 107
+# i = 1, j = 3
+# 00000000
+# 135
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 106
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 107
+# i = 1, j = 4
+# 00000000
+# 135
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 106
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 107
+# i = 1, j = 5
+# 00000000
+# 135
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 106
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 107
+# i = 1, j = 6
+# 00000000
+# 135
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 106
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 107
+# i = 1, j = 7
+# 00000000
+# 135
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 106
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 107
+# i = 2, j = 0
+# 00000000
+# 135
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 106
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 107
+# i = 2, j = 1
+# 00000000
+# 135
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 106
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 107
+# i = 2, j = 2
+# 00000000
+# 135
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 106
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 107
+# i = 2, j = 3
+# 00000000
+# 135
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 106
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 107
+# i = 2, j = 4
+# 00000000
+# 135
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 106
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 107
+# i = 2, j = 5
+# 00000000
+# 135
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 106
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 107
+# i = 2, j = 6
+# 00000000
+# 135
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 106
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 107
+# i = 2, j = 7
+# 00000000
+# 135
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 106
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 107
+# i = 3, j = 0
+# 00000000
+# 135
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 106
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 107
+# i = 3, j = 1
+# 00000000
+# 135
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 106
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 107
+# i = 3, j = 2
+# 00000000
+# 135
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 106
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 107
+# i = 3, j = 3
+# 00000000
+# 135
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 106
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 107
+# i = 3, j = 4
+# 00000000
+# 135
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 106
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 107
+# i = 3, j = 5
+# 00000000
+# 135
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 106
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 107
+# i = 3, j = 6
+# 00000000
+# 135
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 106
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 107
+# i = 3, j = 7
+# 00000000
+# 135
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 106
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 107
+# i = 4, j = 0
+# 00000000
+# 135
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 106
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 107
+# i = 4, j = 1
+# 00000000
+# 135
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 106
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 107
+# i = 4, j = 2
+# 00000000
+# 135
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 106
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 107
+# i = 4, j = 3
+# 00000000
+# 135
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 106
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 107
+# i = 4, j = 4
+# 00000000
+# 135
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 106
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 107
+# i = 4, j = 5
+# 00000000
+# 135
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 106
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 107
+# i = 4, j = 6
+# 00000000
+# 135
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 106
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 107
+# i = 4, j = 7
+# 00000000
+# 135
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 106
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 107
+# i = 5, j = 0
+# 00000000
+# 135
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 106
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 107
+# i = 5, j = 1
+# 00000000
+# 135
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 106
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 107
+# i = 5, j = 2
+# 00000000
+# 135
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 106
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 107
+# i = 5, j = 3
+# 00000000
+# 135
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 106
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 107
+# i = 5, j = 4
+# 00000000
+# 135
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 106
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 107
+# i = 5, j = 5
+# 00000000
+# 135
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 106
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 107
+# i = 5, j = 6
+# 00000000
+# 135
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 106
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 107
+# i = 5, j = 7
+# 00000000
+# 135
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 106
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 107
+# i = 6, j = 0
+# 00000000
+# 135
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 106
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 107
+# i = 6, j = 1
+# 00000000
+# 135
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 106
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 107
+# i = 6, j = 2
+# 00000000
+# 135
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 106
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 107
+# i = 6, j = 3
+# 00000000
+# 135
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 106
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 107
+# i = 6, j = 4
+# 00000000
+# 135
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 106
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 107
+# i = 6, j = 5
+# 00000000
+# 135
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 106
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 107
+# i = 6, j = 6
+# 00000000
+# 135
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 106
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 107
+# i = 6, j = 7
+# 00000000
+# 135
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 106
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 107
+# i = 7, j = 0
+# xxxxxxxx
+# 135
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 106
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 107
+# i = 7, j = 1
+# xxxxxxxx
+# 135
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 106
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 107
+# i = 7, j = 2
+# xxxxxxxx
+# 135
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 106
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 107
+# i = 7, j = 3
+# xxxxxxxx
+# 135
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 106
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 107
+# i = 7, j = 4
+# xxxxxxxx
+# 135
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 106
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 107
+# i = 7, j = 5
+# xxxxxxxx
+# 135
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 106
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 107
+# i = 7, j = 6
+# xxxxxxxx
+# 135
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 106
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 107
+# i = 7, j = 7
+# xxxxxxxx
+# 135
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 106
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 107
+# Test ends.
+# ** Note: $finish    : /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv(400)
+#    Time: 26100 ps  Iteration: 0  Instance: /tb_Bock_PE_wrapper
+# 1
+# Break in Module tb_Bock_PE_wrapper at /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv line 400
+# Compile of tb_Block_PE_wrapper.sv was successful.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# Loading sv_std.std
+# Loading work.tb_Bock_PE_wrapper(fast)
+# Loading work.outer_wrapper(fast)
+# Loading work.Block_PE_wrapper(fast)
+# Loading work.Block_PE(fast)
+# Loading work.MX_MAC_EA_BPE(fast)
+# Loading work.ST_mul_EA(fast)
+# Loading work.preprocessing(fast)
+# Loading work.multiplication(fast)
+# Loading work.mul_2bit(fast)
+# Loading work.lvl1_adders(fast)
+# Loading work.L1(fast)
+# Loading work.L2_EA_no_latch(fast)
+# Loading work.extend_v1_EA(fast)
+# Loading work.high_exp_v1_EA(fast)
+# Loading work.mant_add_v1_EA(fast)
+# Loading work.exp_bias_v5_EA(fast)
+# Loading work.accum_add_EA(fast)
+# Loading work.normalize_v1_EA(fast)
+# Loading work.register(fast)
+# Loading work.requantization_unit(fast)
+run
+# i = 0, j = 0
+# 00000000
+# 135
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 106
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 107
+# i = 0, j = 1
+# 00000000
+# 135
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 106
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 107
+# i = 0, j = 2
+# 00000000
+# 135
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 106
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 107
+# i = 0, j = 3
+# 00000000
+# 135
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 106
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 107
+# i = 0, j = 4
+# 00000000
+# 135
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 106
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 107
+# i = 0, j = 5
+# 00000000
+# 135
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 106
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 107
+# i = 0, j = 6
+# 00000000
+# 135
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 106
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 107
+# i = 0, j = 7
+# xxxxxxxx
+# 135
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 106
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 107
+# i = 1, j = 0
+# 00000000
+# 135
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 106
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 107
+# i = 1, j = 1
+# 00000000
+# 135
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 106
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 107
+# i = 1, j = 2
+# 00000000
+# 135
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 106
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 107
+# i = 1, j = 3
+# 00000000
+# 135
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 106
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 107
+# i = 1, j = 4
+# 00000000
+# 135
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 106
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 107
+# i = 1, j = 5
+# 00000000
+# 135
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 106
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 107
+# i = 1, j = 6
+# 00000000
+# 135
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 106
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 107
+# i = 1, j = 7
+# xxxxxxxx
+# 135
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 106
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 107
+# i = 2, j = 0
+# 00000000
+# 135
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 106
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 107
+# i = 2, j = 1
+# 00000000
+# 135
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 106
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 107
+# i = 2, j = 2
+# 00000000
+# 135
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 106
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 107
+# i = 2, j = 3
+# 00000000
+# 135
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 106
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 107
+# i = 2, j = 4
+# 00000000
+# 135
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 106
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 107
+# i = 2, j = 5
+# 00000000
+# 135
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 106
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 107
+# i = 2, j = 6
+# 00000000
+# 135
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 106
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 107
+# i = 2, j = 7
+# xxxxxxxx
+# 135
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 106
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 107
+# i = 3, j = 0
+# 00000000
+# 135
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 106
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 107
+# i = 3, j = 1
+# 00000000
+# 135
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 106
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 107
+# i = 3, j = 2
+# 00000000
+# 135
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 106
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 107
+# i = 3, j = 3
+# 00000000
+# 135
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 106
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 107
+# i = 3, j = 4
+# 00000000
+# 135
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 106
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 107
+# i = 3, j = 5
+# 00000000
+# 135
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 106
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 107
+# i = 3, j = 6
+# 00000000
+# 135
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 106
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 107
+# i = 3, j = 7
+# xxxxxxxx
+# 135
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 106
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 107
+# i = 4, j = 0
+# 00000000
+# 135
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 106
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 107
+# i = 4, j = 1
+# 00000000
+# 135
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 106
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 107
+# i = 4, j = 2
+# 00000000
+# 135
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 106
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 107
+# i = 4, j = 3
+# 00000000
+# 135
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 106
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 107
+# i = 4, j = 4
+# 00000000
+# 135
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 106
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 107
+# i = 4, j = 5
+# 00000000
+# 135
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 106
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 107
+# i = 4, j = 6
+# 00000000
+# 135
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 106
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 107
+# i = 4, j = 7
+# xxxxxxxx
+# 135
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 106
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 107
+# i = 5, j = 0
+# 00000000
+# 135
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 106
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 107
+# i = 5, j = 1
+# 00000000
+# 135
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 106
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 107
+# i = 5, j = 2
+# 00000000
+# 135
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 106
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 107
+# i = 5, j = 3
+# 00000000
+# 135
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 106
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 107
+# i = 5, j = 4
+# 00000000
+# 135
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 106
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 107
+# i = 5, j = 5
+# 00000000
+# 135
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 106
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 107
+# i = 5, j = 6
+# 00000000
+# 135
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 106
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 107
+# i = 5, j = 7
+# xxxxxxxx
+# 135
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 106
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 107
+# i = 6, j = 0
+# 00000000
+# 135
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 106
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 107
+# i = 6, j = 1
+# 00000000
+# 135
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 106
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 107
+# i = 6, j = 2
+# 00000000
+# 135
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 106
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 107
+# i = 6, j = 3
+# 00000000
+# 135
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 106
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 107
+# i = 6, j = 4
+# 00000000
+# 135
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 106
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 107
+# i = 6, j = 5
+# 00000000
+# 135
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 106
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 107
+# i = 6, j = 6
+# 00000000
+# 135
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 106
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 107
+# i = 6, j = 7
+# xxxxxxxx
+# 135
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 106
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 107
+# i = 7, j = 0
+# 00000000
+# 135
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 106
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 107
+# i = 7, j = 1
+# 00000000
+# 135
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 106
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 107
+# i = 7, j = 2
+# 00000000
+# 135
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 106
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 107
+# i = 7, j = 3
+# 00000000
+# 135
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 106
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 107
+# i = 7, j = 4
+# 00000000
+# 135
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 106
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 107
+# i = 7, j = 5
+# 00000000
+# 135
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 106
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 107
+# i = 7, j = 6
+# 00000000
+# 135
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 106
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 107
+# i = 7, j = 7
+# xxxxxxxx
+# 135
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 106
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 107
+# Test ends.
+# ** Note: $finish    : /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv(400)
+#    Time: 26100 ps  Iteration: 0  Instance: /tb_Bock_PE_wrapper
+# 1
+# Break in Module tb_Bock_PE_wrapper at /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv line 400
+add wave -position insertpoint  \
+sim:/tb_Bock_PE_wrapper/A_INT8 \
+sim:/tb_Bock_PE_wrapper/A_FP8 \
+sim:/tb_Bock_PE_wrapper/A_FP6 \
+sim:/tb_Bock_PE_wrapper/A_FP4
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-8009) Loading existing optimized design _opt
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# Loading work.tb_Bock_PE_wrapper(fast)
+# Loading work.outer_wrapper(fast)
+# Loading work.Block_PE_wrapper(fast)
+# Loading work.Block_PE(fast)
+# Loading work.MX_MAC_EA_BPE(fast)
+# Loading work.ST_mul_EA(fast)
+# Loading work.preprocessing(fast)
+# Loading work.multiplication(fast)
+# Loading work.mul_2bit(fast)
+# Loading work.lvl1_adders(fast)
+# Loading work.L1(fast)
+# Loading work.L2_EA_no_latch(fast)
+# Loading work.extend_v1_EA(fast)
+# Loading work.high_exp_v1_EA(fast)
+# Loading work.mant_add_v1_EA(fast)
+# Loading work.exp_bias_v5_EA(fast)
+# Loading work.accum_add_EA(fast)
+# Loading work.normalize_v1_EA(fast)
+# Loading work.register(fast)
+# Loading work.requantization_unit(fast)
+run
+# i = 0, j = 0
+# 00000000
+# 135
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 106
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 107
+# i = 0, j = 1
+# 00000000
+# 135
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 106
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 107
+# i = 0, j = 2
+# 00000000
+# 135
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 106
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 107
+# i = 0, j = 3
+# 00000000
+# 135
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 106
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 107
+# i = 0, j = 4
+# 00000000
+# 135
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 106
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 107
+# i = 0, j = 5
+# 00000000
+# 135
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 106
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 107
+# i = 0, j = 6
+# 00000000
+# 135
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 106
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 107
+# i = 0, j = 7
+# xxxxxxxx
+# 135
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 106
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 107
+# i = 1, j = 0
+# 00000000
+# 135
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 106
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 107
+# i = 1, j = 1
+# 00000000
+# 135
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 106
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 107
+# i = 1, j = 2
+# 00000000
+# 135
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 106
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 107
+# i = 1, j = 3
+# 00000000
+# 135
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 106
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 107
+# i = 1, j = 4
+# 00000000
+# 135
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 106
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 107
+# i = 1, j = 5
+# 00000000
+# 135
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 106
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 107
+# i = 1, j = 6
+# 00000000
+# 135
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 106
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 107
+# i = 1, j = 7
+# xxxxxxxx
+# 135
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 106
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 107
+# i = 2, j = 0
+# 00000000
+# 135
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 106
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 107
+# i = 2, j = 1
+# 00000000
+# 135
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 106
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 107
+# i = 2, j = 2
+# 00000000
+# 135
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 106
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 107
+# i = 2, j = 3
+# 00000000
+# 135
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 106
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 107
+# i = 2, j = 4
+# 00000000
+# 135
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 106
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 107
+# i = 2, j = 5
+# 00000000
+# 135
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 106
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 107
+# i = 2, j = 6
+# 00000000
+# 135
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 106
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 107
+# i = 2, j = 7
+# xxxxxxxx
+# 135
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 106
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 107
+# i = 3, j = 0
+# 00000000
+# 135
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 106
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 107
+# i = 3, j = 1
+# 00000000
+# 135
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 106
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 107
+# i = 3, j = 2
+# 00000000
+# 135
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 106
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 107
+# i = 3, j = 3
+# 00000000
+# 135
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 106
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 107
+# i = 3, j = 4
+# 00000000
+# 135
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 106
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 107
+# i = 3, j = 5
+# 00000000
+# 135
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 106
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 107
+# i = 3, j = 6
+# 00000000
+# 135
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 106
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 107
+# i = 3, j = 7
+# xxxxxxxx
+# 135
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 106
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 107
+# i = 4, j = 0
+# 00000000
+# 135
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 106
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 107
+# i = 4, j = 1
+# 00000000
+# 135
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 106
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 107
+# i = 4, j = 2
+# 00000000
+# 135
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 106
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 107
+# i = 4, j = 3
+# 00000000
+# 135
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 106
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 107
+# i = 4, j = 4
+# 00000000
+# 135
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 106
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 107
+# i = 4, j = 5
+# 00000000
+# 135
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 106
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 107
+# i = 4, j = 6
+# 00000000
+# 135
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 106
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 107
+# i = 4, j = 7
+# xxxxxxxx
+# 135
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 106
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 107
+# i = 5, j = 0
+# 00000000
+# 135
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 106
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 107
+# i = 5, j = 1
+# 00000000
+# 135
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 106
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 107
+# i = 5, j = 2
+# 00000000
+# 135
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 106
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 107
+# i = 5, j = 3
+# 00000000
+# 135
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 106
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 107
+# i = 5, j = 4
+# 00000000
+# 135
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 106
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 107
+# i = 5, j = 5
+# 00000000
+# 135
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 106
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 107
+# i = 5, j = 6
+# 00000000
+# 135
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 106
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 107
+# i = 5, j = 7
+# xxxxxxxx
+# 135
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 106
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 107
+# i = 6, j = 0
+# 00000000
+# 135
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 106
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 107
+# i = 6, j = 1
+# 00000000
+# 135
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 106
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 107
+# i = 6, j = 2
+# 00000000
+# 135
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 106
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 107
+# i = 6, j = 3
+# 00000000
+# 135
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 106
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 107
+# i = 6, j = 4
+# 00000000
+# 135
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 106
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 107
+# i = 6, j = 5
+# 00000000
+# 135
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 106
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 107
+# i = 6, j = 6
+# 00000000
+# 135
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 106
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 107
+# i = 6, j = 7
+# xxxxxxxx
+# 135
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 106
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 107
+# i = 7, j = 0
+# 00000000
+# 135
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 106
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 107
+# i = 7, j = 1
+# 00000000
+# 135
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 106
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 107
+# i = 7, j = 2
+# 00000000
+# 135
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 106
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 107
+# i = 7, j = 3
+# 00000000
+# 135
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 106
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 107
+# i = 7, j = 4
+# 00000000
+# 135
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 106
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 107
+# i = 7, j = 5
+# 00000000
+# 135
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 106
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 107
+# i = 7, j = 6
+# 00000000
+# 135
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 106
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 107
+# i = 7, j = 7
+# xxxxxxxx
+# 135
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 106
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 107
+# Test ends.
+# ** Note: $finish    : /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv(400)
+#    Time: 26100 ps  Iteration: 0  Instance: /tb_Bock_PE_wrapper
+# 1
+# Break in Module tb_Bock_PE_wrapper at /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv line 400
+# Compile of tb_Block_PE_wrapper.sv was successful.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# Loading sv_std.std
+# Loading work.tb_Bock_PE_wrapper(fast)
+# Loading work.outer_wrapper(fast)
+# Loading work.Block_PE_wrapper(fast)
+# Loading work.Block_PE(fast)
+# Loading work.MX_MAC_EA_BPE(fast)
+# Loading work.ST_mul_EA(fast)
+# Loading work.preprocessing(fast)
+# Loading work.multiplication(fast)
+# Loading work.mul_2bit(fast)
+# Loading work.lvl1_adders(fast)
+# Loading work.L1(fast)
+# Loading work.L2_EA_no_latch(fast)
+# Loading work.extend_v1_EA(fast)
+# Loading work.high_exp_v1_EA(fast)
+# Loading work.mant_add_v1_EA(fast)
+# Loading work.exp_bias_v5_EA(fast)
+# Loading work.accum_add_EA(fast)
+# Loading work.normalize_v1_EA(fast)
+# Loading work.register(fast)
+# Loading work.requantization_unit(fast)
+run
+# i = 0, j = 0
+# 00000000
+# 135
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 106
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 107
+# i = 0, j = 1
+# 00000000
+# 135
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 106
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 107
+# i = 0, j = 2
+# 00000000
+# 135
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 106
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 107
+# i = 0, j = 3
+# 00000000
+# 135
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 106
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 107
+# i = 0, j = 4
+# 00000000
+# 135
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 106
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 107
+# i = 0, j = 5
+# 00000000
+# 135
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 106
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 107
+# i = 0, j = 6
+# 00000000
+# 135
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 106
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 107
+# i = 0, j = 7
+# 00000000
+# 135
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 106
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 107
+# i = 1, j = 0
+# 00000000
+# 135
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 106
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 107
+# i = 1, j = 1
+# 00000000
+# 135
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 106
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 107
+# i = 1, j = 2
+# 00000000
+# 135
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 106
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 107
+# i = 1, j = 3
+# 00000000
+# 135
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 106
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 107
+# i = 1, j = 4
+# 00000000
+# 135
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 106
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 107
+# i = 1, j = 5
+# 00000000
+# 135
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 106
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 107
+# i = 1, j = 6
+# 00000000
+# 135
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 106
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 107
+# i = 1, j = 7
+# 00000000
+# 135
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 106
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 107
+# i = 2, j = 0
+# 00000000
+# 135
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 106
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 107
+# i = 2, j = 1
+# 00000000
+# 135
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 106
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 107
+# i = 2, j = 2
+# 00000000
+# 135
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 106
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 107
+# i = 2, j = 3
+# 00000000
+# 135
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 106
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 107
+# i = 2, j = 4
+# 00000000
+# 135
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 106
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 107
+# i = 2, j = 5
+# 00000000
+# 135
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 106
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 107
+# i = 2, j = 6
+# 00000000
+# 135
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 106
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 107
+# i = 2, j = 7
+# 00000000
+# 135
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 106
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 107
+# i = 3, j = 0
+# 00000000
+# 135
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 106
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 107
+# i = 3, j = 1
+# 00000000
+# 135
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 106
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 107
+# i = 3, j = 2
+# 00000000
+# 135
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 106
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 107
+# i = 3, j = 3
+# 00000000
+# 135
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 106
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 107
+# i = 3, j = 4
+# 00000000
+# 135
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 106
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 107
+# i = 3, j = 5
+# 00000000
+# 135
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 106
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 107
+# i = 3, j = 6
+# 00000000
+# 135
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 106
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 107
+# i = 3, j = 7
+# 00000000
+# 135
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 106
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 107
+# i = 4, j = 0
+# 00000000
+# 135
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 106
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 107
+# i = 4, j = 1
+# 00000000
+# 135
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 106
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 107
+# i = 4, j = 2
+# 00000000
+# 135
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 106
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 107
+# i = 4, j = 3
+# 00000000
+# 135
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 106
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 107
+# i = 4, j = 4
+# 00000000
+# 135
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 106
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 107
+# i = 4, j = 5
+# 00000000
+# 135
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 106
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 107
+# i = 4, j = 6
+# 00000000
+# 135
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 106
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 107
+# i = 4, j = 7
+# 00000000
+# 135
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 106
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 107
+# i = 5, j = 0
+# 00000000
+# 135
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 106
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 107
+# i = 5, j = 1
+# 00000000
+# 135
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 106
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 107
+# i = 5, j = 2
+# 00000000
+# 135
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 106
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 107
+# i = 5, j = 3
+# 00000000
+# 135
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 106
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 107
+# i = 5, j = 4
+# 00000000
+# 135
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 106
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 107
+# i = 5, j = 5
+# 00000000
+# 135
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 106
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 107
+# i = 5, j = 6
+# 00000000
+# 135
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 106
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 107
+# i = 5, j = 7
+# 00000000
+# 135
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 106
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 107
+# i = 6, j = 0
+# 00000000
+# 135
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 106
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 107
+# i = 6, j = 1
+# 00000000
+# 135
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 106
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 107
+# i = 6, j = 2
+# 00000000
+# 135
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 106
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 107
+# i = 6, j = 3
+# 00000000
+# 135
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 106
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 107
+# i = 6, j = 4
+# 00000000
+# 135
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 106
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 107
+# i = 6, j = 5
+# 00000000
+# 135
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 106
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 107
+# i = 6, j = 6
+# 00000000
+# 135
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 106
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 107
+# i = 6, j = 7
+# 00000000
+# 135
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 106
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 107
+# i = 7, j = 0
+# xxxxxxxx
+# 135
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 106
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 107
+# i = 7, j = 1
+# xxxxxxxx
+# 135
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 106
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 107
+# i = 7, j = 2
+# xxxxxxxx
+# 135
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 106
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 107
+# i = 7, j = 3
+# xxxxxxxx
+# 135
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 106
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 107
+# i = 7, j = 4
+# xxxxxxxx
+# 135
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 106
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 107
+# i = 7, j = 5
+# xxxxxxxx
+# 135
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 106
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 107
+# i = 7, j = 6
+# xxxxxxxx
+# 135
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 106
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 107
+# i = 7, j = 7
+# xxxxxxxx
+# 135
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 106
+# ** Error: Assertion error.
+#    Time: 26100 ps  Scope: tb_Bock_PE_wrapper File: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv Line: 107
+# Test ends.
+# ** Note: $finish    : /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv(400)
+#    Time: 26100 ps  Iteration: 0  Instance: /tb_Bock_PE_wrapper
+# 1
+# Break in Module tb_Bock_PE_wrapper at /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv line 400
+# End time: 17:35:17 on Sep 03,2025, Elapsed time: 2:08:18
+# Errors: 128, Warnings: 3

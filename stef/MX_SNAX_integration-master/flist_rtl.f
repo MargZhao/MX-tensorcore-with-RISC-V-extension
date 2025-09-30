@@ -1,0 +1,10 @@
+ST_mul_EA.sv  
+L1.sv  
+L2_EA_no_latch.sv  
+mul_2bit.sv  
+MX_MAC_EA_BPE.sv  
+requantization_unit.sv  
+Block_PE.sv  
+Block_PE_wrapper.sv  
+snax_MX_tensor_core_shell_wrapper.sv  
+tb_Block_PE_wrapper.sv

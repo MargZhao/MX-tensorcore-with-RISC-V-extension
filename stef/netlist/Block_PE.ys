@@ -1,0 +1,9 @@
+read_verilog -sv -formal -overwrite {workspace}/MX_SNAX_integration-master/MX_MAC_EA_BPE.sv
+read_verilog -sv -formal -overwrite {workspace}/MX_SNAX_integration-master/ST_mul_EA.sv
+read_verilog -sv -formal -overwrite {workspace}/MX_SNAX_integration-master/mul_2bit.sv
+read_verilog -sv -formal -overwrite {workspace}/MX_SNAX_integration-master/L1.sv
+read_verilog -sv -formal -overwrite {workspace}/MX_SNAX_integration-master/L2_EA_no_latch.sv
+read_verilog -sv -formal -overwrite {workspace}/MX_SNAX_integration-master/requantization_unit.sv
+read_verilog -sv -formal -overwrite {workspace}/MX_SNAX_integration-master/Block_PE.sv
+design -reset-vlog; proc;
+write_json {workspace}/netlist/Block_PE.json

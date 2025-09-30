@@ -1,0 +1,124 @@
+/users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/src/L2_EA_no_latch.sv {1 {vlog -work work -vopt -sv -stats=none /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/src/L2_EA_no_latch.sv
+QuestaSim-64 vlog 2022.4 Compiler 2022.10 Oct 18 2022
+-- Compiling module L2_EA_no_latch
+-- Compiling module extend_v1_EA
+-- Compiling module high_exp_v1_EA
+-- Compiling module mant_add_v1_EA
+-- Compiling module exp_bias_v5_EA
+-- Compiling module accum_add_EA
+-- Compiling module normalize_v1_EA
+-- Compiling module normalize_v5_EA
+
+Top level modules:
+	L2_EA_no_latch
+	normalize_v5_EA
+
+} {} {}} /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/src/mul_2bit.sv {1 {vlog -work work -vopt -sv -stats=none /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/src/mul_2bit.sv
+QuestaSim-64 vlog 2022.4 Compiler 2022.10 Oct 18 2022
+-- Compiling module mul_2bit
+
+Top level modules:
+	mul_2bit
+
+} {} {}} /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/src/Block_PE.sv {2 {vlog -work work -vopt -sv -stats=none /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/src/Block_PE.sv
+QuestaSim-64 vlog 2022.4 Compiler 2022.10 Oct 18 2022
+-- Compiling module Block_PE
+** Warning: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/src/Block_PE.sv(9): (vlog-13314) Defaulting port 'a_mant0' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+** Warning: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/src/Block_PE.sv(10): (vlog-13314) Defaulting port 'a_mant1' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+** Warning: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/src/Block_PE.sv(11): (vlog-13314) Defaulting port 'a_mant2' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+** Warning: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/src/Block_PE.sv(12): (vlog-13314) Defaulting port 'a_mant3' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+** Warning: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/src/Block_PE.sv(13): (vlog-13314) Defaulting port 'b_mant0' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+** Warning: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/src/Block_PE.sv(14): (vlog-13314) Defaulting port 'b_mant1' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+** Warning: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/src/Block_PE.sv(15): (vlog-13314) Defaulting port 'b_mant2' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+** Warning: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/src/Block_PE.sv(16): (vlog-13314) Defaulting port 'b_mant3' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+** Warning: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/src/Block_PE.sv(17): (vlog-13314) Defaulting port 'a_exp_in0' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+** Warning: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/src/Block_PE.sv(18): (vlog-13314) Defaulting port 'a_exp_in1' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+** Warning: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/src/Block_PE.sv(19): (vlog-13314) Defaulting port 'a_exp_in2' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+** Warning: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/src/Block_PE.sv(20): (vlog-13314) Defaulting port 'a_exp_in3' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+** Warning: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/src/Block_PE.sv(21): (vlog-13314) Defaulting port 'b_exp_in0' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+** Warning: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/src/Block_PE.sv(22): (vlog-13314) Defaulting port 'b_exp_in1' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+** Warning: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/src/Block_PE.sv(23): (vlog-13314) Defaulting port 'b_exp_in2' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+** Warning: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/src/Block_PE.sv(24): (vlog-13314) Defaulting port 'b_exp_in3' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+** Warning: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/src/Block_PE.sv(25): (vlog-13314) Defaulting port 'a_sign_in0' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+** Warning: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/src/Block_PE.sv(26): (vlog-13314) Defaulting port 'a_sign_in1' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+** Warning: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/src/Block_PE.sv(27): (vlog-13314) Defaulting port 'a_sign_in2' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+** Warning: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/src/Block_PE.sv(28): (vlog-13314) Defaulting port 'a_sign_in3' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+** Warning: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/src/Block_PE.sv(29): (vlog-13314) Defaulting port 'b_sign_in0' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+** Warning: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/src/Block_PE.sv(30): (vlog-13314) Defaulting port 'b_sign_in1' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+** Warning: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/src/Block_PE.sv(31): (vlog-13314) Defaulting port 'b_sign_in2' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+** Warning: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/src/Block_PE.sv(32): (vlog-13314) Defaulting port 'b_sign_in3' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+
+Top level modules:
+	Block_PE
+
+} {} {}} /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/src/outer_wrapper.sv {2 {vlog -work work -vopt -sv -stats=none /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/src/outer_wrapper.sv
+QuestaSim-64 vlog 2022.4 Compiler 2022.10 Oct 18 2022
+-- Compiling module outer_wrapper
+** Warning: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/src/outer_wrapper.sv(19): (vlog-13314) Defaulting port 'A_INT8_in' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+** Warning: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/src/outer_wrapper.sv(21): (vlog-13314) Defaulting port 'B_INT8_in' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+** Warning: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/src/outer_wrapper.sv(24): (vlog-13314) Defaulting port 'A_FP8_in' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+** Warning: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/src/outer_wrapper.sv(26): (vlog-13314) Defaulting port 'B_FP8_in' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+** Warning: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/src/outer_wrapper.sv(29): (vlog-13314) Defaulting port 'A_FP6_in' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+** Warning: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/src/outer_wrapper.sv(30): (vlog-13314) Defaulting port 'B_FP6_in' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+** Warning: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/src/outer_wrapper.sv(33): (vlog-13314) Defaulting port 'A_FP4_in' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+** Warning: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/src/outer_wrapper.sv(34): (vlog-13314) Defaulting port 'B_FP4_in' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+
+Top level modules:
+	outer_wrapper
+
+} {} {}} /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/src/Block_PE_wrapper.sv {2 {vlog -work work -vopt -sv -stats=none /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/src/Block_PE_wrapper.sv
+QuestaSim-64 vlog 2022.4 Compiler 2022.10 Oct 18 2022
+-- Compiling module Block_PE_wrapper
+** Warning: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/src/Block_PE_wrapper.sv(25): (vlog-13314) Defaulting port 'A_INT8' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+** Warning: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/src/Block_PE_wrapper.sv(27): (vlog-13314) Defaulting port 'B_INT8' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+** Warning: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/src/Block_PE_wrapper.sv(30): (vlog-13314) Defaulting port 'A_FP8' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+** Warning: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/src/Block_PE_wrapper.sv(32): (vlog-13314) Defaulting port 'B_FP8' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+** Warning: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/src/Block_PE_wrapper.sv(35): (vlog-13314) Defaulting port 'A_FP6' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+** Warning: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/src/Block_PE_wrapper.sv(36): (vlog-13314) Defaulting port 'B_FP6' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+** Warning: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/src/Block_PE_wrapper.sv(39): (vlog-13314) Defaulting port 'A_FP4' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+** Warning: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/src/Block_PE_wrapper.sv(40): (vlog-13314) Defaulting port 'B_FP4' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+
+Top level modules:
+	Block_PE_wrapper
+
+} {} {}} /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv {1 {vlog -work work -vopt -sv -stats=none /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/tb/templates/tb_Block_PE_wrapper.sv
+QuestaSim-64 vlog 2022.4 Compiler 2022.10 Oct 18 2022
+-- Compiling module tb_Bock_PE_wrapper
+
+Top level modules:
+	tb_Bock_PE_wrapper
+
+} {} {}} /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/src/MX_MAC_EA_BPE.sv {1 {vlog -work work -vopt -sv -stats=none /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/src/MX_MAC_EA_BPE.sv
+QuestaSim-64 vlog 2022.4 Compiler 2022.10 Oct 18 2022
+-- Compiling module MX_MAC_EA_BPE
+-- Compiling module register
+
+Top level modules:
+	MX_MAC_EA_BPE
+
+} {} {}} /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/src/requantization_unit.sv {2 {vlog -work work -vopt -sv -stats=none /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/src/requantization_unit.sv
+QuestaSim-64 vlog 2022.4 Compiler 2022.10 Oct 18 2022
+-- Compiling module requantization_unit
+** Warning: /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/src/requantization_unit.sv(9): (vlog-13314) Defaulting port 'unq_block' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+
+Top level modules:
+	requantization_unit
+
+} {} {}} /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/src/ST_mul_EA.sv {1 {vlog -work work -vopt -sv -stats=none /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/src/ST_mul_EA.sv
+QuestaSim-64 vlog 2022.4 Compiler 2022.10 Oct 18 2022
+-- Compiling module ST_mul_EA
+-- Compiling module preprocessing
+-- Compiling module multiplication
+-- Compiling module lvl1_adders
+
+Top level modules:
+	ST_mul_EA
+
+} {} {}} /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/src/L1.sv {1 {vlog -work work -vopt -sv -stats=none /users/micas/scuycken/no_backup/Auto-Syn-3000/ASP-DAC-2026-V2/Final_FPX_EA/rtl/src/L1.sv
+QuestaSim-64 vlog 2022.4 Compiler 2022.10 Oct 18 2022
+-- Compiling module L1
+
+Top level modules:
+	L1
+
+} {} {}}
