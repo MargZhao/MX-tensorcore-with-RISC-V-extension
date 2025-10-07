@@ -8,7 +8,7 @@ module tb_e5m2_MULT;
   logic       inf, NaN;
 
   ////////////// Instantiate DUT //////////////
-  e5m2_MAC dut (
+  e5m2_MULT dut (
     .a_i(a_i),
     .b_i(b_i),
     .c_o(c_o),
@@ -61,9 +61,9 @@ module tb_e5m2_MULT;
 
     if (absval == 0.0)
       return {sign, 7'b0000000};
-    else if ($isinf(absval))
+    else if (absval > 1.0e30)
       return {sign, 7'b1111100};
-    else if ($isnan(absval))
+    else if (!(absval == absval))
       return {sign, 7'b1111101};
 
     exp = $clog2(absval);
