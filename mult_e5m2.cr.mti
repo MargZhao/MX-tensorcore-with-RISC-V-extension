@@ -1,0 +1,15 @@
+/users/students/r0926886/Master_thesis/MX-tensorcore-with-RISC-V-extension/e5m2_pe/e5m2_MULT.sv {1 {vlog -work work -vopt -sv -stats=none /users/students/r0926886/Master_thesis/MX-tensorcore-with-RISC-V-extension/e5m2_pe/e5m2_MULT.sv
+QuestaSim-64 vlog 2022.4 Compiler 2022.10 Oct 18 2022
+-- Compiling module e5m2_MULT
+
+Top level modules:
+	e5m2_MULT
+
+} {} {}} /users/students/r0926886/Master_thesis/MX-tensorcore-with-RISC-V-extension/e5m2_pe/tb_e5m2_MULT.sv {1 {vlog -work work -vopt -sv -stats=none /users/students/r0926886/Master_thesis/MX-tensorcore-with-RISC-V-extension/e5m2_pe/tb_e5m2_MULT.sv
+QuestaSim-64 vlog 2022.4 Compiler 2022.10 Oct 18 2022
+-- Compiling module tb_e5m2_MULT
+
+Top level modules:
+	tb_e5m2_MULT
+
+} {} {}}

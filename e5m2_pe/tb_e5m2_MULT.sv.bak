@@ -63,7 +63,7 @@ module tb_e5m2_MULT;
       return {sign, 7'b0000000};
     else if (absval>1e30)
       return {sign, 7'b1111100};
-    else if (absval!=absval)
+    else if (absval!=absval))
       return {sign, 7'b1111101};
 
     exp = int'($ln(absval) / $ln(2.0));

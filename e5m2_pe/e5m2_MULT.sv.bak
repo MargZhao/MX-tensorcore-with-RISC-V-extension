@@ -45,7 +45,7 @@ module e5m2_MULT #(
     logic a_sign;                 logic b_sign;              logic c_sign;
     logic [EXP_BITS-1:0]  a_exp;  logic [EXP_BITS-1:0]    b_exp;
     logic [MANT_BITS-1:0] a_man;  logic [MANT_BITS-1:0]   b_man;
-    logic [EXP_BITS:0]    c_exp;  logic [(MANT_BITS+1)*2-1:0] c_man;
+    logic [EXP_BITS*2-1:0]    c_exp;  logic [(MANT_BITS+1)*2-1:0] c_man;
     //////////////////////////////////Functions////////////////////////////////////////////////
     //get sign, mentissa, exp
     function automatic void unpack(

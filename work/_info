@@ -1,0 +1,90 @@
+m255
+K4
+z2
+Z0 !s99 nomlopt
+R0
+R0
+R0
+!s11f vlog 2022.4 2022.10, Oct 18 2022
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z1 d/users/students/r0926886
+T_opt
+!s110 1759960196
+VDmQBd[2o123UM@mXn=gV62
+04 9 4 work e5m2_MULT fast 0
+=1-000ae431a4f1-68e6dc83-bad89-30ca
+R0
+Z2 !s12b OEM100
+Z3 !s124 OEM100
+o-quiet -auto_acc_if_foreign -work work
+Z4 tCvgOpt 0
+n@_opt
+Z5 OL;O;2022.4;75
+R1
+T_opt1
+!s110 1760018007
+V4F>06DlU51IiGXaOVY5[W1
+04 12 4 work tb_e5m2_MULT fast 0
+=1-000ae431a4f1-68e7be56-11859-910c
+R0
+R2
+R3
+o-quiet -auto_acc_if_foreign -work work +acc
+R4
+n@_opt1
+R5
+ve5m2_MULT
+Z6 DXx6 sv_std 3 std 0 22 9oUSJO;AeEaW`l:M@^WG92
+!s110 1760017975
+!i10b 1
+!s100 Xn>ZTTenG_Af?iW_UL23;3
+IB:=XZ_c1:F;:N<Gzl_J9H2
+S1
+Z7 d/users/students/r0926886/Master_thesis/MX-tensorcore-with-RISC-V-extension
+w1760017702
+8/users/students/r0926886/Master_thesis/MX-tensorcore-with-RISC-V-extension/e5m2_pe/e5m2_MULT.sv
+F/users/students/r0926886/Master_thesis/MX-tensorcore-with-RISC-V-extension/e5m2_pe/e5m2_MULT.sv
+!i122 5
+L0 13 152
+Z8 VDg1SIo80bB@j0V0VzS_@n1
+Z9 OL;L;2022.4;75
+r1
+!s85 0
+31
+!s108 1760017975.000000
+!s107 /users/students/r0926886/Master_thesis/MX-tensorcore-with-RISC-V-extension/e5m2_pe/e5m2_MULT.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|/users/students/r0926886/Master_thesis/MX-tensorcore-with-RISC-V-extension/e5m2_pe/e5m2_MULT.sv|
+!i113 0
+Z10 o-work work -sv -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R4
+ne5m2_@m@u@l@t
+vtb_e5m2_MULT
+R6
+!s110 1760017983
+!i10b 1
+!s100 J^1XJJGUciFCMEH_QGkmY0
+IUImSH0HY5Y9LgXzoj^4Mg0
+S1
+R7
+w1759960830
+8/users/students/r0926886/Master_thesis/MX-tensorcore-with-RISC-V-extension/e5m2_pe/tb_e5m2_MULT.sv
+F/users/students/r0926886/Master_thesis/MX-tensorcore-with-RISC-V-extension/e5m2_pe/tb_e5m2_MULT.sv
+!i122 6
+L0 3 141
+R8
+R9
+r1
+!s85 0
+31
+!s108 1760017983.000000
+!s107 /users/students/r0926886/Master_thesis/MX-tensorcore-with-RISC-V-extension/e5m2_pe/tb_e5m2_MULT.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|/users/students/r0926886/Master_thesis/MX-tensorcore-with-RISC-V-extension/e5m2_pe/tb_e5m2_MULT.sv|
+!i113 0
+R10
+R4
+ntb_e5m2_@m@u@l@t
