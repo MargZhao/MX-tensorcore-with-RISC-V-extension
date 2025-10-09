@@ -28,10 +28,10 @@ module e5m2_MULT #(
     input  logic [7:0]           b_i,
     output logic [7:0]           c_o,
     output logic                 inf,
-    output logic                 NaN 
+    output logic                 NaN,
+    output logic                 underflow
     //store intermediate in E6M4
     //output of MAC should be fp16 or fp32, TODO: verify this, should we convert it back in FP8 again?
-
 );
 
     //////////////////////////////////parameters//////////////////////////////////////////////
@@ -45,7 +45,7 @@ module e5m2_MULT #(
     logic a_sign;                 logic b_sign;              logic c_sign;
     logic [EXP_BITS-1:0]  a_exp;  logic [EXP_BITS-1:0]    b_exp;
     logic [MANT_BITS-1:0] a_man;  logic [MANT_BITS-1:0]   b_man;
-    logic [EXP_BITS*2-1:0]    c_exp;  logic [(MANT_BITS+1)*2-1:0] c_man;
+    logic [EXP_BITS:0]    c_exp;  logic [(MANT_BITS+1)*2-1:0] c_man;
     //////////////////////////////////Functions////////////////////////////////////////////////
     //get sign, mentissa, exp
     function automatic void unpack(
@@ -80,7 +80,7 @@ module e5m2_MULT #(
             //NaN prod anything is NaN
             c_exp = 6'b011111;
             c_man = 4'b0100;
-            c_sign = 0;
+            c_sign = a_sign^b_sign;
             NaN = 1;
             inf = 0;
         end else if((a_exp==EXP_MAX&&a_man==0)||(b_exp==EXP_MAX&&b_man==0)) begin
@@ -89,16 +89,18 @@ module e5m2_MULT #(
                 //when one inf one zero, set as NaN
                 c_exp = 6'b011111;
                 c_man = 4'b0100;
-                c_sign = 0;
+                c_sign = a_sign^b_sign;
                 NaN = 1;
                 inf = 0;
+                underflow = 0;
             end else begin
                 //otherwise also inf
                 c_exp = 6'b011111;
                 c_man = 0;
-                c_sign = 0;
+                c_sign = a_sign^b_sign;
                 NaN = 0;
                 inf = 1;
+                underflow = 0;
             end
         end else if ((a_exp==0&&a_man==0)||(b_exp==0&&b_man==0)) begin
             //zero
@@ -106,41 +108,69 @@ module e5m2_MULT #(
                 //when one inf one zero, set as NaN
                 c_exp = 6'b011111;
                 c_man = 4'b0100;
-                c_sign = 0;
+                c_sign = a_sign^b_sign;
                 NaN = 1;
                 inf = 0;
+                underflow = 0;
             end else begin
                 c_exp = 0;
                 c_man = 0;
-                c_sign = 0;
+                c_sign = a_sign^b_sign;
                 NaN = 0;
                 inf = 0;
+                underflow = 0;
             end    
         end else begin
             c_sign = a_sign^b_sign;
             NaN = 0;
-            inf = c_exp[EXP_BITS];
             if (a_exp==0&&b_exp==0) begin   
                 //subnormal*subnormal
-                c_exp = a_exp + b_exp-EXP_BIAS+2;
-                c_man = {1'b0,a_man}*{1'b0,b_man};
+                //TODO: underflow case
+                underflow = ({1'b0, a_exp} + {1'b0, b_exp} < EXP_BIAS) ? 1 : 0;
+                if(underflow)begin
+                    c_exp = 0;
+                    c_man = 0;
+                end else begin
+                    c_man = {1'b0,a_man}*{1'b0,b_man};
+                    c_exp = a_exp + b_exp-EXP_BIAS+2;
+                end
             end else if (a_exp==0&&b_exp!=0) begin
                 //subnormal*normal
-                c_exp = a_exp + b_exp-EXP_BIAS+1;
-                c_man = {1'b0,a_man}*{1'b1,b_man};
+                underflow = ({1'b0, a_exp} + {1'b0, b_exp} < EXP_BIAS) ? 1 : 0;
+                if(underflow)begin
+                    c_exp = 0;
+                    c_man = 0;
+                end else begin
+                    c_man = {1'b0,a_man}*{1'b1,b_man};
+                    c_exp = a_exp + b_exp-EXP_BIAS+1;
+                end
             end else if (a_exp!=0&&b_exp==0) begin
                 //normal*subnormal
-                c_exp = a_exp + b_exp-EXP_BIAS+1;
-                c_man = {1'b1,a_man}*{1'b0,b_man};
+                underflow = ({1'b0, a_exp} + {1'b0, b_exp} < EXP_BIAS) ? 1 : 0;
+                if(underflow)begin
+                    c_exp = 0;
+                    c_man = 0;
+                end else begin
+                    c_man = {1'b1,a_man}*{1'b0,b_man};
+                    c_exp = a_exp + b_exp-EXP_BIAS+1;
+                end
             end else begin
                 //normal*normal
+                underflow = ({1'b0, a_exp} + {1'b0, b_exp} < EXP_BIAS) ? 1 : 0;
                 c_exp = a_exp + b_exp-EXP_BIAS;
+                inf = c_exp[EXP_BITS];
                 if (inf) begin
                     //TODO: overflow case
                     c_exp = 6'b011111;
                     c_man = 0;
+                end else if(underflow) begin
+                    c_exp = 0;
+                    c_man = 0;
+                    underflow = 1;
                 end else begin
                     c_man = {1'b1,a_man}*{1'b1,b_man};
+                    
+                    //normalize
                     if(c_man[(MANT_BITS+1)*2-1])begin
                         c_exp = c_exp+1;
                         c_man = c_man>>1;
@@ -150,7 +180,7 @@ module e5m2_MULT #(
             
         end   
     end
-    assign c_o = {c_sign,c_exp[EXP_BITS-1:0],c_man[MANT_BITS*2-1 -:MANT_BITS-1]};
+    assign c_o = {c_sign,c_exp[EXP_BITS-1:0],c_man[MANT_BITS*2-1:MANT_BITS]};
     
 
     

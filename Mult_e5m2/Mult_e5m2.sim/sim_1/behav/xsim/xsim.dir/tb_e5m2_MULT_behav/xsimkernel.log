@@ -1,0 +1,7 @@
+Running: xsim.dir/tb_e5m2_MULT_behav/xsimk.exe -simmode gui -wdb tb_e5m2_MULT_behav.wdb -simrunnum 0 -socket 51309
+Design successfully loaded
+Design Loading Memory Usage: 29912 KB (Peak: 29912 KB)
+Design Loading CPU Usage: 671 ms
+Simulation completed
+Simulation Memory Usage: 31472 KB (Peak: 31472 KB)
+Simulation CPU Usage: 734 ms

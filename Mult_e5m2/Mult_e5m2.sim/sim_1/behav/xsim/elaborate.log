@@ -1,7 +1,7 @@
-Vivado Simulator v2023.1
+Vivado Simulator v2024.2.0
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
-Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
-Running: D:/Software/vitisandvivado/Vivado/2023.1/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L uvm -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_e5m2_MULT_behav xil_defaultlib.tb_e5m2_MULT xil_defaultlib.glbl -log elaborate.log 
+Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+Running: D:/Software/vivado/Vivado/2024.2/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L uvm -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_e5m2_MULT_behav xil_defaultlib.tb_e5m2_MULT xil_defaultlib.glbl -log elaborate.log 
 Using 2 slave threads.
 Starting static elaboration
 Pass Through NonSizing Optimizer
@@ -12,3 +12,4 @@ Time Resolution for simulation is 1ps
 Compiling module xil_defaultlib.e5m2_MULT_default
 Compiling module xil_defaultlib.tb_e5m2_MULT
 Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_e5m2_MULT_behav

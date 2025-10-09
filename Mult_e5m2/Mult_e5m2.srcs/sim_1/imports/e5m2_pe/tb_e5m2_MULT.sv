@@ -5,7 +5,7 @@ module tb_e5m2_MULT;
   ////////////// DUT I/O //////////////
   logic [7:0] a_i, b_i;
   logic [7:0] c_o;
-  logic       inf, NaN;
+  logic       inf, NaN, underflow;
 
   ////////////// Instantiate DUT //////////////
   e5m2_MULT dut (
@@ -13,7 +13,8 @@ module tb_e5m2_MULT;
     .b_i(b_i),
     .c_o(c_o),
     .inf(inf),
-    .NaN(NaN)
+    .NaN(NaN),
+    .underflow(underflow)
   );
 
   ////////////// Local parameters for decoding //////////////
@@ -61,12 +62,13 @@ module tb_e5m2_MULT;
 
     if (absval == 0.0)
       return {sign, 7'b0000000};
-    else if (absval > 1.0e30)
+    else if (absval>1e30)
       return {sign, 7'b1111100};
-    else if (!(absval == absval))
+    else if (absval!=absval)
       return {sign, 7'b1111101};
 
-    exp = $clog2(absval);
+    exp = int'($ln(absval) / $ln(2.0));
+
 
     if (exp + 15 >= 31)
       return {sign, 7'b1111100}; // inf
@@ -99,9 +101,9 @@ endfunction
       dut_real = e5m2_to_real(c_o);
 
       $display("\n----------------------------------------");
-      $display("A = 0x%h (%f),  B = 0x%h (%f)", a, a_real, b, b_real);
-      $display("Expected (SW): 0x%h  (%e)", expect_e5m2, expect_real);
-      $display("DUT Output  : 0x%h  (%e)", c_o, dut_real);
+      $display("A = 0b%b (%f),  B = 0b%b (%f)", a, a_real, b, b_real);
+      $display("Expected (SW): 0b%b  (%e)", expect_e5m2, expect_real);
+      $display("DUT Output  : 0b%b  (%e)", c_o, dut_real);
       if (NaN) $display("DUT flag: NaN");
       if (inf) $display("DUT flag: Inf");
       $display("----------------------------------------\n");
@@ -120,7 +122,7 @@ endfunction
     // (2) Inf & NaN
     check(8'b01111100, 8'b01111100);  // +inf * +inf
     check(8'b11111100, 8'b01111100);  // -inf * +inf
-    check(8'b01111100, 8'b00000000);  // inf * 0 → NaN
+    check(8'b01111100, 8'b00000000);  // inf * 0 NaN
     check(8'b01111101, 8'b00000000);  // NaN * 0
 
     // (3) Normal * Normal
@@ -134,7 +136,8 @@ endfunction
     // (5) Random Signs
     check(8'b10100000, 8'b00100000);  // -normal * +normal
     check(8'b10100000, 8'b10100000);  // -normal * -normal
-
+    check(8'b01000000, 8'b01000000);  // 
+    check(8'b01010011, 8'b01001100);
     $display("------ E5M2 Multiplier Testbench End ------");
     $finish;
   end
