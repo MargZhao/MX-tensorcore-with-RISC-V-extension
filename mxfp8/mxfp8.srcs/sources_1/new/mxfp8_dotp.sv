@@ -65,7 +65,7 @@ module mxfp8_dotp#(
         .NumOperands 	(VectorSize     ),
         .MX          	(1     ))
     u_mxfp8_classifier_a(
-        .operands_i 	(operands_i  ),
+        .operands_i 	(operands_a_i  ),
         .info_o     	(info_a      )
     );
     //oprand B
@@ -74,7 +74,7 @@ module mxfp8_dotp#(
         .NumOperands 	(VectorSize     ),
         .MX          	(1     ))
     u_mxfp8_classifier_b(
-        .operands_i 	(operands_i  ),
+        .operands_i 	(operands_b_i  ),
         .info_o     	(info_b      )
     );
 
@@ -103,11 +103,11 @@ module mxfp8_dotp#(
             a_sign_i[i] = operands_a_i[i][SRC_WIDTH-1];
             b_sign_i[i] = operands_b_i[i][SRC_WIDTH-1];
 
-            a_exp_i[i] = {{signed'(SUPER_SRC_EXP_WIDTH-exp_bits){1'b0}}, operands_a_i[i][SRC_WIDTH-2 -: exp_bits]};
-            b_exp_i[i] = {{signed'(SUPER_SRC_EXP_WIDTH-exp_bits){1'b0}}, operands_b_i[i][SRC_WIDTH-2 -: exp_bits]};
+            a_exp_i[i] = {{(SUPER_SRC_EXP_WIDTH-exp_bits){1'b0}}, operands_a_i[i][SRC_WIDTH-2 -: exp_bits]};
+            b_exp_i[i] = {{(SUPER_SRC_EXP_WIDTH-exp_bits){1'b0}}, operands_b_i[i][SRC_WIDTH-2 -: exp_bits]};
             
-            a_man_i[i]  = operands_a_i[i][man_bits-1:0]<< signed'(SUPER_SRC_MAN_WIDTH-man_bits); //align mant to the LSB
-            b_man_i[i]  = operands_b_i[i][man_bits-1:0]<< signed'(SUPER_SRC_MAN_WIDTH-man_bits);
+            a_man_i[i]  = operands_a_i[i][man_bits-1:0]<< (SUPER_SRC_MAN_WIDTH-man_bits); //align mant to the LSB
+            b_man_i[i]  = operands_b_i[i][man_bits-1:0]<< (SUPER_SRC_MAN_WIDTH-man_bits);
             
             a_isnormal[i] = info_a[i].is_normal;
             b_isnormal[i] = info_b[i].is_normal;
@@ -145,8 +145,8 @@ module mxfp8_dotp#(
     end
 
     //scaling addition
-    logic [SCALE_WIDTH:0] scale_add;
+    signed logic [SCALE_WIDTH:0] scale_add;
     always_comb begin
-        scale_add = scale_i[0] + scale_i[1]-signed'(127); //change 127 with bias according to src_fmt_i
+        scale_add = signed'(scale_i[0]-127) + signed'(scale_i[1]-127); //change 127 with bias according to src_fmt_i
     end
 endmodule
