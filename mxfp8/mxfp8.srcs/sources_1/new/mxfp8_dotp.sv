@@ -51,7 +51,7 @@ module mxfp8_dotp#(
     localparam int unsigned SUPER_SRC_EXP_WIDTH = 5,
     localparam int unsigned PROD_MAN_WIDTH = 8, //change this with package
     localparam int unsigned PROD_EXP_WIDTH = 6, //change this with package
-    localparam int unsigned PROD_WIDTH = DST_MAN_WIDTH + DST_EXP_WIDTH,
+    localparam int unsigned PROD_WIDTH = PROD_MAN_WIDTH + PROD_EXP_WIDTH+1,
 
     ////////////type definition//////////
 
@@ -119,6 +119,7 @@ module mxfp8_dotp#(
     logic [PROD_MAN_WIDTH-1:0][VectorSize-1:0]  man_prod;
     logic signed [PROD_EXP_WIDTH-1:0][VectorSize-1:0] exp_sum;
     logic        [VectorSize-1:0]sign_prod;   
+    logic        [PROD_WIDTH-1:0][VectorSize-1:0] interm_result; //intermediate result before rounding and packing
     mxfp8_mult #(
         .VectorSize       (VectorSize),
         .PROD_MAN_WIDTH   (PROD_MAN_WIDTH),
@@ -137,6 +138,11 @@ module mxfp8_dotp#(
         .exp_sum        (exp_sum),
         .sign_prod       (sgn_prod)
     );
+    always_comb begin: interm_result
+        for (int i = 0; i < VectorSize; i++) begin
+            interm_result[i] = {sign_prod[i], exp_sum[i], man_prod[i]}; 
+        end
+    end
 
     //scaling addition
     logic [SCALE_WIDTH:0] scale_add;
