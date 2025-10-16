@@ -38,7 +38,7 @@ module mxfp8_mult#(
     input  mxfp8_pkg::fp_format_e                                 src_fmt_i,
     output logic [PROD_MAN_WIDTH-1:0][VectorSize-1:0]  man_prod ,
     output logic signed [PROD_EXP_WIDTH-1:0][VectorSize-1:0] exp_sum ,
-    output logic        [VectorSize-1:0]sgn_prod    
+    output logic        [VectorSize-1:0]sign_prod    
 );
     logic [4:0] bias;
     always_comb begin: bias

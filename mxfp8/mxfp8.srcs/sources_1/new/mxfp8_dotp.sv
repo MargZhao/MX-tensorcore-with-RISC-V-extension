@@ -78,13 +78,15 @@ module mxfp8_dotp#(
         .info_o     	(info_b      )
     );
 
+    //handle special cases
+
     //denote bitwidth of mant and exponent according to src_fmt_i
-    // logic [1:0] mant_bits;
-    // logic [2:0] exp_bits;
-    // always_comb begin
-    // exp_bits = mxfp8_pkg::FP_ENCODINGS[src_fmt_i].exp_bits;
-    // man_bits = mxfp8_pkg::FP_ENCODINGS[src_fmt_i].man_bits;           
-    // end
+    logic [1:0] mant_bits;
+    logic [2:0] exp_bits;
+    always_comb begin
+    exp_bits = mxfp8_pkg::FP_ENCODINGS[src_fmt_i].exp_bits;
+    man_bits = mxfp8_pkg::FP_ENCODINGS[src_fmt_i].man_bits;           
+    end
 
     //unpack input operands
     logic [VectorSize-1:0][SUPER_SRC_MAN_WIDTH-1:0] a_man_i;
@@ -110,5 +112,35 @@ module mxfp8_dotp#(
             a_isnormal[i] = info_a[i].is_normal;
             b_isnormal[i] = info_b[i].is_normal;
         end
+    end
+
+    //mantissa multiplication, exponent addition and sign calculation
+    
+    logic [PROD_MAN_WIDTH-1:0][VectorSize-1:0]  man_prod;
+    logic signed [PROD_EXP_WIDTH-1:0][VectorSize-1:0] exp_sum;
+    logic        [VectorSize-1:0]sign_prod;   
+    mxfp8_mult #(
+        .VectorSize       (VectorSize),
+        .PROD_MAN_WIDTH   (PROD_MAN_WIDTH),
+        .PROD_EXP_WIDTH   (PROD_EXP_WIDTH)
+    ) u_mxfp8_mult (
+        .A_mant         (a_man_i), 
+        .B_mant         (b_man_i),
+        .A_exp          (a_exp_i),
+        .B_exp          (b_exp_i),
+        .A_sign         (a_sign_i),
+        .B_sign         (b_sign_i),
+        .A_isnormal    (a_isnormal),
+        .B_isnormal    (b_isnormal), 
+        .src_fmt_i      (src_fmt_i),
+        .man_prod       (man_prod),
+        .exp_sum        (exp_sum),
+        .sign_prod       (sgn_prod)
+    );
+
+    //scaling addition
+    logic [SCALE_WIDTH:0] scale_add;
+    always_comb begin
+        scale_add = scale_i[0] + scale_i[1]-signed'(127); //change 127 with bias according to src_fmt_i
     end
 endmodule
