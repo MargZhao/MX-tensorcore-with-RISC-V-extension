@@ -1,0 +1,8 @@
+read_verilog -sv -formal -overwrite {workspace}/stef/rtl_version_of_paper/rtl/src/ST_mul.sv
+read_verilog -sv -formal -overwrite {workspace}/stef/MX_SNAX_integration-master/mul_2bit.sv
+read_verilog -sv -formal -overwrite {workspace}/stef/rtl_version_of_paper/rtl/src/inside_add1.sv
+read_verilog -sv -formal -overwrite {workspace}/stef/rtl_version_of_paper/rtl/src/inside_add2_v1_h.sv
+read_verilog -sv -formal -overwrite {workspace}/stef/rtl_version_of_paper/rtl/src/FP_Add.sv
+read_verilog -sv -formal -overwrite {workspace}/stef/rtl_version_of_paper/rtl/src/MX_MAC.sv
+design -reset-vlog; proc;
+write_json {workspace}/netlist/MX_MAC.json

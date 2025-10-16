@@ -15,7 +15,7 @@ module FP_Add #(
 
 
 
-  logic signed [8:0] exp_diff, exp_diff_;
+  logic signed [8:0] exp_diff, exp_diff_;//signed 用于比较大小
   logic [8:0] shift_left;
   assign exp_diff = accum_exp-input_exp;
 
