@@ -65,7 +65,7 @@ module mxfp8_dotp#(
         .NumOperands 	(VectorSize     ),
         .MX          	(1     ))
     u_mxfp8_classifier_a(
-        .operands_i 	(operands_i  ),
+        .operands_i 	(operands_a_i  ),
         .info_o     	(info_a      )
     );
     //oprand B
@@ -74,15 +74,15 @@ module mxfp8_dotp#(
         .NumOperands 	(VectorSize     ),
         .MX          	(1     ))
     u_mxfp8_classifier_b(
-        .operands_i 	(operands_i  ),
+        .operands_i 	(operands_b_i  ),
         .info_o     	(info_b      )
     );
 
     //handle special cases
 
     //denote bitwidth of mant and exponent according to src_fmt_i
-    logic [1:0] mant_bits;
-    logic [2:0] exp_bits;
+    logic unsigned[1:0] mant_bits;
+    logic unsigned[2:0] exp_bits;
     always_comb begin
     exp_bits = mxfp8_pkg::FP_ENCODINGS[src_fmt_i].exp_bits;
     man_bits = mxfp8_pkg::FP_ENCODINGS[src_fmt_i].man_bits;           
@@ -147,6 +147,6 @@ module mxfp8_dotp#(
     //scaling addition
     logic [SCALE_WIDTH:0] scale_add;
     always_comb begin
-        scale_add = scale_i[0] + scale_i[1]-signed'(127); //change 127 with bias according to src_fmt_i
+        scale_add = signed'(scale_i[0]-127) + signed'(scale_i[1]-127); //change 127 with bias according to src_fmt_i
     end
 endmodule
