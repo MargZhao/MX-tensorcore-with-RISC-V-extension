@@ -47,12 +47,12 @@ module mxfp8_dotp#(
 
     ////////////cosntants//////////
     //E5M2 and E4M3, max man_prod is 8 bits, max exp_sum is log_2(31)= 6 bits
-    localparam int unsigned SUPER_SRC_MAN_WIDTH = 3,
-    localparam int unsigned SUPER_SRC_EXP_WIDTH = 5,
-    localparam int unsigned PROD_MAN_WIDTH = 8, //change this with package
-    localparam int unsigned PROD_EXP_WIDTH = 6, //change this with package
-    localparam int unsigned PROD_WIDTH = PROD_MAN_WIDTH + PROD_EXP_WIDTH+1,
-
+    localparam int unsigned SUPER_SRC_MAN_WIDTH = 3;
+    localparam int unsigned SUPER_SRC_EXP_WIDTH = 5;
+    localparam int unsigned PROD_MAN_WIDTH = 16;//3m+4
+    localparam int unsigned PROD_EXP_WIDTH = 6;//change this with package
+    localparam int unsigned PROD_WIDTH = PROD_MAN_WIDTH + PROD_EXP_WIDTH+1;
+    localparam int unsigned LEADING_ZERO_WIDTH = $clog2(PROD_MAN_WIDTH); //change this later
     ////////////type definition//////////
 
     ///////////logics//////////
@@ -149,4 +149,47 @@ module mxfp8_dotp#(
     always_comb begin
         scale_add = signed'(scale_i[0]-127) + signed'(scale_i[1]-127); //change 127 with bias according to src_fmt_i
     end
+
+    //normalization
+    logic [PROD_MAN_WIDTH-1:0]     norm_mant;
+    logic [PROD_EXP_WIDTH-1:0]     norm_exp;
+    logic [LEADING_ZERO_WIDTH-1:0] lz_count=0;
+    logic                          is_zero_prod=0;//indicate if the product is zero, no 1 is found
+    always_comb begin: count leading zeros
+        for (int i = 0;i<PROD_MAN_WIDTH ;i++ ) begin
+            if (man_prod[PROD_EXP_WIDTH-i]) begin
+                lz_count = i;
+                is_zero_prod = 0;
+                break;
+            end
+            else begin
+                is_zero_prod = 1;
+            end
+        end
+    end
+
+    always_comb begin: shifting
+        casez (leading_zeros)
+            '0: begin
+                norm_mant = man_prod >> 1;
+                norm_exp  = exp_sum + 1;
+            end
+            '1: begin  
+                norm_mant = man_prod;
+                norm_exp  = exp_sum;
+            end
+            default: begin
+                if (exp_sum < (leading_zeros-1)) begin
+                    //here underflow to zero
+                    norm_mant = 0;
+                    norm_exp  = '0;
+                end
+                else begin
+                    norm_mant = man_prod << (leading_zeros-1);
+                    norm_exp  = exp_sum - (leading_zeros-1);
+                end
+            end
+        endcase   
+    end
+    //acumulation with scaling
 endmodule

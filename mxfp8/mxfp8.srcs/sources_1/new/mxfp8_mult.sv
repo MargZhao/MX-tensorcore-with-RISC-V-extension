@@ -53,7 +53,7 @@ module mxfp8_mult#(
     always_comb begin
         for (int i = 0; i < VectorSize; i++) begin
             man_prod[i] = {A_isnormal,A_mant[i]} * {B_isnormal,B_mant[i]} ; //mant multiplication
-            exp_sum[i]  = signed'(A_exp[i]-bias) + signed'(B_exp[i] -bias)+ (!A_isnormal)+(!B_isnormal); //bias addition
+            exp_sum[i]  = signed'(A_exp[i]-bias) + B_exp[i]+ (!A_isnormal)+(!B_isnormal); //bias addition
             sign_prod[i] = A_sign ^ B_sign;
         end
     end
