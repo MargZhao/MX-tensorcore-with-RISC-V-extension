@@ -103,8 +103,8 @@ module mxfp8_dotp#(
             a_sign_i[i] = operands_a_i[i][SRC_WIDTH-1];
             b_sign_i[i] = operands_b_i[i][SRC_WIDTH-1];
 
-            a_exp_i[i] = {{(SUPER_SRC_EXP_WIDTH-exp_bits){1'b0}}, operands_a_i[i][SRC_WIDTH-2 -: exp_bits]};
-            b_exp_i[i] = {{(SUPER_SRC_EXP_WIDTH-exp_bits){1'b0}}, operands_b_i[i][SRC_WIDTH-2 -: exp_bits]};
+            a_exp_i[i] = {{signed'(SUPER_SRC_EXP_WIDTH-exp_bits){1'b0}}, operands_a_i[i][SRC_WIDTH-2 -: exp_bits]};
+            b_exp_i[i] = {{signed'(SUPER_SRC_EXP_WIDTH-exp_bits){1'b0}}, operands_b_i[i][SRC_WIDTH-2 -: exp_bits]};
             
             a_man_i[i]  = operands_a_i[i][man_bits-1:0]<< (SUPER_SRC_MAN_WIDTH-man_bits); //align mant to the LSB
             b_man_i[i]  = operands_b_i[i][man_bits-1:0]<< (SUPER_SRC_MAN_WIDTH-man_bits);
@@ -145,7 +145,7 @@ module mxfp8_dotp#(
     end
 
     //scaling addition
-    signed logic [SCALE_WIDTH:0] scale_add;
+    logic signed [SCALE_WIDTH:0] scale_add;
     always_comb begin
         scale_add = signed'(scale_i[0]-127) + signed'(scale_i[1]-127); //change 127 with bias according to src_fmt_i
     end
