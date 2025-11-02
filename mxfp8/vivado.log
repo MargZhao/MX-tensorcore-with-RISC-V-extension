@@ -3,12 +3,12 @@
 # SW Build 6140274 on Thu May 22 00:12:29 MDT 2025
 # IP Build 6138677 on Thu May 22 03:10:11 MDT 2025
 # SharedData Build 6139179 on Tue May 20 17:58:58 MDT 2025
-# Start of session at: Tue Oct 28 00:18:24 2025
-# Process ID         : 18704
-# Current directory  : C:/Users/Lenovo/OneDrive - KU Leuven/AAA_ESAT/master thesis/Marg/MX-tensorcore-with-RISC-V-extension/mxfp8
-# Command line       : vivado.exe -gui_launcher_event rodinguilauncherevent17640 C:\Users\Lenovo\OneDrive - KU Leuven\AAA_ESAT\master thesis\Marg\MX-tensorcore-with-RISC-V-extension\mxfp8\mxfp8.xpr
-# Log file           : C:/Users/Lenovo/OneDrive - KU Leuven/AAA_ESAT/master thesis/Marg/MX-tensorcore-with-RISC-V-extension/mxfp8/vivado.log
-# Journal file       : C:/Users/Lenovo/OneDrive - KU Leuven/AAA_ESAT/master thesis/Marg/MX-tensorcore-with-RISC-V-extension/mxfp8\vivado.jou
+# Start of session at: Fri Oct 31 00:16:15 2025
+# Process ID         : 17940
+# Current directory  : C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8
+# Command line       : vivado.exe -gui_launcher_event rodinguilauncherevent21624 C:\master_thesis\MX-tensorcore-with-RISC-V-extension\mxfp8\mxfp8.xpr
+# Log file           : C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/vivado.log
+# Journal file       : C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8\vivado.jou
 # Running On         : DESKTOP-A60D5EN
 # Platform           : Windows Server 2016 or Windows 10
 # Operating System   : 22631
@@ -17,14 +17,12 @@
 # CPU Physical cores : 4
 # CPU Logical cores  : 8
 # Host memory        : 34095 MB
-# Swap memory        : 2147 MB
-# Total Virtual      : 36242 MB
-# Available Virtual  : 21432 MB
+# Swap memory        : 2765 MB
+# Total Virtual      : 36861 MB
+# Available Virtual  : 13335 MB
 #-----------------------------------------------------------
 start_gui
-open_project {C:/Users/Lenovo/OneDrive - KU Leuven/AAA_ESAT/master thesis/Marg/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.xpr}
-INFO: [ProjectBase 1-489] The host OS only allows 260 characters in a normal path. The project is stored in a path with more than 80 characters. If you experience issues with IP, Block Designs, or files not being found, please consider moving the project to a location with a shorter path. Alternately consider using the OS subst command to map part of the path to a drive letter.
-Current project path is 'C:/Users/Lenovo/OneDrive - KU Leuven/AAA_ESAT/master thesis/Marg/MX-tensorcore-with-RISC-V-extension/mxfp8'
+open_project C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.xpr
 WARNING: [Board 49-26] cannot add Board Part xilinx.com:emb-plus-vpr-4616:part0:1.0 available at C:/Xilinx/2025.1/data/xhub/boards\XilinxBoardStore\boards\Xilinx\emb-plus-vpr-4616\1.0\board.xml as part xcve2302-sfva784-2mp-e-s specified in board_part file is either invalid or not available
 WARNING: [Board 49-26] cannot add Board Part xilinx.com:emb-plus-vpr-4616:part0:1.1 available at C:/Xilinx/2025.1/data/xhub/boards\XilinxBoardStore\boards\Xilinx\emb-plus-vpr-4616\1.1\board.xml as part xcve2302-sfva784-2mp-e-s specified in board_part file is either invalid or not available
 WARNING: [Board 49-26] cannot add Board Part xilinx.com:k24c:part0:1.0 available at C:/Xilinx/2025.1/data/xhub/boards\XilinxBoardStore\boards\Xilinx\k24c\1.0\board.xml as part xck24-ubva530-2lv-c specified in board_part file is either invalid or not available
@@ -82,6 +80,7 @@ WARNING: [Board 49-26] cannot add Board Part xilinx.com:vmk180:part0:2.2 availab
 WARNING: [Board 49-26] cannot add Board Part xilinx.com:vmk180:part0:3.0 available at C:/Xilinx/2025.1/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vmk180\production\3.0\board.xml as part xcvm1802-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
 WARNING: [Board 49-26] cannot add Board Part xilinx.com:vmk180:part0:3.1 available at C:/Xilinx/2025.1/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vmk180\production\3.1\board.xml as part xcvm1802-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
 WARNING: [Board 49-26] cannot add Board Part xilinx.com:vmk180:part0:3.2 available at C:/Xilinx/2025.1/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vmk180\production\3.2\board.xml as part xcvm1802-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+INFO: [Project 1-313] Project file moved from 'C:/Users/Lenovo/OneDrive - KU Leuven/AAA_ESAT/master thesis/Marg/MX-tensorcore-with-RISC-V-extension/mxfp8' since last save.
 WARNING: [Board 49-26] cannot add Board Part xilinx.com:vmk180:part0:3.3 available at C:/Xilinx/2025.1/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vmk180\production\3.3\board.xml as part xcvm1802-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
 WARNING: [Board 49-26] cannot add Board Part xilinx.com:vmk180_newl:part0:1.0 available at C:/Xilinx/2025.1/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vmk180_newl\production\1.0\board.xml as part xcvm1802-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
 WARNING: [Board 49-26] cannot add Board Part xilinx.com:vmk180_newl:part0:1.1 available at C:/Xilinx/2025.1/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vmk180_newl\production\1.1\board.xml as part xcvm1802-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
@@ -110,9 +109,8 @@ WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu216:part0:2.0 availab
 WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu216ld:part0:2.0 available at C:/Xilinx/2025.1/data/xhub/boards\XilinxBoardStore\boards\Xilinx\zcu216ld\production\2.0\board.xml as part xczu59dr-ffvf1760-2-i specified in board_part file is either invalid or not available
 WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu670:part0:2.0 available at C:/Xilinx/2025.1/data/xhub/boards\XilinxBoardStore\boards\Xilinx\zcu670\2.0\board.xml as part xczu67dr-fsve1156-2-i specified in board_part file is either invalid or not available
 WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu670ld:part0:1.0 available at C:/Xilinx/2025.1/data/xhub/boards\XilinxBoardStore\boards\Xilinx\zcu670ld\1.0\board.xml as part xczu57dr-fsve1156-2-i specified in board_part file is either invalid or not available
-INFO: [Project 1-313] Project file moved from 'D:/Master2_1/Master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8' since last save.
-INFO: [filemgmt 56-3] Default IP Output Path : Could not find the directory 'C:/Users/Lenovo/OneDrive - KU Leuven/AAA_ESAT/master thesis/Marg/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.gen/sources_1'.
-WARNING: [filemgmt 56-3] IPUserFilesDir: Could not find the directory 'C:/Users/Lenovo/OneDrive - KU Leuven/AAA_ESAT/master thesis/Marg/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.ip_user_files'.
+INFO: [filemgmt 56-3] Default IP Output Path : Could not find the directory 'C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.gen/sources_1'.
+WARNING: [filemgmt 56-3] IPUserFilesDir: Could not find the directory 'C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.ip_user_files'.
 Scanning sources...
 Finished scanning sources
 WARNING: [Board 49-26] cannot add Board Part xilinx.com:emb-plus-vpr-4616:part0:1.0 available at C:/Xilinx/2025.1/data/xhub/boards\XilinxBoardStore\boards\Xilinx\emb-plus-vpr-4616\1.0\board.xml as part xcve2302-sfva784-2mp-e-s specified in board_part file is either invalid or not available
@@ -132,9 +130,1717 @@ WARNING: [Board 49-26] cannot add Board Part xilinx.com:kcu116:part0:1.4 availab
 WARNING: [Board 49-26] cannot add Board Part xilinx.com:kcu116:part0:1.5 available at C:/Xilinx/2025.1/data/xhub/boards\XilinxBoardStore\boards\Xilinx\kcu116\1.5\board.xml as part xcku5p-ffvb676-2-e specified in board_part file is either invalid or not available
 INFO: [Common 17-14] Message 'Board 49-26' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 WARNING: [Project 1-5713] Board part '' set for the project  is not found. BoardPart property will be unset. Please select board from latest repo build 
-INFO: [Project 1-230] Project 'mxfp8.xpr' upgraded for this version of Vivado.
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1704] No user IP repositories specified
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/2025.1/Vivado/data/ip'.
-open_project: Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 1592.031 ; gain = 186.754
+open_project: Time (s): cpu = 00:00:15 ; elapsed = 00:00:14 . Memory (MB): peak = 1596.570 ; gain = 172.414
 update_compile_order -fileset sources_1
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-12493] Simulation top is 'fp8_fma_tb'
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from 'C:/Xilinx/2025.1/Vivado/tps/boost_1_72_0'
+INFO: [SIM-utils-54] Inspecting design source files for 'fp8_fma_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -L uvm -prj fp8_fma_tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/adder_tree.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module adder_tree
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/mxfp8_pkg.sv" into library xil_defaultlib
+WARNING: [VRFC 10-9547] assignment pattern cannot be used in static casting [C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/mxfp8_pkg.sv:31]
+WARNING: [VRFC 10-9547] assignment pattern cannot be used in static casting [C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/mxfp8_pkg.sv:32]
+WARNING: [VRFC 10-9547] assignment pattern cannot be used in static casting [C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/mxfp8_pkg.sv:33]
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/mxfp8_classifier.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mxfp8_classifier
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/mxfp8_dotp.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mxfp8_dotp
+ERROR: [VRFC 10-2989] 'fpnew_pkg' is not declared [C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/mxfp8_dotp.sv:32]
+ERROR: [VRFC 10-2934] 'interm_result' is already declared [C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/mxfp8_dotp.sv:146]
+ERROR: [VRFC 10-2951] 'src_fmt_i' is not a constant [C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/mxfp8_dotp.sv:68]
+ERROR: [VRFC 10-2951] 'src_fmt_i' is not a constant [C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/mxfp8_dotp.sv:77]
+ERROR: [VRFC 10-2989] 'man_bits' is not declared [C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/mxfp8_dotp.sv:92]
+ERROR: [VRFC 10-2951] 'exp_bits' is not a constant [C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/mxfp8_dotp.sv:110]
+ERROR: [VRFC 10-2951] 'exp_bits' is not a constant [C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/mxfp8_dotp.sv:111]
+ERROR: [VRFC 10-2989] 'man_bits' is not declared [C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/mxfp8_dotp.sv:113]
+ERROR: [VRFC 10-1775] range must be bounded by constant expressions [C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/mxfp8_dotp.sv:113]
+ERROR: [VRFC 10-2989] 'man_bits' is not declared [C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/mxfp8_dotp.sv:114]
+ERROR: [VRFC 10-1775] range must be bounded by constant expressions [C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/mxfp8_dotp.sv:114]
+ERROR: [VRFC 10-2989] 'leading_zeros' is not declared [C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/mxfp8_dotp.sv:201]
+ERROR: [VRFC 10-2989] 'leading_zeros' is not declared [C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/mxfp8_dotp.sv:211]
+ERROR: [VRFC 10-2989] 'leading_zeros' is not declared [C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/mxfp8_dotp.sv:217]
+ERROR: [VRFC 10-2989] 'leading_zeros' is not declared [C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/mxfp8_dotp.sv:218]
+ERROR: [VRFC 10-8530] module 'mxfp8_dotp' is ignored due to previous errors [C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/mxfp8_dotp.sv:23]
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-99] Step results log file:'C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.sim/sim_1/behav/xsim/xvlog.log'
+ERROR: [USF-XSim-62] 'compile' step failed with error(s). Please check the Tcl console output or 'C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.sim/sim_1/behav/xsim/xvlog.log' file for more information.
+ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
+ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-12493] Simulation top is 'fp8_fma_tb'
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from 'C:/Xilinx/2025.1/Vivado/tps/boost_1_72_0'
+INFO: [SIM-utils-54] Inspecting design source files for 'fp8_fma_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -L uvm -prj fp8_fma_tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/adder_tree.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module adder_tree
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/mxfp8_pkg.sv" into library xil_defaultlib
+WARNING: [VRFC 10-9547] assignment pattern cannot be used in static casting [C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/mxfp8_pkg.sv:31]
+WARNING: [VRFC 10-9547] assignment pattern cannot be used in static casting [C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/mxfp8_pkg.sv:32]
+WARNING: [VRFC 10-9547] assignment pattern cannot be used in static casting [C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/mxfp8_pkg.sv:33]
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/mxfp8_classifier.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mxfp8_classifier
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/mxfp8_dotp.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mxfp8_dotp
+ERROR: [VRFC 10-2989] 'fpnew_pkg' is not declared [C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/mxfp8_dotp.sv:32]
+ERROR: [VRFC 10-2934] 'interm_result' is already declared [C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/mxfp8_dotp.sv:146]
+ERROR: [VRFC 10-2951] 'src_fmt_i' is not a constant [C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/mxfp8_dotp.sv:68]
+ERROR: [VRFC 10-2951] 'src_fmt_i' is not a constant [C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/mxfp8_dotp.sv:77]
+ERROR: [VRFC 10-2989] 'man_bits' is not declared [C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/mxfp8_dotp.sv:92]
+ERROR: [VRFC 10-2951] 'exp_bits' is not a constant [C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/mxfp8_dotp.sv:110]
+ERROR: [VRFC 10-2951] 'exp_bits' is not a constant [C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/mxfp8_dotp.sv:111]
+ERROR: [VRFC 10-2989] 'man_bits' is not declared [C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/mxfp8_dotp.sv:113]
+ERROR: [VRFC 10-1775] range must be bounded by constant expressions [C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/mxfp8_dotp.sv:113]
+ERROR: [VRFC 10-2989] 'man_bits' is not declared [C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/mxfp8_dotp.sv:114]
+ERROR: [VRFC 10-1775] range must be bounded by constant expressions [C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/mxfp8_dotp.sv:114]
+ERROR: [VRFC 10-2989] 'leading_zeros' is not declared [C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/mxfp8_dotp.sv:201]
+ERROR: [VRFC 10-2989] 'leading_zeros' is not declared [C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/mxfp8_dotp.sv:211]
+ERROR: [VRFC 10-2989] 'leading_zeros' is not declared [C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/mxfp8_dotp.sv:217]
+ERROR: [VRFC 10-2989] 'leading_zeros' is not declared [C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/mxfp8_dotp.sv:218]
+ERROR: [VRFC 10-8530] module 'mxfp8_dotp' is ignored due to previous errors [C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/mxfp8_dotp.sv:23]
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-99] Step results log file:'C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.sim/sim_1/behav/xsim/xvlog.log'
+ERROR: [USF-XSim-62] 'compile' step failed with error(s). Please check the Tcl console output or 'C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.sim/sim_1/behav/xsim/xvlog.log' file for more information.
+ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
+ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-12493] Simulation top is 'fp8_fma_tb'
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from 'C:/Xilinx/2025.1/Vivado/tps/boost_1_72_0'
+INFO: [SIM-utils-54] Inspecting design source files for 'fp8_fma_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -L uvm -prj fp8_fma_tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/adder_tree.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module adder_tree
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/mxfp8_pkg.sv" into library xil_defaultlib
+WARNING: [VRFC 10-9547] assignment pattern cannot be used in static casting [C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/mxfp8_pkg.sv:31]
+WARNING: [VRFC 10-9547] assignment pattern cannot be used in static casting [C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/mxfp8_pkg.sv:32]
+WARNING: [VRFC 10-9547] assignment pattern cannot be used in static casting [C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/mxfp8_pkg.sv:33]
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/mxfp8_classifier.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mxfp8_classifier
+ERROR: [VRFC 10-2989] 'man_bits' is not declared [C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/mxfp8_classifier.sv:25]
+ERROR: [VRFC 10-2989] 'man_bits' is not declared [C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/mxfp8_classifier.sv:29]
+ERROR: [VRFC 10-2989] 'man_bits' is not declared [C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/mxfp8_classifier.sv:33]
+ERROR: [VRFC 10-2989] 'FpFormat' is not declared [C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/mxfp8_classifier.sv:54]
+ERROR: [VRFC 10-2989] 'man_bits' is not declared [C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/mxfp8_classifier.sv:55]
+ERROR: [VRFC 10-2989] 'man_bits' is not declared [C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/mxfp8_classifier.sv:56]
+ERROR: [VRFC 10-2989] 'FpFormat' is not declared [C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/mxfp8_classifier.sv:58]
+ERROR: [VRFC 10-2989] 'man_bits' is not declared [C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/mxfp8_classifier.sv:61]
+ERROR: [VRFC 10-2989] 'man_bits' is not declared [C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/mxfp8_classifier.sv:70]
+ERROR: [VRFC 10-2989] 'man_bits' is not declared [C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/mxfp8_classifier.sv:72]
+ERROR: [VRFC 10-2951] 'exp_bits' is not a constant [C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/mxfp8_classifier.sv:90]
+ERROR: [VRFC 10-2989] 'man_bits' is not declared [C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/mxfp8_classifier.sv:92]
+ERROR: [VRFC 10-1775] range must be bounded by constant expressions [C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/mxfp8_classifier.sv:92]
+ERROR: [VRFC 10-8530] module 'mxfp8_classifier' is ignored due to previous errors [C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/mxfp8_classifier.sv:1]
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-99] Step results log file:'C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.sim/sim_1/behav/xsim/xvlog.log'
+ERROR: [USF-XSim-62] 'compile' step failed with error(s). Please check the Tcl console output or 'C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.sim/sim_1/behav/xsim/xvlog.log' file for more information.
+ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
+ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-12493] Simulation top is 'fp8_fma_tb'
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from 'C:/Xilinx/2025.1/Vivado/tps/boost_1_72_0'
+INFO: [SIM-utils-54] Inspecting design source files for 'fp8_fma_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -L uvm -prj fp8_fma_tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/adder_tree.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module adder_tree
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/mxfp8_pkg.sv" into library xil_defaultlib
+WARNING: [VRFC 10-9547] assignment pattern cannot be used in static casting [C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/mxfp8_pkg.sv:31]
+WARNING: [VRFC 10-9547] assignment pattern cannot be used in static casting [C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/mxfp8_pkg.sv:32]
+WARNING: [VRFC 10-9547] assignment pattern cannot be used in static casting [C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/mxfp8_pkg.sv:33]
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/mxfp8_classifier.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mxfp8_classifier
+ERROR: [VRFC 10-2951] 'exp_bits' is not a constant [C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/mxfp8_classifier.sv:90]
+ERROR: [VRFC 10-2951] 'man_bits' is not a constant [C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/mxfp8_classifier.sv:92]
+ERROR: [VRFC 10-1775] range must be bounded by constant expressions [C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/mxfp8_classifier.sv:92]
+ERROR: [VRFC 10-8530] module 'mxfp8_classifier' is ignored due to previous errors [C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/mxfp8_classifier.sv:1]
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-99] Step results log file:'C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.sim/sim_1/behav/xsim/xvlog.log'
+ERROR: [USF-XSim-62] 'compile' step failed with error(s). Please check the Tcl console output or 'C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.sim/sim_1/behav/xsim/xvlog.log' file for more information.
+ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
+ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-12493] Simulation top is 'fp8_fma_tb'
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from 'C:/Xilinx/2025.1/Vivado/tps/boost_1_72_0'
+INFO: [SIM-utils-54] Inspecting design source files for 'fp8_fma_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -L uvm -prj fp8_fma_tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/adder_tree.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module adder_tree
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/mxfp8_pkg.sv" into library xil_defaultlib
+WARNING: [VRFC 10-9547] assignment pattern cannot be used in static casting [C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/mxfp8_pkg.sv:31]
+WARNING: [VRFC 10-9547] assignment pattern cannot be used in static casting [C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/mxfp8_pkg.sv:32]
+WARNING: [VRFC 10-9547] assignment pattern cannot be used in static casting [C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/mxfp8_pkg.sv:33]
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/mxfp8_classifier.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mxfp8_classifier
+ERROR: [VRFC 10-2951] 'exp_bits' is not a constant [C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/mxfp8_classifier.sv:90]
+ERROR: [VRFC 10-2951] 'man_bits' is not a constant [C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/mxfp8_classifier.sv:92]
+ERROR: [VRFC 10-1775] range must be bounded by constant expressions [C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/mxfp8_classifier.sv:92]
+ERROR: [VRFC 10-8530] module 'mxfp8_classifier' is ignored due to previous errors [C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/mxfp8_classifier.sv:1]
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-99] Step results log file:'C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.sim/sim_1/behav/xsim/xvlog.log'
+ERROR: [USF-XSim-62] 'compile' step failed with error(s). Please check the Tcl console output or 'C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.sim/sim_1/behav/xsim/xvlog.log' file for more information.
+ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
+ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-12493] Simulation top is 'fp8_fma_tb'
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from 'C:/Xilinx/2025.1/Vivado/tps/boost_1_72_0'
+INFO: [SIM-utils-54] Inspecting design source files for 'fp8_fma_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -L uvm -prj fp8_fma_tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/adder_tree.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module adder_tree
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/mxfp8_pkg.sv" into library xil_defaultlib
+WARNING: [VRFC 10-9547] assignment pattern cannot be used in static casting [C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/mxfp8_pkg.sv:31]
+WARNING: [VRFC 10-9547] assignment pattern cannot be used in static casting [C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/mxfp8_pkg.sv:32]
+WARNING: [VRFC 10-9547] assignment pattern cannot be used in static casting [C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/mxfp8_pkg.sv:33]
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/mxfp8_classifier.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mxfp8_classifier
+ERROR: [VRFC 10-2951] 'exp_bits' is not a constant [C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/mxfp8_classifier.sv:90]
+ERROR: [VRFC 10-2951] 'man_bits' is not a constant [C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/mxfp8_classifier.sv:92]
+ERROR: [VRFC 10-1775] range must be bounded by constant expressions [C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/mxfp8_classifier.sv:92]
+ERROR: [VRFC 10-8530] module 'mxfp8_classifier' is ignored due to previous errors [C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/mxfp8_classifier.sv:1]
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-99] Step results log file:'C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.sim/sim_1/behav/xsim/xvlog.log'
+ERROR: [USF-XSim-62] 'compile' step failed with error(s). Please check the Tcl console output or 'C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.sim/sim_1/behav/xsim/xvlog.log' file for more information.
+ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
+ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-12493] Simulation top is 'fp8_fma_tb'
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from 'C:/Xilinx/2025.1/Vivado/tps/boost_1_72_0'
+INFO: [SIM-utils-54] Inspecting design source files for 'fp8_fma_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -L uvm -prj fp8_fma_tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/adder_tree.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module adder_tree
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/mxfp8_pkg.sv" into library xil_defaultlib
+WARNING: [VRFC 10-9547] assignment pattern cannot be used in static casting [C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/mxfp8_pkg.sv:31]
+WARNING: [VRFC 10-9547] assignment pattern cannot be used in static casting [C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/mxfp8_pkg.sv:32]
+WARNING: [VRFC 10-9547] assignment pattern cannot be used in static casting [C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/mxfp8_pkg.sv:33]
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/mxfp8_classifier.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mxfp8_classifier
+ERROR: [VRFC 10-2989] 'i' is not declared [C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/mxfp8_classifier.sv:76]
+ERROR: [VRFC 10-8530] module 'mxfp8_classifier' is ignored due to previous errors [C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/mxfp8_classifier.sv:1]
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-99] Step results log file:'C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.sim/sim_1/behav/xsim/xvlog.log'
+ERROR: [USF-XSim-62] 'compile' step failed with error(s). Please check the Tcl console output or 'C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.sim/sim_1/behav/xsim/xvlog.log' file for more information.
+ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
+ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-12493] Simulation top is 'fp8_fma_tb'
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from 'C:/Xilinx/2025.1/Vivado/tps/boost_1_72_0'
+INFO: [SIM-utils-54] Inspecting design source files for 'fp8_fma_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -L uvm -prj fp8_fma_tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/adder_tree.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module adder_tree
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/mxfp8_pkg.sv" into library xil_defaultlib
+WARNING: [VRFC 10-9547] assignment pattern cannot be used in static casting [C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/mxfp8_pkg.sv:31]
+WARNING: [VRFC 10-9547] assignment pattern cannot be used in static casting [C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/mxfp8_pkg.sv:32]
+WARNING: [VRFC 10-9547] assignment pattern cannot be used in static casting [C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/mxfp8_pkg.sv:33]
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/mxfp8_classifier.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mxfp8_classifier
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/mxfp8_dotp.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mxfp8_dotp
+ERROR: [VRFC 10-845] illegal operand for operator < [C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/mxfp8_dotp.sv:198]
+ERROR: [VRFC 10-8530] module 'mxfp8_dotp' is ignored due to previous errors [C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/mxfp8_dotp.sv:23]
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-99] Step results log file:'C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.sim/sim_1/behav/xsim/xvlog.log'
+ERROR: [USF-XSim-62] 'compile' step failed with error(s). Please check the Tcl console output or 'C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.sim/sim_1/behav/xsim/xvlog.log' file for more information.
+ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
+ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-12493] Simulation top is 'fp8_fma_tb'
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from 'C:/Xilinx/2025.1/Vivado/tps/boost_1_72_0'
+INFO: [SIM-utils-54] Inspecting design source files for 'fp8_fma_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -L uvm -prj fp8_fma_tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/adder_tree.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module adder_tree
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/mxfp8_pkg.sv" into library xil_defaultlib
+WARNING: [VRFC 10-9547] assignment pattern cannot be used in static casting [C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/mxfp8_pkg.sv:31]
+WARNING: [VRFC 10-9547] assignment pattern cannot be used in static casting [C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/mxfp8_pkg.sv:32]
+WARNING: [VRFC 10-9547] assignment pattern cannot be used in static casting [C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/mxfp8_pkg.sv:33]
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/mxfp8_classifier.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mxfp8_classifier
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/mxfp8_dotp.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mxfp8_dotp
+ERROR: [VRFC 10-9230] non-integral argument type is not legal for signed [C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/mxfp8_dotp.sv:198]
+ERROR: [VRFC 10-8530] module 'mxfp8_dotp' is ignored due to previous errors [C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/mxfp8_dotp.sv:23]
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-99] Step results log file:'C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.sim/sim_1/behav/xsim/xvlog.log'
+ERROR: [USF-XSim-62] 'compile' step failed with error(s). Please check the Tcl console output or 'C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.sim/sim_1/behav/xsim/xvlog.log' file for more information.
+ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
+ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-12493] Simulation top is 'fp8_fma_tb'
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from 'C:/Xilinx/2025.1/Vivado/tps/boost_1_72_0'
+INFO: [SIM-utils-54] Inspecting design source files for 'fp8_fma_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -L uvm -prj fp8_fma_tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/adder_tree.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module adder_tree
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/mxfp8_pkg.sv" into library xil_defaultlib
+WARNING: [VRFC 10-9547] assignment pattern cannot be used in static casting [C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/mxfp8_pkg.sv:31]
+WARNING: [VRFC 10-9547] assignment pattern cannot be used in static casting [C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/mxfp8_pkg.sv:32]
+WARNING: [VRFC 10-9547] assignment pattern cannot be used in static casting [C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/mxfp8_pkg.sv:33]
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/mxfp8_classifier.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mxfp8_classifier
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/mxfp8_dotp.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mxfp8_dotp
+ERROR: [VRFC 10-845] illegal operand for operator < [C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/mxfp8_dotp.sv:203]
+ERROR: [VRFC 10-8530] module 'mxfp8_dotp' is ignored due to previous errors [C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/mxfp8_dotp.sv:23]
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-99] Step results log file:'C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.sim/sim_1/behav/xsim/xvlog.log'
+ERROR: [USF-XSim-62] 'compile' step failed with error(s). Please check the Tcl console output or 'C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.sim/sim_1/behav/xsim/xvlog.log' file for more information.
+ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
+ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-12493] Simulation top is 'fp8_fma_tb'
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from 'C:/Xilinx/2025.1/Vivado/tps/boost_1_72_0'
+INFO: [SIM-utils-54] Inspecting design source files for 'fp8_fma_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -L uvm -prj fp8_fma_tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/adder_tree.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module adder_tree
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/mxfp8_pkg.sv" into library xil_defaultlib
+WARNING: [VRFC 10-9547] assignment pattern cannot be used in static casting [C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/mxfp8_pkg.sv:31]
+WARNING: [VRFC 10-9547] assignment pattern cannot be used in static casting [C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/mxfp8_pkg.sv:32]
+WARNING: [VRFC 10-9547] assignment pattern cannot be used in static casting [C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/mxfp8_pkg.sv:33]
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/mxfp8_classifier.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mxfp8_classifier
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/mxfp8_dotp.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mxfp8_dotp
+ERROR: [VRFC 10-845] illegal operand for operator - [C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/mxfp8_dotp.sv:203]
+ERROR: [VRFC 10-8530] module 'mxfp8_dotp' is ignored due to previous errors [C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/mxfp8_dotp.sv:23]
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-99] Step results log file:'C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.sim/sim_1/behav/xsim/xvlog.log'
+ERROR: [USF-XSim-62] 'compile' step failed with error(s). Please check the Tcl console output or 'C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.sim/sim_1/behav/xsim/xvlog.log' file for more information.
+ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
+ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-12493] Simulation top is 'fp8_fma_tb'
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from 'C:/Xilinx/2025.1/Vivado/tps/boost_1_72_0'
+INFO: [SIM-utils-54] Inspecting design source files for 'fp8_fma_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -L uvm -prj fp8_fma_tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/adder_tree.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module adder_tree
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/mxfp8_pkg.sv" into library xil_defaultlib
+WARNING: [VRFC 10-9547] assignment pattern cannot be used in static casting [C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/mxfp8_pkg.sv:31]
+WARNING: [VRFC 10-9547] assignment pattern cannot be used in static casting [C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/mxfp8_pkg.sv:32]
+WARNING: [VRFC 10-9547] assignment pattern cannot be used in static casting [C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/mxfp8_pkg.sv:33]
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/mxfp8_classifier.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mxfp8_classifier
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/mxfp8_dotp.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mxfp8_dotp
+ERROR: [VRFC 10-845] illegal operand for operator - [C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/mxfp8_dotp.sv:183]
+ERROR: [VRFC 10-8530] module 'mxfp8_dotp' is ignored due to previous errors [C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/mxfp8_dotp.sv:23]
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-99] Step results log file:'C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.sim/sim_1/behav/xsim/xvlog.log'
+ERROR: [USF-XSim-62] 'compile' step failed with error(s). Please check the Tcl console output or 'C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.sim/sim_1/behav/xsim/xvlog.log' file for more information.
+ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
+ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-12493] Simulation top is 'fp8_fma_tb'
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from 'C:/Xilinx/2025.1/Vivado/tps/boost_1_72_0'
+INFO: [SIM-utils-54] Inspecting design source files for 'fp8_fma_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -L uvm -prj fp8_fma_tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/adder_tree.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module adder_tree
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/mxfp8_pkg.sv" into library xil_defaultlib
+WARNING: [VRFC 10-9547] assignment pattern cannot be used in static casting [C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/mxfp8_pkg.sv:31]
+WARNING: [VRFC 10-9547] assignment pattern cannot be used in static casting [C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/mxfp8_pkg.sv:32]
+WARNING: [VRFC 10-9547] assignment pattern cannot be used in static casting [C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/mxfp8_pkg.sv:33]
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/mxfp8_classifier.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mxfp8_classifier
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/mxfp8_dotp.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mxfp8_dotp
+ERROR: [VRFC 10-845] illegal operand for operator - [C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/mxfp8_dotp.sv:183]
+ERROR: [VRFC 10-8530] module 'mxfp8_dotp' is ignored due to previous errors [C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/mxfp8_dotp.sv:23]
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-99] Step results log file:'C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.sim/sim_1/behav/xsim/xvlog.log'
+ERROR: [USF-XSim-62] 'compile' step failed with error(s). Please check the Tcl console output or 'C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.sim/sim_1/behav/xsim/xvlog.log' file for more information.
+ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
+ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-12493] Simulation top is 'fp8_fma_tb'
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from 'C:/Xilinx/2025.1/Vivado/tps/boost_1_72_0'
+INFO: [SIM-utils-54] Inspecting design source files for 'fp8_fma_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -L uvm -prj fp8_fma_tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/adder_tree.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module adder_tree
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/mxfp8_pkg.sv" into library xil_defaultlib
+WARNING: [VRFC 10-9547] assignment pattern cannot be used in static casting [C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/mxfp8_pkg.sv:31]
+WARNING: [VRFC 10-9547] assignment pattern cannot be used in static casting [C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/mxfp8_pkg.sv:32]
+WARNING: [VRFC 10-9547] assignment pattern cannot be used in static casting [C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/mxfp8_pkg.sv:33]
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/mxfp8_classifier.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mxfp8_classifier
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/mxfp8_dotp.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mxfp8_dotp
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/mxfp8_mult.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mxfp8_mult
+ERROR: [VRFC 10-2934] 'bias' is already declared [C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/mxfp8_mult.sv:44]
+ERROR: [VRFC 10-8530] module 'mxfp8_mult' is ignored due to previous errors [C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/mxfp8_mult.sv:21]
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-99] Step results log file:'C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.sim/sim_1/behav/xsim/xvlog.log'
+ERROR: [USF-XSim-62] 'compile' step failed with error(s). Please check the Tcl console output or 'C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.sim/sim_1/behav/xsim/xvlog.log' file for more information.
+ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
+ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-12493] Simulation top is 'fp8_fma_tb'
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from 'C:/Xilinx/2025.1/Vivado/tps/boost_1_72_0'
+INFO: [SIM-utils-54] Inspecting design source files for 'fp8_fma_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -L uvm -prj fp8_fma_tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/adder_tree.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module adder_tree
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/mxfp8_pkg.sv" into library xil_defaultlib
+WARNING: [VRFC 10-9547] assignment pattern cannot be used in static casting [C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/mxfp8_pkg.sv:31]
+WARNING: [VRFC 10-9547] assignment pattern cannot be used in static casting [C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/mxfp8_pkg.sv:32]
+WARNING: [VRFC 10-9547] assignment pattern cannot be used in static casting [C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/mxfp8_pkg.sv:33]
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/mxfp8_classifier.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mxfp8_classifier
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/mxfp8_dotp.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mxfp8_dotp
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/mxfp8_mult.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mxfp8_mult
+ERROR: [VRFC 10-4982] syntax error near 'if' [C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/mxfp8_mult.sv:45]
+ERROR: [VRFC 10-8549] SystemVerilog keyword 'if' used in incorrect context [C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/mxfp8_mult.sv:45]
+ERROR: [VRFC 10-4982] syntax error near '=' [C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/mxfp8_mult.sv:46]
+ERROR: [VRFC 10-4982] syntax error near '=' [C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/mxfp8_mult.sv:48]
+ERROR: [VRFC 10-4982] syntax error near '=' [C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/mxfp8_mult.sv:50]
+ERROR: [VRFC 10-2951] 'src_fmt_i' is not a constant [C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/mxfp8_mult.sv:45]
+ERROR: [VRFC 10-8530] module 'mxfp8_mult' is ignored due to previous errors [C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/mxfp8_mult.sv:21]
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-99] Step results log file:'C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.sim/sim_1/behav/xsim/xvlog.log'
+ERROR: [USF-XSim-62] 'compile' step failed with error(s). Please check the Tcl console output or 'C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.sim/sim_1/behav/xsim/xvlog.log' file for more information.
+ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
+ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-12493] Simulation top is 'fp8_fma_tb'
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from 'C:/Xilinx/2025.1/Vivado/tps/boost_1_72_0'
+INFO: [SIM-utils-54] Inspecting design source files for 'fp8_fma_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -L uvm -prj fp8_fma_tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/adder_tree.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module adder_tree
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/mxfp8_pkg.sv" into library xil_defaultlib
+WARNING: [VRFC 10-9547] assignment pattern cannot be used in static casting [C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/mxfp8_pkg.sv:31]
+WARNING: [VRFC 10-9547] assignment pattern cannot be used in static casting [C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/mxfp8_pkg.sv:32]
+WARNING: [VRFC 10-9547] assignment pattern cannot be used in static casting [C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/mxfp8_pkg.sv:33]
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/mxfp8_classifier.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mxfp8_classifier
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/mxfp8_dotp.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mxfp8_dotp
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/mxfp8_mult.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mxfp8_mult
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/stage8_fp32_accumulation.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module stage8_fp32_accumulator
+ERROR: [VRFC 10-2989] 'NORM_MANT_WIDTH' is not declared [C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/stage8_fp32_accumulation.sv:20]
+ERROR: [VRFC 10-1775] range must be bounded by constant expressions [C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/stage8_fp32_accumulation.sv:20]
+ERROR: [VRFC 10-8530] module 'stage8_fp32_accumulator' is ignored due to previous errors [C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/stage8_fp32_accumulation.sv:1]
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-99] Step results log file:'C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.sim/sim_1/behav/xsim/xvlog.log'
+ERROR: [USF-XSim-62] 'compile' step failed with error(s). Please check the Tcl console output or 'C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.sim/sim_1/behav/xsim/xvlog.log' file for more information.
+ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
+ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-12493] Simulation top is 'fp8_fma_tb'
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from 'C:/Xilinx/2025.1/Vivado/tps/boost_1_72_0'
+INFO: [SIM-utils-54] Inspecting design source files for 'fp8_fma_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -L uvm -prj fp8_fma_tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/adder_tree.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module adder_tree
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/mxfp8_pkg.sv" into library xil_defaultlib
+WARNING: [VRFC 10-9547] assignment pattern cannot be used in static casting [C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/mxfp8_pkg.sv:31]
+WARNING: [VRFC 10-9547] assignment pattern cannot be used in static casting [C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/mxfp8_pkg.sv:32]
+WARNING: [VRFC 10-9547] assignment pattern cannot be used in static casting [C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/mxfp8_pkg.sv:33]
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/mxfp8_classifier.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mxfp8_classifier
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/mxfp8_dotp.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mxfp8_dotp
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/mxfp8_mult.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mxfp8_mult
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/stage8_fp32_accumulation.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module stage8_fp32_accumulator
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sim_1/new/fp8_fma_tb.sv" into library xil_defaultlib
+ERROR: [VRFC 10-3195] cannot open include file 'mxfp8_pkg.sv' [C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sim_1/new/fp8_fma_tb.sv:25]
+INFO: [VRFC 10-311] analyzing module fp8_fma_tb
+ERROR: [VRFC 10-8530] module 'fp8_fma_tb' is ignored due to previous errors [C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sim_1/new/fp8_fma_tb.sv:27]
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-99] Step results log file:'C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.sim/sim_1/behav/xsim/xvlog.log'
+ERROR: [USF-XSim-62] 'compile' step failed with error(s). Please check the Tcl console output or 'C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.sim/sim_1/behav/xsim/xvlog.log' file for more information.
+ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
+ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-12493] Simulation top is 'fp8_fma_tb'
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from 'C:/Xilinx/2025.1/Vivado/tps/boost_1_72_0'
+INFO: [SIM-utils-54] Inspecting design source files for 'fp8_fma_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -L uvm -prj fp8_fma_tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/adder_tree.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module adder_tree
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/mxfp8_pkg.sv" into library xil_defaultlib
+WARNING: [VRFC 10-9547] assignment pattern cannot be used in static casting [C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/mxfp8_pkg.sv:31]
+WARNING: [VRFC 10-9547] assignment pattern cannot be used in static casting [C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/mxfp8_pkg.sv:32]
+WARNING: [VRFC 10-9547] assignment pattern cannot be used in static casting [C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/mxfp8_pkg.sv:33]
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/mxfp8_classifier.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mxfp8_classifier
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/mxfp8_dotp.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mxfp8_dotp
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/mxfp8_mult.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mxfp8_mult
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/stage8_fp32_accumulation.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module stage8_fp32_accumulator
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sim_1/new/fp8_fma_tb.sv" into library xil_defaultlib
+ERROR: [VRFC 10-3195] cannot open include file '../sources_1/new/mxfp8_pkg.sv' [C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sim_1/new/fp8_fma_tb.sv:25]
+INFO: [VRFC 10-311] analyzing module fp8_fma_tb
+ERROR: [VRFC 10-8530] module 'fp8_fma_tb' is ignored due to previous errors [C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sim_1/new/fp8_fma_tb.sv:27]
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-99] Step results log file:'C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.sim/sim_1/behav/xsim/xvlog.log'
+ERROR: [USF-XSim-62] 'compile' step failed with error(s). Please check the Tcl console output or 'C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.sim/sim_1/behav/xsim/xvlog.log' file for more information.
+ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
+ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-12493] Simulation top is 'fp8_fma_tb'
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from 'C:/Xilinx/2025.1/Vivado/tps/boost_1_72_0'
+INFO: [SIM-utils-54] Inspecting design source files for 'fp8_fma_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -L uvm -prj fp8_fma_tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/adder_tree.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module adder_tree
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/mxfp8_pkg.sv" into library xil_defaultlib
+WARNING: [VRFC 10-9547] assignment pattern cannot be used in static casting [C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/mxfp8_pkg.sv:31]
+WARNING: [VRFC 10-9547] assignment pattern cannot be used in static casting [C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/mxfp8_pkg.sv:32]
+WARNING: [VRFC 10-9547] assignment pattern cannot be used in static casting [C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/mxfp8_pkg.sv:33]
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/mxfp8_classifier.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mxfp8_classifier
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/mxfp8_dotp.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mxfp8_dotp
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/mxfp8_mult.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mxfp8_mult
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/stage8_fp32_accumulation.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module stage8_fp32_accumulator
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sim_1/new/fp8_fma_tb.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module fp8_fma_tb
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.sim/sim_1/behav/xsim/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.sim/sim_1/behav/xsim'
+"xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L uvm -L unisims_ver -L unimacro_ver -L secureip --snapshot fp8_fma_tb_behav xil_defaultlib.fp8_fma_tb xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator v2025.1.0
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+Running: C:/Xilinx/2025.1/Vivado/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L uvm -L unisims_ver -L unimacro_ver -L secureip --snapshot fp8_fma_tb_behav xil_defaultlib.fp8_fma_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+ERROR: [VRFC 10-3180] cannot find port 'FpFormat' on this module [C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/mxfp8_dotp.sv:83]
+ERROR: [VRFC 10-3180] cannot find port 'FpFormat' on this module [C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/mxfp8_dotp.sv:97]
+WARNING: [VRFC 10-3633] port 'a_exp' is already connected [C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/mxfp8_dotp.sv:225]
+ERROR: [VRFC 10-8530] module 'mxfp8_classifier(NumOperands=32'b0100)' is ignored due to previous errors [C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/mxfp8_classifier.sv:1]
+ERROR: [VRFC 10-8530] module 'mxfp8_mult(PROD_EXP_WIDTH=32'b01000)' is ignored due to previous errors [C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/mxfp8_mult.sv:21]
+ERROR: [VRFC 10-8530] module 'adder_tree(PROD_EXP_WIDTH=32'b01000)' is ignored due to previous errors [C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/adder_tree.sv:1]
+ERROR: [VRFC 10-8530] module 'stage8_fp32_accumulator(MANT_WIDTH=32'b01000,NORM_MAN_WIDTH=32'b010000,EXP_WIDTH=32'b01000)' is ignored due to previous errors [C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/stage8_fp32_accumulation.sv:1]
+ERROR: [XSIM 43-3322] Static elaboration of top level Verilog design unit(s) in library work failed.
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-99] Step results log file:'C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.sim/sim_1/behav/xsim/elaborate.log'
+ERROR: [USF-XSim-62] 'elaborate' step failed with error(s). Please check the Tcl console output or 'C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.sim/sim_1/behav/xsim/elaborate.log' file for more information.
+ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
+ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-12493] Simulation top is 'fp8_fma_tb'
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from 'C:/Xilinx/2025.1/Vivado/tps/boost_1_72_0'
+INFO: [SIM-utils-54] Inspecting design source files for 'fp8_fma_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -L uvm -prj fp8_fma_tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/adder_tree.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module adder_tree
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/mxfp8_pkg.sv" into library xil_defaultlib
+WARNING: [VRFC 10-9547] assignment pattern cannot be used in static casting [C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/mxfp8_pkg.sv:31]
+WARNING: [VRFC 10-9547] assignment pattern cannot be used in static casting [C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/mxfp8_pkg.sv:32]
+WARNING: [VRFC 10-9547] assignment pattern cannot be used in static casting [C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/mxfp8_pkg.sv:33]
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/mxfp8_classifier.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mxfp8_classifier
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/mxfp8_dotp.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mxfp8_dotp
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/mxfp8_mult.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mxfp8_mult
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/stage8_fp32_accumulation.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module stage8_fp32_accumulator
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sim_1/new/fp8_fma_tb.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module fp8_fma_tb
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.sim/sim_1/behav/xsim'
+"xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L uvm -L unisims_ver -L unimacro_ver -L secureip --snapshot fp8_fma_tb_behav xil_defaultlib.fp8_fma_tb xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator v2025.1.0
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+Running: C:/Xilinx/2025.1/Vivado/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L uvm -L unisims_ver -L unimacro_ver -L secureip --snapshot fp8_fma_tb_behav xil_defaultlib.fp8_fma_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+ERROR: [VRFC 10-3180] cannot find port 'FpFormat' on this module [C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/mxfp8_dotp.sv:97]
+WARNING: [VRFC 10-3633] port 'a_exp' is already connected [C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/mxfp8_dotp.sv:225]
+ERROR: [VRFC 10-8530] module 'mxfp8_classifier(NumOperands=32'b0100)' is ignored due to previous errors [C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/mxfp8_classifier.sv:1]
+ERROR: [VRFC 10-8530] module 'mxfp8_mult(PROD_EXP_WIDTH=32'b01000)' is ignored due to previous errors [C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/mxfp8_mult.sv:21]
+ERROR: [VRFC 10-8530] module 'adder_tree(PROD_EXP_WIDTH=32'b01000)' is ignored due to previous errors [C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/adder_tree.sv:1]
+ERROR: [VRFC 10-8530] module 'stage8_fp32_accumulator(MANT_WIDTH=32'b01000,NORM_MAN_WIDTH=32'b010000,EXP_WIDTH=32'b01000)' is ignored due to previous errors [C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/stage8_fp32_accumulation.sv:1]
+ERROR: [XSIM 43-3322] Static elaboration of top level Verilog design unit(s) in library work failed.
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+INFO: [USF-XSim-99] Step results log file:'C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.sim/sim_1/behav/xsim/elaborate.log'
+ERROR: [USF-XSim-62] 'elaborate' step failed with error(s). Please check the Tcl console output or 'C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.sim/sim_1/behav/xsim/elaborate.log' file for more information.
+ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
+ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-12493] Simulation top is 'fp8_fma_tb'
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from 'C:/Xilinx/2025.1/Vivado/tps/boost_1_72_0'
+INFO: [SIM-utils-54] Inspecting design source files for 'fp8_fma_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -L uvm -prj fp8_fma_tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/adder_tree.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module adder_tree
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/mxfp8_pkg.sv" into library xil_defaultlib
+WARNING: [VRFC 10-9547] assignment pattern cannot be used in static casting [C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/mxfp8_pkg.sv:31]
+WARNING: [VRFC 10-9547] assignment pattern cannot be used in static casting [C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/mxfp8_pkg.sv:32]
+WARNING: [VRFC 10-9547] assignment pattern cannot be used in static casting [C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/mxfp8_pkg.sv:33]
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/mxfp8_classifier.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mxfp8_classifier
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/mxfp8_dotp.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mxfp8_dotp
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/mxfp8_mult.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mxfp8_mult
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/stage8_fp32_accumulation.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module stage8_fp32_accumulator
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sim_1/new/fp8_fma_tb.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module fp8_fma_tb
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.sim/sim_1/behav/xsim'
+"xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L uvm -L unisims_ver -L unimacro_ver -L secureip --snapshot fp8_fma_tb_behav xil_defaultlib.fp8_fma_tb xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator v2025.1.0
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+Running: C:/Xilinx/2025.1/Vivado/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L uvm -L unisims_ver -L unimacro_ver -L secureip --snapshot fp8_fma_tb_behav xil_defaultlib.fp8_fma_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+WARNING: [VRFC 10-3633] port 'a_exp' is already connected [C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/mxfp8_dotp.sv:225]
+ERROR: [VRFC 10-2939] 'fp_t' is an unknown type [C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/mxfp8_classifier.sv:41]
+ERROR: [VRFC 10-8530] module 'mxfp8_mult(PROD_EXP_WIDTH=32'b01000)' is ignored due to previous errors [C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/mxfp8_mult.sv:21]
+ERROR: [VRFC 10-8530] module 'adder_tree(PROD_EXP_WIDTH=32'b01000)' is ignored due to previous errors [C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/adder_tree.sv:1]
+ERROR: [VRFC 10-8530] module 'stage8_fp32_accumulator(MANT_WIDTH=32'b01000,NORM_MAN_WIDTH=32'b010000,EXP_WIDTH=32'b01000)' is ignored due to previous errors [C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/stage8_fp32_accumulation.sv:1]
+ERROR: [XSIM 43-3322] Static elaboration of top level Verilog design unit(s) in library work failed.
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+INFO: [USF-XSim-99] Step results log file:'C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.sim/sim_1/behav/xsim/elaborate.log'
+ERROR: [USF-XSim-62] 'elaborate' step failed with error(s). Please check the Tcl console output or 'C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.sim/sim_1/behav/xsim/elaborate.log' file for more information.
+ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
+ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-12493] Simulation top is 'fp8_fma_tb'
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from 'C:/Xilinx/2025.1/Vivado/tps/boost_1_72_0'
+INFO: [SIM-utils-54] Inspecting design source files for 'fp8_fma_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -L uvm -prj fp8_fma_tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/adder_tree.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module adder_tree
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/mxfp8_pkg.sv" into library xil_defaultlib
+WARNING: [VRFC 10-9547] assignment pattern cannot be used in static casting [C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/mxfp8_pkg.sv:31]
+WARNING: [VRFC 10-9547] assignment pattern cannot be used in static casting [C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/mxfp8_pkg.sv:32]
+WARNING: [VRFC 10-9547] assignment pattern cannot be used in static casting [C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/mxfp8_pkg.sv:33]
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/mxfp8_classifier.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mxfp8_classifier
+ERROR: [VRFC 10-2951] 'exp_bits' is not a constant [C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/mxfp8_classifier.sv:55]
+ERROR: [VRFC 10-2951] 'exp_bits' is not a constant [C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/mxfp8_classifier.sv:56]
+ERROR: [VRFC 10-2951] 'exp_bits' is not a constant [C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/mxfp8_classifier.sv:57]
+ERROR: [VRFC 10-2951] 'exp_bits' is not a constant [C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/mxfp8_classifier.sv:58]
+ERROR: [VRFC 10-2951] 'man_bits' is not a constant [C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/mxfp8_classifier.sv:59]
+ERROR: [VRFC 10-2951] 'exp_bits' is not a constant [C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/mxfp8_classifier.sv:64]
+ERROR: [VRFC 10-2951] 'exp_bits' is not a constant [C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/mxfp8_classifier.sv:65]
+ERROR: [VRFC 10-2951] 'exp_bits' is not a constant [C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/mxfp8_classifier.sv:66]
+ERROR: [VRFC 10-2951] 'man_bits' is not a constant [C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/mxfp8_classifier.sv:67]
+ERROR: [VRFC 10-2951] 'exp_bits' is not a constant [C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/mxfp8_classifier.sv:77]
+ERROR: [VRFC 10-2951] 'exp_bits' is not a constant [C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/mxfp8_classifier.sv:78]
+ERROR: [VRFC 10-2951] 'man_bits' is not a constant [C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/mxfp8_classifier.sv:79]
+ERROR: [VRFC 10-8530] module 'mxfp8_classifier' is ignored due to previous errors [C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/mxfp8_classifier.sv:1]
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-99] Step results log file:'C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.sim/sim_1/behav/xsim/xvlog.log'
+ERROR: [USF-XSim-62] 'compile' step failed with error(s). Please check the Tcl console output or 'C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.sim/sim_1/behav/xsim/xvlog.log' file for more information.
+ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
+ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-12493] Simulation top is 'fp8_fma_tb'
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from 'C:/Xilinx/2025.1/Vivado/tps/boost_1_72_0'
+INFO: [SIM-utils-54] Inspecting design source files for 'fp8_fma_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -L uvm -prj fp8_fma_tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/adder_tree.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module adder_tree
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/mxfp8_pkg.sv" into library xil_defaultlib
+WARNING: [VRFC 10-9547] assignment pattern cannot be used in static casting [C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/mxfp8_pkg.sv:31]
+WARNING: [VRFC 10-9547] assignment pattern cannot be used in static casting [C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/mxfp8_pkg.sv:32]
+WARNING: [VRFC 10-9547] assignment pattern cannot be used in static casting [C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/mxfp8_pkg.sv:33]
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/mxfp8_classifier.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mxfp8_classifier
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/mxfp8_dotp.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mxfp8_dotp
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/mxfp8_mult.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mxfp8_mult
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/stage8_fp32_accumulation.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module stage8_fp32_accumulator
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sim_1/new/fp8_fma_tb.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module fp8_fma_tb
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.sim/sim_1/behav/xsim'
+"xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L uvm -L unisims_ver -L unimacro_ver -L secureip --snapshot fp8_fma_tb_behav xil_defaultlib.fp8_fma_tb xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator v2025.1.0
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+Running: C:/Xilinx/2025.1/Vivado/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L uvm -L unisims_ver -L unimacro_ver -L secureip --snapshot fp8_fma_tb_behav xil_defaultlib.fp8_fma_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+WARNING: [VRFC 10-3633] port 'a_exp' is already connected [C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/mxfp8_dotp.sv:229]
+ERROR: [VRFC 10-2989] 'maximum' is not declared [C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/mxfp8_pkg.sv:109]
+ERROR: [VRFC 10-2989] 'maximum' is not declared [C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/mxfp8_pkg.sv:110]
+ERROR: [VRFC 10-395] cannot assign an unpacked type to a packed type [C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/mxfp8_dotp.sv:162]
+ERROR: [VRFC 10-395] cannot assign an unpacked type to a packed type [C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/mxfp8_dotp.sv:163]
+WARNING: [VRFC 10-3705] select index -7 into 'reg_man' is out of bounds [C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/mxfp8_dotp.sv:265]
+ERROR: [XSIM 43-3322] Static elaboration of top level Verilog design unit(s) in library work failed.
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-99] Step results log file:'C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.sim/sim_1/behav/xsim/elaborate.log'
+ERROR: [USF-XSim-62] 'elaborate' step failed with error(s). Please check the Tcl console output or 'C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.sim/sim_1/behav/xsim/elaborate.log' file for more information.
+ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
+ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-12493] Simulation top is 'fp8_fma_tb'
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from 'C:/Xilinx/2025.1/Vivado/tps/boost_1_72_0'
+INFO: [SIM-utils-54] Inspecting design source files for 'fp8_fma_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -L uvm -prj fp8_fma_tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/adder_tree.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module adder_tree
+ERROR: [VRFC 10-845] illegal operand for operator >= [C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/adder_tree.sv:42]
+ERROR: [VRFC 10-8530] module 'adder_tree' is ignored due to previous errors [C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/adder_tree.sv:2]
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-99] Step results log file:'C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.sim/sim_1/behav/xsim/xvlog.log'
+ERROR: [USF-XSim-62] 'compile' step failed with error(s). Please check the Tcl console output or 'C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.sim/sim_1/behav/xsim/xvlog.log' file for more information.
+ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
+ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-12493] Simulation top is 'fp8_fma_tb'
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from 'C:/Xilinx/2025.1/Vivado/tps/boost_1_72_0'
+INFO: [SIM-utils-54] Inspecting design source files for 'fp8_fma_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -L uvm -prj fp8_fma_tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/adder_tree.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module adder_tree
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/mxfp8_pkg.sv" into library xil_defaultlib
+WARNING: [VRFC 10-9547] assignment pattern cannot be used in static casting [C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/mxfp8_pkg.sv:31]
+WARNING: [VRFC 10-9547] assignment pattern cannot be used in static casting [C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/mxfp8_pkg.sv:32]
+WARNING: [VRFC 10-9547] assignment pattern cannot be used in static casting [C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/mxfp8_pkg.sv:33]
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/mxfp8_classifier.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mxfp8_classifier
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/mxfp8_dotp.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mxfp8_dotp
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/mxfp8_mult.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mxfp8_mult
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/stage8_fp32_accumulation.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module stage8_fp32_accumulator
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sim_1/new/fp8_fma_tb.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module fp8_fma_tb
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.sim/sim_1/behav/xsim'
+"xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L uvm -L unisims_ver -L unimacro_ver -L secureip --snapshot fp8_fma_tb_behav xil_defaultlib.fp8_fma_tb xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator v2025.1.0
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+Running: C:/Xilinx/2025.1/Vivado/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L uvm -L unisims_ver -L unimacro_ver -L secureip --snapshot fp8_fma_tb_behav xil_defaultlib.fp8_fma_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+WARNING: [VRFC 10-3633] port 'a_exp' is already connected [C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/mxfp8_dotp.sv:229]
+WARNING: [VRFC 10-3091] actual bit length 16 differs from formal bit length 8 for port 'a_exp' [C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/mxfp8_dotp.sv:238]
+WARNING: [VRFC 10-3091] actual bit length 5 differs from formal bit length 8 for port 'b_exp' [C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/mxfp8_dotp.sv:240]
+WARNING: [VRFC 10-3091] actual bit length 5 differs from formal bit length 8 for port 'out_exp' [C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/mxfp8_dotp.sv:243]
+WARNING: [VRFC 10-3091] actual bit length 16 differs from formal bit length 8 for port 'out_man' [C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/mxfp8_dotp.sv:244]
+ERROR: [VRFC 10-3633] port 'a_exp' is already connected [C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/mxfp8_dotp.sv:238]
+WARNING: [VRFC 10-3705] select index -7 into 'reg_man' is out of bounds [C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/mxfp8_dotp.sv:265]
+ERROR: [XSIM 43-3322] Static elaboration of top level Verilog design unit(s) in library work failed.
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+INFO: [USF-XSim-99] Step results log file:'C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.sim/sim_1/behav/xsim/elaborate.log'
+ERROR: [USF-XSim-62] 'elaborate' step failed with error(s). Please check the Tcl console output or 'C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.sim/sim_1/behav/xsim/elaborate.log' file for more information.
+ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
+ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-12493] Simulation top is 'fp8_fma_tb'
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from 'C:/Xilinx/2025.1/Vivado/tps/boost_1_72_0'
+INFO: [SIM-utils-54] Inspecting design source files for 'fp8_fma_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -L uvm -prj fp8_fma_tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/adder_tree.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module adder_tree
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/mxfp8_pkg.sv" into library xil_defaultlib
+WARNING: [VRFC 10-9547] assignment pattern cannot be used in static casting [C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/mxfp8_pkg.sv:31]
+WARNING: [VRFC 10-9547] assignment pattern cannot be used in static casting [C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/mxfp8_pkg.sv:32]
+WARNING: [VRFC 10-9547] assignment pattern cannot be used in static casting [C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/mxfp8_pkg.sv:33]
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/mxfp8_classifier.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mxfp8_classifier
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/mxfp8_dotp.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mxfp8_dotp
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/mxfp8_mult.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mxfp8_mult
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/stage8_fp32_accumulation.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module stage8_fp32_accumulator
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sim_1/new/fp8_fma_tb.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module fp8_fma_tb
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.sim/sim_1/behav/xsim'
+"xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L uvm -L unisims_ver -L unimacro_ver -L secureip --snapshot fp8_fma_tb_behav xil_defaultlib.fp8_fma_tb xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator v2025.1.0
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+Running: C:/Xilinx/2025.1/Vivado/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L uvm -L unisims_ver -L unimacro_ver -L secureip --snapshot fp8_fma_tb_behav xil_defaultlib.fp8_fma_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+WARNING: [VRFC 10-3091] actual bit length 16 differs from formal bit length 8 for port 'a_man' [C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/mxfp8_dotp.sv:238]
+WARNING: [VRFC 10-3091] actual bit length 5 differs from formal bit length 8 for port 'b_exp' [C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/mxfp8_dotp.sv:240]
+WARNING: [VRFC 10-3091] actual bit length 5 differs from formal bit length 8 for port 'out_exp' [C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/mxfp8_dotp.sv:243]
+WARNING: [VRFC 10-3091] actual bit length 16 differs from formal bit length 8 for port 'out_man' [C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/mxfp8_dotp.sv:244]
+WARNING: [VRFC 10-3705] select index -7 into 'reg_man' is out of bounds [C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/mxfp8_dotp.sv:265]
+Completed static elaboration
+Starting simulation data flow analysis
+WARNING: [XSIM 43-4100] "C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sim_1/new/fp8_fma_tb.sv" Line 27. Module fp8_fma_tb has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/mxfp8_dotp.sv" Line 23. Module mxfp8_dotp_default has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/mxfp8_mult.sv" Line 21. Module mxfp8_mult(PROD_EXP_WIDTH=32'b01000) has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/stage8_fp32_accumulation.sv" Line 1. Module stage8_fp32_accumulator(MANT_WIDTH=32'b01000,NORM_MAN_WIDTH=32'b010000,EXP_WIDTH=32'b01000) has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sim_1/new/fp8_fma_tb.sv" Line 27. Module fp8_fma_tb has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/mxfp8_dotp.sv" Line 23. Module mxfp8_dotp_default has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/mxfp8_mult.sv" Line 21. Module mxfp8_mult(PROD_EXP_WIDTH=32'b01000) has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/stage8_fp32_accumulation.sv" Line 1. Module stage8_fp32_accumulator(MANT_WIDTH=32'b01000,NORM_MAN_WIDTH=32'b010000,EXP_WIDTH=32'b01000) has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.sim/sim_1/behav/xsim/glbl.v" Line 6. Module glbl has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.sim/sim_1/behav/xsim/glbl.v" Line 6. Module glbl has a timescale but at least one module in design doesn't have timescale.
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package xil_defaultlib.mxfp8_pkg
+Compiling module xil_defaultlib.mxfp8_classifier(NumOperands=32'...
+Compiling module xil_defaultlib.mxfp8_mult(PROD_EXP_WIDTH=32'b01...
+Compiling module xil_defaultlib.adder_tree(PROD_EXP_WIDTH=32'b01...
+Compiling module xil_defaultlib.stage8_fp32_accumulator(MANT_WID...
+Compiling module xil_defaultlib.mxfp8_dotp_default
+Compiling module xil_defaultlib.fp8_fma_tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot fp8_fma_tb_behav
+run_program: Time (s): cpu = 00:00:00 ; elapsed = 00:00:07 . Memory (MB): peak = 1640.902 ; gain = 0.000
+INFO: [USF-XSim-69] 'elaborate' step finished in '7' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "fp8_fma_tb_behav -key {Behavioral:sim_1:Functional:fp8_fma_tb} -tclbatch {fp8_fma_tb.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Time resolution is 1 ps
+source fp8_fma_tb.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+=== MXFP8 DOTP TEST START ===
+[Test1] Simple MAC output = 000000Xx (0.000000)
+Error: ❌ Test1 failed: incorrect MAC result
+Time: 45 ns  Iteration: 0  Process: /fp8_fma_tb/Initial95_31  Scope: fp8_fma_tb  File: C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sim_1/new/fp8_fma_tb.sv Line: 116
+[Test2] Special cases result = 000000Xx
+[Test3] Large/small exponent diff result = 000000Xx (0.000000)
+Error: ❌ Test3 failed: exponent alignment issue
+Time: 85 ns  Iteration: 0  Process: /fp8_fma_tb/Initial95_31  Scope: fp8_fma_tb  File: C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sim_1/new/fp8_fma_tb.sv Line: 144
+[Test4.0] Random output = 000000Xx (0.000000)
+[Test4.1] Random output = 000000Xx (0.000000)
+[Test4.2] Random output = 000000Xx (0.000000)
+[Test4.3] Random output = 000000Xx (0.000000)
+[Test4.4] Random output = 000000Xx (0.000000)
+=== MXFP8 DOTP TEST COMPLETE ===
+$finish called at time : 235 ns : File "C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sim_1/new/fp8_fma_tb.sv" Line 160
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'fp8_fma_tb_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:03 ; elapsed = 00:00:13 . Memory (MB): peak = 1675.574 ; gain = 34.672
+restart
+INFO: [Wavedata 42-604] Simulation restarted
+run all
+=== MXFP8 DOTP TEST START ===
+[Test1] Simple MAC output = 000000Xx (0.000000)
+Error: ❌ Test1 failed: incorrect MAC result
+Time: 45 ns  Iteration: 0  Process: /fp8_fma_tb/Initial95_31  Scope: fp8_fma_tb  File: C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sim_1/new/fp8_fma_tb.sv Line: 116
+[Test2] Special cases result = 000000Xx
+[Test3] Large/small exponent diff result = 000000Xx (0.000000)
+Error: ❌ Test3 failed: exponent alignment issue
+Time: 85 ns  Iteration: 0  Process: /fp8_fma_tb/Initial95_31  Scope: fp8_fma_tb  File: C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sim_1/new/fp8_fma_tb.sv Line: 144
+[Test4.0] Random output = 000000Xx (0.000000)
+[Test4.1] Random output = 000000Xx (0.000000)
+[Test4.2] Random output = 000000Xx (0.000000)
+[Test4.3] Random output = 000000Xx (0.000000)
+[Test4.4] Random output = 000000Xx (0.000000)
+=== MXFP8 DOTP TEST COMPLETE ===
+$finish called at time : 235 ns : File "C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sim_1/new/fp8_fma_tb.sv" Line 160
+restart
+INFO: [Wavedata 42-604] Simulation restarted
+run all
+=== MXFP8 DOTP TEST START ===
+[Test1] Simple MAC output = 000000Xx (0.000000)
+Error: ❌ Test1 failed: incorrect MAC result
+Time: 45 ns  Iteration: 0  Process: /fp8_fma_tb/Initial95_31  Scope: fp8_fma_tb  File: C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sim_1/new/fp8_fma_tb.sv Line: 116
+[Test2] Special cases result = 000000Xx
+[Test3] Large/small exponent diff result = 000000Xx (0.000000)
+Error: ❌ Test3 failed: exponent alignment issue
+Time: 85 ns  Iteration: 0  Process: /fp8_fma_tb/Initial95_31  Scope: fp8_fma_tb  File: C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sim_1/new/fp8_fma_tb.sv Line: 144
+[Test4.0] Random output = 000000Xx (0.000000)
+[Test4.1] Random output = 000000Xx (0.000000)
+[Test4.2] Random output = 000000Xx (0.000000)
+[Test4.3] Random output = 000000Xx (0.000000)
+[Test4.4] Random output = 000000Xx (0.000000)
+=== MXFP8 DOTP TEST COMPLETE ===
+$finish called at time : 235 ns : File "C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sim_1/new/fp8_fma_tb.sv" Line 160
+relaunch_sim
+Command: launch_simulation -step compile -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'fp8_fma_tb'
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from 'C:/Xilinx/2025.1/Vivado/tps/boost_1_72_0'
+INFO: [SIM-utils-54] Inspecting design source files for 'fp8_fma_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -L uvm -prj fp8_fma_tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/adder_tree.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module adder_tree
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/mxfp8_pkg.sv" into library xil_defaultlib
+WARNING: [VRFC 10-9547] assignment pattern cannot be used in static casting [C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/mxfp8_pkg.sv:31]
+WARNING: [VRFC 10-9547] assignment pattern cannot be used in static casting [C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/mxfp8_pkg.sv:32]
+WARNING: [VRFC 10-9547] assignment pattern cannot be used in static casting [C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/mxfp8_pkg.sv:33]
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/mxfp8_classifier.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mxfp8_classifier
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/mxfp8_dotp.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mxfp8_dotp
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/mxfp8_mult.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mxfp8_mult
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/stage8_fp32_accumulation.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module stage8_fp32_accumulator
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sim_1/new/fp8_fma_tb.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module fp8_fma_tb
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+Command: launch_simulation -step elaborate -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'fp8_fma_tb'
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.sim/sim_1/behav/xsim'
+"xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L uvm -L unisims_ver -L unimacro_ver -L secureip --snapshot fp8_fma_tb_behav xil_defaultlib.fp8_fma_tb xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator v2025.1.0
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+Running: C:/Xilinx/2025.1/Vivado/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L uvm -L unisims_ver -L unimacro_ver -L secureip --snapshot fp8_fma_tb_behav xil_defaultlib.fp8_fma_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+WARNING: [VRFC 10-3091] actual bit length 16 differs from formal bit length 8 for port 'a_man' [C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/mxfp8_dotp.sv:238]
+WARNING: [VRFC 10-3091] actual bit length 16 differs from formal bit length 8 for port 'out_man' [C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/mxfp8_dotp.sv:244]
+WARNING: [VRFC 10-3705] select index -7 into 'reg_man' is out of bounds [C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/mxfp8_dotp.sv:265]
+Completed static elaboration
+Starting simulation data flow analysis
+WARNING: [XSIM 43-4100] "C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sim_1/new/fp8_fma_tb.sv" Line 27. Module fp8_fma_tb has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/mxfp8_dotp.sv" Line 23. Module mxfp8_dotp_default has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/mxfp8_mult.sv" Line 21. Module mxfp8_mult(PROD_EXP_WIDTH=32'b01000) has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/stage8_fp32_accumulation.sv" Line 1. Module stage8_fp32_accumulator(MANT_WIDTH=32'b01000,NORM_MAN_WIDTH=32'b010000,EXP_WIDTH=32'b01000) has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sim_1/new/fp8_fma_tb.sv" Line 27. Module fp8_fma_tb has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/mxfp8_dotp.sv" Line 23. Module mxfp8_dotp_default has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/mxfp8_mult.sv" Line 21. Module mxfp8_mult(PROD_EXP_WIDTH=32'b01000) has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/stage8_fp32_accumulation.sv" Line 1. Module stage8_fp32_accumulator(MANT_WIDTH=32'b01000,NORM_MAN_WIDTH=32'b010000,EXP_WIDTH=32'b01000) has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.sim/sim_1/behav/xsim/glbl.v" Line 6. Module glbl has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.sim/sim_1/behav/xsim/glbl.v" Line 6. Module glbl has a timescale but at least one module in design doesn't have timescale.
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package xil_defaultlib.mxfp8_pkg
+Compiling module xil_defaultlib.mxfp8_classifier(NumOperands=32'...
+Compiling module xil_defaultlib.mxfp8_mult(PROD_EXP_WIDTH=32'b01...
+Compiling module xil_defaultlib.adder_tree(PROD_EXP_WIDTH=32'b01...
+Compiling module xil_defaultlib.stage8_fp32_accumulator(MANT_WID...
+Compiling module xil_defaultlib.mxfp8_dotp_default
+Compiling module xil_defaultlib.fp8_fma_tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot fp8_fma_tb_behav
+run_program: Time (s): cpu = 00:00:00 ; elapsed = 00:00:05 . Memory (MB): peak = 3338.082 ; gain = 0.000
+INFO: [USF-XSim-69] 'elaborate' step finished in '5' seconds
+launch_simulation: Time (s): cpu = 00:00:00 ; elapsed = 00:00:05 . Memory (MB): peak = 3338.082 ; gain = 0.000
+Time resolution is 1 ps
+=== MXFP8 DOTP TEST START ===
+[Test1] Simple MAC output = 000000Xx (0.000000)
+Error: ❌ Test1 failed: incorrect MAC result
+Time: 45 ns  Iteration: 0  Process: /fp8_fma_tb/Initial95_31  Scope: fp8_fma_tb  File: C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sim_1/new/fp8_fma_tb.sv Line: 116
+[Test2] Special cases result = 000000Xx
+[Test3] Large/small exponent diff result = 000000Xx (0.000000)
+Error: ❌ Test3 failed: exponent alignment issue
+Time: 85 ns  Iteration: 0  Process: /fp8_fma_tb/Initial95_31  Scope: fp8_fma_tb  File: C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sim_1/new/fp8_fma_tb.sv Line: 144
+[Test4.0] Random output = 000000Xx (0.000000)
+[Test4.1] Random output = 000000Xx (0.000000)
+[Test4.2] Random output = 000000Xx (0.000000)
+[Test4.3] Random output = 000000Xx (0.000000)
+[Test4.4] Random output = 000000Xx (0.000000)
+=== MXFP8 DOTP TEST COMPLETE ===
+$finish called at time : 235 ns : File "C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sim_1/new/fp8_fma_tb.sv" Line 160
+relaunch_sim: Time (s): cpu = 00:00:01 ; elapsed = 00:00:09 . Memory (MB): peak = 3338.082 ; gain = 0.000
+relaunch_sim
+Command: launch_simulation -step compile -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'fp8_fma_tb'
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -L uvm -prj fp8_fma_tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/adder_tree.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module adder_tree
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/mxfp8_pkg.sv" into library xil_defaultlib
+WARNING: [VRFC 10-9547] assignment pattern cannot be used in static casting [C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/mxfp8_pkg.sv:31]
+WARNING: [VRFC 10-9547] assignment pattern cannot be used in static casting [C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/mxfp8_pkg.sv:32]
+WARNING: [VRFC 10-9547] assignment pattern cannot be used in static casting [C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/mxfp8_pkg.sv:33]
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/mxfp8_classifier.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mxfp8_classifier
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/mxfp8_dotp.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mxfp8_dotp
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/mxfp8_mult.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mxfp8_mult
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/stage8_fp32_accumulation.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module stage8_fp32_accumulator
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sim_1/new/fp8_fma_tb.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module fp8_fma_tb
+INFO: [USF-XSim-69] 'compile' step finished in '3' seconds
+Command: launch_simulation -step elaborate -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'fp8_fma_tb'
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.sim/sim_1/behav/xsim'
+"xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L uvm -L unisims_ver -L unimacro_ver -L secureip --snapshot fp8_fma_tb_behav xil_defaultlib.fp8_fma_tb xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator v2025.1.0
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+Running: C:/Xilinx/2025.1/Vivado/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L uvm -L unisims_ver -L unimacro_ver -L secureip --snapshot fp8_fma_tb_behav xil_defaultlib.fp8_fma_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+WARNING: [VRFC 10-3705] select index -7 into 'reg_man' is out of bounds [C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/mxfp8_dotp.sv:265]
+Completed static elaboration
+Starting simulation data flow analysis
+WARNING: [XSIM 43-4100] "C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sim_1/new/fp8_fma_tb.sv" Line 27. Module fp8_fma_tb has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/mxfp8_dotp.sv" Line 23. Module mxfp8_dotp_default has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/mxfp8_mult.sv" Line 21. Module mxfp8_mult(PROD_EXP_WIDTH=32'b01000) has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/stage8_fp32_accumulation.sv" Line 1. Module stage8_fp32_accumulator(MANT_WIDTH=32'b01000,NORM_MAN_WIDTH=32'b010000,EXP_WIDTH=32'b01000) has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sim_1/new/fp8_fma_tb.sv" Line 27. Module fp8_fma_tb has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/mxfp8_dotp.sv" Line 23. Module mxfp8_dotp_default has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/mxfp8_mult.sv" Line 21. Module mxfp8_mult(PROD_EXP_WIDTH=32'b01000) has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/stage8_fp32_accumulation.sv" Line 1. Module stage8_fp32_accumulator(MANT_WIDTH=32'b01000,NORM_MAN_WIDTH=32'b010000,EXP_WIDTH=32'b01000) has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.sim/sim_1/behav/xsim/glbl.v" Line 6. Module glbl has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.sim/sim_1/behav/xsim/glbl.v" Line 6. Module glbl has a timescale but at least one module in design doesn't have timescale.
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package xil_defaultlib.mxfp8_pkg
+Compiling module xil_defaultlib.mxfp8_classifier(NumOperands=32'...
+Compiling module xil_defaultlib.mxfp8_mult(PROD_EXP_WIDTH=32'b01...
+Compiling module xil_defaultlib.adder_tree(PROD_EXP_WIDTH=32'b01...
+Compiling module xil_defaultlib.stage8_fp32_accumulator(MANT_WID...
+Compiling module xil_defaultlib.mxfp8_dotp_default
+Compiling module xil_defaultlib.fp8_fma_tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot fp8_fma_tb_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '4' seconds
+Time resolution is 1 ps
+=== MXFP8 DOTP TEST START ===
+[Test1] Simple MAC output = 000000Xx (0.000000)
+Error: ❌ Test1 failed: incorrect MAC result
+Time: 45 ns  Iteration: 0  Process: /fp8_fma_tb/Initial95_31  Scope: fp8_fma_tb  File: C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sim_1/new/fp8_fma_tb.sv Line: 116
+[Test2] Special cases result = 000000Xx
+[Test3] Large/small exponent diff result = 000000Xx (0.000000)
+Error: ❌ Test3 failed: exponent alignment issue
+Time: 85 ns  Iteration: 0  Process: /fp8_fma_tb/Initial95_31  Scope: fp8_fma_tb  File: C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sim_1/new/fp8_fma_tb.sv Line: 144
+[Test4.0] Random output = 000000Xx (0.000000)
+[Test4.1] Random output = 000000Xx (0.000000)
+[Test4.2] Random output = 000000Xx (0.000000)
+[Test4.3] Random output = 000000Xx (0.000000)
+[Test4.4] Random output = 000000Xx (0.000000)
+=== MXFP8 DOTP TEST COMPLETE ===
+$finish called at time : 235 ns : File "C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sim_1/new/fp8_fma_tb.sv" Line 160
+relaunch_sim: Time (s): cpu = 00:00:01 ; elapsed = 00:00:08 . Memory (MB): peak = 3338.082 ; gain = 0.000
+relaunch_sim
+Command: launch_simulation -step compile -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'fp8_fma_tb'
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -L uvm -prj fp8_fma_tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/adder_tree.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module adder_tree
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/mxfp8_pkg.sv" into library xil_defaultlib
+WARNING: [VRFC 10-9547] assignment pattern cannot be used in static casting [C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/mxfp8_pkg.sv:31]
+WARNING: [VRFC 10-9547] assignment pattern cannot be used in static casting [C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/mxfp8_pkg.sv:32]
+WARNING: [VRFC 10-9547] assignment pattern cannot be used in static casting [C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/mxfp8_pkg.sv:33]
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/mxfp8_classifier.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mxfp8_classifier
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/mxfp8_dotp.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mxfp8_dotp
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/mxfp8_mult.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mxfp8_mult
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/stage8_fp32_accumulation.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module stage8_fp32_accumulator
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sim_1/new/fp8_fma_tb.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module fp8_fma_tb
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+Command: launch_simulation -step elaborate -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'fp8_fma_tb'
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.sim/sim_1/behav/xsim'
+"xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L uvm -L unisims_ver -L unimacro_ver -L secureip --snapshot fp8_fma_tb_behav xil_defaultlib.fp8_fma_tb xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator v2025.1.0
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+Running: C:/Xilinx/2025.1/Vivado/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L uvm -L unisims_ver -L unimacro_ver -L secureip --snapshot fp8_fma_tb_behav xil_defaultlib.fp8_fma_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+WARNING: [VRFC 10-3091] actual bit length 9 differs from formal bit length 8 for port 'a_exp' [C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/mxfp8_dotp.sv:237]
+WARNING: [VRFC 10-3091] actual bit length 16 differs from formal bit length 8 for port 'a_man' [C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/mxfp8_dotp.sv:238]
+WARNING: [VRFC 10-3705] select index -7 into 'reg_man' is out of bounds [C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/mxfp8_dotp.sv:265]
+Completed static elaboration
+Starting simulation data flow analysis
+WARNING: [XSIM 43-4100] "C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sim_1/new/fp8_fma_tb.sv" Line 27. Module fp8_fma_tb has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/mxfp8_dotp.sv" Line 23. Module mxfp8_dotp_default has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/mxfp8_mult.sv" Line 21. Module mxfp8_mult(PROD_EXP_WIDTH=32'b01000) has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/stage8_fp32_accumulation.sv" Line 1. Module stage8_fp32_accumulator(MANT_WIDTH=32'b01000,NORM_MAN_WIDTH=32'b010000,EXP_WIDTH=32'b01000) has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sim_1/new/fp8_fma_tb.sv" Line 27. Module fp8_fma_tb has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/mxfp8_dotp.sv" Line 23. Module mxfp8_dotp_default has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/mxfp8_mult.sv" Line 21. Module mxfp8_mult(PROD_EXP_WIDTH=32'b01000) has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/stage8_fp32_accumulation.sv" Line 1. Module stage8_fp32_accumulator(MANT_WIDTH=32'b01000,NORM_MAN_WIDTH=32'b010000,EXP_WIDTH=32'b01000) has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.sim/sim_1/behav/xsim/glbl.v" Line 6. Module glbl has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.sim/sim_1/behav/xsim/glbl.v" Line 6. Module glbl has a timescale but at least one module in design doesn't have timescale.
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package xil_defaultlib.mxfp8_pkg
+Compiling module xil_defaultlib.mxfp8_classifier(NumOperands=32'...
+Compiling module xil_defaultlib.mxfp8_mult(PROD_EXP_WIDTH=32'b01...
+Compiling module xil_defaultlib.adder_tree(PROD_EXP_WIDTH=32'b01...
+Compiling module xil_defaultlib.stage8_fp32_accumulator(MANT_WID...
+Compiling module xil_defaultlib.mxfp8_dotp_default
+Compiling module xil_defaultlib.fp8_fma_tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot fp8_fma_tb_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '5' seconds
+Time resolution is 1 ps
+=== MXFP8 DOTP TEST START ===
+[Test1] Simple MAC output = 000000Xx (0.000000)
+Error: ❌ Test1 failed: incorrect MAC result
+Time: 45 ns  Iteration: 0  Process: /fp8_fma_tb/Initial95_28  Scope: fp8_fma_tb  File: C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sim_1/new/fp8_fma_tb.sv Line: 116
+[Test2] Special cases result = 000000Xx
+[Test3] Large/small exponent diff result = 000000Xx (0.000000)
+Error: ❌ Test3 failed: exponent alignment issue
+Time: 85 ns  Iteration: 0  Process: /fp8_fma_tb/Initial95_28  Scope: fp8_fma_tb  File: C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sim_1/new/fp8_fma_tb.sv Line: 144
+[Test4.0] Random output = 000000Xx (0.000000)
+[Test4.1] Random output = 000000Xx (0.000000)
+[Test4.2] Random output = 000000Xx (0.000000)
+[Test4.3] Random output = 000000Xx (0.000000)
+[Test4.4] Random output = 000000Xx (0.000000)
+=== MXFP8 DOTP TEST COMPLETE ===
+$finish called at time : 235 ns : File "C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sim_1/new/fp8_fma_tb.sv" Line 160
+relaunch_sim: Time (s): cpu = 00:00:00 ; elapsed = 00:00:08 . Memory (MB): peak = 3338.082 ; gain = 0.000
+restart
+INFO: [Wavedata 42-604] Simulation restarted
+run all
+=== MXFP8 DOTP TEST START ===
+[Test1] Simple MAC output = 000000Xx (0.000000)
+Error: ❌ Test1 failed: incorrect MAC result
+Time: 45 ns  Iteration: 0  Process: /fp8_fma_tb/Initial95_28  Scope: fp8_fma_tb  File: C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sim_1/new/fp8_fma_tb.sv Line: 116
+[Test2] Special cases result = 000000Xx
+[Test3] Large/small exponent diff result = 000000Xx (0.000000)
+Error: ❌ Test3 failed: exponent alignment issue
+Time: 85 ns  Iteration: 0  Process: /fp8_fma_tb/Initial95_28  Scope: fp8_fma_tb  File: C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sim_1/new/fp8_fma_tb.sv Line: 144
+[Test4.0] Random output = 000000Xx (0.000000)
+[Test4.1] Random output = 000000Xx (0.000000)
+[Test4.2] Random output = 000000Xx (0.000000)
+[Test4.3] Random output = 000000Xx (0.000000)
+[Test4.4] Random output = 000000Xx (0.000000)
+=== MXFP8 DOTP TEST COMPLETE ===
+$finish called at time : 235 ns : File "C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sim_1/new/fp8_fma_tb.sv" Line 160
+relaunch_sim
+Command: launch_simulation -step compile -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'fp8_fma_tb'
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -L uvm -prj fp8_fma_tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/adder_tree.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module adder_tree
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/mxfp8_pkg.sv" into library xil_defaultlib
+WARNING: [VRFC 10-9547] assignment pattern cannot be used in static casting [C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/mxfp8_pkg.sv:31]
+WARNING: [VRFC 10-9547] assignment pattern cannot be used in static casting [C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/mxfp8_pkg.sv:32]
+WARNING: [VRFC 10-9547] assignment pattern cannot be used in static casting [C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/mxfp8_pkg.sv:33]
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/mxfp8_classifier.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mxfp8_classifier
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/mxfp8_dotp.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mxfp8_dotp
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/mxfp8_mult.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mxfp8_mult
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/stage8_fp32_accumulation.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module stage8_fp32_accumulator
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sim_1/new/fp8_fma_tb.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module fp8_fma_tb
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+Command: launch_simulation -step elaborate -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'fp8_fma_tb'
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.sim/sim_1/behav/xsim'
+"xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L uvm -L unisims_ver -L unimacro_ver -L secureip --snapshot fp8_fma_tb_behav xil_defaultlib.fp8_fma_tb xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator v2025.1.0
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+Running: C:/Xilinx/2025.1/Vivado/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L uvm -L unisims_ver -L unimacro_ver -L secureip --snapshot fp8_fma_tb_behav xil_defaultlib.fp8_fma_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+WARNING: [VRFC 10-3091] actual bit length 9 differs from formal bit length 8 for port 'a_exp' [C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/mxfp8_dotp.sv:237]
+WARNING: [VRFC 10-3705] select index -7 into 'reg_man' is out of bounds [C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/mxfp8_dotp.sv:265]
+Completed static elaboration
+Starting simulation data flow analysis
+WARNING: [XSIM 43-4100] "C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sim_1/new/fp8_fma_tb.sv" Line 27. Module fp8_fma_tb has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/mxfp8_dotp.sv" Line 23. Module mxfp8_dotp_default has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/mxfp8_mult.sv" Line 21. Module mxfp8_mult(PROD_EXP_WIDTH=32'b01000) has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/stage8_fp32_accumulation.sv" Line 1. Module stage8_fp32_accumulator(MANT_WIDTH=32'b01000,NORM_MAN_WIDTH=32'b010000,EXP_WIDTH=32'b01000) has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sim_1/new/fp8_fma_tb.sv" Line 27. Module fp8_fma_tb has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/mxfp8_dotp.sv" Line 23. Module mxfp8_dotp_default has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/mxfp8_mult.sv" Line 21. Module mxfp8_mult(PROD_EXP_WIDTH=32'b01000) has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/stage8_fp32_accumulation.sv" Line 1. Module stage8_fp32_accumulator(MANT_WIDTH=32'b01000,NORM_MAN_WIDTH=32'b010000,EXP_WIDTH=32'b01000) has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.sim/sim_1/behav/xsim/glbl.v" Line 6. Module glbl has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.sim/sim_1/behav/xsim/glbl.v" Line 6. Module glbl has a timescale but at least one module in design doesn't have timescale.
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package xil_defaultlib.mxfp8_pkg
+Compiling module xil_defaultlib.mxfp8_classifier(NumOperands=32'...
+Compiling module xil_defaultlib.mxfp8_mult(PROD_EXP_WIDTH=32'b01...
+Compiling module xil_defaultlib.adder_tree(PROD_EXP_WIDTH=32'b01...
+Compiling module xil_defaultlib.stage8_fp32_accumulator(MANT_WID...
+Compiling module xil_defaultlib.mxfp8_dotp_default
+Compiling module xil_defaultlib.fp8_fma_tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot fp8_fma_tb_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '4' seconds
+Time resolution is 1 ps
+=== MXFP8 DOTP TEST START ===
+[Test1] Simple MAC output = 000000Xx (0.000000)
+Error: ❌ Test1 failed: incorrect MAC result
+Time: 45 ns  Iteration: 0  Process: /fp8_fma_tb/Initial95_28  Scope: fp8_fma_tb  File: C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sim_1/new/fp8_fma_tb.sv Line: 116
+[Test2] Special cases result = 000000Xx
+[Test3] Large/small exponent diff result = 000000Xx (0.000000)
+Error: ❌ Test3 failed: exponent alignment issue
+Time: 85 ns  Iteration: 0  Process: /fp8_fma_tb/Initial95_28  Scope: fp8_fma_tb  File: C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sim_1/new/fp8_fma_tb.sv Line: 144
+[Test4.0] Random output = 000000Xx (0.000000)
+[Test4.1] Random output = 000000Xx (0.000000)
+[Test4.2] Random output = 000000Xx (0.000000)
+[Test4.3] Random output = 000000Xx (0.000000)
+[Test4.4] Random output = 000000Xx (0.000000)
+=== MXFP8 DOTP TEST COMPLETE ===
+$finish called at time : 235 ns : File "C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sim_1/new/fp8_fma_tb.sv" Line 160
+relaunch_sim: Time (s): cpu = 00:00:01 ; elapsed = 00:00:08 . Memory (MB): peak = 3338.082 ; gain = 0.000
+relaunch_sim
+Command: launch_simulation -step compile -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'fp8_fma_tb'
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -L uvm -prj fp8_fma_tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/adder_tree.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module adder_tree
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/mxfp8_pkg.sv" into library xil_defaultlib
+WARNING: [VRFC 10-9547] assignment pattern cannot be used in static casting [C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/mxfp8_pkg.sv:31]
+WARNING: [VRFC 10-9547] assignment pattern cannot be used in static casting [C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/mxfp8_pkg.sv:32]
+WARNING: [VRFC 10-9547] assignment pattern cannot be used in static casting [C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/mxfp8_pkg.sv:33]
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/mxfp8_classifier.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mxfp8_classifier
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/mxfp8_dotp.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mxfp8_dotp
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/mxfp8_mult.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mxfp8_mult
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/stage8_fp32_accumulation.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module stage8_fp32_accumulator
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sim_1/new/fp8_fma_tb.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module fp8_fma_tb
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+Command: launch_simulation -step elaborate -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'fp8_fma_tb'
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.sim/sim_1/behav/xsim'
+"xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L uvm -L unisims_ver -L unimacro_ver -L secureip --snapshot fp8_fma_tb_behav xil_defaultlib.fp8_fma_tb xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator v2025.1.0
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+Running: C:/Xilinx/2025.1/Vivado/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L uvm -L unisims_ver -L unimacro_ver -L secureip --snapshot fp8_fma_tb_behav xil_defaultlib.fp8_fma_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+WARNING: [VRFC 10-3091] actual bit length 9 differs from formal bit length 8 for port 'a_exp' [C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/mxfp8_dotp.sv:237]
+WARNING: [VRFC 10-3705] select index -7 into 'reg_man' is out of bounds [C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/mxfp8_dotp.sv:265]
+Completed static elaboration
+Starting simulation data flow analysis
+WARNING: [XSIM 43-4100] "C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sim_1/new/fp8_fma_tb.sv" Line 27. Module fp8_fma_tb has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/mxfp8_dotp.sv" Line 23. Module mxfp8_dotp_default has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/mxfp8_mult.sv" Line 21. Module mxfp8_mult(PROD_EXP_WIDTH=32'b01000) has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/stage8_fp32_accumulation.sv" Line 1. Module stage8_fp32_accumulator(MANT_WIDTH=32'b01000,NORM_MAN_WIDTH=32'b010000,EXP_WIDTH=32'b01000) has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sim_1/new/fp8_fma_tb.sv" Line 27. Module fp8_fma_tb has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/mxfp8_dotp.sv" Line 23. Module mxfp8_dotp_default has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/mxfp8_mult.sv" Line 21. Module mxfp8_mult(PROD_EXP_WIDTH=32'b01000) has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/stage8_fp32_accumulation.sv" Line 1. Module stage8_fp32_accumulator(MANT_WIDTH=32'b01000,NORM_MAN_WIDTH=32'b010000,EXP_WIDTH=32'b01000) has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.sim/sim_1/behav/xsim/glbl.v" Line 6. Module glbl has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.sim/sim_1/behav/xsim/glbl.v" Line 6. Module glbl has a timescale but at least one module in design doesn't have timescale.
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package xil_defaultlib.mxfp8_pkg
+Compiling module xil_defaultlib.mxfp8_classifier(NumOperands=32'...
+Compiling module xil_defaultlib.mxfp8_mult(PROD_EXP_WIDTH=32'b01...
+Compiling module xil_defaultlib.adder_tree(PROD_EXP_WIDTH=32'b01...
+Compiling module xil_defaultlib.stage8_fp32_accumulator(MANT_WID...
+Compiling module xil_defaultlib.mxfp8_dotp_default
+Compiling module xil_defaultlib.fp8_fma_tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot fp8_fma_tb_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '3' seconds
+Time resolution is 1 ps
+=== MXFP8 DOTP TEST START ===
+[Test1] Simple MAC output = 000000Xx (0.000000)
+Error: ❌ Test1 failed: incorrect MAC result
+Time: 45 ns  Iteration: 0  Process: /fp8_fma_tb/Initial95_28  Scope: fp8_fma_tb  File: C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sim_1/new/fp8_fma_tb.sv Line: 116
+[Test2] Special cases result = 000000Xx
+[Test3] Large/small exponent diff result = 000000Xx (0.000000)
+Error: ❌ Test3 failed: exponent alignment issue
+Time: 85 ns  Iteration: 0  Process: /fp8_fma_tb/Initial95_28  Scope: fp8_fma_tb  File: C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sim_1/new/fp8_fma_tb.sv Line: 144
+[Test4.0] Random output = 000000Xx (0.000000)
+[Test4.1] Random output = 000000Xx (0.000000)
+[Test4.2] Random output = 000000Xx (0.000000)
+[Test4.3] Random output = 000000Xx (0.000000)
+[Test4.4] Random output = 000000Xx (0.000000)
+=== MXFP8 DOTP TEST COMPLETE ===
+$finish called at time : 235 ns : File "C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sim_1/new/fp8_fma_tb.sv" Line 160
+relaunch_sim: Time (s): cpu = 00:00:00 ; elapsed = 00:00:09 . Memory (MB): peak = 3361.688 ; gain = 0.000
+restart
+INFO: [Wavedata 42-604] Simulation restarted
+run all
+=== MXFP8 DOTP TEST START ===
+[Test1] Simple MAC output = 000000Xx (0.000000)
+Error: ❌ Test1 failed: incorrect MAC result
+Time: 45 ns  Iteration: 0  Process: /fp8_fma_tb/Initial95_28  Scope: fp8_fma_tb  File: C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sim_1/new/fp8_fma_tb.sv Line: 116
+[Test2] Special cases result = 000000Xx
+[Test3] Large/small exponent diff result = 000000Xx (0.000000)
+Error: ❌ Test3 failed: exponent alignment issue
+Time: 85 ns  Iteration: 0  Process: /fp8_fma_tb/Initial95_28  Scope: fp8_fma_tb  File: C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sim_1/new/fp8_fma_tb.sv Line: 144
+[Test4.0] Random output = 000000Xx (0.000000)
+[Test4.1] Random output = 000000Xx (0.000000)
+[Test4.2] Random output = 000000Xx (0.000000)
+[Test4.3] Random output = 000000Xx (0.000000)
+[Test4.4] Random output = 000000Xx (0.000000)
+=== MXFP8 DOTP TEST COMPLETE ===
+$finish called at time : 235 ns : File "C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sim_1/new/fp8_fma_tb.sv" Line 160
+relaunch_sim
+Command: launch_simulation -step compile -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'fp8_fma_tb'
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -L uvm -prj fp8_fma_tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/adder_tree.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module adder_tree
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/mxfp8_pkg.sv" into library xil_defaultlib
+WARNING: [VRFC 10-9547] assignment pattern cannot be used in static casting [C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/mxfp8_pkg.sv:31]
+WARNING: [VRFC 10-9547] assignment pattern cannot be used in static casting [C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/mxfp8_pkg.sv:32]
+WARNING: [VRFC 10-9547] assignment pattern cannot be used in static casting [C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/mxfp8_pkg.sv:33]
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/mxfp8_classifier.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mxfp8_classifier
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/mxfp8_dotp.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mxfp8_dotp
+ERROR: [VRFC 10-4982] syntax error near '{' [C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/mxfp8_dotp.sv:265]
+ERROR: [VRFC 10-8530] module 'mxfp8_dotp' is ignored due to previous errors [C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/mxfp8_dotp.sv:23]
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-99] Step results log file:'C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.sim/sim_1/behav/xsim/xvlog.log'
+ERROR: [USF-XSim-62] 'compile' step failed with error(s). Please check the Tcl console output or 'C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.sim/sim_1/behav/xsim/xvlog.log' file for more information.
+ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
+ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+ERROR: [Common 17-69] Command failed: ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+
+relaunch_sim
+Command: launch_simulation -step compile -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'fp8_fma_tb'
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -L uvm -prj fp8_fma_tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/adder_tree.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module adder_tree
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/mxfp8_pkg.sv" into library xil_defaultlib
+WARNING: [VRFC 10-9547] assignment pattern cannot be used in static casting [C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/mxfp8_pkg.sv:31]
+WARNING: [VRFC 10-9547] assignment pattern cannot be used in static casting [C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/mxfp8_pkg.sv:32]
+WARNING: [VRFC 10-9547] assignment pattern cannot be used in static casting [C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/mxfp8_pkg.sv:33]
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/mxfp8_classifier.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mxfp8_classifier
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/mxfp8_dotp.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mxfp8_dotp
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/mxfp8_mult.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mxfp8_mult
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/stage8_fp32_accumulation.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module stage8_fp32_accumulator
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sim_1/new/fp8_fma_tb.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module fp8_fma_tb
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+Command: launch_simulation -step elaborate -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'fp8_fma_tb'
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.sim/sim_1/behav/xsim'
+"xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L uvm -L unisims_ver -L unimacro_ver -L secureip --snapshot fp8_fma_tb_behav xil_defaultlib.fp8_fma_tb xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator v2025.1.0
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+Running: C:/Xilinx/2025.1/Vivado/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L uvm -L unisims_ver -L unimacro_ver -L secureip --snapshot fp8_fma_tb_behav xil_defaultlib.fp8_fma_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+WARNING: [VRFC 10-3091] actual bit length 9 differs from formal bit length 8 for port 'a_exp' [C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/mxfp8_dotp.sv:237]
+Completed static elaboration
+Starting simulation data flow analysis
+WARNING: [XSIM 43-4100] "C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sim_1/new/fp8_fma_tb.sv" Line 27. Module fp8_fma_tb has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/mxfp8_dotp.sv" Line 23. Module mxfp8_dotp_default has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/mxfp8_mult.sv" Line 21. Module mxfp8_mult(PROD_EXP_WIDTH=32'b01000) has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/stage8_fp32_accumulation.sv" Line 1. Module stage8_fp32_accumulator(MANT_WIDTH=32'b01000,NORM_MAN_WIDTH=32'b010000,EXP_WIDTH=32'b01000) has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sim_1/new/fp8_fma_tb.sv" Line 27. Module fp8_fma_tb has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/mxfp8_dotp.sv" Line 23. Module mxfp8_dotp_default has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/mxfp8_mult.sv" Line 21. Module mxfp8_mult(PROD_EXP_WIDTH=32'b01000) has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/stage8_fp32_accumulation.sv" Line 1. Module stage8_fp32_accumulator(MANT_WIDTH=32'b01000,NORM_MAN_WIDTH=32'b010000,EXP_WIDTH=32'b01000) has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.sim/sim_1/behav/xsim/glbl.v" Line 6. Module glbl has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.sim/sim_1/behav/xsim/glbl.v" Line 6. Module glbl has a timescale but at least one module in design doesn't have timescale.
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package xil_defaultlib.mxfp8_pkg
+Compiling module xil_defaultlib.mxfp8_classifier(NumOperands=32'...
+Compiling module xil_defaultlib.mxfp8_mult(PROD_EXP_WIDTH=32'b01...
+Compiling module xil_defaultlib.adder_tree(PROD_EXP_WIDTH=32'b01...
+Compiling module xil_defaultlib.stage8_fp32_accumulator(MANT_WID...
+Compiling module xil_defaultlib.mxfp8_dotp_default
+Compiling module xil_defaultlib.fp8_fma_tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot fp8_fma_tb_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '3' seconds
+Time resolution is 1 ps
+=== MXFP8 DOTP TEST START ===
+[Test1] Simple MAC output = 00000000 (0.000000)
+Error: ❌ Test1 failed: incorrect MAC result
+Time: 45 ns  Iteration: 0  Process: /fp8_fma_tb/Initial95_28  Scope: fp8_fma_tb  File: C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sim_1/new/fp8_fma_tb.sv Line: 116
+[Test2] Special cases result = 00000000
+[Test3] Large/small exponent diff result = 00000000 (0.000000)
+Error: ❌ Test3 failed: exponent alignment issue
+Time: 85 ns  Iteration: 0  Process: /fp8_fma_tb/Initial95_28  Scope: fp8_fma_tb  File: C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sim_1/new/fp8_fma_tb.sv Line: 144
+[Test4.0] Random output = 00000000 (0.000000)
+[Test4.1] Random output = 00000000 (0.000000)
+[Test4.2] Random output = 00000000 (0.000000)
+[Test4.3] Random output = 00000000 (0.000000)
+[Test4.4] Random output = 00000000 (0.000000)
+=== MXFP8 DOTP TEST COMPLETE ===
+$finish called at time : 235 ns : File "C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sim_1/new/fp8_fma_tb.sv" Line 160
+relaunch_sim: Time (s): cpu = 00:00:01 ; elapsed = 00:00:06 . Memory (MB): peak = 3361.688 ; gain = 0.000
+restart
+INFO: [Wavedata 42-604] Simulation restarted
+run all
+=== MXFP8 DOTP TEST START ===
+[Test1] Simple MAC output = 00000000 (0.000000)
+Error: ❌ Test1 failed: incorrect MAC result
+Time: 45 ns  Iteration: 0  Process: /fp8_fma_tb/Initial95_28  Scope: fp8_fma_tb  File: C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sim_1/new/fp8_fma_tb.sv Line: 116
+[Test2] Special cases result = 00000000
+[Test3] Large/small exponent diff result = 00000000 (0.000000)
+Error: ❌ Test3 failed: exponent alignment issue
+Time: 85 ns  Iteration: 0  Process: /fp8_fma_tb/Initial95_28  Scope: fp8_fma_tb  File: C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sim_1/new/fp8_fma_tb.sv Line: 144
+[Test4.0] Random output = 00000000 (0.000000)
+[Test4.1] Random output = 00000000 (0.000000)
+[Test4.2] Random output = 00000000 (0.000000)
+[Test4.3] Random output = 00000000 (0.000000)
+[Test4.4] Random output = 00000000 (0.000000)
+=== MXFP8 DOTP TEST COMPLETE ===
+$finish called at time : 235 ns : File "C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sim_1/new/fp8_fma_tb.sv" Line 160
+relaunch_sim
+Command: launch_simulation -step compile -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'fp8_fma_tb'
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -L uvm -prj fp8_fma_tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/adder_tree.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module adder_tree
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/mxfp8_pkg.sv" into library xil_defaultlib
+WARNING: [VRFC 10-9547] assignment pattern cannot be used in static casting [C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/mxfp8_pkg.sv:31]
+WARNING: [VRFC 10-9547] assignment pattern cannot be used in static casting [C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/mxfp8_pkg.sv:32]
+WARNING: [VRFC 10-9547] assignment pattern cannot be used in static casting [C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/mxfp8_pkg.sv:33]
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/mxfp8_classifier.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mxfp8_classifier
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/mxfp8_dotp.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mxfp8_dotp
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/mxfp8_mult.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mxfp8_mult
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/stage8_fp32_accumulation.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module stage8_fp32_accumulator
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sim_1/new/fp8_fma_tb.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module fp8_fma_tb
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+Command: launch_simulation -step elaborate -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'fp8_fma_tb'
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.sim/sim_1/behav/xsim'
+"xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L uvm -L unisims_ver -L unimacro_ver -L secureip --snapshot fp8_fma_tb_behav xil_defaultlib.fp8_fma_tb xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator v2025.1.0
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+Running: C:/Xilinx/2025.1/Vivado/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L uvm -L unisims_ver -L unimacro_ver -L secureip --snapshot fp8_fma_tb_behav xil_defaultlib.fp8_fma_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+WARNING: [VRFC 10-3091] actual bit length 9 differs from formal bit length 8 for port 'a_exp' [C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/mxfp8_dotp.sv:237]
+Completed static elaboration
+Starting simulation data flow analysis
+WARNING: [XSIM 43-4100] "C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sim_1/new/fp8_fma_tb.sv" Line 27. Module fp8_fma_tb has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/mxfp8_dotp.sv" Line 23. Module mxfp8_dotp_default has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/mxfp8_mult.sv" Line 21. Module mxfp8_mult(PROD_EXP_WIDTH=32'b01000) has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/stage8_fp32_accumulation.sv" Line 1. Module stage8_fp32_accumulator(MANT_WIDTH=32'b01000,NORM_MAN_WIDTH=32'b010000,EXP_WIDTH=32'b01000) has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sim_1/new/fp8_fma_tb.sv" Line 27. Module fp8_fma_tb has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/mxfp8_dotp.sv" Line 23. Module mxfp8_dotp_default has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/mxfp8_mult.sv" Line 21. Module mxfp8_mult(PROD_EXP_WIDTH=32'b01000) has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/stage8_fp32_accumulation.sv" Line 1. Module stage8_fp32_accumulator(MANT_WIDTH=32'b01000,NORM_MAN_WIDTH=32'b010000,EXP_WIDTH=32'b01000) has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.sim/sim_1/behav/xsim/glbl.v" Line 6. Module glbl has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.sim/sim_1/behav/xsim/glbl.v" Line 6. Module glbl has a timescale but at least one module in design doesn't have timescale.
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package xil_defaultlib.mxfp8_pkg
+Compiling module xil_defaultlib.mxfp8_classifier(NumOperands=32'...
+Compiling module xil_defaultlib.mxfp8_mult(PROD_EXP_WIDTH=32'b01...
+Compiling module xil_defaultlib.adder_tree(PROD_EXP_WIDTH=32'b01...
+Compiling module xil_defaultlib.stage8_fp32_accumulator(MANT_WID...
+Compiling module xil_defaultlib.mxfp8_dotp_default
+Compiling module xil_defaultlib.fp8_fma_tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot fp8_fma_tb_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '3' seconds
+Time resolution is 1 ps
+=== MXFP8 DOTP TEST START ===
+[Test1] Simple MAC output = 56000000 (35184372088832.000000)
+Error: ❌ Test1 failed: incorrect MAC result
+Time: 45 ns  Iteration: 0  Process: /fp8_fma_tb/Initial95_28  Scope: fp8_fma_tb  File: C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sim_1/new/fp8_fma_tb.sv Line: 116
+[Test2] Special cases result = 4b500000
+[Test3] Large/small exponent diff result = 55880200 (18692771414016.000000)
+[Test4.0] Random output = 5b5c6200 (62032247015866368.000000)
+[Test4.1] Random output = 5961c000 (3971435999526912.000000)
+[Test4.2] Random output = 5b9e1c00 (89007665291722752.000000)
+[Test4.3] Random output = 3fc18800 (1.511963)
+[Test4.4] Random output = 3fe06e00 (1.753357)
+=== MXFP8 DOTP TEST COMPLETE ===
+$finish called at time : 235 ns : File "C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sim_1/new/fp8_fma_tb.sv" Line 160
+relaunch_sim: Time (s): cpu = 00:00:01 ; elapsed = 00:00:07 . Memory (MB): peak = 3361.688 ; gain = 0.000
+save_wave_config {C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/fp8_fma_tb_behav.wcfg}
+add_files -fileset sim_1 -norecurse C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/fp8_fma_tb_behav.wcfg
+set_property xsim.view C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/fp8_fma_tb_behav.wcfg [get_filesets sim_1]
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+exit
+INFO: [Common 17-206] Exiting Vivado at Fri Oct 31 04:07:27 2025...
