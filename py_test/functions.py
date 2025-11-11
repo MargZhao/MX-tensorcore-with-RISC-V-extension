@@ -10,10 +10,12 @@ def find_share(values):
         share = share_min
     return share
 
-def normalize(matrix,share):
-    return matrix/2**share
+def normalize(matrix,share,normalized=True):
+    if normalized:
+        return matrix/2**share
+    else: return matrix
 
-def quantize_matrix_e5m2(matrix,block_size = 32):
+def quantize_matrix_e5m2(matrix,block_size = 32,normalized=True):
     m,n = matrix.shape
     m_pad = int(np.ceil(m / block_size) * block_size)
     n_pad = int(np.ceil(n / block_size) * block_size)
@@ -26,7 +28,7 @@ def quantize_matrix_e5m2(matrix,block_size = 32):
             block = matrix_padded[i, j:j+block_size]
             share = find_share(block)
             exp_map[i, j // block_size] = share
-            norm_block = normalize(block,share)
+            norm_block = normalize(block,share,normalized)
             for k in range(block_size):
                 e = E5M2().quantize(norm_block[k])
                 e = (e.to_float())*2**share
@@ -34,7 +36,7 @@ def quantize_matrix_e5m2(matrix,block_size = 32):
 
     return q_matrix, exp_map
 
-def quantize_matrix_e4m3(matrix,block_size = 32):
+def quantize_matrix_e4m3(matrix,block_size = 32,normalized=True):
     m,n = matrix.shape
     m_pad = int(np.ceil(m / block_size) * block_size)
     n_pad = int(np.ceil(n / block_size) * block_size)
@@ -47,7 +49,7 @@ def quantize_matrix_e4m3(matrix,block_size = 32):
             block = matrix_padded[i, j:j+block_size]
             share = find_share(block)
             exp_map[i, j // block_size] = share
-            norm_block = normalize(block,share)
+            norm_block = normalize(block,share,normalized)
             for k in range(block_size):
                 e = E4M3().quantize(norm_block[k])
                 e = (e.to_float())*2**share
@@ -55,7 +57,7 @@ def quantize_matrix_e4m3(matrix,block_size = 32):
 
     return q_matrix, exp_map
 
-def quantize_matrix_int8(matrix,block_size = 32):
+def quantize_matrix_int8(matrix,block_size = 32,normalized=True):
     m,n = matrix.shape
     m_pad = int(np.ceil(m / block_size) * block_size)
     n_pad = int(np.ceil(n / block_size) * block_size)
@@ -68,7 +70,7 @@ def quantize_matrix_int8(matrix,block_size = 32):
             block = matrix_padded[i, j:j+block_size]
             share = find_share(block)
             exp_map[i, j // block_size] = share
-            norm_block = normalize(block,share)
+            norm_block = normalize(block,share,normalized)
             for k in range(block_size):
                 e = MXINT8().quantize(norm_block[k])
                 e = (e.to_float())*2**share
