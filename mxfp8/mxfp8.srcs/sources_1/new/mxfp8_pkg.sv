@@ -101,15 +101,15 @@ package mxfp8_pkg;
     endfunction
     
     // Returns the format that can hold all the data in config
-    function automatic fp_encoding_t super_format(fmt_logic_t cfg);
-    automatic fp_encoding_t res;
-    res = '0;
-    for (int unsigned fmt = 0; fmt < NUM_FP_FORMATS; fmt++)
-      if (cfg[fmt]) begin // only active format
-        res.exp_bits = unsigned'(maximum(res.exp_bits, exp_bits(fp_format_e'(fmt))));
-        res.man_bits = unsigned'(maximum(res.man_bits, man_bits(fp_format_e'(fmt))));
-      end
-    return res;
-    endfunction
+    // function automatic fp_encoding_t super_format(fmt_logic_t cfg);
+    // automatic fp_encoding_t res;
+    // res = '0;
+    // for (int unsigned fmt = 0; fmt < NUM_FP_FORMATS; fmt++)
+    //   if (cfg[fmt]) begin // only active format
+    //     res.exp_bits = unsigned'(maximum(res.exp_bits, exp_bits(fp_format_e'(fmt))));
+    //     res.man_bits = unsigned'(maximum(res.man_bits, man_bits(fp_format_e'(fmt))));
+    //   end
+    // return res;
+    // endfunction
 
 endpackage

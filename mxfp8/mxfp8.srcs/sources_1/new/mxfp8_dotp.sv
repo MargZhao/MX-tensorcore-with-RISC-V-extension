@@ -22,14 +22,14 @@
 
 module mxfp8_dotp#(
     //config
-    parameter int unsigned             VectorSize  = 4,
+    parameter int unsigned             VectorSize  = 32,
     //parameter mxfp8_pkg::fmt_logic_t   SrcDotpFpFmtConfig = 3'b110,
     //const
     localparam int unsigned SRC_WIDTH = mxfp8_pkg::fp_width(mxfp8_pkg::E5M2), //change this with package
     localparam int unsigned SCALE_WIDTH = 8, //change this with package
     localparam int unsigned DST_WIDTH = mxfp8_pkg::fp_width(mxfp8_pkg::FP32), //change this with package
-    localparam int unsigned NUM_OPERANDS = 2*VectorSize+1, // 2 input and result, scale is not included
-    localparam int unsigned NUM_FORMATS = fpnew_pkg::NUM_FP_FORMATS
+    localparam int unsigned NUM_OPERANDS = 2*VectorSize+1 // 2 input and result, scale is not included
+    //localparam int unsigned NUM_FORMATS = fpnew_pkg::NUM_FP_FORMATS
     )(
     input  logic                        clk_i,
     input  logic                        rst_ni,
@@ -40,9 +40,12 @@ module mxfp8_dotp#(
     input  mxfp8_pkg::fp_format_e                dst_fmt_i,//dst operands data type,fixed to FP32 now
     input  logic [1:0][SCALE_WIDTH-1:0]          scale_i, // 2 scales for 2 vectors
 
+    ////////////control signals///////////
+    input logic clr,
+
     ////////////output signals//////////
-    output logic [DST_WIDTH-1:0]        result_o,
-    output fpnew_pkg::status_t          status_o,
+    output logic [DST_WIDTH-1:0]        result_o
+    //output mxfp8_pkg::status_t          status_o,
     );
 
     ////////////cosntants//////////
@@ -56,23 +59,37 @@ module mxfp8_dotp#(
     ////////////type definition//////////
 
     ///////////logics//////////
+    //unpack input operands
+    logic [SUPER_SRC_MAN_WIDTH-1:0] a_man_i[VectorSize-1:0];
+    logic [SUPER_SRC_MAN_WIDTH-1:0] b_man_i[VectorSize-1:0];
+    logic signed [SUPER_SRC_EXP_WIDTH-1:0] a_exp_i[VectorSize-1:0];
+    logic signed [SUPER_SRC_EXP_WIDTH-1:0] b_exp_i[VectorSize-1:0];
+    logic [VectorSize-1:0] a_sign_i;
+    logic [VectorSize-1:0] b_sign_i;
+    logic [VectorSize-1:0] a_isnormal;
+    logic [VectorSize-1:0] b_isnormal;
 
     // output declaration of module mxfp8_classifier
     mxfp8_pkg::fp_info_t [VectorSize-1:0] info_a, info_b;
+
     //oprand A
     mxfp8_classifier #(
-        .FpFormat    	(src_fmt_i  ),
         .NumOperands 	(VectorSize     ),
-        .MX          	(1     ))
+        .MX          	(1     ),
+        .SUPER_SRC_MAN_WIDTH(SUPER_SRC_MAN_WIDTH),
+        .SUPER_SRC_EXP_WIDTH(SUPER_SRC_EXP_WIDTH),
+        .SRC_WIDTH(SRC_WIDTH))
     u_mxfp8_classifier_a(
         .operands_i 	(operands_a_i  ),
         .info_o     	(info_a      )
     );
     //oprand B
     mxfp8_classifier #(
-        .FpFormat    	(src_fmt_i  ),
         .NumOperands 	(VectorSize     ),
-        .MX          	(1     ))
+        .MX          	(1     ),
+        .SUPER_SRC_MAN_WIDTH(SUPER_SRC_MAN_WIDTH),
+        .SUPER_SRC_EXP_WIDTH(SUPER_SRC_EXP_WIDTH),
+        .SRC_WIDTH(SRC_WIDTH))
     u_mxfp8_classifier_b(
         .operands_i 	(operands_b_i  ),
         .info_o     	(info_b      )
@@ -116,10 +133,10 @@ module mxfp8_dotp#(
 
     //mantissa multiplication, exponent addition and sign calculation
     
-    logic [PROD_MAN_WIDTH-1:0][VectorSize-1:0]  man_prod;
-    logic signed [PROD_EXP_WIDTH-1:0][VectorSize-1:0] exp_sum;
+    logic [PROD_MAN_WIDTH-1:0]  man_prod[VectorSize-1:0];
+    logic signed [PROD_EXP_WIDTH-1:0] exp_sum[VectorSize-1:0];
     logic        [VectorSize-1:0]sign_prod;   
-    logic        [PROD_WIDTH-1:0][VectorSize-1:0] interm_result; //intermediate result before rounding and packing
+  //  logic        [PROD_WIDTH-1:0] interm_result[VectorSize-1:0]; //intermediate result before rounding and packing
     mxfp8_mult #(
         .VectorSize       (VectorSize),
         .PROD_MAN_WIDTH   (PROD_MAN_WIDTH),
@@ -136,15 +153,16 @@ module mxfp8_dotp#(
         .src_fmt_i      (src_fmt_i),
         .man_prod       (man_prod),
         .exp_sum        (exp_sum),
-        .sign_prod       (sgn_prod)
+        .sign_prod       (sign_prod)
     );
-    always_comb begin: interm_result
-        for (int i = 0; i < VectorSize; i++) begin
-            interm_result[i] = {sign_prod[i], exp_sum[i], man_prod[i]}; 
-        end
-    end
 
-    //scaling addition
+    // always_comb begin: 
+    //     for (int i = 0; i < VectorSize; i++) begin
+    //         interm_result[i] = {sign_prod[i], exp_sum[i], man_prod[i]}; 
+    //     end
+    // end
+
+     //scaling addition
     logic [SCALE_WIDTH:0] scale_add;
     always_comb begin
         scale_add = signed'(scale_i[0]-127) + signed'(scale_i[1]-127); //change 127 with bias according to src_fmt_i

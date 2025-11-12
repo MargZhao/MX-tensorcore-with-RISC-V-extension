@@ -25,23 +25,23 @@ module mxfp8_mult#(
     parameter int unsigned PROD_EXP_WIDTH = 6, //change this with package
     //const
     localparam int unsigned SUPER_SRC_MAN_WIDTH = 3,
-    localparam int unsigned SUPER_SRC_EXP_WIDTH = 5,
+    localparam int unsigned SUPER_SRC_EXP_WIDTH = 5
 )(
-    input  logic [SUPER_SRC_MAN_WIDTH-1:0][VectorSize-1:0]        A_mant ,//mant should include implicit bit
-    input  logic [SUPER_SRC_MAN_WIDTH-1:0][VectorSize-1:0]        B_mant ,
-    input  logic signed [SUPER_SRC_EXP_WIDTH-1:0][VectorSize-1:0] A_exp ,
-    input  logic signed [SUPER_SRC_EXP_WIDTH-1:0][VectorSize-1:0] B_exp ,
+    input  logic [SUPER_SRC_MAN_WIDTH-1:0]        A_mant[VectorSize-1:0] ,//mant should include implicit bit
+    input  logic [SUPER_SRC_MAN_WIDTH-1:0]        B_mant[VectorSize-1:0] ,
+    input  logic signed [SUPER_SRC_EXP_WIDTH-1:0] A_exp [VectorSize-1:0],
+    input  logic signed [SUPER_SRC_EXP_WIDTH-1:0] B_exp [VectorSize-1:0],
     input  logic        [VectorSize-1:0]                          A_sign ,
     input  logic        [VectorSize-1:0]                          B_sign ,
     input  logic        [VectorSize-1:0]                          A_isnormal ,
     input  logic        [VectorSize-1:0]                          B_isnormal ,
     input  mxfp8_pkg::fp_format_e                                 src_fmt_i,
-    output logic [PROD_MAN_WIDTH-1:0][VectorSize-1:0]  man_prod ,
-    output logic signed [PROD_EXP_WIDTH-1:0][VectorSize-1:0] exp_sum ,
+    output logic [PROD_MAN_WIDTH-1:0]  man_prod[VectorSize-1:0] ,
+    output logic signed [PROD_EXP_WIDTH-1:0] exp_sum[VectorSize-1:0] ,
     output logic        [VectorSize-1:0]sign_prod    
 );
     logic [4:0] bias;
-    always_comb begin: bias
+    always_comb begin
         if (src_fmt_i==mxfp8_pkg::E5M2) begin
             bias = 15; // 2^(5-1)-1
         end else if (src_fmt_i==mxfp8_pkg::E4M3) begin

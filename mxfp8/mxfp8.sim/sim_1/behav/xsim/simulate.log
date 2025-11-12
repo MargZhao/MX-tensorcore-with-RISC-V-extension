@@ -1,0 +1,40 @@
+Time resolution is 1 ps
+=== MXFP8 DOTP TEST START ===
+[Test1] Simple MAC output = 56000000 (35184372088832.000000)
+Error: ❌ Test1 failed: incorrect MAC result
+Time: 45 ns  Iteration: 0  Process: /fp8_fma_tb/Initial95_28  Scope: fp8_fma_tb  File: C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sim_1/new/fp8_fma_tb.sv Line: 116
+[Test2] Special cases result = 4b500000
+[Test3] Large/small exponent diff result = 55880200 (18692771414016.000000)
+[Test4.0] Random output = 5b5c6200 (62032247015866368.000000)
+[Test4.1] Random output = 5961c000 (3971435999526912.000000)
+[Test4.2] Random output = 5b9e1c00 (89007665291722752.000000)
+[Test4.3] Random output = 3fc18800 (1.511963)
+[Test4.4] Random output = 3fe06e00 (1.753357)
+=== MXFP8 DOTP TEST COMPLETE ===
+$finish called at time : 235 ns : File "C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sim_1/new/fp8_fma_tb.sv" Line 160
+=== MXFP8 DOTP TEST START ===
+[Test1] Simple MAC output = 56000000 (35184372088832.000000)
+Error: ❌ Test1 failed: incorrect MAC result
+Time: 45 ns  Iteration: 0  Process: /fp8_fma_tb/Initial95_28  Scope: fp8_fma_tb  File: C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sim_1/new/fp8_fma_tb.sv Line: 116
+[Test2] Special cases result = 4b500000
+[Test3] Large/small exponent diff result = 55880200 (18692771414016.000000)
+[Test4.0] Random output = 5b5c6200 (62032247015866368.000000)
+[Test4.1] Random output = 5961c000 (3971435999526912.000000)
+[Test4.2] Random output = 5b9e1c00 (89007665291722752.000000)
+[Test4.3] Random output = 3fc18800 (1.511963)
+[Test4.4] Random output = 3fe06e00 (1.753357)
+=== MXFP8 DOTP TEST COMPLETE ===
+$finish called at time : 235 ns : File "C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sim_1/new/fp8_fma_tb.sv" Line 160
+=== MXFP8 DOTP TEST START ===
+[Test1] Simple MAC output = 56000000 (35184372088832.000000)
+Error: ❌ Test1 failed: incorrect MAC result
+Time: 45 ns  Iteration: 0  Process: /fp8_fma_tb/Initial95_28  Scope: fp8_fma_tb  File: C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sim_1/new/fp8_fma_tb.sv Line: 116
+[Test2] Special cases result = 4b500000
+[Test3] Large/small exponent diff result = 55880200 (18692771414016.000000)
+[Test4.0] Random output = 5b5c6200 (62032247015866368.000000)
+[Test4.1] Random output = 5961c000 (3971435999526912.000000)
+[Test4.2] Random output = 5b9e1c00 (89007665291722752.000000)
+[Test4.3] Random output = 3fc18800 (1.511963)
+[Test4.4] Random output = 3fe06e00 (1.753357)
+=== MXFP8 DOTP TEST COMPLETE ===
+$finish called at time : 235 ns : File "C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sim_1/new/fp8_fma_tb.sv" Line 160
