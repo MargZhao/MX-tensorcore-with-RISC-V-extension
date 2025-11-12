@@ -13,9 +13,9 @@ seed = int(datetime.now().timestamp() )
 np.random.seed(seed)
 matrix_col_dim = 32*16
 matrix_row_dim = 32*16
-variation_list = [1, 2, 4, 8]
+variation_list = [1]
 normalized = True
-df = 4
+df_list = [4, 40, 400, 4000]
 # ========== 误差计算函数 ==========
 def compute_metrics(C_ref, C_test, eps=1e-12):
     abs_err = np.abs(C_ref - C_test)
@@ -41,12 +41,15 @@ results_rmse = {}
 #################################logic##################################################
 for variation in variation_list:
     variance = variation/3
-    # A_fp64 = (student_t(df=df,loc=variation,scale=variance).rvs((matrix_row_dim, matrix_col_dim))).astype(np.float64)
-    # B_fp64 = (student_t(df=df,loc=variation,scale=variance).rvs((matrix_row_dim, matrix_col_dim))).astype(np.float64)
+    A_fp64 = (student_t(df=df,loc=variation,scale=variance).rvs((matrix_row_dim, matrix_col_dim))).astype(np.float64)
+    B_fp64 = (student_t(df=df,loc=variation,scale=variance).rvs((matrix_row_dim, matrix_col_dim))).astype(np.float64)
     # A_fp64 = (student_t(df=3).rvs((matrix_row_dim, matrix_col_dim))).astype(np.float64)
     # B_fp64 = (student_t(df=3).rvs((matrix_row_dim, matrix_col_dim))).astype(np.float64)
-    A_fp64 = (np.random.randn(matrix_row_dim, matrix_col_dim) * variance ).astype(np.float64)
-    B_fp64 = (np.random.randn(matrix_row_dim, matrix_col_dim) * variance ).astype(np.float64)
+    # A_fp64 = (np.random.randn(matrix_row_dim, matrix_col_dim) * variance ).astype(np.float64)
+    # B_fp64 = (np.random.randn(matrix_row_dim, matrix_col_dim) * variance ).astype(np.float64)
+    #
+    # A_fp64 = (np.random.uniform(-variation, variation,(matrix_row_dim, matrix_col_dim))).astype(np.float64)
+    # B_fp64 = (np.random.uniform(-variation, variation,(matrix_row_dim, matrix_col_dim))).astype(np.float64)
 
     #fp32
     A_fp32 = A_fp64.astype(np.float32)
