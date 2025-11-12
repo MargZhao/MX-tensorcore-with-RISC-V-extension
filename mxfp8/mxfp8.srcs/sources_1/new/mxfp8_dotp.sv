@@ -22,7 +22,7 @@
 
 module mxfp8_dotp#(
     //config
-    parameter int unsigned             VectorSize  = 4,
+    parameter int unsigned             VectorSize  = 32,
     //parameter mxfp8_pkg::fmt_logic_t   SrcDotpFpFmtConfig = 3'b110,
     //const
     localparam int unsigned SRC_WIDTH = mxfp8_pkg::fp_width(mxfp8_pkg::E5M2), //change this with package
@@ -167,57 +167,6 @@ module mxfp8_dotp#(
             .scale_aligned(scale_aligned),
             .sum_man(sum_man),
             .sum_sgn(sum_sgn));
-
- 
- 
-    // //normalization
-    // //logic signed [PROD_EXP_WIDTH-1:0]     total_exp;
-    // logic [NORM_MAN_WIDTH-1:0]     norm_mant;
-    // logic signed [PROD_EXP_WIDTH-1:0]     norm_exp;
-    // logic [LEADING_ZERO_WIDTH-1:0] lz_count=0;
-    // logic                          is_zero_prod=0;//indicate if the product is zero, no 1 is found
-    // logic signed [LEADING_ZERO_WIDTH-1:0]    f_underflow=0;
-    // always_comb begin : count_leading_zeros
-    // lz_count     = 0;
-    // is_zero_prod = 1'b1;  // assume all zero
-    // for (int i = 0; i < NORM_MAN_WIDTH; i++) begin
-    //     if (sum_man[NORM_MAN_WIDTH-1-i]) begin
-    //         lz_count     = i;
-    //         is_zero_prod = 1'b0;
-    //         //f_underflow  = lz_count - exp_sum;
-    //         break; // found first '1'
-    //         end
-    //     end
-    // end
-
-    // always_comb begin : shifting
-    //     // default assignments
-    //     norm_mant = '0;
-    //     norm_exp  = '0;
-
-    //     // special cases for lz_count == 0 or 1
-    //     if (lz_count == 0) begin
-    //         norm_mant = sum_man >> 1;
-    //         norm_exp  = scale_aligned + 1;
-    //     end
-    //     else if (lz_count == 1) begin
-    //         norm_mant = sum_man;
-    //         norm_exp  = scale_aligned;
-    //     end
-    //     else begin
-    //         // for larger lz_count, handle underflow / shift
-    //         // if (f_underflow > 1) begin
-    //         //     // underflow → zero
-    //         //     norm_mant = '0;
-    //         //     norm_exp  = '0;
-    //         // end
-    //         // else begin
-    //             norm_mant = sum_man << (lz_count - 1);
-    //             norm_exp  = scale_aligned - (lz_count - 1);
-    //        //end
-    //     end
-    // end
-    //acumulation with scaling
 
     logic [NORM_MAN_WIDTH-1:0] reg_man;
     logic signed [PROD_EXP_WIDTH-1:0] reg_exp;
