@@ -3,22 +3,22 @@
 # SW Build 6140274 on Thu May 22 00:12:29 MDT 2025
 # IP Build 6138677 on Thu May 22 03:10:11 MDT 2025
 # SharedData Build 6139179 on Tue May 20 17:58:58 MDT 2025
-# Start of session at: Fri Oct 31 12:25:28 2025
-# Process ID         : 31800
-# Current directory  : C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.runs/synth_1
+# Start of session at: Thu Nov 13 14:31:46 2025
+# Process ID         : 36368
+# Current directory  : D:/Master2_1/Master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.runs/synth_1
 # Command line       : vivado.exe -log mxfp8_dotp.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source mxfp8_dotp.tcl
-# Log file           : C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.runs/synth_1/mxfp8_dotp.vds
-# Journal file       : C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.runs/synth_1\vivado.jou
-# Running On         : DESKTOP-A60D5EN
+# Log file           : D:/Master2_1/Master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.runs/synth_1/mxfp8_dotp.vds
+# Journal file       : D:/Master2_1/Master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.runs/synth_1\vivado.jou
+# Running On         : DESKTOP-DFA467O
 # Platform           : Windows Server 2016 or Windows 10
-# Operating System   : 22631
-# Processor Detail   : Intel(R) Core(TM) i7-8665U CPU @ 1.90GHz
-# CPU Frequency      : 2112 MHz
-# CPU Physical cores : 4
-# CPU Logical cores  : 8
-# Host memory        : 34095 MB
-# Swap memory        : 2765 MB
-# Total Virtual      : 36861 MB
-# Available Virtual  : 11694 MB
+# Operating System   : 26100
+# Processor Detail   : AMD Ryzen 9 8945HX with Radeon Graphics        
+# CPU Frequency      : 2495 MHz
+# CPU Physical cores : 16
+# CPU Logical cores  : 32
+# Host memory        : 33521 MB
+# Swap memory        : 34359 MB
+# Total Virtual      : 67880 MB
+# Available Virtual  : 23562 MB
 #-----------------------------------------------------------
 source mxfp8_dotp.tcl -notrace

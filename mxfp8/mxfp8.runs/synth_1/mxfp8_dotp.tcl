@@ -4,7 +4,7 @@
 
 set TIME_start [clock seconds] 
 namespace eval ::optrace {
-  variable script "C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.runs/synth_1/mxfp8_dotp.tcl"
+  variable script "D:/Master2_1/Master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.runs/synth_1/mxfp8_dotp.tcl"
   variable category "vivado_synth"
 }
 
@@ -56,28 +56,33 @@ if {$::dispatch::connected} {
 }
 
 OPTRACE "synth_1" START { ROLLUP_AUTO }
+set_param chipscope.maxJobs 8
 set_param general.usePosixSpawnForFork 1
+set_param checkpoint.writeSynthRtdsInDcp 1
+set_msg_config -id {Common 17-41} -limit 10000000
+set_msg_config -id {Synth 8-256} -limit 10000
+set_msg_config -id {Synth 8-638} -limit 10000
 OPTRACE "Creating in-memory project" START { }
-create_project -in_memory -part xc7a12ticsg325-1L
+create_project -in_memory -part xc7a100tlfgg484-2L
 
 set_param project.singleFileAddWarning.threshold 0
 set_param project.compositeFile.enableAutoGeneration 0
 set_param synth.vivado.isSynthRun true
-set_property webtalk.parent_dir C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.cache/wt [current_project]
-set_property parent.project_path C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.xpr [current_project]
+set_property webtalk.parent_dir D:/Master2_1/Master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.cache/wt [current_project]
+set_property parent.project_path D:/Master2_1/Master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.xpr [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language Verilog [current_project]
-set_property ip_output_repo c:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.cache/ip [current_project]
+set_property ip_output_repo d:/Master2_1/Master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
 read_verilog -library xil_defaultlib -sv {
-  C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/adder_tree.sv
-  C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/mxfp8_pkg.sv
-  C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/mxfp8_classifier.sv
-  C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/mxfp8_mult.sv
-  C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/stage8_fp32_accumulation.sv
-  C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/mxfp8_dotp.sv
+  D:/Master2_1/Master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/adder_tree.sv
+  D:/Master2_1/Master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/mxfp8_pkg.sv
+  D:/Master2_1/Master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/mxfp8_classifier.sv
+  D:/Master2_1/Master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/mxfp8_mult.sv
+  D:/Master2_1/Master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/stage8_fp32_accumulation.sv
+  D:/Master2_1/Master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/mxfp8_dotp.sv
 }
 OPTRACE "Adding files" END { }
 # Mark all dcp files as not used in implementation to prevent them from being
@@ -89,10 +94,12 @@ foreach dcp [get_files -quiet -all -filter file_type=="Design\ Checkpoint"] {
   set_property used_in_implementation false $dcp
 }
 set_param ips.enableIPCacheLiteLoad 1
+
+read_checkpoint -auto_incremental -incremental D:/Master2_1/Master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/utils_1/imports/synth_1/mxfp8_dotp.dcp
 close [open __synthesis_is_running__ w]
 
 OPTRACE "synth_design" START { }
-synth_design -top mxfp8_dotp -part xc7a12ticsg325-1L
+synth_design -top mxfp8_dotp -part xc7a100tlfgg484-2L
 OPTRACE "synth_design" END { }
 if { [get_msg_config -count -severity {CRITICAL WARNING}] > 0 } {
  send_msg_id runtcl-6 info "Synthesis results are not added to the cache due to CRITICAL_WARNING"
