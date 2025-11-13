@@ -52,10 +52,11 @@ module mxfp8_dotp#(
     //E5M2 and E4M3, max man_prod is 8 bits, max exp_sum is log_2(31)= 6 bits
     localparam int unsigned SUPER_SRC_MAN_WIDTH = 3;
     localparam int unsigned SUPER_SRC_EXP_WIDTH = 5;
-    localparam int unsigned PROD_MAN_WIDTH = 16;//3m+4
-    localparam int unsigned PROD_EXP_WIDTH = 6;//change this with package
+    localparam int unsigned PROD_MAN_WIDTH = 8;//3m+4
+    localparam int unsigned PROD_EXP_WIDTH = 8;//change this with package
+    localparam int unsigned NORM_MAN_WIDTH = 1.5*PROD_MAN_WIDTH +4; //16
     localparam int unsigned PROD_WIDTH = PROD_MAN_WIDTH + PROD_EXP_WIDTH+1;
-    localparam int unsigned LEADING_ZERO_WIDTH = $clog2(PROD_MAN_WIDTH); //change this later
+    localparam int unsigned LEADING_ZERO_WIDTH = $clog2(NORM_MAN_WIDTH); //change this later
     ////////////type definition//////////
 
     ///////////logics//////////
@@ -80,8 +81,14 @@ module mxfp8_dotp#(
         .SUPER_SRC_EXP_WIDTH(SUPER_SRC_EXP_WIDTH),
         .SRC_WIDTH(SRC_WIDTH))
     u_mxfp8_classifier_a(
+        .src_fmt_i    	(src_fmt_i  ),
         .operands_i 	(operands_a_i  ),
-        .info_o     	(info_a      )
+        .info_o     	(info_a      ),
+        .man_i          (a_man_i),
+        .exp_i          (a_exp_i),
+        .sign_i         (a_sign_i),
+        .isnormal       (a_isnormal)
+
     );
     //oprand B
     mxfp8_classifier #(
@@ -91,45 +98,16 @@ module mxfp8_dotp#(
         .SUPER_SRC_EXP_WIDTH(SUPER_SRC_EXP_WIDTH),
         .SRC_WIDTH(SRC_WIDTH))
     u_mxfp8_classifier_b(
+        .src_fmt_i    	(src_fmt_i  ),
         .operands_i 	(operands_b_i  ),
-        .info_o     	(info_b      )
+        .info_o     	(info_b      ),
+        .man_i          (b_man_i),
+        .exp_i          (b_exp_i),
+        .sign_i         (b_sign_i),
+        .isnormal       (b_isnormal)
     );
 
     //handle special cases
-
-    //denote bitwidth of mant and exponent according to src_fmt_i
-    logic unsigned[1:0] mant_bits;
-    logic unsigned[2:0] exp_bits;
-    always_comb begin
-    exp_bits = mxfp8_pkg::FP_ENCODINGS[src_fmt_i].exp_bits;
-    man_bits = mxfp8_pkg::FP_ENCODINGS[src_fmt_i].man_bits;           
-    end
-
-    //unpack input operands
-    logic [VectorSize-1:0][SUPER_SRC_MAN_WIDTH-1:0] a_man_i;
-    logic [VectorSize-1:0][SUPER_SRC_MAN_WIDTH-1:0] b_man_i;
-    logic signed [VectorSize-1:0][SUPER_SRC_EXP_WIDTH-1:0] a_exp_i;
-    logic signed [VectorSize-1:0][SUPER_SRC_EXP_WIDTH-1:0] b_exp_i;
-    logic [VectorSize-1:0] a_sign_i;
-    logic [VectorSize-1:0] b_sign_i;
-    logic [VectorSize-1:0] a_isnormal;
-    logic [VectorSize-1:0] b_isnormal;
-
-    always_comb begin: unpack_operands
-        for (int i = 0; i < VectorSize; i++) begin
-            a_sign_i[i] = operands_a_i[i][SRC_WIDTH-1];
-            b_sign_i[i] = operands_b_i[i][SRC_WIDTH-1];
-
-            a_exp_i[i] = {{signed'(SUPER_SRC_EXP_WIDTH-exp_bits){1'b0}}, operands_a_i[i][SRC_WIDTH-2 -: exp_bits]};
-            b_exp_i[i] = {{signed'(SUPER_SRC_EXP_WIDTH-exp_bits){1'b0}}, operands_b_i[i][SRC_WIDTH-2 -: exp_bits]};
-            
-            a_man_i[i]  = operands_a_i[i][man_bits-1:0]<< signed'(SUPER_SRC_MAN_WIDTH-man_bits); //align mant to the LSB
-            b_man_i[i]  = operands_b_i[i][man_bits-1:0]<< signed'(SUPER_SRC_MAN_WIDTH-man_bits);
-            
-            a_isnormal[i] = info_a[i].is_normal;
-            b_isnormal[i] = info_b[i].is_normal;
-        end
-    end
 
     //mantissa multiplication, exponent addition and sign calculation
     
@@ -168,46 +146,77 @@ module mxfp8_dotp#(
         scale_add = signed'(scale_i[0]-127) + signed'(scale_i[1]-127); //change 127 with bias according to src_fmt_i
     end
 
-    //normalization
-    logic [PROD_MAN_WIDTH-1:0]     norm_mant;
-    logic [PROD_EXP_WIDTH-1:0]     norm_exp;
-    logic [LEADING_ZERO_WIDTH-1:0] lz_count=0;
-    logic                          is_zero_prod=0;//indicate if the product is zero, no 1 is found
-    always_comb begin: count leading zeros
-        for (int i = 0;i<PROD_MAN_WIDTH ;i++ ) begin
-            if (man_prod[PROD_EXP_WIDTH-i]) begin
-                lz_count = i;
-                is_zero_prod = 0;
-                break;
-            end
-            else begin
-                is_zero_prod = 1;
-            end
+    // Stage 4
+    //logic signed [PROD_EXP_WIDTH-1:0] exp_max;
+    //logic [PROD_EXP_WIDTH-1:0] exp_diff[VectorSize-1:0];
+    logic [SCALE_WIDTH:0] scale_aligned;
+    logic [NORM_MAN_WIDTH-1:0] sum_man;
+    logic sum_sgn;
+    adder_tree#(.VectorSize(VectorSize), 
+                .PROD_EXP_WIDTH(PROD_EXP_WIDTH), 
+                .PROD_MAN_WIDTH(PROD_MAN_WIDTH),
+                .NORM_MAN_WIDTH(NORM_MAN_WIDTH),
+                .SCALE_WIDTH(SCALE_WIDTH)) 
+        u_adder_tree (
+            //input
+            .exp_sum(exp_sum), 
+            .man_prod(man_prod),
+            .sgn_prod(sign_prod),
+            .scale_sum(scale_add),
+            //output
+            .scale_aligned(scale_aligned),
+            .sum_man(sum_man),
+            .sum_sgn(sum_sgn));
+
+    logic [NORM_MAN_WIDTH-1:0] reg_man;
+    logic signed [PROD_EXP_WIDTH-1:0] reg_exp;
+    logic reg_sgn;
+    logic [NORM_MAN_WIDTH-1:0] acc_man;
+    logic signed [PROD_EXP_WIDTH-1:0] acc_exp;
+    logic acc_sgn;
+
+    stage8_fp32_accumulator #(
+        .MANT_WIDTH(PROD_MAN_WIDTH),
+        .NORM_MAN_WIDTH(NORM_MAN_WIDTH),
+        .EXP_WIDTH(PROD_EXP_WIDTH)
+    )
+    u_fp32_acc(
+        .clr(clr),
+        .a_sgn(sum_sgn),
+        .a_exp(scale_aligned),
+        .a_man(sum_man), 
+        .b_sgn(reg_sgn),
+        .b_exp(reg_exp), 
+        .b_man(reg_man), 
+        .out_sgn(acc_sgn), 
+        .out_exp(acc_exp), 
+        .out_man(acc_man)
+    );
+
+
+    
+
+    always_ff @(posedge clk_i) begin
+        if (!rst_ni) begin
+            reg_sgn <= 1'b0;
+            reg_exp  <= '0;
+            reg_man <= '0;
+        end else begin
+            reg_sgn <= acc_sgn;
+            reg_exp  <= acc_exp;
+            reg_man <= acc_man;
         end
     end
 
-    always_comb begin: shifting
-        casez (leading_zeros)
-            '0: begin
-                norm_mant = man_prod >> 1;
-                norm_exp  = exp_sum + 1;
-            end
-            '1: begin  
-                norm_mant = man_prod;
-                norm_exp  = exp_sum;
-            end
-            default: begin
-                if (exp_sum < (leading_zeros-1)) begin
-                    //here underflow to zero
-                    norm_mant = 0;
-                    norm_exp  = '0;
-                end
-                else begin
-                    norm_mant = man_prod << (leading_zeros-1);
-                    norm_exp  = exp_sum - (leading_zeros-1);
-                end
-            end
-        endcase   
-    end
-    //acumulation with scaling
+    logic [22:0] man_fp32;
+    logic [7:0]  exp_fp32;
+
+    assign man_fp32 = {reg_man[NORM_MAN_WIDTH-2:0],{(23-NORM_MAN_WIDTH+1){1'b0}}};
+    assign exp_fp32 = (reg_man == 0) ? 8'd0 : reg_exp + 127;
+    assign result_o = {reg_sgn,exp_fp32,man_fp32};
+
+
+    
+
+
 endmodule
