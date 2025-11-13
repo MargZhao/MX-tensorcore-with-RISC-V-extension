@@ -13,13 +13,12 @@ module adder_tree#(
 
 )
  (
-    input  logic clk,
     input  logic signed  [VectorSize-1:0][PROD_EXP_WIDTH-1:0] exp_sum,
     input  logic [VectorSize-1:0][PROD_MAN_WIDTH-1:0] man_prod,
     input  logic [VectorSize-1:0] sgn_prod,
     input  logic [SCALE_WIDTH:0] scale_sum,
     output logic [SCALE_WIDTH:0] scale_aligned,
-    output logic [ACC_WIDTH-1:0] sum_man,
+    output logic [NORM_MAN_WIDTH-1:0] sum_man,
     output logic sum_sgn
 );
 /*
@@ -31,13 +30,13 @@ module adder_tree#(
 
 //Stage 1
     logic signed [PROD_EXP_WIDTH-1:0] exp_max;
-    logic[VectorSize-1:0][PROD_EXP_WIDTH-1:0]  exp_diff;
+    logic signed [VectorSize-1:0][PROD_EXP_WIDTH-1:0]  exp_diff;
 
     //Max Reduce
         always_comb begin: find_max
             exp_max = exp_sum[0];
             for (int i = 1; i < VectorSize; i++)
-                if (exp_sum[i] > exp_max)
+                if ($signed(exp_sum[i]) > $signed(exp_max))
                     exp_max = exp_sum[i];
         end
 
@@ -82,13 +81,15 @@ module adder_tree#(
     );
 
     logic signed [ACC_WIDTH-1:0] sum_all; 
+   
     assign sum_all = final_sum + final_carry;
+    
 
     //Sign and 2's complement
     always_comb begin : sign_extract
         sum_sgn = sum_all[ACC_WIDTH-1];
-        sum_man = sum_sgn ? (~sum_all + 1'b1) : sum_all;
-    end
+        sum_man = sum_sgn ? (~sum_all[ACC_WIDTH-1 -:NORM_MAN_WIDTH] + 1'b1) : sum_all[ACC_WIDTH-1 -:NORM_MAN_WIDTH];
+    end// 
 
 endmodule
 

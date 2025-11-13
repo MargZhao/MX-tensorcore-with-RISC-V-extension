@@ -61,10 +61,10 @@ module mxfp8_dotp#(
 
     ///////////logics//////////
     //unpack input operands
-    logic [SUPER_SRC_MAN_WIDTH-1:0] a_man_i[VectorSize-1:0];
-    logic [SUPER_SRC_MAN_WIDTH-1:0] b_man_i[VectorSize-1:0];
-    logic signed [SUPER_SRC_EXP_WIDTH-1:0] a_exp_i[VectorSize-1:0];
-    logic signed [SUPER_SRC_EXP_WIDTH-1:0] b_exp_i[VectorSize-1:0];
+    logic [VectorSize-1:0][SUPER_SRC_MAN_WIDTH-1:0] a_man_i;
+    logic [VectorSize-1:0][SUPER_SRC_MAN_WIDTH-1:0] b_man_i;
+    logic unsigned [VectorSize-1:0][SUPER_SRC_EXP_WIDTH-1:0] a_exp_i;
+    logic unsigned [VectorSize-1:0][SUPER_SRC_EXP_WIDTH-1:0] b_exp_i;
     logic [VectorSize-1:0] a_sign_i;
     logic [VectorSize-1:0] b_sign_i;
     logic [VectorSize-1:0] a_isnormal;
@@ -111,8 +111,8 @@ module mxfp8_dotp#(
 
     //mantissa multiplication, exponent addition and sign calculation
     
-    logic [PROD_MAN_WIDTH-1:0]  man_prod[VectorSize-1:0];
-    logic signed [PROD_EXP_WIDTH-1:0] exp_sum[VectorSize-1:0];
+    logic [VectorSize-1:0][PROD_MAN_WIDTH-1:0]  man_prod;
+    logic signed [VectorSize-1:0][PROD_EXP_WIDTH-1:0] exp_sum;
     logic        [VectorSize-1:0]sign_prod;   
   //  logic        [PROD_WIDTH-1:0] interm_result[VectorSize-1:0]; //intermediate result before rounding and packing
     mxfp8_mult #(
@@ -131,7 +131,7 @@ module mxfp8_dotp#(
         .src_fmt_i      (src_fmt_i),
         .man_prod       (man_prod),
         .exp_sum        (exp_sum),
-        .sign_prod       (sign_prod)
+        .sign_prod      (sign_prod)
     );
 
     // always_comb begin: 

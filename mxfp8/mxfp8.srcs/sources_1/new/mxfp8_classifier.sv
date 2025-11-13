@@ -8,8 +8,8 @@ module mxfp8_classifier#(
     input  mxfp8_pkg::fp_format_e src_fmt_i,
     input  logic                [NumOperands-1:0][SRC_WIDTH-1:0] operands_i,
     output mxfp8_pkg::fp_info_t [NumOperands-1:0]            info_o,
-    output logic                [SUPER_SRC_MAN_WIDTH-1:0]    man_i [NumOperands-1:0],
-    output logic signed         [SUPER_SRC_EXP_WIDTH-1:0]    exp_i [NumOperands-1:0],
+    output logic                [NumOperands-1:0][SUPER_SRC_MAN_WIDTH-1:0]    man_i ,
+    output logic unsigned         [NumOperands-1:0][SUPER_SRC_EXP_WIDTH-1:0]    exp_i ,
     output logic                [NumOperands-1:0]            sign_i,
     output logic                [NumOperands-1:0]            isnormal
 );
@@ -54,7 +54,7 @@ module mxfp8_classifier#(
         if(MX==1 && src_fmt_i == mxfp8_pkg::E5M2) begin
             is_inf    = (value[(SRC_WIDTH-2) -: 5] == '1) && (value[0 +: 2] == '0);
             is_nan    = (value[(SRC_WIDTH-2) -: 5] == '1) && (value[0 +: 2] != '0);
-            is_normal = (value[(SRC_WIDTH-2) -: 5] != '0) && (value[(SRC_WIDTH-2) -: 2] != '1);
+            is_normal = (value[(SRC_WIDTH-2) -: 5] != '0) && (value[(SRC_WIDTH-2) -: 5] != '1);
             is_zero   = (value[(SRC_WIDTH-2) -: 5] == '0) && (value[0 +: 2] == '0);
             exp_i[op] = value[(SRC_WIDTH-2) -: 5];
             is_subnormal  = (value[(SRC_WIDTH-2) -: 5] == '0) && !is_zero;
