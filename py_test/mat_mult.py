@@ -13,9 +13,10 @@ seed = int(datetime.now().timestamp() )
 np.random.seed(seed)
 matrix_col_dim = 32*16
 matrix_row_dim = 32*16
-variation_list = [1]
+variation_list = [1,4,10,100]
 normalized = True
-df_list = [4, 40, 400, 4000]
+df = 10000
+block_size = 16
 # ========== 误差计算函数 ==========
 def compute_metrics(C_ref, C_test, eps=1e-12):
     abs_err = np.abs(C_ref - C_test)
@@ -41,12 +42,12 @@ results_rmse = {}
 #################################logic##################################################
 for variation in variation_list:
     variance = variation/3
-    A_fp64 = (student_t(df=df,loc=variation,scale=variance).rvs((matrix_row_dim, matrix_col_dim))).astype(np.float64)
-    B_fp64 = (student_t(df=df,loc=variation,scale=variance).rvs((matrix_row_dim, matrix_col_dim))).astype(np.float64)
+    # A_fp64 = (student_t(df=df,loc=variation,scale=variance).rvs((matrix_row_dim, matrix_col_dim))).astype(np.float64)
+    # B_fp64 = (student_t(df=df,loc=variation,scale=variance).rvs((matrix_row_dim, matrix_col_dim))).astype(np.float64)
     # A_fp64 = (student_t(df=3).rvs((matrix_row_dim, matrix_col_dim))).astype(np.float64)
     # B_fp64 = (student_t(df=3).rvs((matrix_row_dim, matrix_col_dim))).astype(np.float64)
-    # A_fp64 = (np.random.randn(matrix_row_dim, matrix_col_dim) * variance ).astype(np.float64)
-    # B_fp64 = (np.random.randn(matrix_row_dim, matrix_col_dim) * variance ).astype(np.float64)
+    A_fp64 = (np.random.randn(matrix_row_dim, matrix_col_dim) * variance ).astype(np.float64)
+    B_fp64 = (np.random.randn(matrix_row_dim, matrix_col_dim) * variance ).astype(np.float64)
     #
     # A_fp64 = (np.random.uniform(-variation, variation,(matrix_row_dim, matrix_col_dim))).astype(np.float64)
     # B_fp64 = (np.random.uniform(-variation, variation,(matrix_row_dim, matrix_col_dim))).astype(np.float64)
@@ -60,15 +61,15 @@ for variation in variation_list:
     B_fp16 = B_fp64.astype(np.float16)
 
     #E5M2
-    A_E5M2,A_emap = quantize_matrix_e5m2(A_fp64, block_size=32,normalized=normalized)
-    B_E5M2,B_Emap = quantize_matrix_e5m2(B_fp64, block_size=32,normalized=normalized)
+    A_E5M2,A_emap = quantize_matrix_e5m2(A_fp64, block_size=block_size,normalized=normalized)
+    B_E5M2,B_Emap = quantize_matrix_e5m2(B_fp64, block_size=block_size,normalized=normalized)
 
     #E4M3
-    A_E4M3,A_emap_E4M3 = quantize_matrix_e4m3(A_fp64, block_size=32,normalized=normalized)
-    B_E4M3,B_Emap_E4M3 = quantize_matrix_e4m3(B_fp64, block_size=32,normalized=normalized)
+    A_E4M3,A_emap_E4M3 = quantize_matrix_e4m3(A_fp64, block_size=block_size,normalized=normalized)
+    B_E4M3,B_Emap_E4M3 = quantize_matrix_e4m3(B_fp64, block_size=block_size,normalized=normalized)
 
-    A_INT8,A_emap_INT8 = quantize_matrix_int8(A_fp64, block_size=32,normalized=normalized)
-    B_INT8,B_Emap_INT8 = quantize_matrix_int8(B_fp64, block_size=32,normalized=normalized)
+    A_INT8,A_emap_INT8 = quantize_matrix_int8(A_fp64, block_size=block_size,normalized=normalized)
+    B_INT8,B_Emap_INT8 = quantize_matrix_int8(B_fp64, block_size=block_size,normalized=normalized)
 
     # matrix mult
     C_fp64 = np.matmul(A_fp64, B_fp64)   # baseline
@@ -116,7 +117,7 @@ for variation in variation_list:
 
 # ========== 绘图 ==========
 data_types = ["FP32", "FP16", "INT8", "E4M3", "E5M2"]
-fig, axes = plt.subplots(2, 1, figsize=(8, 8))  # 4 行子图，高度加大以防重叠
+fig, axes = plt.subplots(1, 1, figsize=(8, 8))  # 4 行子图，高度加大以防重叠
 metrics = ["MAE", "MSE", "RMSE", "MRE"]
 #
 # # ---- MAE ----
@@ -139,7 +140,7 @@ metrics = ["MAE", "MSE", "RMSE", "MRE"]
 # ax.grid(True, linestyle='--', alpha=0.6)
 
 # ---- RMSE ----
-ax = axes[0]
+ax = axes
 for variation in variation_list:
     y = [results_rmse[variation][dt] for dt in data_types]
     ax.plot(data_types, y, marker='o', label=f"variation={variation}")
@@ -147,15 +148,15 @@ ax.set_title("Norm Root Mean Squared Error (NRMSE) vs. Data Type")
 ax.set_ylabel("NRMSE")
 ax.grid(True, linestyle='--', alpha=0.6)
 ax.legend(title="Variation", loc="upper left")
-# ---- MRE ----
-ax = axes[1]
-for variation in variation_list:
-    y = [results_mre[variation][dt] * 100 for dt in data_types]
-    ax.plot(data_types, y, marker='o', label=f"variation={variation}")
-ax.set_title("Mean Relative Error (MRE) vs. Data Type")
-ax.set_xlabel("Data Type")
-ax.set_ylabel("MRE (%)")
-ax.grid(True, linestyle='--', alpha=0.6)
+# # ---- MRE ----
+# ax = axes[1]
+# for variation in variation_list:
+#     y = [results_mre[variation][dt] * 100 for dt in data_types]
+#     ax.plot(data_types, y, marker='o', label=f"variation={variation}")
+# ax.set_title("Mean Relative Error (MRE) vs. Data Type")
+# ax.set_xlabel("Data Type")
+# ax.set_ylabel("MRE (%)")
+# ax.grid(True, linestyle='--', alpha=0.6)
 
 plt.tight_layout()
 plt.show()

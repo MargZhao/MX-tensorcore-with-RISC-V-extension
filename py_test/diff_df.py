@@ -11,9 +11,9 @@ np.random.seed(seed)
 matrix_col_dim = 32 * 16
 matrix_row_dim = 32 * 16
 
-variation_list = [4]
-df_list = [40, 400, 4000]
-normalized = False
+variation_list = [1]
+df_list = [4, 40, 400, 4000]
+normalized = True
 
 #################################metrics############################################
 def compute_metrics(C_ref, C_test, eps=1e-12):
@@ -89,9 +89,9 @@ for df in df_list:
 #################################plot############################################
 data_types = ["FP16", "INT8", "E4M3", "E5M2"]
 
-fig, axes = plt.subplots(2, 1, figsize=(8, 8))
+fig, axes = plt.subplots(1, 1, figsize=(8, 8))
 # ---- RMSE ----
-ax = axes[0]
+ax = axes
 for df in df_list:
     y = [results_rmse[df][variation_list[0]][dt] for dt in data_types]
     ax.plot(data_types, y, marker='o', label=f"df={df}")
@@ -101,15 +101,15 @@ ax.grid(True, linestyle='--', alpha=0.6)
 ax.legend(title="Degrees of Freedom (df)", loc="upper left")
 
 # ---- MRE ----
-ax = axes[1]
-for df in df_list:
-    y = [results_mre[df][variation_list[0]][dt] * 100 for dt in data_types]
-    ax.plot(data_types, y, marker='o', label=f"df={df}")
-ax.set_title("Mean Relative Error vs. Data Type (Student-t)")
-ax.set_xlabel("Data Type")
-ax.set_ylabel("MRE (%)")
-ax.grid(True, linestyle='--', alpha=0.6)
-ax.legend(title="Degrees of Freedom (df)", loc="upper left")
+# ax = axes[1]
+# for df in df_list:
+#     y = [results_mre[df][variation_list[0]][dt] * 100 for dt in data_types]
+#     ax.plot(data_types, y, marker='o', label=f"df={df}")
+# ax.set_title("Mean Relative Error vs. Data Type (Student-t)")
+# ax.set_xlabel("Data Type")
+# ax.set_ylabel("MRE (%)")
+# ax.grid(True, linestyle='--', alpha=0.6)
+# ax.legend(title="Degrees of Freedom (df)", loc="upper left")
 
 
 plt.tight_layout()

@@ -1,9 +1,17 @@
 import numpy as np
-def find_share(values):
-    share_max = 127  #from -127 to 127
-    share_min = -127
+from scipy.stats import t as student_t
+def find_share(values,format):
     max_val = np.max(np.abs(values))
-    share = np.floor(np.log2(max_val+ 1e-30))
+    if format == "E8M0":
+        share_max = 127  #from -127 to 127
+        share_min = -127
+        share = np.floor(np.log2(max_val+ 1e-30))
+    else:
+        share_max = 448 # from -127 to 127
+        share_min = -448
+        share = np.log2(max_val+ 1e-30)
+        share = E4M3().quantize(share)
+        share = share.to_float()
     if share > share_max:
         share = share_max
     elif share < share_min:
@@ -15,18 +23,18 @@ def normalize(matrix,share,normalized=True):
         return matrix/2**share
     else: return matrix
 
-def quantize_matrix_e5m2(matrix,block_size = 32,normalized=True):
+def quantize_matrix_e5m2(matrix,block_size = 32,normalized=True,format = "E8M0"):
     m,n = matrix.shape
     m_pad = int(np.ceil(m / block_size) * block_size)
     n_pad = int(np.ceil(n / block_size) * block_size)
     matrix_padded = np.zeros((m_pad, n_pad), dtype=np.float64)
     matrix_padded[:m, :n] = matrix
     q_matrix = np.zeros_like(matrix_padded, dtype=np.float32)
-    exp_map = np.zeros((m_pad, n_pad // block_size), dtype=np.int16)#// means divide and take the integer
+    exp_map = np.zeros((m_pad, n_pad // block_size), dtype=np.float32)#// means divide and take the integer
     for i in range(0, m, 1):
         for j in range(0, n, block_size):
             block = matrix_padded[i, j:j+block_size]
-            share = find_share(block)
+            share = find_share(block,format)
             exp_map[i, j // block_size] = share
             norm_block = normalize(block,share,normalized)
             for k in range(block_size):
@@ -36,18 +44,18 @@ def quantize_matrix_e5m2(matrix,block_size = 32,normalized=True):
 
     return q_matrix, exp_map
 
-def quantize_matrix_e4m3(matrix,block_size = 32,normalized=True):
+def quantize_matrix_e4m3(matrix,block_size = 32,normalized=True,format = "E8M0"):
     m,n = matrix.shape
     m_pad = int(np.ceil(m / block_size) * block_size)
     n_pad = int(np.ceil(n / block_size) * block_size)
     matrix_padded = np.zeros((m_pad, n_pad), dtype=np.float64)
     matrix_padded[:m, :n] = matrix
     q_matrix = np.zeros_like(matrix_padded, dtype=np.float32)
-    exp_map = np.zeros((m_pad, n_pad // block_size), dtype=np.int16)#// means divide and take the integer
+    exp_map = np.zeros((m_pad, n_pad // block_size), dtype=np.float32)#// means divide and take the integer
     for i in range(0, m, 1):
         for j in range(0, n, block_size):
             block = matrix_padded[i, j:j+block_size]
-            share = find_share(block)
+            share = find_share(block,format)
             exp_map[i, j // block_size] = share
             norm_block = normalize(block,share,normalized)
             for k in range(block_size):
@@ -57,23 +65,26 @@ def quantize_matrix_e4m3(matrix,block_size = 32,normalized=True):
 
     return q_matrix, exp_map
 
-def quantize_matrix_int8(matrix,block_size = 32,normalized=True):
+def quantize_matrix_int8(matrix,block_size = 32,normalized=True,format = "E8M0"):
     m,n = matrix.shape
     m_pad = int(np.ceil(m / block_size) * block_size)
     n_pad = int(np.ceil(n / block_size) * block_size)
     matrix_padded = np.zeros((m_pad, n_pad), dtype=np.float64)
     matrix_padded[:m, :n] = matrix
     q_matrix = np.zeros_like(matrix_padded, dtype=np.float32)
-    exp_map = np.zeros((m_pad, n_pad // block_size), dtype=np.int16)#// means divide and take the integer
+    exp_map = np.zeros((m_pad, n_pad // block_size), dtype=np.float32)#// means divide and take the integer
     for i in range(0, m, 1):
         for j in range(0, n, block_size):
             block = matrix_padded[i, j:j+block_size]
-            share = find_share(block)
+            share = find_share(block,format)
             exp_map[i, j // block_size] = share
             norm_block = normalize(block,share,normalized)
             for k in range(block_size):
                 e = MXINT8().quantize(norm_block[k])
-                e = (e.to_float())*2**share
+                if normalized:
+                    e = (e.to_float())*2**share
+                else:
+                    e = (e.to_float())
                 q_matrix[i, j + k] = e
 
     return q_matrix, exp_map
@@ -265,7 +276,11 @@ class MXINT8:
 if __name__ == "__main__":
     matrix_col_dim = 4
     matrix_row_dim = 4
-    A = (np.random.randn(matrix_row_dim, matrix_col_dim)*1).astype(np.float64)
+    df = 4
+    A = (np.random.randn(matrix_row_dim, matrix_col_dim)*10).astype(np.float64)
+    A = student_t(df=df, scale=1/3).rvs(
+        (matrix_row_dim, matrix_col_dim)
+    ).astype(np.float64)
 
     # A = np.array([
     #     [-0.44043609, -0.86577136, 0.13157700, 0.21752759],
@@ -273,7 +288,9 @@ if __name__ == "__main__":
     #     [-0.41173249, 0.32445009, -0.27792746, 0.40200163],
     #     [0.64749107, 0.29383548, -1.02255926, -1.13099681]
     # ], dtype=np.float64)
-    qA, exp_map = quantize_matrix_int8(A, block_size=4)
+
+
+    qA, exp_map = quantize_matrix_e5m2(A, block_size=4,normalized=True,format="E4M3")
 
     print("原矩阵:\n", A)
     print("\n量化结果 :\n", qA)
