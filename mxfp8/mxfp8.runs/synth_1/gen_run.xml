@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7a12ticsg325-1L" LaunchTime="1761909924">
+<GenRun Id="synth_1" LaunchPart="xc7a12ticsg325-1L" LaunchTime="1763933925" LaunchIncrCheckpoint="$PSRCDIR/utils_1/imports/synth_1/mxfp8_dotp.dcp">
   <File Type="PA-TCL" Name="mxfp8_dotp.tcl"/>
-  <File Type="RDS-PROPCONSTRS" Name="mxfp8_dotp_drc_synth.rpt"/>
   <File Type="REPORTS-TCL" Name="mxfp8_dotp_reports.tcl"/>
   <File Type="RDS-RDS" Name="mxfp8_dotp.vds"/>
+  <File Type="RDS-PROPCONSTRS" Name="mxfp8_dotp_drc_synth.rpt"/>
   <File Type="RDS-UTIL" Name="mxfp8_dotp_utilization_synth.rpt"/>
   <File Type="RDS-UTIL-PB" Name="mxfp8_dotp_utilization_synth.pb"/>
   <File Type="RDS-DCP" Name="mxfp8_dotp.dcp"/>
@@ -53,6 +53,30 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
+    <File Path="$PSRCDIR/sources_1/new/csa_tree.sv">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/mxdotp_anchor.sv">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/add_comp.sv">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
     <File Path="$PSRCDIR/sources_1/new/stage7_normalize_accum.sv">
       <FileInfo>
         <Attr Name="AutoDisabled" Val="1"/>
@@ -64,7 +88,6 @@
     <Config>
       <Option Name="DesignMode" Val="RTL"/>
       <Option Name="TopModule" Val="mxfp8_dotp"/>
-      <Option Name="TopAutoSet" Val="TRUE"/>
     </Config>
   </FileSet>
   <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1" RelGenDir="$PGENDIR/constrs_1">
@@ -75,6 +98,14 @@
   </FileSet>
   <FileSet Name="utils" Type="Utils" RelSrcDir="$PSRCDIR/utils_1" RelGenDir="$PGENDIR/utils_1">
     <Filter Type="Utils"/>
+    <File Path="$PSRCDIR/utils_1/imports/synth_1/mxfp8_dotp.dcp">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedInSteps" Val="synth_1"/>
+        <Attr Name="AutoDcp" Val="1"/>
+      </FileInfo>
+    </File>
     <Config>
       <Option Name="TopAutoSet" Val="TRUE"/>
     </Config>

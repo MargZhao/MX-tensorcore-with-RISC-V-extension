@@ -52,11 +52,14 @@ module mxfp8_dotp#(
     //E5M2 and E4M3, max man_prod is 8 bits, max exp_sum is log_2(31)= 6 bits
     localparam int unsigned SUPER_SRC_MAN_WIDTH = 3;
     localparam int unsigned SUPER_SRC_EXP_WIDTH = 5;
-    localparam int unsigned PROD_MAN_WIDTH = 8;//3m+4
-    localparam int unsigned PROD_EXP_WIDTH = 8;//change this with package
-    localparam int unsigned NORM_MAN_WIDTH = 1.5*PROD_MAN_WIDTH +4; //16
-    localparam int unsigned PROD_WIDTH = PROD_MAN_WIDTH + PROD_EXP_WIDTH+1;
-    localparam int unsigned LEADING_ZERO_WIDTH = $clog2(NORM_MAN_WIDTH); //change this later
+    localparam int unsigned PROD_MAN_WIDTH = 8;//2(m+1)
+    localparam int unsigned PROD_EXP_WIDTH = 6;//change this with package
+    localparam int unsigned NORM_MAN_WIDTH = 26; 
+    localparam int unsigned DST_MAN_WIDTH = 23;
+    localparam int unsigned DST_EXP_WIDTH = 8;
+    localparam int unsigned GUARD_BITS = $clog2(VectorSize); //32 位累加需要+5位 
+    localparam int unsigned ACC_WIDTH  = NORM_MAN_WIDTH + GUARD_BITS + 1; //+1 sign 位
+
     ////////////type definition//////////
 
     ///////////logics//////////
@@ -74,6 +77,7 @@ module mxfp8_dotp#(
     mxfp8_pkg::fp_info_t [VectorSize-1:0] info_a, info_b;
 
     //oprand A
+    (* keep_hierarchy = "yes" *)
     mxfp8_classifier #(
         .NumOperands 	(VectorSize     ),
         .MX          	(1     ),
@@ -91,6 +95,7 @@ module mxfp8_dotp#(
 
     );
     //oprand B
+    (* keep_hierarchy = "yes" *)
     mxfp8_classifier #(
         .NumOperands 	(VectorSize     ),
         .MX          	(1     ),
@@ -114,7 +119,7 @@ module mxfp8_dotp#(
     logic [VectorSize-1:0][PROD_MAN_WIDTH-1:0]  man_prod;
     logic signed [VectorSize-1:0][PROD_EXP_WIDTH-1:0] exp_sum;
     logic        [VectorSize-1:0]sign_prod;   
-  //  logic        [PROD_WIDTH-1:0] interm_result[VectorSize-1:0]; //intermediate result before rounding and packing
+    (* keep_hierarchy = "yes" *)
     mxfp8_mult #(
         .VectorSize       (VectorSize),
         .PROD_MAN_WIDTH   (PROD_MAN_WIDTH),
@@ -150,8 +155,9 @@ module mxfp8_dotp#(
     //logic signed [PROD_EXP_WIDTH-1:0] exp_max;
     //logic [PROD_EXP_WIDTH-1:0] exp_diff[VectorSize-1:0];
     logic [SCALE_WIDTH:0] scale_aligned;
-    logic [NORM_MAN_WIDTH-1:0] sum_man;
+    logic [ACC_WIDTH-1:0] sum_man;
     logic sum_sgn;
+    (* keep_hierarchy = "yes" *)
     adder_tree#(.VectorSize(VectorSize), 
                 .PROD_EXP_WIDTH(PROD_EXP_WIDTH), 
                 .PROD_MAN_WIDTH(PROD_MAN_WIDTH),
@@ -168,17 +174,19 @@ module mxfp8_dotp#(
             .sum_man(sum_man),
             .sum_sgn(sum_sgn));
 
-    logic [NORM_MAN_WIDTH-1:0] reg_man;
-    logic signed [PROD_EXP_WIDTH-1:0] reg_exp;
+    logic [DST_MAN_WIDTH-1:0] reg_man;
+    logic signed [DST_EXP_WIDTH-1:0] reg_exp;
     logic reg_sgn;
-    logic [NORM_MAN_WIDTH-1:0] acc_man;
-    logic signed [PROD_EXP_WIDTH-1:0] acc_exp;
+    logic [DST_MAN_WIDTH-1:0] acc_man;
+    logic signed [DST_EXP_WIDTH-1:0] acc_exp;
     logic acc_sgn;
 
+    (* keep_hierarchy = "yes" *)
     stage8_fp32_accumulator #(
-        .MANT_WIDTH(PROD_MAN_WIDTH),
-        .NORM_MAN_WIDTH(NORM_MAN_WIDTH),
-        .EXP_WIDTH(PROD_EXP_WIDTH)
+        .ACC_WIDTH(ACC_WIDTH),
+        .EXP_WIDTH(DST_EXP_WIDTH),
+        .DST_MAN_WIDTH(DST_MAN_WIDTH),
+        .SCALE_WIDTH(SCALE_WIDTH)
     )
     u_fp32_acc(
         .clr(clr),
@@ -211,7 +219,7 @@ module mxfp8_dotp#(
     logic [22:0] man_fp32;
     logic [7:0]  exp_fp32;
 
-    assign man_fp32 = {reg_man[NORM_MAN_WIDTH-2:0],{(23-NORM_MAN_WIDTH+1){1'b0}}};
+    assign man_fp32 = reg_man;
     assign exp_fp32 = (reg_man == 0) ? 8'd0 : reg_exp + 127;
     assign result_o = {reg_sgn,exp_fp32,man_fp32};
 

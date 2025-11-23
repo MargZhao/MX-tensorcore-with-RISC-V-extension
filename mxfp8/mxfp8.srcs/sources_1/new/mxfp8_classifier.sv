@@ -1,3 +1,4 @@
+(* keep_hierarchy = "yes" *)
 module mxfp8_classifier#(
     parameter int unsigned             NumOperands = 1,
     parameter int unsigned             MX = 1,

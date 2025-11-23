@@ -1,97 +1,213 @@
 (* keep_hierarchy = "yes" *)
 module adder_tree#(
 
-    //config
-    parameter int unsigned VectorSize= 32,
-    parameter int unsigned PROD_EXP_WIDTH = 8,
-    parameter int unsigned PROD_MAN_WIDTH = 8,
-    parameter int unsigned NORM_MAN_WIDTH = 16,
-    parameter int unsigned SCALE_WIDTH = 8,
+    parameter int VectorSize= 32,
+    parameter int PROD_EXP_WIDTH = 6,
+    parameter int PROD_MAN_WIDTH = 8,
+    parameter int NORM_MAN_WIDTH = 32,
+    parameter int SCALE_WIDTH = 8,
+    parameter int GUARD_BITS = $clog2(VectorSize),
+    parameter int ACC_WIDTH  = NORM_MAN_WIDTH + GUARD_BITS + 1
 
-    parameter int unsigned GUARD_BITS = $clog2(VectorSize), //32 位累加需要+5位 
-    parameter int unsigned ACC_WIDTH  = NORM_MAN_WIDTH + GUARD_BITS + 1 //+1 sign 位
-
-)
- (
+)(
     input  logic signed  [VectorSize-1:0][PROD_EXP_WIDTH-1:0] exp_sum,
     input  logic [VectorSize-1:0][PROD_MAN_WIDTH-1:0] man_prod,
     input  logic [VectorSize-1:0] sgn_prod,
-    input  logic [SCALE_WIDTH:0] scale_sum,
-    output logic [SCALE_WIDTH:0] scale_aligned,
-    output logic [NORM_MAN_WIDTH-1:0] sum_man,
-    output logic sum_sgn
+    input  logic signed [SCALE_WIDTH:0] scale_sum,
+    output logic signed [SCALE_WIDTH:0] scale_aligned,
+    output logic signed [ACC_WIDTH-1:0] sum_man,
+    output logic signed [PROD_EXP_WIDTH-1:0] sum_sgn
 );
-/*
-    Pipeline stage for 4-2 compressor adder tree
 
-    alignment -> stage 1 -> stage 2 -> stage 3 -> stage 4 -> CPA
-
-*/
-
-//Stage 1
-    logic signed [PROD_EXP_WIDTH-1:0] exp_max;
-    logic signed [VectorSize-1:0][PROD_EXP_WIDTH-1:0]  exp_diff;
-
-    //Max Reduce
-        always_comb begin: find_max
-            exp_max = exp_sum[0];
-            for (int i = 1; i < VectorSize; i++)
-                if ($signed(exp_sum[i]) > $signed(exp_max))
-                    exp_max = exp_sum[i];
-        end
-
-        always_comb begin: reduce_exp
-            scale_aligned = scale_sum + exp_max;
-            for (int i = 0; i < VectorSize; i++)
-                exp_diff[i] = exp_max - exp_sum[i];
-        end
-
-
-   
-
-    logic signed [VectorSize-1:0][NORM_MAN_WIDTH-1:0]  man_align;
- 
-
-
+    // ------------------------------------------------------------
+    // 1) exp_max
+    // ------------------------------------------------------------
+    (* keep_hierarchy = "yes" *)
+    exp_max #(
+        .VectorSize(VectorSize),
+        .EXPW(PROD_EXP_WIDTH)
+    ) u_exp_max (
+        .exp_sum(exp_sum),
+        .exp_max(exp_max)
+    );
     
-    //Alignment
-    always_comb begin: alignment
+    assign scale_aligned = signed'(scale_sum) + signed'(exp_max);
+
+    // ------------------------------------------------------------
+    // 2) diff = exp_max - exp_sum
+    // ------------------------------------------------------------
+    (* keep_hierarchy = "yes" *)
+    logic signed [VectorSize-1:0][PROD_EXP_WIDTH-1:0] diff;
+
+    exp_diff #(
+        .VectorSize(VectorSize),
+        .EXPW(PROD_EXP_WIDTH)
+    ) u_exp_diff (
+        .exp_max(exp_max),
+        .exp_sum(exp_sum),
+        .diff(diff)
+    );
+
+    // ------------------------------------------------------------
+    // 3) align stage (barrel shifter inside)
+    // ------------------------------------------------------------
+    logic signed [VectorSize-1:0][NORM_MAN_WIDTH-1:0] man_align;
+    (* keep_hierarchy = "yes" *)
+    align_unit #(
+        .VectorSize(VectorSize),
+        .PROD_MAN_WIDTH(PROD_MAN_WIDTH),
+        .NORM_MAN_WIDTH(NORM_MAN_WIDTH),
+        .EXPW(PROD_EXP_WIDTH)
+    ) u_align (
+        .man_prod (man_prod),
+        .sgn_prod (sgn_prod),
+        .exp_diff (diff),
+        .man_align(man_align)
+    );
+
+    // ------------------------------------------------------------
+    // 4) CSA tree + CPA
+    // ------------------------------------------------------------
+    // logic signed [ACC_WIDTH-2:0] final_sum;
+    // logic signed [ACC_WIDTH-2:0] final_carry;
+    // (* keep_hierarchy = "yes" *)
+    // csa_tree #(
+    //     .VectorSize(VectorSize),
+    //     .WIDTH_I(NORM_MAN_WIDTH),
+    //     .WIDTH_O(ACC_WIDTH-1)
+    // ) u_tree (
+    //     .operands_i(man_align),
+    //     .sum_o(final_sum),
+    //     .carry_o(final_carry)
+    // );
+
+    // assign sum_all = final_sum + final_carry;
+ 
+    logic signed [ACC_WIDTH-1:0] sum_all;
+    always_comb begin
+        sum_all = '0;
         for (int i = 0; i < VectorSize; i++) begin
-            if(exp_diff[i] >= PROD_MAN_WIDTH) begin
-                man_align[i] = 'h0;
-            end
-            else begin
-                man_align[i] = sgn_prod[i] ?
-                    -($signed({1'b0, man_prod[i], {(NORM_MAN_WIDTH-PROD_MAN_WIDTH-1){1'b0}}}) >>> exp_diff[i]):
-                    ($signed({1'b0, man_prod[i], {(NORM_MAN_WIDTH-PROD_MAN_WIDTH-1){1'b0}}}) >>> exp_diff[i]);
-            end
+            sum_all += man_align[i];
         end
     end
 
-    //
-    logic signed [ACC_WIDTH-2:0] final_sum;
-    logic signed [ACC_WIDTH-2:0] final_carry;
-    csa_tree #(
-        .VectorSize(VectorSize),
-        .WIDTH_I(NORM_MAN_WIDTH)
-    ) inst_compressor_tree(
-        .operands_i(man_align),
-        .sum_o(final_sum),
-        .carry_o(final_carry)
-    );
-
-    logic signed [ACC_WIDTH-1:0] sum_all; 
-   
-    assign sum_all = final_sum + final_carry;
-    
-
-    //Sign and 2's complement
     always_comb begin : sign_extract
         sum_sgn = sum_all[ACC_WIDTH-1];
-        sum_man = sum_sgn ? (~sum_all[ACC_WIDTH-1 -:NORM_MAN_WIDTH] + 1'b1) : sum_all[ACC_WIDTH-1 -:NORM_MAN_WIDTH];
-    end// 
+
+        if (sum_sgn) begin
+            // 负数 → 取反 + 1，取高 NORM_MAN_WIDTH 位
+            sum_man = (~sum_all[ACC_WIDTH-1 -: NORM_MAN_WIDTH]) + 1'b1;
+        end else begin
+            sum_man = sum_all[ACC_WIDTH-1 -: NORM_MAN_WIDTH];
+        end
+    end
 
 endmodule
+
+module align_unit #(
+    parameter int VectorSize = 32,
+    parameter int PROD_MAN_WIDTH = 8,
+    parameter int NORM_MAN_WIDTH = 32,
+    parameter int EXPW = 6
+)(
+    input  logic [VectorSize-1:0][PROD_MAN_WIDTH-1:0] man_prod,
+    input  logic [VectorSize-1:0] sgn_prod,
+    input  logic [VectorSize-1:0][EXPW-1:0] exp_diff,
+
+    output logic signed [VectorSize-1:0][NORM_MAN_WIDTH-1:0] man_align
+);
+
+    logic signed [NORM_MAN_WIDTH-1:0] man_ext [VectorSize];
+    logic signed [NORM_MAN_WIDTH-1:0] shifted  [VectorSize];
+
+    generate
+        for (genvar i = 0; i < VectorSize; i++) begin : G_ALIGN
+
+            // Sign-extend
+            always_comb begin
+                man_ext[i] = $signed({
+                    1'b0,
+                    man_prod[i],
+                    {(NORM_MAN_WIDTH-PROD_MAN_WIDTH-1){1'b0}}
+                });
+
+                if (sgn_prod[i])
+                    man_ext[i] = -man_ext[i];
+            end
+
+            // Barrel shifter instance
+            (* keep_hierarchy = "yes" *)
+            barrel_shifter #(
+                .WIDTH(NORM_MAN_WIDTH)
+            ) u_bs (
+                .din  (man_ext[i]),
+                .shift(exp_diff[i][ $clog2(NORM_MAN_WIDTH)-1 : 0 ]),
+                .dout (shifted[i])
+            );
+
+            // Too-large shift → zero
+            always_comb begin
+                if (exp_diff[i] >= NORM_MAN_WIDTH)
+                    man_align[i] = '0;
+                else
+                    man_align[i] = shifted[i];
+            end
+
+        end
+    endgenerate
+
+endmodule
+
+module exp_max #(
+    parameter int VectorSize = 32,
+    parameter int EXPW = 6
+)(
+    input  logic signed [VectorSize-1:0][EXPW-1:0] exp_sum,
+    output logic signed [EXPW-1:0] exp_max
+);
+    always_comb begin
+        exp_max = exp_sum[0];
+        for (int i = 1; i < VectorSize; i++)
+            if ($signed(exp_sum[i]) > $signed(exp_max))
+                exp_max = exp_sum[i];
+    end
+endmodule
+
+module exp_diff #(
+    parameter int VectorSize = 32,
+    parameter int EXPW = 6
+)(
+    input  logic signed [EXPW-1:0] exp_max,
+    input  logic signed [VectorSize-1:0][EXPW-1:0] exp_sum,
+    output logic signed [VectorSize-1:0][EXPW-1:0] diff
+);
+
+    always_comb begin
+        for (int i = 0; i < VectorSize; i++)
+            diff[i] = exp_max - exp_sum[i];
+    end
+endmodule
+
+module barrel_shifter #(
+    parameter int WIDTH = 32,
+    parameter int SHIFTW = $clog2(WIDTH)
+)(
+    input  logic signed [WIDTH-1:0] din,
+    input  logic [SHIFTW-1:0]       shift,
+    output logic signed [WIDTH-1:0] dout
+);
+    logic signed [WIDTH-1:0] tmp;
+
+    always_comb begin
+        tmp = din;
+        for (int k = 0; k < SHIFTW; k++)
+            if (shift[k])
+                tmp = tmp >>> (1 << k);
+
+        dout = tmp;
+    end
+endmodule
+
 
 module csa_tree #(
     parameter int unsigned VectorSize = 32,
@@ -235,3 +351,4 @@ module counter_5to3(
     assign cout = (x1 ^ x2) & x3 | ~(x1 ^ x2) & x1;
     assign carry = (x1 ^ x2 ^ x3 ^ x4) & cin | ~(x1 ^ x2 ^ x3 ^ x4) & x4;
 endmodule
+

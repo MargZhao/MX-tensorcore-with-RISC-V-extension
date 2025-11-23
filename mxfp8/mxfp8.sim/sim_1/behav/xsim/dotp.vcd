@@ -1,0 +1,2533 @@
+$date
+   Thu Nov 13 02:53:08 2025
+$end
+
+$version
+  2025.1.0
+  $dumpfile ("dotp.vcd") 
+$end
+
+$timescale
+  1ps
+$end
+
+$scope module mxfp8_dotp_tb $end
+$var reg 1 ! clk $end
+$var reg 1 " rst_n $end
+$var reg 64 # operands_a_i [63:0] $end
+$var reg 64 $ operands_b_i [63:0] $end
+$var reg 16 % scale_i [15:0] $end
+$var reg 2 & src_fmt_i $end
+$var reg 2 ' dst_fmt_i $end
+$var reg 1 ( clr $end
+$var reg 32 ) result_o [31:0] $end
+$var real 32 * ref_dot $end
+$scope module dut $end
+$var wire 1 + clk_i $end
+$var wire 1 , rst_ni $end
+$var wire 64 - operands_a_i [63:0] $end
+$var wire 64 . operands_b_i [63:0] $end
+$var wire 2 / src_fmt_i $end
+$var wire 2 0 dst_fmt_i $end
+$var wire 16 1 scale_i [15:0] $end
+$var wire 1 2 clr $end
+$var reg 32 ) result_o [31:0] $end
+$var reg 24 3 a_man_i [23:0] $end
+$var reg 24 4 b_man_i [23:0] $end
+$var reg 40 5 a_exp_i [39:0] $end
+$var reg 40 6 b_exp_i [39:0] $end
+$var reg 8 7 a_sign_i [7:0] $end
+$var reg 8 8 b_sign_i [7:0] $end
+$var reg 8 9 a_isnormal [7:0] $end
+$var reg 8 : b_isnormal [7:0] $end
+$var reg 64 ; info_a [63:0] $end
+$var reg 64 < info_b [63:0] $end
+$var reg 64 = man_prod [63:0] $end
+$var reg 64 > exp_sum [63:0] $end
+$var reg 8 ? sign_prod [7:0] $end
+$var reg 9 @ scale_add [8:0] $end
+$var reg 9 A scale_aligned [8:0] $end
+$var reg 16 B sum_man [15:0] $end
+$var reg 1 C sum_sgn $end
+$var reg 16 D reg_man [15:0] $end
+$var reg 8 E reg_exp [7:0] $end
+$var reg 1 F reg_sgn $end
+$var reg 16 G acc_man [15:0] $end
+$var reg 8 H acc_exp [7:0] $end
+$var reg 1 I acc_sgn $end
+$var reg 23 J man_fp32 [22:0] $end
+$var reg 8 K exp_fp32 [7:0] $end
+$scope module u_mxfp8_classifier_a $end
+$var wire 2 / src_fmt_i $end
+$var wire 64 - operands_i [63:0] $end
+$var reg 64 ; info_o [63:0] $end
+$var reg 24 3 man_i [23:0] $end
+$var reg 40 5 exp_i [39:0] $end
+$var reg 8 7 sign_i [7:0] $end
+$var reg 8 9 isnormal [7:0] $end
+$var reg 2 L man_bits [1:0] $end
+$var reg 3 M exp_bits [2:0] $end
+$var reg 8 N \gen_num_values[0].value  [7:0] $end
+$var reg 1 O \gen_num_values[0].is_boxed  $end
+$var reg 1 P \gen_num_values[0].is_normal  $end
+$var reg 1 Q \gen_num_values[0].is_inf  $end
+$var reg 1 R \gen_num_values[0].is_nan  $end
+$var reg 1 S \gen_num_values[0].is_signalling  $end
+$var reg 1 T \gen_num_values[0].is_quiet  $end
+$var reg 1 U \gen_num_values[0].is_zero  $end
+$var reg 1 V \gen_num_values[0].is_subnormal  $end
+$var reg 8 W \gen_num_values[1].value  [7:0] $end
+$var reg 1 X \gen_num_values[1].is_boxed  $end
+$var reg 1 Y \gen_num_values[1].is_normal  $end
+$var reg 1 Z \gen_num_values[1].is_inf  $end
+$var reg 1 [ \gen_num_values[1].is_nan  $end
+$var reg 1 \ \gen_num_values[1].is_signalling  $end
+$var reg 1 ] \gen_num_values[1].is_quiet  $end
+$var reg 1 ^ \gen_num_values[1].is_zero  $end
+$var reg 1 _ \gen_num_values[1].is_subnormal  $end
+$var reg 8 ` \gen_num_values[2].value  [7:0] $end
+$var reg 1 a \gen_num_values[2].is_boxed  $end
+$var reg 1 b \gen_num_values[2].is_normal  $end
+$var reg 1 c \gen_num_values[2].is_inf  $end
+$var reg 1 d \gen_num_values[2].is_nan  $end
+$var reg 1 e \gen_num_values[2].is_signalling  $end
+$var reg 1 f \gen_num_values[2].is_quiet  $end
+$var reg 1 g \gen_num_values[2].is_zero  $end
+$var reg 1 h \gen_num_values[2].is_subnormal  $end
+$var reg 8 i \gen_num_values[3].value  [7:0] $end
+$var reg 1 j \gen_num_values[3].is_boxed  $end
+$var reg 1 k \gen_num_values[3].is_normal  $end
+$var reg 1 l \gen_num_values[3].is_inf  $end
+$var reg 1 m \gen_num_values[3].is_nan  $end
+$var reg 1 n \gen_num_values[3].is_signalling  $end
+$var reg 1 o \gen_num_values[3].is_quiet  $end
+$var reg 1 p \gen_num_values[3].is_zero  $end
+$var reg 1 q \gen_num_values[3].is_subnormal  $end
+$var reg 8 r \gen_num_values[4].value  [7:0] $end
+$var reg 1 s \gen_num_values[4].is_boxed  $end
+$var reg 1 t \gen_num_values[4].is_normal  $end
+$var reg 1 u \gen_num_values[4].is_inf  $end
+$var reg 1 v \gen_num_values[4].is_nan  $end
+$var reg 1 w \gen_num_values[4].is_signalling  $end
+$var reg 1 x \gen_num_values[4].is_quiet  $end
+$var reg 1 y \gen_num_values[4].is_zero  $end
+$var reg 1 z \gen_num_values[4].is_subnormal  $end
+$var reg 8 { \gen_num_values[5].value  [7:0] $end
+$var reg 1 | \gen_num_values[5].is_boxed  $end
+$var reg 1 } \gen_num_values[5].is_normal  $end
+$var reg 1 ~ \gen_num_values[5].is_inf  $end
+$var reg 1 !! \gen_num_values[5].is_nan  $end
+$var reg 1 "! \gen_num_values[5].is_signalling  $end
+$var reg 1 #! \gen_num_values[5].is_quiet  $end
+$var reg 1 $! \gen_num_values[5].is_zero  $end
+$var reg 1 %! \gen_num_values[5].is_subnormal  $end
+$var reg 8 &! \gen_num_values[6].value  [7:0] $end
+$var reg 1 '! \gen_num_values[6].is_boxed  $end
+$var reg 1 (! \gen_num_values[6].is_normal  $end
+$var reg 1 )! \gen_num_values[6].is_inf  $end
+$var reg 1 *! \gen_num_values[6].is_nan  $end
+$var reg 1 +! \gen_num_values[6].is_signalling  $end
+$var reg 1 ,! \gen_num_values[6].is_quiet  $end
+$var reg 1 -! \gen_num_values[6].is_zero  $end
+$var reg 1 .! \gen_num_values[6].is_subnormal  $end
+$var reg 8 /! \gen_num_values[7].value  [7:0] $end
+$var reg 1 0! \gen_num_values[7].is_boxed  $end
+$var reg 1 1! \gen_num_values[7].is_normal  $end
+$var reg 1 2! \gen_num_values[7].is_inf  $end
+$var reg 1 3! \gen_num_values[7].is_nan  $end
+$var reg 1 4! \gen_num_values[7].is_signalling  $end
+$var reg 1 5! \gen_num_values[7].is_quiet  $end
+$var reg 1 6! \gen_num_values[7].is_zero  $end
+$var reg 1 7! \gen_num_values[7].is_subnormal  $end
+$upscope $end
+$scope module u_mxfp8_classifier_b $end
+$var wire 2 / src_fmt_i $end
+$var wire 64 . operands_i [63:0] $end
+$var reg 64 < info_o [63:0] $end
+$var reg 24 4 man_i [23:0] $end
+$var reg 40 6 exp_i [39:0] $end
+$var reg 8 8 sign_i [7:0] $end
+$var reg 8 : isnormal [7:0] $end
+$var reg 2 8! man_bits [1:0] $end
+$var reg 3 9! exp_bits [2:0] $end
+$var reg 8 :! \gen_num_values[0].value  [7:0] $end
+$var reg 1 ;! \gen_num_values[0].is_boxed  $end
+$var reg 1 <! \gen_num_values[0].is_normal  $end
+$var reg 1 =! \gen_num_values[0].is_inf  $end
+$var reg 1 >! \gen_num_values[0].is_nan  $end
+$var reg 1 ?! \gen_num_values[0].is_signalling  $end
+$var reg 1 @! \gen_num_values[0].is_quiet  $end
+$var reg 1 A! \gen_num_values[0].is_zero  $end
+$var reg 1 B! \gen_num_values[0].is_subnormal  $end
+$var reg 8 C! \gen_num_values[1].value  [7:0] $end
+$var reg 1 D! \gen_num_values[1].is_boxed  $end
+$var reg 1 E! \gen_num_values[1].is_normal  $end
+$var reg 1 F! \gen_num_values[1].is_inf  $end
+$var reg 1 G! \gen_num_values[1].is_nan  $end
+$var reg 1 H! \gen_num_values[1].is_signalling  $end
+$var reg 1 I! \gen_num_values[1].is_quiet  $end
+$var reg 1 J! \gen_num_values[1].is_zero  $end
+$var reg 1 K! \gen_num_values[1].is_subnormal  $end
+$var reg 8 L! \gen_num_values[2].value  [7:0] $end
+$var reg 1 M! \gen_num_values[2].is_boxed  $end
+$var reg 1 N! \gen_num_values[2].is_normal  $end
+$var reg 1 O! \gen_num_values[2].is_inf  $end
+$var reg 1 P! \gen_num_values[2].is_nan  $end
+$var reg 1 Q! \gen_num_values[2].is_signalling  $end
+$var reg 1 R! \gen_num_values[2].is_quiet  $end
+$var reg 1 S! \gen_num_values[2].is_zero  $end
+$var reg 1 T! \gen_num_values[2].is_subnormal  $end
+$var reg 8 U! \gen_num_values[3].value  [7:0] $end
+$var reg 1 V! \gen_num_values[3].is_boxed  $end
+$var reg 1 W! \gen_num_values[3].is_normal  $end
+$var reg 1 X! \gen_num_values[3].is_inf  $end
+$var reg 1 Y! \gen_num_values[3].is_nan  $end
+$var reg 1 Z! \gen_num_values[3].is_signalling  $end
+$var reg 1 [! \gen_num_values[3].is_quiet  $end
+$var reg 1 \! \gen_num_values[3].is_zero  $end
+$var reg 1 ]! \gen_num_values[3].is_subnormal  $end
+$var reg 8 ^! \gen_num_values[4].value  [7:0] $end
+$var reg 1 _! \gen_num_values[4].is_boxed  $end
+$var reg 1 `! \gen_num_values[4].is_normal  $end
+$var reg 1 a! \gen_num_values[4].is_inf  $end
+$var reg 1 b! \gen_num_values[4].is_nan  $end
+$var reg 1 c! \gen_num_values[4].is_signalling  $end
+$var reg 1 d! \gen_num_values[4].is_quiet  $end
+$var reg 1 e! \gen_num_values[4].is_zero  $end
+$var reg 1 f! \gen_num_values[4].is_subnormal  $end
+$var reg 8 g! \gen_num_values[5].value  [7:0] $end
+$var reg 1 h! \gen_num_values[5].is_boxed  $end
+$var reg 1 i! \gen_num_values[5].is_normal  $end
+$var reg 1 j! \gen_num_values[5].is_inf  $end
+$var reg 1 k! \gen_num_values[5].is_nan  $end
+$var reg 1 l! \gen_num_values[5].is_signalling  $end
+$var reg 1 m! \gen_num_values[5].is_quiet  $end
+$var reg 1 n! \gen_num_values[5].is_zero  $end
+$var reg 1 o! \gen_num_values[5].is_subnormal  $end
+$var reg 8 p! \gen_num_values[6].value  [7:0] $end
+$var reg 1 q! \gen_num_values[6].is_boxed  $end
+$var reg 1 r! \gen_num_values[6].is_normal  $end
+$var reg 1 s! \gen_num_values[6].is_inf  $end
+$var reg 1 t! \gen_num_values[6].is_nan  $end
+$var reg 1 u! \gen_num_values[6].is_signalling  $end
+$var reg 1 v! \gen_num_values[6].is_quiet  $end
+$var reg 1 w! \gen_num_values[6].is_zero  $end
+$var reg 1 x! \gen_num_values[6].is_subnormal  $end
+$var reg 8 y! \gen_num_values[7].value  [7:0] $end
+$var reg 1 z! \gen_num_values[7].is_boxed  $end
+$var reg 1 {! \gen_num_values[7].is_normal  $end
+$var reg 1 |! \gen_num_values[7].is_inf  $end
+$var reg 1 }! \gen_num_values[7].is_nan  $end
+$var reg 1 ~! \gen_num_values[7].is_signalling  $end
+$var reg 1 !" \gen_num_values[7].is_quiet  $end
+$var reg 1 "" \gen_num_values[7].is_zero  $end
+$var reg 1 #" \gen_num_values[7].is_subnormal  $end
+$upscope $end
+$scope module u_mxfp8_mult $end
+$var wire 24 $" A_mant [23:0] $end
+$var wire 24 %" B_mant [23:0] $end
+$var wire 40 &" A_exp [39:0] $end
+$var wire 40 '" B_exp [39:0] $end
+$var wire 8 (" A_sign [7:0] $end
+$var wire 8 )" B_sign [7:0] $end
+$var wire 8 *" A_isnormal [7:0] $end
+$var wire 8 +" B_isnormal [7:0] $end
+$var wire 2 / src_fmt_i $end
+$var reg 64 = man_prod [63:0] $end
+$var reg 64 > exp_sum [63:0] $end
+$var reg 8 ? sign_prod [7:0] $end
+$var reg 64 ," A_exp_biased [63:0] $end
+$var reg 64 -" B_exp_biased [63:0] $end
+$var reg 5 ." bias [4:0] $end
+$scope begin Block56_22 $end
+$var reg 32 /" i [31:0] $end
+$upscope $end
+$upscope $end
+$scope module u_adder_tree $end
+$var wire 64 0" exp_sum [63:0] $end
+$var wire 64 1" man_prod [63:0] $end
+$var wire 8 2" sgn_prod [7:0] $end
+$var wire 9 3" scale_sum [8:0] $end
+$var reg 9 A scale_aligned [8:0] $end
+$var reg 16 B sum_man [15:0] $end
+$var reg 1 C sum_sgn $end
+$var reg 8 4" exp_max [7:0] $end
+$var reg 64 5" exp_diff [63:0] $end
+$var reg 128 6" man_align [127:0] $end
+$var reg 19 7" final_sum [18:0] $end
+$var reg 19 8" final_carry [18:0] $end
+$var reg 20 9" sum_all [19:0] $end
+$scope begin find_max $end
+$scope begin Block38_25 $end
+$var reg 32 :" i [31:0] $end
+$upscope $end
+$upscope $end
+$scope begin reduce_exp $end
+$scope begin Block45_27 $end
+$var reg 32 ;" i [31:0] $end
+$upscope $end
+$upscope $end
+$scope begin alignment $end
+$scope begin Block59_29 $end
+$var reg 32 <" i [31:0] $end
+$upscope $end
+$upscope $end
+$scope module inst_compressor_tree $end
+$var wire 128 =" operands_i [127:0] $end
+$var reg 21 >" sum_o [20:0] $end
+$var reg 21 ?" carry_o [20:0] $end
+$var reg 64 @" \genblk1.operands_i_A  [63:0] $end
+$var reg 64 A" \genblk1.operands_i_B  [63:0] $end
+$var reg 21 B" \genblk1.sum_o_A  [20:0] $end
+$var reg 21 C" \genblk1.sum_o_B  [20:0] $end
+$var reg 21 D" \genblk1.carry_o_A  [20:0] $end
+$var reg 21 E" \genblk1.carry_o_B  [20:0] $end
+$var reg 84 F" \genblk1.operands_i_C  [83:0] $end
+$scope module genblk1.ua_csa_tree $end
+$var wire 64 G" operands_i [63:0] $end
+$var reg 21 B" sum_o [20:0] $end
+$var reg 21 D" carry_o [20:0] $end
+$scope module genblk1.u_compressor_4to2 $end
+$var wire 64 G" operands_i [63:0] $end
+$var reg 21 B" sum_o [20:0] $end
+$var reg 21 D" carry_o [20:0] $end
+$var reg 16 H" sum [15:0] $end
+$var reg 17 I" cin [16:0] $end
+$var reg 16 J" cout [15:0] $end
+$var reg 16 K" carry [15:0] $end
+$var reg 1 L" carry_temp $end
+$var reg 17 M" carry_raw [16:0] $end
+$scope module genblk1[0].u_counter_5to3 $end
+$var wire 1 N" x1 $end
+$var wire 1 O" x2 $end
+$var wire 1 P" x3 $end
+$var wire 1 Q" x4 $end
+$var wire 1 R" cin $end
+$var reg 1 S" sum $end
+$var reg 1 T" carry $end
+$var reg 1 U" cout $end
+$upscope $end
+$scope module genblk1[1].u_counter_5to3 $end
+$var wire 1 V" x1 $end
+$var wire 1 W" x2 $end
+$var wire 1 X" x3 $end
+$var wire 1 Y" x4 $end
+$var wire 1 Z" cin $end
+$var reg 1 [" sum $end
+$var reg 1 \" carry $end
+$var reg 1 ]" cout $end
+$upscope $end
+$scope module genblk1[2].u_counter_5to3 $end
+$var wire 1 ^" x1 $end
+$var wire 1 _" x2 $end
+$var wire 1 `" x3 $end
+$var wire 1 a" x4 $end
+$var wire 1 b" cin $end
+$var reg 1 c" sum $end
+$var reg 1 d" carry $end
+$var reg 1 e" cout $end
+$upscope $end
+$scope module genblk1[3].u_counter_5to3 $end
+$var wire 1 f" x1 $end
+$var wire 1 g" x2 $end
+$var wire 1 h" x3 $end
+$var wire 1 i" x4 $end
+$var wire 1 j" cin $end
+$var reg 1 k" sum $end
+$var reg 1 l" carry $end
+$var reg 1 m" cout $end
+$upscope $end
+$scope module genblk1[4].u_counter_5to3 $end
+$var wire 1 n" x1 $end
+$var wire 1 o" x2 $end
+$var wire 1 p" x3 $end
+$var wire 1 q" x4 $end
+$var wire 1 r" cin $end
+$var reg 1 s" sum $end
+$var reg 1 t" carry $end
+$var reg 1 u" cout $end
+$upscope $end
+$scope module genblk1[5].u_counter_5to3 $end
+$var wire 1 v" x1 $end
+$var wire 1 w" x2 $end
+$var wire 1 x" x3 $end
+$var wire 1 y" x4 $end
+$var wire 1 z" cin $end
+$var reg 1 {" sum $end
+$var reg 1 |" carry $end
+$var reg 1 }" cout $end
+$upscope $end
+$scope module genblk1[6].u_counter_5to3 $end
+$var wire 1 ~" x1 $end
+$var wire 1 !# x2 $end
+$var wire 1 "# x3 $end
+$var wire 1 ## x4 $end
+$var wire 1 $# cin $end
+$var reg 1 %# sum $end
+$var reg 1 &# carry $end
+$var reg 1 '# cout $end
+$upscope $end
+$scope module genblk1[7].u_counter_5to3 $end
+$var wire 1 (# x1 $end
+$var wire 1 )# x2 $end
+$var wire 1 *# x3 $end
+$var wire 1 +# x4 $end
+$var wire 1 ,# cin $end
+$var reg 1 -# sum $end
+$var reg 1 .# carry $end
+$var reg 1 /# cout $end
+$upscope $end
+$scope module genblk1[8].u_counter_5to3 $end
+$var wire 1 0# x1 $end
+$var wire 1 1# x2 $end
+$var wire 1 2# x3 $end
+$var wire 1 3# x4 $end
+$var wire 1 4# cin $end
+$var reg 1 5# sum $end
+$var reg 1 6# carry $end
+$var reg 1 7# cout $end
+$upscope $end
+$scope module genblk1[9].u_counter_5to3 $end
+$var wire 1 8# x1 $end
+$var wire 1 9# x2 $end
+$var wire 1 :# x3 $end
+$var wire 1 ;# x4 $end
+$var wire 1 <# cin $end
+$var reg 1 =# sum $end
+$var reg 1 ># carry $end
+$var reg 1 ?# cout $end
+$upscope $end
+$scope module genblk1[10].u_counter_5to3 $end
+$var wire 1 @# x1 $end
+$var wire 1 A# x2 $end
+$var wire 1 B# x3 $end
+$var wire 1 C# x4 $end
+$var wire 1 D# cin $end
+$var reg 1 E# sum $end
+$var reg 1 F# carry $end
+$var reg 1 G# cout $end
+$upscope $end
+$scope module genblk1[11].u_counter_5to3 $end
+$var wire 1 H# x1 $end
+$var wire 1 I# x2 $end
+$var wire 1 J# x3 $end
+$var wire 1 K# x4 $end
+$var wire 1 L# cin $end
+$var reg 1 M# sum $end
+$var reg 1 N# carry $end
+$var reg 1 O# cout $end
+$upscope $end
+$scope module genblk1[12].u_counter_5to3 $end
+$var wire 1 P# x1 $end
+$var wire 1 Q# x2 $end
+$var wire 1 R# x3 $end
+$var wire 1 S# x4 $end
+$var wire 1 T# cin $end
+$var reg 1 U# sum $end
+$var reg 1 V# carry $end
+$var reg 1 W# cout $end
+$upscope $end
+$scope module genblk1[13].u_counter_5to3 $end
+$var wire 1 X# x1 $end
+$var wire 1 Y# x2 $end
+$var wire 1 Z# x3 $end
+$var wire 1 [# x4 $end
+$var wire 1 \# cin $end
+$var reg 1 ]# sum $end
+$var reg 1 ^# carry $end
+$var reg 1 _# cout $end
+$upscope $end
+$scope module genblk1[14].u_counter_5to3 $end
+$var wire 1 `# x1 $end
+$var wire 1 a# x2 $end
+$var wire 1 b# x3 $end
+$var wire 1 c# x4 $end
+$var wire 1 d# cin $end
+$var reg 1 e# sum $end
+$var reg 1 f# carry $end
+$var reg 1 g# cout $end
+$upscope $end
+$scope module genblk1[15].u_counter_5to3 $end
+$var wire 1 h# x1 $end
+$var wire 1 i# x2 $end
+$var wire 1 j# x3 $end
+$var wire 1 k# x4 $end
+$var wire 1 l# cin $end
+$var reg 1 m# sum $end
+$var reg 1 n# carry $end
+$var reg 1 o# cout $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope module genblk1.ub_csa_tree $end
+$var wire 64 p# operands_i [63:0] $end
+$var reg 21 C" sum_o [20:0] $end
+$var reg 21 E" carry_o [20:0] $end
+$scope module genblk1.u_compressor_4to2 $end
+$var wire 64 p# operands_i [63:0] $end
+$var reg 21 C" sum_o [20:0] $end
+$var reg 21 E" carry_o [20:0] $end
+$var reg 16 q# sum [15:0] $end
+$var reg 17 r# cin [16:0] $end
+$var reg 16 s# cout [15:0] $end
+$var reg 16 t# carry [15:0] $end
+$var reg 1 u# carry_temp $end
+$var reg 17 v# carry_raw [16:0] $end
+$scope module genblk1[0].u_counter_5to3 $end
+$var wire 1 w# x1 $end
+$var wire 1 x# x2 $end
+$var wire 1 y# x3 $end
+$var wire 1 z# x4 $end
+$var wire 1 {# cin $end
+$var reg 1 |# sum $end
+$var reg 1 }# carry $end
+$var reg 1 ~# cout $end
+$upscope $end
+$scope module genblk1[1].u_counter_5to3 $end
+$var wire 1 !$ x1 $end
+$var wire 1 "$ x2 $end
+$var wire 1 #$ x3 $end
+$var wire 1 $$ x4 $end
+$var wire 1 %$ cin $end
+$var reg 1 &$ sum $end
+$var reg 1 '$ carry $end
+$var reg 1 ($ cout $end
+$upscope $end
+$scope module genblk1[2].u_counter_5to3 $end
+$var wire 1 )$ x1 $end
+$var wire 1 *$ x2 $end
+$var wire 1 +$ x3 $end
+$var wire 1 ,$ x4 $end
+$var wire 1 -$ cin $end
+$var reg 1 .$ sum $end
+$var reg 1 /$ carry $end
+$var reg 1 0$ cout $end
+$upscope $end
+$scope module genblk1[3].u_counter_5to3 $end
+$var wire 1 1$ x1 $end
+$var wire 1 2$ x2 $end
+$var wire 1 3$ x3 $end
+$var wire 1 4$ x4 $end
+$var wire 1 5$ cin $end
+$var reg 1 6$ sum $end
+$var reg 1 7$ carry $end
+$var reg 1 8$ cout $end
+$upscope $end
+$scope module genblk1[4].u_counter_5to3 $end
+$var wire 1 9$ x1 $end
+$var wire 1 :$ x2 $end
+$var wire 1 ;$ x3 $end
+$var wire 1 <$ x4 $end
+$var wire 1 =$ cin $end
+$var reg 1 >$ sum $end
+$var reg 1 ?$ carry $end
+$var reg 1 @$ cout $end
+$upscope $end
+$scope module genblk1[5].u_counter_5to3 $end
+$var wire 1 A$ x1 $end
+$var wire 1 B$ x2 $end
+$var wire 1 C$ x3 $end
+$var wire 1 D$ x4 $end
+$var wire 1 E$ cin $end
+$var reg 1 F$ sum $end
+$var reg 1 G$ carry $end
+$var reg 1 H$ cout $end
+$upscope $end
+$scope module genblk1[6].u_counter_5to3 $end
+$var wire 1 I$ x1 $end
+$var wire 1 J$ x2 $end
+$var wire 1 K$ x3 $end
+$var wire 1 L$ x4 $end
+$var wire 1 M$ cin $end
+$var reg 1 N$ sum $end
+$var reg 1 O$ carry $end
+$var reg 1 P$ cout $end
+$upscope $end
+$scope module genblk1[7].u_counter_5to3 $end
+$var wire 1 Q$ x1 $end
+$var wire 1 R$ x2 $end
+$var wire 1 S$ x3 $end
+$var wire 1 T$ x4 $end
+$var wire 1 U$ cin $end
+$var reg 1 V$ sum $end
+$var reg 1 W$ carry $end
+$var reg 1 X$ cout $end
+$upscope $end
+$scope module genblk1[8].u_counter_5to3 $end
+$var wire 1 Y$ x1 $end
+$var wire 1 Z$ x2 $end
+$var wire 1 [$ x3 $end
+$var wire 1 \$ x4 $end
+$var wire 1 ]$ cin $end
+$var reg 1 ^$ sum $end
+$var reg 1 _$ carry $end
+$var reg 1 `$ cout $end
+$upscope $end
+$scope module genblk1[9].u_counter_5to3 $end
+$var wire 1 a$ x1 $end
+$var wire 1 b$ x2 $end
+$var wire 1 c$ x3 $end
+$var wire 1 d$ x4 $end
+$var wire 1 e$ cin $end
+$var reg 1 f$ sum $end
+$var reg 1 g$ carry $end
+$var reg 1 h$ cout $end
+$upscope $end
+$scope module genblk1[10].u_counter_5to3 $end
+$var wire 1 i$ x1 $end
+$var wire 1 j$ x2 $end
+$var wire 1 k$ x3 $end
+$var wire 1 l$ x4 $end
+$var wire 1 m$ cin $end
+$var reg 1 n$ sum $end
+$var reg 1 o$ carry $end
+$var reg 1 p$ cout $end
+$upscope $end
+$scope module genblk1[11].u_counter_5to3 $end
+$var wire 1 q$ x1 $end
+$var wire 1 r$ x2 $end
+$var wire 1 s$ x3 $end
+$var wire 1 t$ x4 $end
+$var wire 1 u$ cin $end
+$var reg 1 v$ sum $end
+$var reg 1 w$ carry $end
+$var reg 1 x$ cout $end
+$upscope $end
+$scope module genblk1[12].u_counter_5to3 $end
+$var wire 1 y$ x1 $end
+$var wire 1 z$ x2 $end
+$var wire 1 {$ x3 $end
+$var wire 1 |$ x4 $end
+$var wire 1 }$ cin $end
+$var reg 1 ~$ sum $end
+$var reg 1 !% carry $end
+$var reg 1 "% cout $end
+$upscope $end
+$scope module genblk1[13].u_counter_5to3 $end
+$var wire 1 #% x1 $end
+$var wire 1 $% x2 $end
+$var wire 1 %% x3 $end
+$var wire 1 &% x4 $end
+$var wire 1 '% cin $end
+$var reg 1 (% sum $end
+$var reg 1 )% carry $end
+$var reg 1 *% cout $end
+$upscope $end
+$scope module genblk1[14].u_counter_5to3 $end
+$var wire 1 +% x1 $end
+$var wire 1 ,% x2 $end
+$var wire 1 -% x3 $end
+$var wire 1 .% x4 $end
+$var wire 1 /% cin $end
+$var reg 1 0% sum $end
+$var reg 1 1% carry $end
+$var reg 1 2% cout $end
+$upscope $end
+$scope module genblk1[15].u_counter_5to3 $end
+$var wire 1 3% x1 $end
+$var wire 1 4% x2 $end
+$var wire 1 5% x3 $end
+$var wire 1 6% x4 $end
+$var wire 1 7% cin $end
+$var reg 1 8% sum $end
+$var reg 1 9% carry $end
+$var reg 1 :% cout $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope module genblk1.uc_compressor_4to2 $end
+$var wire 84 ;% operands_i [83:0] $end
+$var reg 21 >" sum_o [20:0] $end
+$var reg 21 ?" carry_o [20:0] $end
+$var reg 21 <% sum [20:0] $end
+$var reg 22 =% cin [21:0] $end
+$var reg 21 >% cout [20:0] $end
+$var reg 21 ?% carry [20:0] $end
+$var reg 1 @% carry_temp $end
+$var reg 22 A% carry_raw [21:0] $end
+$scope module genblk1[0].u_counter_5to3 $end
+$var wire 1 B% x1 $end
+$var wire 1 C% x2 $end
+$var wire 1 D% x3 $end
+$var wire 1 E% x4 $end
+$var wire 1 F% cin $end
+$var reg 1 G% sum $end
+$var reg 1 H% carry $end
+$var reg 1 I% cout $end
+$upscope $end
+$scope module genblk1[1].u_counter_5to3 $end
+$var wire 1 J% x1 $end
+$var wire 1 K% x2 $end
+$var wire 1 L% x3 $end
+$var wire 1 M% x4 $end
+$var wire 1 N% cin $end
+$var reg 1 O% sum $end
+$var reg 1 P% carry $end
+$var reg 1 Q% cout $end
+$upscope $end
+$scope module genblk1[2].u_counter_5to3 $end
+$var wire 1 R% x1 $end
+$var wire 1 S% x2 $end
+$var wire 1 T% x3 $end
+$var wire 1 U% x4 $end
+$var wire 1 V% cin $end
+$var reg 1 W% sum $end
+$var reg 1 X% carry $end
+$var reg 1 Y% cout $end
+$upscope $end
+$scope module genblk1[3].u_counter_5to3 $end
+$var wire 1 Z% x1 $end
+$var wire 1 [% x2 $end
+$var wire 1 \% x3 $end
+$var wire 1 ]% x4 $end
+$var wire 1 ^% cin $end
+$var reg 1 _% sum $end
+$var reg 1 `% carry $end
+$var reg 1 a% cout $end
+$upscope $end
+$scope module genblk1[4].u_counter_5to3 $end
+$var wire 1 b% x1 $end
+$var wire 1 c% x2 $end
+$var wire 1 d% x3 $end
+$var wire 1 e% x4 $end
+$var wire 1 f% cin $end
+$var reg 1 g% sum $end
+$var reg 1 h% carry $end
+$var reg 1 i% cout $end
+$upscope $end
+$scope module genblk1[5].u_counter_5to3 $end
+$var wire 1 j% x1 $end
+$var wire 1 k% x2 $end
+$var wire 1 l% x3 $end
+$var wire 1 m% x4 $end
+$var wire 1 n% cin $end
+$var reg 1 o% sum $end
+$var reg 1 p% carry $end
+$var reg 1 q% cout $end
+$upscope $end
+$scope module genblk1[6].u_counter_5to3 $end
+$var wire 1 r% x1 $end
+$var wire 1 s% x2 $end
+$var wire 1 t% x3 $end
+$var wire 1 u% x4 $end
+$var wire 1 v% cin $end
+$var reg 1 w% sum $end
+$var reg 1 x% carry $end
+$var reg 1 y% cout $end
+$upscope $end
+$scope module genblk1[7].u_counter_5to3 $end
+$var wire 1 z% x1 $end
+$var wire 1 {% x2 $end
+$var wire 1 |% x3 $end
+$var wire 1 }% x4 $end
+$var wire 1 ~% cin $end
+$var reg 1 !& sum $end
+$var reg 1 "& carry $end
+$var reg 1 #& cout $end
+$upscope $end
+$scope module genblk1[8].u_counter_5to3 $end
+$var wire 1 $& x1 $end
+$var wire 1 %& x2 $end
+$var wire 1 && x3 $end
+$var wire 1 '& x4 $end
+$var wire 1 (& cin $end
+$var reg 1 )& sum $end
+$var reg 1 *& carry $end
+$var reg 1 +& cout $end
+$upscope $end
+$scope module genblk1[9].u_counter_5to3 $end
+$var wire 1 ,& x1 $end
+$var wire 1 -& x2 $end
+$var wire 1 .& x3 $end
+$var wire 1 /& x4 $end
+$var wire 1 0& cin $end
+$var reg 1 1& sum $end
+$var reg 1 2& carry $end
+$var reg 1 3& cout $end
+$upscope $end
+$scope module genblk1[10].u_counter_5to3 $end
+$var wire 1 4& x1 $end
+$var wire 1 5& x2 $end
+$var wire 1 6& x3 $end
+$var wire 1 7& x4 $end
+$var wire 1 8& cin $end
+$var reg 1 9& sum $end
+$var reg 1 :& carry $end
+$var reg 1 ;& cout $end
+$upscope $end
+$scope module genblk1[11].u_counter_5to3 $end
+$var wire 1 <& x1 $end
+$var wire 1 =& x2 $end
+$var wire 1 >& x3 $end
+$var wire 1 ?& x4 $end
+$var wire 1 @& cin $end
+$var reg 1 A& sum $end
+$var reg 1 B& carry $end
+$var reg 1 C& cout $end
+$upscope $end
+$scope module genblk1[12].u_counter_5to3 $end
+$var wire 1 D& x1 $end
+$var wire 1 E& x2 $end
+$var wire 1 F& x3 $end
+$var wire 1 G& x4 $end
+$var wire 1 H& cin $end
+$var reg 1 I& sum $end
+$var reg 1 J& carry $end
+$var reg 1 K& cout $end
+$upscope $end
+$scope module genblk1[13].u_counter_5to3 $end
+$var wire 1 L& x1 $end
+$var wire 1 M& x2 $end
+$var wire 1 N& x3 $end
+$var wire 1 O& x4 $end
+$var wire 1 P& cin $end
+$var reg 1 Q& sum $end
+$var reg 1 R& carry $end
+$var reg 1 S& cout $end
+$upscope $end
+$scope module genblk1[14].u_counter_5to3 $end
+$var wire 1 T& x1 $end
+$var wire 1 U& x2 $end
+$var wire 1 V& x3 $end
+$var wire 1 W& x4 $end
+$var wire 1 X& cin $end
+$var reg 1 Y& sum $end
+$var reg 1 Z& carry $end
+$var reg 1 [& cout $end
+$upscope $end
+$scope module genblk1[15].u_counter_5to3 $end
+$var wire 1 \& x1 $end
+$var wire 1 ]& x2 $end
+$var wire 1 ^& x3 $end
+$var wire 1 _& x4 $end
+$var wire 1 `& cin $end
+$var reg 1 a& sum $end
+$var reg 1 b& carry $end
+$var reg 1 c& cout $end
+$upscope $end
+$scope module genblk1[16].u_counter_5to3 $end
+$var wire 1 d& x1 $end
+$var wire 1 e& x2 $end
+$var wire 1 f& x3 $end
+$var wire 1 g& x4 $end
+$var wire 1 h& cin $end
+$var reg 1 i& sum $end
+$var reg 1 j& carry $end
+$var reg 1 k& cout $end
+$upscope $end
+$scope module genblk1[17].u_counter_5to3 $end
+$var wire 1 l& x1 $end
+$var wire 1 m& x2 $end
+$var wire 1 n& x3 $end
+$var wire 1 o& x4 $end
+$var wire 1 p& cin $end
+$var reg 1 q& sum $end
+$var reg 1 r& carry $end
+$var reg 1 s& cout $end
+$upscope $end
+$scope module genblk1[18].u_counter_5to3 $end
+$var wire 1 t& x1 $end
+$var wire 1 u& x2 $end
+$var wire 1 v& x3 $end
+$var wire 1 w& x4 $end
+$var wire 1 x& cin $end
+$var reg 1 y& sum $end
+$var reg 1 z& carry $end
+$var reg 1 {& cout $end
+$upscope $end
+$scope module genblk1[19].u_counter_5to3 $end
+$var wire 1 |& x1 $end
+$var wire 1 }& x2 $end
+$var wire 1 ~& x3 $end
+$var wire 1 !' x4 $end
+$var wire 1 "' cin $end
+$var reg 1 #' sum $end
+$var reg 1 $' carry $end
+$var reg 1 %' cout $end
+$upscope $end
+$scope module genblk1[20].u_counter_5to3 $end
+$var wire 1 &' x1 $end
+$var wire 1 '' x2 $end
+$var wire 1 (' x3 $end
+$var wire 1 )' x4 $end
+$var wire 1 *' cin $end
+$var reg 1 +' sum $end
+$var reg 1 ,' carry $end
+$var reg 1 -' cout $end
+$upscope $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope module u_fp32_acc $end
+$var wire 1 2 clr $end
+$var wire 1 .' a_sgn $end
+$var wire 8 /' a_exp [7:0] $end
+$var wire 16 0' a_man [15:0] $end
+$var wire 1 1' b_sgn $end
+$var wire 8 2' b_exp [7:0] $end
+$var wire 16 3' b_man [15:0] $end
+$var reg 1 I out_sgn $end
+$var reg 8 H out_exp [7:0] $end
+$var reg 16 G out_man [15:0] $end
+$var reg 8 4' exp_diff [7:0] $end
+$var reg 17 5' mant_a_shifted [16:0] $end
+$var reg 17 6' mant_b_shifted [16:0] $end
+$var reg 8 7' exp_large [7:0] $end
+$var reg 1 8' b_sgn_sel $end
+$var reg 9 9' b_exp_sel [8:0] $end
+$var reg 17 :' b_man_sel [16:0] $end
+$var reg 18 ;' mant_sum_signed [17:0] $end
+$var reg 1 <' sum_negative $end
+$var reg 17 =' mant_norm_abs [16:0] $end
+$var reg 5 >' lead_shift [4:0] $end
+$var reg 8 ?' exp_adjust [7:0] $end
+$var reg 17 @' mant_abs [16:0] $end
+$scope function leading_one_pos $end
+$upscope $end
+$upscope $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+
+#0
+$dumpvars
+0!
+x!!
+x!"
+x!#
+x!$
+x!%
+x!&
+x!'
+0"
+x"!
+x""
+x"#
+x"$
+x"%
+x"&
+x"'
+bx #
+x#!
+x#"
+x##
+x#$
+x#%
+x#&
+x#'
+bx $
+x$!
+bx0xx0xx0xx0xx0xx0xx0xx0 $"
+x$#
+x$$
+x$%
+x$&
+x$'
+b111111101111111 %
+x%!
+bx0xx0xx0xx0xx0xx0xx0xx0 %"
+x%#
+x%$
+x%%
+x%&
+x%'
+b0 &
+bx &!
+bx &"
+x&#
+x&$
+x&%
+x&&
+x&'
+b10 '
+x'!
+bx '"
+x'#
+x'$
+x'%
+x'&
+x''
+1(
+x(!
+bx ("
+x(#
+x($
+x(%
+x(&
+x('
+bx00000000 )
+x)!
+bx )"
+x)#
+x)$
+x)%
+x)&
+x)'
+r0 *
+x*!
+bx *"
+x*#
+x*$
+x*%
+x*&
+x*'
+0+
+x+!
+bx +"
+x+#
+x+$
+x+%
+x+&
+x+'
+0,
+x,!
+bx ,"
+x,#
+x,$
+x,%
+x,&
+x,'
+bx -
+x-!
+bx -"
+x-#
+x-$
+x-%
+x-&
+x-'
+bx .
+x.!
+b1111 ."
+x.#
+x.$
+x.%
+x.&
+x.'
+b0 /
+bx /!
+b1000 /"
+x/#
+x/$
+x/%
+x/&
+bx /'
+b10 0
+x0!
+bx 0"
+x0#
+x0$
+x0%
+x0&
+bx 0'
+b111111101111111 1
+x1!
+bx 1"
+x1#
+x1$
+x1%
+x1&
+x1'
+12
+x2!
+bx 2"
+x2#
+x2$
+x2%
+x2&
+bx 2'
+bx0xx0xx0xx0xx0xx0xx0xx0 3
+x3!
+b0 3"
+x3#
+x3$
+x3%
+x3&
+bx 3'
+bx0xx0xx0xx0xx0xx0xx0xx0 4
+x4!
+bx 4"
+x4#
+x4$
+x4%
+x4&
+bx 4'
+bx 5
+x5!
+bx 5"
+x5#
+x5$
+x5%
+x5&
+b0xxxxxxxxxxxxxxxx 5'
+bx 6
+x6!
+bx 6"
+x6#
+x6$
+x6%
+x6&
+b0 6'
+bx 7
+x7!
+bx 7"
+x7#
+x7$
+x7%
+x7&
+bx 7'
+bx 8
+b10 8!
+bx0 8"
+x8#
+x8$
+x8%
+x8&
+08'
+bx 9
+b101 9!
+bx 9"
+x9#
+x9$
+x9%
+x9&
+b0 9'
+bx :
+bx :!
+b1000 :"
+x:#
+x:$
+x:%
+x:&
+b0 :'
+bx ;
+x;!
+b1000 ;"
+x;#
+x;$
+bx0xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx0 ;%
+x;&
+bx ;'
+bx <
+x<!
+b1000 <"
+x<#
+x<$
+bx <%
+x<&
+x<'
+bx =
+x=!
+bx ="
+x=#
+x=$
+bx00 =%
+x=&
+bx ='
+bx >
+x>!
+bx >"
+x>#
+x>$
+bx0 >%
+x>&
+b0 >'
+bx ?
+x?!
+bx0 ?"
+x?#
+x?$
+bx ?%
+x?&
+b1 ?'
+b0 @
+x@!
+bx @"
+x@#
+x@$
+x@%
+x@&
+bx @'
+bx A
+xA!
+bx A"
+xA#
+xA$
+bx0 A%
+xA&
+bx B
+xB!
+bx B"
+xB#
+xB$
+0B%
+xB&
+xC
+bx C!
+bx C"
+xC#
+xC$
+xC%
+xC&
+bx D
+xD!
+bx0 D"
+xD#
+xD$
+0D%
+xD&
+bx E
+xE!
+bx0 E"
+xE#
+xE$
+xE%
+xE&
+xF
+xF!
+bx0xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx0 F"
+xF#
+xF$
+0F%
+xF&
+bx G
+xG!
+bx G"
+xG#
+xG$
+xG%
+xG&
+b0 H
+xH!
+bx H"
+xH#
+xH$
+xH%
+xH&
+xI
+xI!
+bx0 I"
+xI#
+xI$
+0I%
+xI&
+bx00000000 J
+xJ!
+bx J"
+xJ#
+xJ$
+xJ%
+xJ&
+bx K
+xK!
+bx K"
+xK#
+xK$
+xK%
+xK&
+b10 L
+bx L!
+xL"
+xL#
+xL$
+xL%
+xL&
+b101 M
+xM!
+bx0 M"
+xM#
+xM$
+xM%
+xM&
+bx N
+xN!
+xN"
+xN#
+xN$
+0N%
+xN&
+xO
+xO!
+xO"
+xO#
+xO$
+xO%
+xO&
+xP
+xP!
+xP"
+xP#
+xP$
+xP%
+xP&
+xQ
+xQ!
+xQ"
+xQ#
+xQ$
+xQ%
+xQ&
+xR
+xR!
+0R"
+xR#
+xR$
+xR%
+xR&
+xS
+xS!
+xS"
+xS#
+xS$
+xS%
+xS&
+xT
+xT!
+xT"
+xT#
+xT$
+xT%
+xT&
+xU
+bx U!
+xU"
+xU#
+xU$
+xU%
+xU&
+xV
+xV!
+xV"
+xV#
+xV$
+xV%
+xV&
+bx W
+xW!
+xW"
+xW#
+xW$
+xW%
+xW&
+xX
+xX!
+xX"
+xX#
+xX$
+xX%
+xX&
+xY
+xY!
+xY"
+xY#
+xY$
+xY%
+xY&
+xZ
+xZ!
+xZ"
+xZ#
+xZ$
+xZ%
+xZ&
+x[
+x[!
+x["
+x[#
+x[$
+x[%
+x[&
+x\
+x\!
+x\"
+x\#
+x\$
+x\%
+x\&
+x]
+x]!
+x]"
+x]#
+x]$
+x]%
+x]&
+x^
+bx ^!
+x^"
+x^#
+x^$
+x^%
+x^&
+x_
+x_!
+x_"
+x_#
+x_$
+x_%
+x_&
+bx `
+x`!
+x`"
+x`#
+x`$
+x`%
+x`&
+xa
+xa!
+xa"
+xa#
+xa$
+xa%
+xa&
+xb
+xb!
+xb"
+xb#
+xb$
+xb%
+xb&
+xc
+xc!
+xc"
+xc#
+xc$
+xc%
+xc&
+xd
+xd!
+xd"
+xd#
+xd$
+xd%
+xd&
+xe
+xe!
+xe"
+xe#
+xe$
+xe%
+xe&
+xf
+xf!
+xf"
+xf#
+xf$
+xf%
+xf&
+xg
+bx g!
+xg"
+xg#
+xg$
+xg%
+xg&
+xh
+xh!
+xh"
+xh#
+xh$
+xh%
+xh&
+bx i
+xi!
+xi"
+xi#
+xi$
+xi%
+xi&
+xj
+xj!
+xj"
+xj#
+xj$
+xj%
+xj&
+xk
+xk!
+xk"
+xk#
+xk$
+xk%
+xk&
+xl
+xl!
+xl"
+xl#
+xl$
+xl%
+xl&
+xm
+xm!
+xm"
+xm#
+xm$
+xm%
+xm&
+xn
+xn!
+xn"
+xn#
+xn$
+xn%
+xn&
+xo
+xo!
+xo"
+xo#
+xo$
+xo%
+xo&
+xp
+bx p!
+xp"
+bx p#
+xp$
+xp%
+xp&
+xq
+xq!
+xq"
+bx q#
+xq$
+xq%
+xq&
+bx r
+xr!
+xr"
+bx0 r#
+xr$
+xr%
+xr&
+xs
+xs!
+xs"
+bx s#
+xs$
+xs%
+xs&
+xt
+xt!
+xt"
+bx t#
+xt$
+xt%
+xt&
+xu
+xu!
+xu"
+xu#
+xu$
+xu%
+xu&
+xv
+xv!
+xv"
+bx0 v#
+xv$
+xv%
+xv&
+xw
+xw!
+xw"
+xw#
+xw$
+xw%
+xw&
+xx
+xx!
+xx"
+xx#
+xx$
+xx%
+xx&
+xy
+bx y!
+xy"
+xy#
+xy$
+xy%
+xy&
+xz
+xz!
+xz"
+xz#
+xz$
+xz%
+xz&
+bx {
+x{!
+x{"
+0{#
+x{$
+x{%
+x{&
+x|
+x|!
+x|"
+x|#
+x|$
+x|%
+x|&
+x}
+x}!
+x}"
+x}#
+x}$
+x}%
+x}&
+x~
+x~!
+x~"
+x~#
+x~$
+x~%
+x~&
+$end
+
+#5000
+1!
+0!!
+0!"
+0!#
+0!$
+0!%
+0!&
+1!'
+1"
+0"!
+0""
+0"#
+0"$
+0"%
+0"&
+0"'
+b1101010001100111101111001010001011011011110100011000100001010101 #
+0#!
+0#"
+0##
+0#$
+0#%
+0#&
+1#'
+b10001110000111010001001101110001100001000011000011000000010011 $
+0$!
+b110000100110010000010 $"
+0$#
+0$$
+0$%
+0$&
+0$'
+0%!
+b110110000000010000000110 %"
+0%#
+0%$
+0%%
+0%&
+0%'
+b1100111 &!
+b1010111001011110100010110101000001010101 &"
+0&#
+0&$
+0&%
+0&&
+0&'
+b100000001100011011111000000110110000100 '"
+0'#
+0'$
+0'%
+0'&
+0''
+0(
+1(!
+b10111110 ("
+0(#
+0($
+0(%
+0(&
+0('
+bx0xxxxxxxxxxxxxxxxxxxxxx00000000 )
+0)!
+b1010000 )"
+0)#
+0)$
+0)%
+0)&
+1)'
+0*!
+b11111111 *"
+0*#
+0*$
+0*%
+0*&
+0*'
+1+
+0+!
+b11111111 +"
+0+#
+0+$
+0+%
+0+&
+1+'
+1,
+0,!
+b11000001010000000001111100100000111000001011111001100000110 ,"
+0,#
+0,$
+0,%
+0,&
+0,'
+b1101010001100111101111001010001011011011110100011000100001010101 -
+0-!
+b1111100111110010000000100000100000001001111101001111110111110101 -"
+0-#
+0-$
+0-%
+0-&
+0-'
+b10001110000111010001001101110001100001000011000011000000010011 .
+0.!
+0.#
+0.$
+0.%
+0.&
+1.'
+b11010100 /!
+b1000 /"
+0/#
+0/$
+0/%
+1/&
+b10000 /'
+b1111111111111100000000100000000100010000111110011111000011111011 0"
+00#
+00$
+00%
+00&
+b10001100000 0'
+11!
+b111000011000100010000000110000010001100010100000100000010001100 1"
+01#
+01$
+01%
+11&
+02
+02!
+b11101110 2"
+02#
+02$
+02%
+02&
+b0 2'
+b110000100110010000010 3
+03!
+03#
+03$
+03%
+03&
+b110110000000010000000110 4
+04!
+b10000 4"
+04#
+04$
+04%
+04&
+b10000 4'
+b1010111001011110100010110101000001010101 5
+05!
+b1000100010100000011100000111100000000000101110010000000010101 5"
+05#
+05$
+05%
+05&
+b10001100000 5'
+b100000001100011011111000000110110000100 6
+06!
+b1011101000000000000000000000000000000000000000000000000000000000 6"
+06#
+06$
+06%
+06&
+b0 6'
+b10111110 7
+07!
+b1111011101000000000 7"
+07#
+07$
+07%
+07&
+b10000 7'
+b1010000 8
+b0 8"
+08#
+08$
+08%
+08&
+b11111111 9
+b11111011101000000000 9"
+09#
+09$
+09%
+09&
+b0x0000000 9'
+b11111111 :
+b10011 :!
+b1000 :"
+0:#
+0:$
+0:%
+0:&
+b0xxxxxxxxxxxxxxxx :'
+b1000000x1000000x1000000x1000000x1000000x1000000x1000000x1000000x ;
+b1000 ;"
+1;#
+0;$
+b111111011101000000000000000000000000000000000000000000000000000000000000000000000000 ;%
+0;&
+b10001100000 ;'
+b1000000x1000000x1000000x1000000x1000000x1000000x1000000x1000000x <
+1<!
+b1000 <"
+0<#
+0<$
+b111111011101000000000 <%
+0<&
+0<'
+b111000011000100010000000110000010001100010100000100000010001100 =
+0=!
+b1011101000000000000000000000000000000000000000000000000000000000 ="
+1=#
+0=$
+b0 =%
+0=&
+b10001100000000000 ='
+b1111111111111100000000100000000100010000111110011111000011111011 >
+0>!
+b111111011101000000000 >"
+0>#
+0>$
+b0 >%
+0>&
+b110 >'
+b11101110 ?
+0?!
+b0 ?"
+0?#
+0?$
+b0 ?%
+1?&
+b11111011 ?'
+0@!
+b1011101000000000000000000000000000000000000000000000000000000000 @"
+0@#
+0@$
+0@%
+0@&
+b10001100000 @'
+b10000 A
+0A!
+b0 A"
+0A#
+0A$
+b0 A%
+1A&
+b10001100000 B
+0B!
+b111111011101000000000 B"
+0B#
+0B$
+0B%
+0B&
+1C
+b110000 C!
+b0 C"
+0C#
+0C$
+0C%
+0C&
+b0 D"
+0D#
+0D$
+0D%
+0D&
+b0 E
+1E!
+b0 E"
+0E#
+0E$
+0E%
+0E&
+0F!
+b111111011101000000000000000000000000000000000000000000000000000000000000000000000000 F"
+0F#
+0F$
+0F&
+b1000110000000000 G
+0G!
+b1011101000000000000000000000000000000000000000000000000000000000 G"
+0G#
+0G$
+0G%
+1G&
+b1011 H
+0H!
+b1011101000000000 H"
+0H#
+0H$
+0H%
+0H&
+0I
+0I!
+b0 I"
+0I#
+0I$
+1I&
+0J!
+b0 J"
+0J#
+0J$
+0J%
+0J&
+b0xxxxxxx K
+0K!
+b0 K"
+1K#
+0K$
+0K%
+0K&
+b1100 L!
+0L"
+0L#
+0L$
+0L%
+0L&
+b0 M"
+1M#
+0M$
+0M%
+0M&
+b1010101 N
+1N!
+0N"
+0N#
+0N$
+0N&
+0O!
+0O"
+0O#
+0O$
+0O%
+1O&
+1P
+0P!
+0P"
+0P#
+0P$
+0P%
+0P&
+0Q
+0Q!
+0Q"
+0Q#
+0Q$
+0Q%
+1Q&
+0R
+0R!
+0R#
+0R$
+0R%
+0R&
+0S
+0S!
+0S"
+1S#
+0S$
+0S%
+0S&
+0T
+0T!
+0T"
+0T#
+0T$
+0T%
+0T&
+0U
+b1100001 U!
+0U"
+1U#
+0U$
+0U%
+0U&
+0V
+0V"
+0V#
+0V$
+0V%
+0V&
+b10001000 W
+1W!
+0W"
+0W#
+0W$
+0W%
+0W&
+0X!
+0X"
+0X#
+0X$
+0X%
+0X&
+1Y
+0Y!
+0Y"
+0Y#
+0Y$
+0Y%
+0Y&
+0Z
+0Z!
+0Z"
+0Z#
+0Z$
+0Z%
+0Z&
+0[
+0[!
+0["
+1[#
+0[$
+0[%
+0[&
+0\
+0\!
+0\"
+0\#
+0\$
+0\%
+0\&
+0]
+0]!
+0]"
+1]#
+0]$
+0]%
+0]&
+0^
+b11011100 ^!
+0^"
+0^#
+0^$
+0^%
+0^&
+0_
+0_"
+0_#
+0_$
+0_%
+1_&
+b11010001 `
+1`!
+0`"
+0`#
+0`$
+0`%
+0`&
+0a!
+0a"
+0a#
+0a$
+0a%
+1a&
+1b
+0b!
+0b"
+0b#
+0b$
+0b%
+0b&
+0c
+0c!
+0c"
+0c#
+0c$
+0c%
+0c&
+0d
+0d!
+0d"
+0d#
+0d$
+0d%
+0d&
+0e
+0e!
+0e"
+0e#
+0e$
+0e%
+0e&
+0f
+0f!
+0f"
+0f#
+0f$
+0f%
+0f&
+0g
+b1000100 g!
+0g"
+0g#
+0g$
+0g%
+1g&
+0h
+0h"
+0h#
+0h$
+0h%
+0h&
+b11011011 i
+1i!
+0i"
+0i#
+0i$
+0i%
+1i&
+0j!
+0j"
+0j#
+0j$
+0j%
+0j&
+1k
+0k!
+0k"
+1k#
+0k$
+0k%
+0k&
+0l
+0l!
+0l"
+0l#
+0l$
+0l%
+0l&
+0m
+0m!
+0m"
+1m#
+0m$
+0m%
+0m&
+0n
+0n!
+0n"
+0n#
+0n$
+0n%
+0n&
+0o
+0o!
+0o"
+0o#
+0o$
+0o%
+1o&
+0p
+b10000111 p!
+0p"
+b0 p#
+0p$
+0p%
+0p&
+0q
+0q"
+b0 q#
+0q$
+0q%
+1q&
+b10100010 r
+1r!
+0r"
+b0 r#
+0r$
+0r%
+0r&
+0s!
+0s"
+b0 s#
+0s$
+0s%
+0s&
+1t
+0t!
+0t"
+b0 t#
+0t$
+0t%
+0t&
+0u
+0u!
+0u"
+0u#
+0u$
+0u%
+0u&
+0v
+0v!
+0v"
+b0 v#
+0v$
+0v%
+0v&
+0w
+0w!
+0w"
+0w#
+0w$
+0w%
+1w&
+0x
+0x!
+0x"
+0x#
+0x$
+0x%
+0x&
+0y
+b100011 y!
+0y"
+0y#
+0y$
+0y%
+1y&
+0z
+0z"
+0z#
+0z$
+0z%
+0z&
+b10111100 {
+1{!
+0{"
+0{$
+0{%
+0{&
+0|!
+0|"
+0|#
+0|$
+0|%
+0|&
+1}
+0}!
+0}"
+0}#
+0}$
+0}%
+0}&
+0~
+0~!
+0~"
+0~#
+0~$
+0~%
+0~&
+
+#10000
+0!
+0+
+
+#15000
+1!
+b1000101000011000000000000000000 )
+1+
+01'
+b1011 2'
+b1000110000000000 3'
+b101 4'
+b110001100000 6'
+b101 9'
+b11000110000000000 :'
+b111111100000000000 ;'
+1<'
+b10000000000000000 ='
+b101 >'
+b11111100 ?'
+b100000000000 @'
+b1000110000000000 D
+b1011 E
+0F
+b1000000000000000 G
+b1100 H
+1I
+b11000000000000000000 J
+b10001010 K
+
+#20000
+0!
+0+
+
+#25000
+1!
+b11000101100000000000000000000000 )
+1+
+11'
+b1100 2'
+b1000000000000000 3'
+b100 4'
+b100000000000 6'
+b10000110 9'
+b1000000000000000 :'
+b110001100000 ;'
+0<'
+b11000110000000000 ='
+b101 >'
+b11111100 ?'
+b110001100000 @'
+b1000000000000000 D
+b1100 E
+1F
+b1100011000000000 G
+b1100 H
+0I
+b0 J
+b10001011 K
+
+#30000
+0!
+0+
+
+#35000
+1!
+b1000101110001100000000000000000 )
+1+
+01'
+b1100011000000000 3'
+b110001100000 6'
+b110 9'
+b1100011000000000 :'
+b111111100000000000 ;'
+1<'
+b10000000000000000 ='
+b101 >'
+b11111100 ?'
+b100000000000 @'
+b1100011000000000 D
+0F
+b1000000000000000 G
+b1100 H
+1I
+b10001100000000000000000 J
+
+#40000
+0!
+0+
+
+#45000
+1!
+b11000101100000000000000000000000 )
+1+
+11'
+b1000000000000000 3'
+b100000000000 6'
+b10000110 9'
+b1000000000000000 :'
+b110001100000 ;'
+0<'
+b11000110000000000 ='
+b101 >'
+b11111100 ?'
+b110001100000 @'
+b1000000000000000 D
+1F
+b1100011000000000 G
+b1100 H
+0I
+b0 J
+
+#50000
+0!
+0+
+
+#55000
+1!
+b1000101110001100000000000000000 )
+1+
+01'
+b1100011000000000 3'
+b110001100000 6'
+b110 9'
+b1100011000000000 :'
+b111111100000000000 ;'
+1<'
+b10000000000000000 ='
+b101 >'
+b11111100 ?'
+b100000000000 @'
+b1100011000000000 D
+0F
+b1000000000000000 G
+b1100 H
+1I
+b10001100000000000000000 J
+
+#60000
+0!
+0+
+
+#65000
+1!
+b11000101100000000000000000000000 )
+1+
+11'
+b1000000000000000 3'
+b100000000000 6'
+b10000110 9'
+b1000000000000000 :'
+b110001100000 ;'
+0<'
+b11000110000000000 ='
+b101 >'
+b11111100 ?'
+b110001100000 @'
+b1000000000000000 D
+1F
+b1100011000000000 G
+b1100 H
+0I
+b0 J
+
+#70000
+0!
+0+
+
+#75000
+1!
+b1000101110001100000000000000000 )
+1+
+01'
+b1100011000000000 3'
+b110001100000 6'
+b110 9'
+b1100011000000000 :'
+b111111100000000000 ;'
+1<'
+b10000000000000000 ='
+b101 >'
+b11111100 ?'
+b100000000000 @'
+b1100011000000000 D
+0F
+b1000000000000000 G
+b1100 H
+1I
+b10001100000000000000000 J
+
+#80000
+0!
+0+
+
+#85000
+1!
+b11000101100000000000000000000000 )
+1+
+11'
+b1000000000000000 3'
+b100000000000 6'
+b10000110 9'
+b1000000000000000 :'
+b110001100000 ;'
+0<'
+b11000110000000000 ='
+b101 >'
+b11111100 ?'
+b110001100000 @'
+b1000000000000000 D
+1F
+b1100011000000000 G
+b1100 H
+0I
+b0 J
+
+#90000
+0!
+0+
+
+#95000
+1!
+b1000101110001100000000000000000 )
+1+
+01'
+b1100011000000000 3'
+b110001100000 6'
+b110 9'
+b1100011000000000 :'
+b111111100000000000 ;'
+1<'
+b10000000000000000 ='
+b101 >'
+b11111100 ?'
+b100000000000 @'
+b1100011000000000 D
+0F
+b1000000000000000 G
+b1100 H
+1I
+b10001100000000000000000 J
+
+#100000
+0!
+0+
+
+#105000
+1!
+b11000101100000000000000000000000 )
+1+
+11'
+b1000000000000000 3'
+b100000000000 6'
+b10000110 9'
+b1000000000000000 :'
+b110001100000 ;'
+0<'
+b11000110000000000 ='
+b101 >'
+b11111100 ?'
+b110001100000 @'
+b1000000000000000 D
+1F
+b1100011000000000 G
+b1100 H
+0I
+b0 J
+
+#110000
+0!
+0+
+
+#115000
+1!
+b1000101110001100000000000000000 )
+1+
+01'
+b1100011000000000 3'
+b110001100000 6'
+b110 9'
+b1100011000000000 :'
+b111111100000000000 ;'
+1<'
+b10000000000000000 ='
+b101 >'
+b11111100 ?'
+b100000000000 @'
+b1100011000000000 D
+0F
+b1000000000000000 G
+b1100 H
+1I
+b10001100000000000000000 J
+
+#120000
+0!
+0+

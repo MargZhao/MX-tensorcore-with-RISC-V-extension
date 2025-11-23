@@ -18,6 +18,7 @@
 // Additional Comments:
 // 
 //////////////////////////////////////////////////////////////////////////////////
+(* keep_hierarchy = "yes" *)
 module mxfp8_mult#(
     //config
     parameter int unsigned             VectorSize  = 4,

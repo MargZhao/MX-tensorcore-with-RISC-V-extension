@@ -56,6 +56,7 @@ if {$::dispatch::connected} {
 }
 
 OPTRACE "synth_1" START { ROLLUP_AUTO }
+set_param chipscope.maxJobs 2
 set_param general.usePosixSpawnForFork 1
 OPTRACE "Creating in-memory project" START { }
 create_project -in_memory -part xc7a12ticsg325-1L
@@ -89,6 +90,8 @@ foreach dcp [get_files -quiet -all -filter file_type=="Design\ Checkpoint"] {
   set_property used_in_implementation false $dcp
 }
 set_param ips.enableIPCacheLiteLoad 1
+
+read_checkpoint -auto_incremental -incremental C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/utils_1/imports/synth_1/mxfp8_dotp.dcp
 close [open __synthesis_is_running__ w]
 
 OPTRACE "synth_design" START { }
