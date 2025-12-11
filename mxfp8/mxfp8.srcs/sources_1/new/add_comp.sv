@@ -18,7 +18,44 @@
 // Additional Comments:
 // 
 //////////////////////////////////////////////////////////////////////////////////
+
+typedef struct packed {
+    logic                      sign;
+    logic [5-1:0] exponent;
+    logic [3-1:0] mantissa;
+  } fp_src_t;
+
 (* keep_hierarchy = "yes" *)
+module add_comp#(
+    VectorSize = 32,
+    EXP_WIDTH  = 6,
+    SOP_FIXED_WIDTH = 68,
+    PRECISION_BITS = 4
+)(
+    input fp_src_t [VectorSize-1:0]operands_a,
+    input fp_src_t [VectorSize-1:0]operands_b,
+    input logic signed [VectorSize-1:0][2*PRECISION_BITS  :0] product_signed,
+    output logic signed [VectorSize-1:0][EXP_WIDTH-1:0] exponent_product,
+    output logic signed [VectorSize-1:0][SOP_FIXED_WIDTH-1:0] shifted_product,
+    output logic [VectorSize-1:0][  5:0] shift_amount // max shift can be 58 (28 + exp-max(30)), min shift is 0 (28 + exp-min(-28))
+);
+  // ------------------
+  // Shift data path
+  // ------------------
+  // Calculate the non-biased exponent of the product
+    generate
+        for (genvar i = 0; i < VectorSize; i++) begin : gen_exponent_adjustment
+            assign exponent_product[i] = operands_a[i].exponent + 1
+                                        + operands_b[i].exponent + 1
+                                        - 2*signed'(16);
+            // Right shift the significand by anchor point - exponent
+            // sum of four 9-bit numbers can be at most 11 bits, for 69 bits output we need to shift by 69 - 11 = 58
+            // 58-30=28 plus inherit 6 fractional bits from the multiplication -> point moves to 28+6=34
+            assign shift_amount[i] = signed'(28) + signed'(exponent_product[i]);
+            assign shifted_product[i] = signed'(product_signed[i]) << shift_amount[i];
+        end
+    endgenerate
+endmodule
 // module add_comp #(
 //     // config
 //     parameter int unsigned VectorSize      = 32,
@@ -159,344 +196,344 @@
 //     end
 
 // endmodule
-(* keep_hierarchy = "yes" *)
-module add_comp #(
+// (* keep_hierarchy = "yes" *)
+// module add_comp #(
 
-    parameter int VectorSize= 32,
-    parameter int PROD_EXP_WIDTH = 6,
-    parameter int PROD_MAN_WIDTH = 8,
-    parameter int NORM_MAN_WIDTH = 32,
+//     parameter int VectorSize= 32,
+//     parameter int PROD_EXP_WIDTH = 6,
+//     parameter int PROD_MAN_WIDTH = 8,
+//     parameter int NORM_MAN_WIDTH = 32,
 
-    parameter int GUARD_BITS = $clog2(VectorSize),
-    parameter int ACC_WIDTH  = NORM_MAN_WIDTH + GUARD_BITS + 1
+//     parameter int GUARD_BITS = $clog2(VectorSize),
+//     parameter int ACC_WIDTH  = NORM_MAN_WIDTH + GUARD_BITS + 1
 
-)(
-    input  logic signed  [VectorSize-1:0][PROD_EXP_WIDTH-1:0] exp_sum,
-    input  logic [VectorSize-1:0][PROD_MAN_WIDTH-1:0] man_prod,
-    input  logic [VectorSize-1:0] sgn_prod,
+// )(
+//     input  logic signed  [VectorSize-1:0][PROD_EXP_WIDTH-1:0] exp_sum,
+//     input  logic [VectorSize-1:0][PROD_MAN_WIDTH-1:0] man_prod,
+//     input  logic [VectorSize-1:0] sgn_prod,
 
-    output logic signed [ACC_WIDTH-1:0] sum_all,
-    output logic signed [PROD_EXP_WIDTH-1:0] exp_max
-);
+//     output logic signed [ACC_WIDTH-1:0] sum_all,
+//     output logic signed [PROD_EXP_WIDTH-1:0] exp_max
+// );
 
-    // ------------------------------------------------------------
-    // 1) exp_max
-    // ------------------------------------------------------------
-    (* keep_hierarchy = "yes" *)
-    exp_max #(
-        .VectorSize(VectorSize),
-        .EXPW(PROD_EXP_WIDTH)
-    ) u_exp_max (
-        .exp_sum(exp_sum),
-        .exp_max(exp_max)
-    );
+//     // ------------------------------------------------------------
+//     // 1) exp_max
+//     // ------------------------------------------------------------
+//     (* keep_hierarchy = "yes" *)
+//     exp_max #(
+//         .VectorSize(VectorSize),
+//         .EXPW(PROD_EXP_WIDTH)
+//     ) u_exp_max (
+//         .exp_sum(exp_sum),
+//         .exp_max(exp_max)
+//     );
 
-    // ------------------------------------------------------------
-    // 2) diff = exp_max - exp_sum
-    // ------------------------------------------------------------
-    (* keep_hierarchy = "yes" *)
-    logic signed [VectorSize-1:0][PROD_EXP_WIDTH-1:0] diff;
+//     // ------------------------------------------------------------
+//     // 2) diff = exp_max - exp_sum
+//     // ------------------------------------------------------------
+//     (* keep_hierarchy = "yes" *)
+//     logic signed [VectorSize-1:0][PROD_EXP_WIDTH-1:0] diff;
 
-    exp_diff #(
-        .VectorSize(VectorSize),
-        .EXPW(PROD_EXP_WIDTH)
-    ) u_exp_diff (
-        .exp_max(exp_max),
-        .exp_sum(exp_sum),
-        .diff(diff)
-    );
+//     exp_diff #(
+//         .VectorSize(VectorSize),
+//         .EXPW(PROD_EXP_WIDTH)
+//     ) u_exp_diff (
+//         .exp_max(exp_max),
+//         .exp_sum(exp_sum),
+//         .diff(diff)
+//     );
 
-    // ------------------------------------------------------------
-    // 3) align stage (barrel shifter inside)
-    // ------------------------------------------------------------
-    logic signed [VectorSize-1:0][NORM_MAN_WIDTH-1:0] man_align;
-    (* keep_hierarchy = "yes" *)
-    align_unit #(
-        .VectorSize(VectorSize),
-        .PROD_MAN_WIDTH(PROD_MAN_WIDTH),
-        .NORM_MAN_WIDTH(NORM_MAN_WIDTH),
-        .EXPW(PROD_EXP_WIDTH)
-    ) u_align (
-        .man_prod (man_prod),
-        .sgn_prod (sgn_prod),
-        .exp_diff (diff),
-        .man_align(man_align)
-    );
+//     // ------------------------------------------------------------
+//     // 3) align stage (barrel shifter inside)
+//     // ------------------------------------------------------------
+//     logic signed [VectorSize-1:0][NORM_MAN_WIDTH-1:0] man_align;
+//     (* keep_hierarchy = "yes" *)
+//     align_unit #(
+//         .VectorSize(VectorSize),
+//         .PROD_MAN_WIDTH(PROD_MAN_WIDTH),
+//         .NORM_MAN_WIDTH(NORM_MAN_WIDTH),
+//         .EXPW(PROD_EXP_WIDTH)
+//     ) u_align (
+//         .man_prod (man_prod),
+//         .sgn_prod (sgn_prod),
+//         .exp_diff (diff),
+//         .man_align(man_align)
+//     );
 
-    // ------------------------------------------------------------
-    // 4) CSA tree + CPA
-    // ------------------------------------------------------------
-    // logic signed [ACC_WIDTH-2:0] final_sum;
-    // logic signed [ACC_WIDTH-2:0] final_carry;
-    // (* keep_hierarchy = "yes" *)
-    // csa_tree #(
-    //     .VectorSize(VectorSize),
-    //     .WIDTH_I(NORM_MAN_WIDTH),
-    //     .WIDTH_O(ACC_WIDTH-1)
-    // ) u_tree (
-    //     .operands_i(man_align),
-    //     .sum_o(final_sum),
-    //     .carry_o(final_carry)
-    // );
+//     // ------------------------------------------------------------
+//     // 4) CSA tree + CPA
+//     // ------------------------------------------------------------
+//     // logic signed [ACC_WIDTH-2:0] final_sum;
+//     // logic signed [ACC_WIDTH-2:0] final_carry;
+//     // (* keep_hierarchy = "yes" *)
+//     // csa_tree #(
+//     //     .VectorSize(VectorSize),
+//     //     .WIDTH_I(NORM_MAN_WIDTH),
+//     //     .WIDTH_O(ACC_WIDTH-1)
+//     // ) u_tree (
+//     //     .operands_i(man_align),
+//     //     .sum_o(final_sum),
+//     //     .carry_o(final_carry)
+//     // );
 
-    // assign sum_all = final_sum + final_carry;
-    always_comb begin
-        sum_all = '0;
-        for (int i = 0; i < VectorSize; i++) begin
-            sum_all += man_align[i];
-        end
-    end
+//     // assign sum_all = final_sum + final_carry;
+//     always_comb begin
+//         sum_all = '0;
+//         for (int i = 0; i < VectorSize; i++) begin
+//             sum_all += man_align[i];
+//         end
+//     end
 
-endmodule
+// endmodule
 
-module align_unit #(
-    parameter int VectorSize = 32,
-    parameter int PROD_MAN_WIDTH = 8,
-    parameter int NORM_MAN_WIDTH = 32,
-    parameter int EXPW = 6
-)(
-    input  logic [VectorSize-1:0][PROD_MAN_WIDTH-1:0] man_prod,
-    input  logic [VectorSize-1:0] sgn_prod,
-    input  logic [VectorSize-1:0][EXPW-1:0] exp_diff,
+// module align_unit #(
+//     parameter int VectorSize = 32,
+//     parameter int PROD_MAN_WIDTH = 8,
+//     parameter int NORM_MAN_WIDTH = 32,
+//     parameter int EXPW = 6
+// )(
+//     input  logic [VectorSize-1:0][PROD_MAN_WIDTH-1:0] man_prod,
+//     input  logic [VectorSize-1:0] sgn_prod,
+//     input  logic [VectorSize-1:0][EXPW-1:0] exp_diff,
 
-    output logic signed [VectorSize-1:0][NORM_MAN_WIDTH-1:0] man_align
-);
+//     output logic signed [VectorSize-1:0][NORM_MAN_WIDTH-1:0] man_align
+// );
 
-    logic signed [NORM_MAN_WIDTH-1:0] man_ext [VectorSize];
-    logic signed [NORM_MAN_WIDTH-1:0] shifted  [VectorSize];
+//     logic signed [NORM_MAN_WIDTH-1:0] man_ext [VectorSize];
+//     logic signed [NORM_MAN_WIDTH-1:0] shifted  [VectorSize];
 
-    generate
-        for (genvar i = 0; i < VectorSize; i++) begin : G_ALIGN
+//     generate
+//         for (genvar i = 0; i < VectorSize; i++) begin : G_ALIGN
 
-            // Sign-extend
-            always_comb begin
-                man_ext[i] = $signed({
-                    1'b0,
-                    man_prod[i],
-                    {(NORM_MAN_WIDTH-PROD_MAN_WIDTH-1){1'b0}}
-                });
+//             // Sign-extend
+//             always_comb begin
+//                 man_ext[i] = $signed({
+//                     1'b0,
+//                     man_prod[i],
+//                     {(NORM_MAN_WIDTH-PROD_MAN_WIDTH-1){1'b0}}
+//                 });
 
-                if (sgn_prod[i])
-                    man_ext[i] = -man_ext[i];
-            end
+//                 if (sgn_prod[i])
+//                     man_ext[i] = -man_ext[i];
+//             end
 
-            // Barrel shifter instance
-            (* keep_hierarchy = "yes" *)
-            barrel_shifter #(
-                .WIDTH(NORM_MAN_WIDTH)
-            ) u_bs (
-                .din  (man_ext[i]),
-                .shift(exp_diff[i][ $clog2(NORM_MAN_WIDTH)-1 : 0 ]),
-                .dout (shifted[i])
-            );
+//             // Barrel shifter instance
+//             (* keep_hierarchy = "yes" *)
+//             barrel_shifter #(
+//                 .WIDTH(NORM_MAN_WIDTH)
+//             ) u_bs (
+//                 .din  (man_ext[i]),
+//                 .shift(exp_diff[i][ $clog2(NORM_MAN_WIDTH)-1 : 0 ]),
+//                 .dout (shifted[i])
+//             );
 
-            // Too-large shift → zero
-            always_comb begin
-                if (exp_diff[i] >= NORM_MAN_WIDTH)
-                    man_align[i] = '0;
-                else
-                    man_align[i] = shifted[i];
-            end
+//             // Too-large shift → zero
+//             always_comb begin
+//                 if (exp_diff[i] >= NORM_MAN_WIDTH)
+//                     man_align[i] = '0;
+//                 else
+//                     man_align[i] = shifted[i];
+//             end
 
-        end
-    endgenerate
+//         end
+//     endgenerate
 
-endmodule
+// endmodule
 
-module exp_max #(
-    parameter int VectorSize = 32,
-    parameter int EXPW = 6
-)(
-    input  logic signed [VectorSize-1:0][EXPW-1:0] exp_sum,
-    output logic signed [EXPW-1:0] exp_max
-);
-    always_comb begin
-        exp_max = exp_sum[0];
-        for (int i = 1; i < VectorSize; i++)
-            if ($signed(exp_sum[i]) > $signed(exp_max))
-                exp_max = exp_sum[i];
-    end
-endmodule
+// module exp_max #(
+//     parameter int VectorSize = 32,
+//     parameter int EXPW = 6
+// )(
+//     input  logic signed [VectorSize-1:0][EXPW-1:0] exp_sum,
+//     output logic signed [EXPW-1:0] exp_max
+// );
+//     always_comb begin
+//         exp_max = exp_sum[0];
+//         for (int i = 1; i < VectorSize; i++)
+//             if ($signed(exp_sum[i]) > $signed(exp_max))
+//                 exp_max = exp_sum[i];
+//     end
+// endmodule
 
-module exp_diff #(
-    parameter int VectorSize = 32,
-    parameter int EXPW = 6
-)(
-    input  logic signed [EXPW-1:0] exp_max,
-    input  logic signed [VectorSize-1:0][EXPW-1:0] exp_sum,
-    output logic signed [VectorSize-1:0][EXPW-1:0] diff
-);
+// module exp_diff #(
+//     parameter int VectorSize = 32,
+//     parameter int EXPW = 6
+// )(
+//     input  logic signed [EXPW-1:0] exp_max,
+//     input  logic signed [VectorSize-1:0][EXPW-1:0] exp_sum,
+//     output logic signed [VectorSize-1:0][EXPW-1:0] diff
+// );
 
-    always_comb begin
-        for (int i = 0; i < VectorSize; i++)
-            diff[i] = exp_max - exp_sum[i];
-    end
-endmodule
+//     always_comb begin
+//         for (int i = 0; i < VectorSize; i++)
+//             diff[i] = exp_max - exp_sum[i];
+//     end
+// endmodule
 
-module barrel_shifter #(
-    parameter int WIDTH = 32,
-    parameter int SHIFTW = $clog2(WIDTH)
-)(
-    input  logic signed [WIDTH-1:0] din,
-    input  logic [SHIFTW-1:0]       shift,
-    output logic signed [WIDTH-1:0] dout
-);
-    logic signed [WIDTH-1:0] tmp;
+// module barrel_shifter #(
+//     parameter int WIDTH = 32,
+//     parameter int SHIFTW = $clog2(WIDTH)
+// )(
+//     input  logic signed [WIDTH-1:0] din,
+//     input  logic [SHIFTW-1:0]       shift,
+//     output logic signed [WIDTH-1:0] dout
+// );
+//     logic signed [WIDTH-1:0] tmp;
 
-    always_comb begin
-        tmp = din;
-        for (int k = 0; k < SHIFTW; k++)
-            if (shift[k])
-                tmp = tmp >>> (1 << k);
+//     always_comb begin
+//         tmp = din;
+//         for (int k = 0; k < SHIFTW; k++)
+//             if (shift[k])
+//                 tmp = tmp >>> (1 << k);
 
-        dout = tmp;
-    end
-endmodule
+//         dout = tmp;
+//     end
+// endmodule
 
 
 
-module csa_tree #(
-    parameter int unsigned VectorSize = 32,
-    parameter int unsigned WIDTH_I = 8,     // bit-width of inputs
-    parameter int unsigned WIDTH_O = WIDTH_I + 4 + 1   // bit-width of outputs
-)(
-    input logic signed[VectorSize-1:0][WIDTH_I-1:0] operands_i,
-    output logic signed[WIDTH_O-1:0] sum_o,
-    output logic signed[WIDTH_O-1:0] carry_o
-);
-    localparam int unsigned N_A = VectorSize/2;
-    localparam int unsigned N_B = VectorSize - N_A;
+// module csa_tree #(
+//     parameter int unsigned VectorSize = 32,
+//     parameter int unsigned WIDTH_I = 8,     // bit-width of inputs
+//     parameter int unsigned WIDTH_O = WIDTH_I + 4 + 1   // bit-width of outputs
+// )(
+//     input logic signed[VectorSize-1:0][WIDTH_I-1:0] operands_i,
+//     output logic signed[WIDTH_O-1:0] sum_o,
+//     output logic signed[WIDTH_O-1:0] carry_o
+// );
+//     localparam int unsigned N_A = VectorSize/2;
+//     localparam int unsigned N_B = VectorSize - N_A;
 
-    generate
-        if (VectorSize==1) begin
-            assign sum_o = operands_i[0];
-            assign carry_o = '0;
-        end
-        else if(VectorSize==2) begin
-            assign sum_o = operands_i[0];
-            assign carry_o = operands_i[1];
-        end
-        else if(VectorSize==3) begin
-            compressor_3to2 #(
-                .WIDTH_I(WIDTH_I),
-                .WIDTH_O(WIDTH_O)
-            ) u_compressor_3to2(
-                .operands_i(operands_i),
-                .sum_o(sum_o),
-                .carry_o(carry_o)
-            );
-        end
-        else if(VectorSize==4) begin
-            compressor_4to2 #(
-                .WIDTH_I(WIDTH_I),
-                .WIDTH_O(WIDTH_O)
-            ) u_compressor_4to2(
-                .operands_i(operands_i),
-                .sum_o(sum_o),
-                .carry_o(carry_o)
-            );
-        end
-        else begin
-            logic signed [N_A-1:0][WIDTH_I-1:0] operands_i_A;
-            logic signed [N_B-1:0][WIDTH_I-1:0] operands_i_B;
-            logic signed [WIDTH_O-1:0] sum_o_A;
-            logic signed [WIDTH_O-1:0] sum_o_B;
-            logic signed [WIDTH_O-1:0] carry_o_A;
-            logic signed [WIDTH_O-1:0] carry_o_B;
+//     generate
+//         if (VectorSize==1) begin
+//             assign sum_o = operands_i[0];
+//             assign carry_o = '0;
+//         end
+//         else if(VectorSize==2) begin
+//             assign sum_o = operands_i[0];
+//             assign carry_o = operands_i[1];
+//         end
+//         else if(VectorSize==3) begin
+//             compressor_3to2 #(
+//                 .WIDTH_I(WIDTH_I),
+//                 .WIDTH_O(WIDTH_O)
+//             ) u_compressor_3to2(
+//                 .operands_i(operands_i),
+//                 .sum_o(sum_o),
+//                 .carry_o(carry_o)
+//             );
+//         end
+//         else if(VectorSize==4) begin
+//             compressor_4to2 #(
+//                 .WIDTH_I(WIDTH_I),
+//                 .WIDTH_O(WIDTH_O)
+//             ) u_compressor_4to2(
+//                 .operands_i(operands_i),
+//                 .sum_o(sum_o),
+//                 .carry_o(carry_o)
+//             );
+//         end
+//         else begin
+//             logic signed [N_A-1:0][WIDTH_I-1:0] operands_i_A;
+//             logic signed [N_B-1:0][WIDTH_I-1:0] operands_i_B;
+//             logic signed [WIDTH_O-1:0] sum_o_A;
+//             logic signed [WIDTH_O-1:0] sum_o_B;
+//             logic signed [WIDTH_O-1:0] carry_o_A;
+//             logic signed [WIDTH_O-1:0] carry_o_B;
 
-            // Divide the inputs into two chunks
-            assign operands_i_A = operands_i[N_A-1:0];
-            assign operands_i_B = operands_i[VectorSize-1:N_A];
+//             // Divide the inputs into two chunks
+//             assign operands_i_A = operands_i[N_A-1:0];
+//             assign operands_i_B = operands_i[VectorSize-1:N_A];
 
-            csa_tree #(
-                .VectorSize(N_A),
-                .WIDTH_I(WIDTH_I),
-                .WIDTH_O(WIDTH_O)
-            ) ua_csa_tree(
-                .operands_i(operands_i_A),
-                .sum_o(sum_o_A),
-                .carry_o(carry_o_A)
-            );
+//             csa_tree #(
+//                 .VectorSize(N_A),
+//                 .WIDTH_I(WIDTH_I),
+//                 .WIDTH_O(WIDTH_O)
+//             ) ua_csa_tree(
+//                 .operands_i(operands_i_A),
+//                 .sum_o(sum_o_A),
+//                 .carry_o(carry_o_A)
+//             );
 
-            csa_tree #(
-                .VectorSize(N_B),
-                .WIDTH_I(WIDTH_I),
-                .WIDTH_O(WIDTH_O)
-            ) ub_csa_tree(
-                .operands_i(operands_i_B),
-                .sum_o(sum_o_B),
-                .carry_o(carry_o_B)
-            );
+//             csa_tree #(
+//                 .VectorSize(N_B),
+//                 .WIDTH_I(WIDTH_I),
+//                 .WIDTH_O(WIDTH_O)
+//             ) ub_csa_tree(
+//                 .operands_i(operands_i_B),
+//                 .sum_o(sum_o_B),
+//                 .carry_o(carry_o_B)
+//             );
 
-            logic signed [3:0][WIDTH_O-1:0] operands_i_C ;
-            assign operands_i_C = {sum_o_A, carry_o_A, sum_o_B, carry_o_B};
+//             logic signed [3:0][WIDTH_O-1:0] operands_i_C ;
+//             assign operands_i_C = {sum_o_A, carry_o_A, sum_o_B, carry_o_B};
             
-            compressor_4to2 #(
-                .WIDTH_I(WIDTH_O),
-                .WIDTH_O(WIDTH_O)
-            ) uc_compressor_4to2(
-                .operands_i(operands_i_C),
-                .sum_o(sum_o),
-                .carry_o(carry_o)
-            );
-        end
-    endgenerate
-endmodule
+//             compressor_4to2 #(
+//                 .WIDTH_I(WIDTH_O),
+//                 .WIDTH_O(WIDTH_O)
+//             ) uc_compressor_4to2(
+//                 .operands_i(operands_i_C),
+//                 .sum_o(sum_o),
+//                 .carry_o(carry_o)
+//             );
+//         end
+//     endgenerate
+// endmodule
 
-module compressor_4to2 #(
-    parameter int unsigned WIDTH_I = 8,                             // bit-width of inputs
-    parameter int unsigned WIDTH_O = WIDTH_I + 5   // bit-width of outputs
-)(
-    input logic signed [3:0][WIDTH_I-1:0] operands_i,
-    output logic signed [WIDTH_O-1:0] sum_o,
-    output logic signed [WIDTH_O-1:0] carry_o
-);
-    logic signed[WIDTH_I-1:0] sum;
-    logic [WIDTH_I:0] cin;
-    logic [WIDTH_I-1:0] cout;
-    logic signed[WIDTH_I-1:0] carry;
+// module compressor_4to2 #(
+//     parameter int unsigned WIDTH_I = 8,                             // bit-width of inputs
+//     parameter int unsigned WIDTH_O = WIDTH_I + 5   // bit-width of outputs
+// )(
+//     input logic signed [3:0][WIDTH_I-1:0] operands_i,
+//     output logic signed [WIDTH_O-1:0] sum_o,
+//     output logic signed [WIDTH_O-1:0] carry_o
+// );
+//     logic signed[WIDTH_I-1:0] sum;
+//     logic [WIDTH_I:0] cin;
+//     logic [WIDTH_I-1:0] cout;
+//     logic signed[WIDTH_I-1:0] carry;
     
-    assign cin[0] = 1'b0;
+//     assign cin[0] = 1'b0;
 
-    // Cascaded 5:3 counters according to input bit-width
-    generate
-        genvar i;
-        for(i=0;i<WIDTH_I;i++) begin
-            counter_5to3 u_counter_5to3(
-                .x1(operands_i[0][i]),
-                .x2(operands_i[1][i]),
-                .x3(operands_i[2][i]),
-                .x4(operands_i[3][i]),
-                .cin(cin[i]),
-                .sum(sum[i]),
-                .carry(carry[i]),
-                .cout(cout[i])
-            );
-            assign cin[i+1] = cout[i];
-        end
-    endgenerate
+//     // Cascaded 5:3 counters according to input bit-width
+//     generate
+//         genvar i;
+//         for(i=0;i<WIDTH_I;i++) begin
+//             counter_5to3 u_counter_5to3(
+//                 .x1(operands_i[0][i]),
+//                 .x2(operands_i[1][i]),
+//                 .x3(operands_i[2][i]),
+//                 .x4(operands_i[3][i]),
+//                 .cin(cin[i]),
+//                 .sum(sum[i]),
+//                 .carry(carry[i]),
+//                 .cout(cout[i])
+//             );
+//             assign cin[i+1] = cout[i];
+//         end
+//     endgenerate
 
-    logic carry_temp;
+//     logic carry_temp;
     
-    assign sum_o = sum;
-    assign carry_temp = carry[WIDTH_I-1]|cin[WIDTH_I];
+//     assign sum_o = sum;
+//     assign carry_temp = carry[WIDTH_I-1]|cin[WIDTH_I];
 
-    // 1) 组合出未扩展的 carry_o 原始向量 (宽度 WIDTH_I + 2)
-    logic signed [WIDTH_I:0] carry_raw;
-    assign carry_raw = {carry_temp, carry[WIDTH_I-2:0], 1'b0};
+//     // 1) 组合出未扩展的 carry_o 原始向量 (宽度 WIDTH_I + 2)
+//     logic signed [WIDTH_I:0] carry_raw;
+//     assign carry_raw = {carry_temp, carry[WIDTH_I-2:0], 1'b0};
 
-    // 2) 按符号位扩展到 WIDTH_O 位
-    assign carry_o = {{(WIDTH_O-(WIDTH_I+1)){carry_raw[WIDTH_I]}}, carry_raw};
-endmodule
+//     // 2) 按符号位扩展到 WIDTH_O 位
+//     assign carry_o = {{(WIDTH_O-(WIDTH_I+1)){carry_raw[WIDTH_I]}}, carry_raw};
+// endmodule
 
-module counter_5to3(
-    input logic x1,x2,x3,x4,cin,
-    output logic sum,carry,cout
-);
-    assign sum = x1 ^ x2 ^ x3 ^ x4 ^ cin;
-    assign cout = (x1 ^ x2) & x3 | ~(x1 ^ x2) & x1;
-    assign carry = (x1 ^ x2 ^ x3 ^ x4) & cin | ~(x1 ^ x2 ^ x3 ^ x4) & x4;
-endmodule
+// module counter_5to3(
+//     input logic x1,x2,x3,x4,cin,
+//     output logic sum,carry,cout
+// );
+//     assign sum = x1 ^ x2 ^ x3 ^ x4 ^ cin;
+//     assign cout = (x1 ^ x2) & x3 | ~(x1 ^ x2) & x1;
+//     assign carry = (x1 ^ x2 ^ x3 ^ x4) & cin | ~(x1 ^ x2 ^ x3 ^ x4) & x4;
+// endmodule
 
 
 // module add_comp#(

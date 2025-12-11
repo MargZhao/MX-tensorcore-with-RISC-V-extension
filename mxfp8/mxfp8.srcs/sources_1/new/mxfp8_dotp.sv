@@ -22,7 +22,7 @@
 
 module mxfp8_dotp#(
     //config
-    parameter int unsigned             VectorSize  = 32,
+    parameter int unsigned             VectorSize  = 4,
     //parameter mxfp8_pkg::fmt_logic_t   SrcDotpFpFmtConfig = 3'b110,
     //const
     localparam int unsigned SRC_WIDTH = mxfp8_pkg::fp_width(mxfp8_pkg::E5M2), //change this with package
@@ -41,7 +41,10 @@ module mxfp8_dotp#(
     input  logic [1:0][SCALE_WIDTH-1:0]          scale_i, // 2 scales for 2 vectors
 
     ////////////control signals///////////
-    input logic clr,
+    input logic a_valid_i,
+    input logic b_valid_i,
+    input logic init_save_i,
+    input logic acc_clr_i,
 
     ////////////output signals//////////
     output logic [DST_WIDTH-1:0]        result_o
@@ -146,7 +149,7 @@ module mxfp8_dotp#(
     // end
 
      //scaling addition
-    logic [SCALE_WIDTH:0] scale_add;
+    logic signed [SCALE_WIDTH:0] scale_add;
     always_comb begin
         scale_add = signed'(scale_i[0]-127) + signed'(scale_i[1]-127); //change 127 with bias according to src_fmt_i
     end
@@ -154,8 +157,8 @@ module mxfp8_dotp#(
     // Stage 4
     //logic signed [PROD_EXP_WIDTH-1:0] exp_max;
     //logic [PROD_EXP_WIDTH-1:0] exp_diff[VectorSize-1:0];
-    logic [SCALE_WIDTH:0] scale_aligned;
-    logic [ACC_WIDTH-1:0] sum_man;
+    logic signed [SCALE_WIDTH:0] scale_aligned;
+    logic signed [NORM_MAN_WIDTH-1:0] sum_man;
     logic sum_sgn;
     (* keep_hierarchy = "yes" *)
     adder_tree#(.VectorSize(VectorSize), 
@@ -180,6 +183,8 @@ module mxfp8_dotp#(
     logic [DST_MAN_WIDTH-1:0] acc_man;
     logic signed [DST_EXP_WIDTH-1:0] acc_exp;
     logic acc_sgn;
+    logic acc_valid;
+    assign acc_valid = a_valid_i & b_valid_i;
 
     (* keep_hierarchy = "yes" *)
     stage8_fp32_accumulator #(
@@ -189,7 +194,6 @@ module mxfp8_dotp#(
         .SCALE_WIDTH(SCALE_WIDTH)
     )
     u_fp32_acc(
-        .clr(clr),
         .a_sgn(sum_sgn),
         .a_exp(scale_aligned),
         .a_man(sum_man), 
@@ -209,10 +213,22 @@ module mxfp8_dotp#(
             reg_sgn <= 1'b0;
             reg_exp  <= '0;
             reg_man <= '0;
-        end else begin
+        end else if (init_save_i) begin
+            reg_sgn <= sum_sgn;
+            reg_exp  <= scale_aligned;
+            reg_man <= sum_man[NORM_MAN_WIDTH-1 -:DST_MAN_WIDTH];
+        end else if (acc_valid) begin
             reg_sgn <= acc_sgn;
             reg_exp  <= acc_exp;
             reg_man <= acc_man;
+        end else if (acc_clr_i) begin
+            reg_sgn <= '0;
+            reg_exp  <= '0;
+            reg_man <= '0;
+        end else begin
+            reg_sgn <= reg_sgn;
+            reg_exp  <= reg_exp;
+            reg_man <= reg_man;
         end
     end
 
@@ -220,7 +236,7 @@ module mxfp8_dotp#(
     logic [7:0]  exp_fp32;
 
     assign man_fp32 = reg_man;
-    assign exp_fp32 = (reg_man == 0) ? 8'd0 : reg_exp + 127;
+    assign exp_fp32 = reg_exp + 127;
     assign result_o = {reg_sgn,exp_fp32,man_fp32};
 
 

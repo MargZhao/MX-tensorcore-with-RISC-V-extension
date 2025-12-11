@@ -41,4 +41,4 @@ EAStep()
      fi
 }
 
-EAStep vivado -log mxfp8_dotp.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source mxfp8_dotp.tcl
+EAStep vivado -log add_comp.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source add_comp.tcl

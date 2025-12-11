@@ -5,11 +5,11 @@ SW Build: 6140274 on Thu May 22 00:12:29 MDT 2025
 IP Build: 6138677 on Thu May 22 03:10:11 MDT 2025
 IP Build: 6138677 on Thu May 22 03:10:11 MDT 2025
 
-Process ID (PID): 18704
+Process ID (PID): 19468
 License: Customer
 Mode: GUI Mode
 
-Current time: 	Tue Oct 28 00:19:02 CET 2025
+Current time: 	Thu Dec 11 14:45:44 CET 2025
 Time zone: 	Central European Standard Time (Europe/Berlin)
 
 OS: Windows 11
@@ -18,7 +18,7 @@ OS Architecture: amd64
 Available processors (cores): 8
 
 Screen size: 1920x1080
-Local screen bounds: x = 0, y = 0, width = 1920, height = 1080
+Local screen bounds: x = 0, y = 0, width = 1920, height = 1008
 Screen resolution (DPI): 150
 Available screens: 2
 Default font: family=Dialog,name=Dialog,style=plain,size=18
@@ -36,7 +36,7 @@ Java maximum memory (-Xmx):	 6 GB
 
 User name: 	Lenovo
 User home directory: C:/Users/Lenovo
-User working directory: C:/Users/Lenovo/OneDrive - KU Leuven/AAA_ESAT/master thesis/Marg/MX-tensorcore-with-RISC-V-extension/mxfp8
+User working directory: C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8
 User country: 	CN
 User language: 	zh
 User locale: 	zh_CN
@@ -50,15 +50,15 @@ Vivado preferences file: C:/Users/Lenovo/AppData/Roaming/Xilinx/Vivado/2025.1/vi
 Vivado preferences directory: C:/Users/Lenovo/AppData/Roaming/Xilinx/Vivado/2025.1/
 Vivado layouts directory: C:/Users/Lenovo/AppData/Roaming/Xilinx/Vivado/2025.1/data/layouts
 PlanAhead jar file: 	C:/Xilinx/2025.1/Vivado/lib/classes/planAhead.jar
-Vivado log file: 	C:/Users/Lenovo/OneDrive - KU Leuven/AAA_ESAT/master thesis/Marg/MX-tensorcore-with-RISC-V-extension/mxfp8/vivado.log
-Vivado journal file: 	C:/Users/Lenovo/OneDrive - KU Leuven/AAA_ESAT/master thesis/Marg/MX-tensorcore-with-RISC-V-extension/mxfp8/vivado.jou
-Engine tmp dir: 	C:/Users/Lenovo/OneDrive - KU Leuven/AAA_ESAT/master thesis/Marg/MX-tensorcore-with-RISC-V-extension/mxfp8/.Xil/Vivado-18704-DESKTOP-A60D5EN
+Vivado log file: 	C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/vivado.log
+Vivado journal file: 	C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/vivado.jou
+Engine tmp dir: 	C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/.Xil/Vivado-19468-DESKTOP-A60D5EN
 Non-Default Parameters:	[]
 
 Xilinx & AMD Environment Variables
 --------------------------------------------------------------------------------------------
 RDI_APPROOT: C:/Xilinx/2025.1/Vivado
-RDI_ARGS:  -gui_launcher_event rodinguilauncherevent17640 "C:\Users\Lenovo\OneDrive - KU Leuven\AAA_ESAT\master thesis\Marg\MX-tensorcore-with-RISC-V-extension\mxfp8\mxfp8.xpr"
+RDI_ARGS:  -gui_launcher_event rodinguilauncherevent14524 "C:\master_thesis\MX-tensorcore-with-RISC-V-extension\mxfp8\mxfp8.xpr"
 RDI_ARGS_FUNCTION: RDI_EXEC_DEFAULT
 RDI_BASEROOT: C:/Xilinx/2025.1
 RDI_BINDIR: C:/Xilinx/2025.1/Vivado/bin
@@ -86,7 +86,7 @@ RDI_PYTHON3_VERSION: 3.13.0
 RDI_PYTHONHOME: C:/Xilinx/2025.1/Vivado\tps\win64\python-3.13.0
 RDI_PYTHONPATH: C:/Xilinx/2025.1/Vivado\tps\win64\python-3.13.0;C:/Xilinx/2025.1/Vivado\tps\win64\python-3.13.0\bin;C:/Xilinx/2025.1/Vivado\tps\win64\python-3.13.0\lib;C:/Xilinx/2025.1/Vivado\tps\win64\python-3.13.0\lib\site-packages
 RDI_PYTHON_LD_LIBPATH: C:/Xilinx/2025.1/Vivado\tps\win64\python-3.13.0\lib
-RDI_SESSION_INFO: C:\Users\Lenovo\OneDrive-KULeuven\AAA_ESAT\masterthesis\Marg\MX-tensorcore-with-RISC-V-extension\mxfp8:DESKTOP-A60D5EN-Tue10-28-2025_0-18-22.46
+RDI_SESSION_INFO: C:\master_thesis\MX-tensorcore-with-RISC-V-extension\mxfp8:DESKTOP-A60D5EN-Thu12-11-2025_14-44-32.97
 RDI_SHARED_DATA: C:/Xilinx/SharedData/2025.1/data
 RDI_TPS_ROOT: C:/Xilinx/2025.1/Vivado/tps/win64
 RDI_USE_JDK21: True
@@ -99,12 +99,12 @@ XILINX_SDK: C:/Xilinx/2025.1/Vitis
 XILINX_VITIS: C:/Xilinx/2025.1/Vitis
 XILINX_VIVADO: C:/Xilinx/2025.1/Vivado
 _RDI_BINROOT: C:\Xilinx\2025.1\Vivado\bin
-_RDI_CWD: C:\Users\Lenovo\OneDrive - KU Leuven\AAA_ESAT\master thesis\Marg\MX-tensorcore-with-RISC-V-extension\mxfp8
+_RDI_CWD: C:\master_thesis\MX-tensorcore-with-RISC-V-extension\mxfp8
 
 
 GUI allocated memory:	812 MB
 GUI max memory:		6,144 MB
-Engine allocated memory: 768 MB
+Engine allocated memory: 779 MB
 
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
@@ -113,18 +113,18 @@ Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 
 // TclEventType: START_GUI
 // Tcl Message: start_gui 
+// WARNING: HEventQueue.dispatchEvent() is taking  1459 ms.
 // TclEventType: PROJECT_OPEN_DIALOG
-selectButton(RDIResource.BaseDialog_OK, "OK", "Older Project Version"); // f (RDIResource.BaseDialog_OK)
-// Opening Vivado Project: C:\Users\Lenovo\OneDrive - KU Leuven\AAA_ESAT\master thesis\Marg\MX-tensorcore-with-RISC-V-extension\mxfp8\mxfp8.xpr. Version: Vivado v2024.2 
-dismissDialog("Older Project Version"); // az (dialog0)
+// Opening Vivado Project: C:\master_thesis\MX-tensorcore-with-RISC-V-extension\mxfp8\mxfp8.xpr. Version: Vivado v2025.1 
 // TclEventType: DEBUG_PROBE_SET_CHANGE
+// Tcl Message: open_project C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.xpr 
 // TclEventType: FLOW_ADDED
-// HMemoryUtils.trashcanNow. Engine heap size: 802 MB. GUI used memory: 74 MB. Current time: 10/28/25, 12:19:03 AM CET
-// Tcl Message: open_project {C:/Users/Lenovo/OneDrive - KU Leuven/AAA_ESAT/master thesis/Marg/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.xpr} 
-// Tcl Message: INFO: [ProjectBase 1-489] The host OS only allows 260 characters in a normal path. The project is stored in a path with more than 80 characters. If you experience issues with IP, Block Designs, or files not being found, please consider moving the project to a location with a shorter path. Alternately consider using the OS subst command to map part of the path to a drive letter. Current project path is 'C:/Users/Lenovo/OneDrive - KU Leuven/AAA_ESAT/master thesis/Marg/MX-tensorcore-with-RISC-V-extension/mxfp8' 
+// HMemoryUtils.trashcanNow. Engine heap size: 794 MB. GUI used memory: 74 MB. Current time: 12/11/25, 2:45:45 PM CET
 // TclEventType: MSGMGR_MOVEMSG
 // TclEventType: FILE_SET_CHANGE
 // TclEventType: FILE_SET_NEW
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
 // TclEventType: RUN_CURRENT
 // TclEventType: PROJECT_DASHBOARD_NEW
 // TclEventType: PROJECT_DASHBOARD_GADGET_NEW
@@ -140,31 +140,30 @@ dismissDialog("Older Project Version"); // az (dialog0)
 // TclEventType: PROJECT_DASHBOARD_GADGET_NEW
 // TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
 // TclEventType: PROJECT_NEW
-// Tcl Message: open_project {C:/Users/Lenovo/OneDrive - KU Leuven/AAA_ESAT/master thesis/Marg/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.xpr} 
-// Tcl Message: INFO: [ProjectBase 1-489] The host OS only allows 260 characters in a normal path. The project is stored in a path with more than 80 characters. If you experience issues with IP, Block Designs, or files not being found, please consider moving the project to a location with a shorter path. Alternately consider using the OS subst command to map part of the path to a drive letter. Current project path is 'C:/Users/Lenovo/OneDrive - KU Leuven/AAA_ESAT/master thesis/Marg/MX-tensorcore-with-RISC-V-extension/mxfp8' 
-// Tcl Message: INFO: [Project 1-313] Project file moved from 'D:/Master2_1/Master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8' since last save. INFO: [filemgmt 56-3] Default IP Output Path : Could not find the directory 'C:/Users/Lenovo/OneDrive - KU Leuven/AAA_ESAT/master thesis/Marg/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.gen/sources_1'. 
+// Tcl Message: open_project C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.xpr 
+// Tcl Message: INFO: [filemgmt 56-3] Default IP Output Path : Could not find the directory 'C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.gen/sources_1'. 
 // Tcl Message: Scanning sources... Finished scanning sources 
 // Tcl Message: INFO: [Common 17-14] Message 'Board 49-26' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings. 
-// Tcl Message: INFO: [Project 1-230] Project 'mxfp8.xpr' upgraded for this version of Vivado. INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1704] No user IP repositories specified 
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1704] No user IP repositories specified 
 // TclEventType: PROJECT_NEW
-// [GUI Memory]: 128 MB (+131814kb) [00:00:24]
-// [Engine Memory]: 954 MB (+848460kb) [00:00:24]
-// WARNING: HEventQueue.dispatchEvent() is taking  3386 ms.
+// [GUI Memory]: 134 MB (+137537kb) [00:00:59]
+// [Engine Memory]: 954 MB (+848837kb) [00:00:59]
+// WARNING: HEventQueue.dispatchEvent() is taking  5298 ms.
 // Tcl Message: INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/2025.1/Vivado/data/ip'. 
-// Project name: mxfp8; location: C:/Users/Lenovo/OneDrive - KU Leuven/AAA_ESAT/master thesis/Marg/MX-tensorcore-with-RISC-V-extension/mxfp8; part: xc7a12ticsg325-1L
-// Tcl Message: open_project: Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 1592.031 ; gain = 186.754 
-// Elapsed time: 12 seconds
+// [Engine Memory]: 1,007 MB (+5635kb) [00:01:03]
+// Project name: mxfp8; location: C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8; part: xc7a12ticsg325-1L
+// Tcl Message: open_project: Time (s): cpu = 00:00:34 ; elapsed = 00:00:21 . Memory (MB): peak = 1618.703 ; gain = 229.684 
 dismissDialog("Open Project"); // bk (Open Project Progress)
-// TclEventType: DG_GRAPH_GENERATED
+// [GUI Memory]: 158 MB (+18393kb) [00:01:07]
 // TclEventType: DG_GRAPH_GENERATED
 // Tcl Message: update_compile_order -fileset sources_1 
-// [GUI Memory]: 148 MB (+14140kb) [00:00:34]
-// Elapsed time: 14 seconds
-selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, mxfp8_classifier (mxfp8_classifier.sv)]", 3, false); // E (PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE)
-// [Engine Memory]: 1,003 MB (+2176kb) [00:00:45]
-expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Syntax Error Files]", 1); // E (PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE)
-expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Non-module Files]", 4); // E (PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE)
-// HMemoryUtils.trashcanNow. Engine heap size: 1,004 MB. GUI used memory: 78 MB. Current time: 10/28/25, 12:19:33 AM CET
-selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Syntax Error Files, mxfp8_dotp.sv]", 2, false); // E (PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE)
-selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Syntax Error Files, mxfp8_dotp.sv]", 2, false, false, false, false, false, true); // E (PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE) - Double Click
-// Launch External Editor: 'C:/Users/Lenovo/AppData/Local/Programs/Microsoft VS Code/Code.exe "C:/Users/Lenovo/OneDrive - KU Leuven/AAA_ESAT/master thesis/Marg/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/mxfp8_dotp.sv"'
+selectButton(PAResourceCommand.PACommandNames_TOGGLE_VIEW_NAV, (String) null); // C (PAResourceCommand.PACommandNames_TOGGLE_VIEW_NAV)
+// Run Command: PAResourceCommand.PACommandNames_TOGGLE_VIEW_NAV
+// HMemoryUtils.trashcanNow. Engine heap size: 1,023 MB. GUI used memory: 88 MB. Current time: 12/11/25, 2:46:15 PM CET
+// PAPropertyPanels.initPanels (csa_tree.sv) elapsed time: 0.3s
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, csa_tree (csa_tree.sv)]", 1, true); // E (PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, stage7_normalize_accum (stage7_normalize_accum.sv)]", 8, false); // E (PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE)
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, mxfp8_dotp (mxfp8_dotp.sv)]", 2); // E (PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE)
+// Elapsed time: 12 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, mxfp8_dotp (mxfp8_dotp.sv), u_fp32_acc : stage8_fp32_accumulator (stage8_fp32_accumulation.sv)]", 7, true); // E (PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE) - Node
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, mxfp8_dotp (mxfp8_dotp.sv), u_fp32_acc : stage8_fp32_accumulator (stage8_fp32_accumulation.sv)]", 7); // E (PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE)

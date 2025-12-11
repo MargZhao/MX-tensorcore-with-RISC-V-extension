@@ -15,13 +15,15 @@ module adder_tree#(
     input  logic [VectorSize-1:0] sgn_prod,
     input  logic signed [SCALE_WIDTH:0] scale_sum,
     output logic signed [SCALE_WIDTH:0] scale_aligned,
-    output logic signed [ACC_WIDTH-1:0] sum_man,
+    output logic signed [NORM_MAN_WIDTH-1:0] sum_man,
     output logic signed [PROD_EXP_WIDTH-1:0] sum_sgn
 );
 
     // ------------------------------------------------------------
     // 1) exp_max
     // ------------------------------------------------------------
+    logic signed [PROD_EXP_WIDTH-1:0] exp_max;
+
     (* keep_hierarchy = "yes" *)
     exp_max #(
         .VectorSize(VectorSize),
@@ -30,8 +32,8 @@ module adder_tree#(
         .exp_sum(exp_sum),
         .exp_max(exp_max)
     );
-    
-    assign scale_aligned = signed'(scale_sum) + signed'(exp_max);
+    logic signed [SCALE_WIDTH:0] scale_exp;
+    assign scale_exp = signed'(scale_sum) + signed'(exp_max)+2;
 
     // ------------------------------------------------------------
     // 2) diff = exp_max - exp_sum
@@ -64,43 +66,46 @@ module adder_tree#(
         .exp_diff (diff),
         .man_align(man_align)
     );
-
-    // ------------------------------------------------------------
-    // 4) CSA tree + CPA
-    // ------------------------------------------------------------
-    // logic signed [ACC_WIDTH-2:0] final_sum;
-    // logic signed [ACC_WIDTH-2:0] final_carry;
-    // (* keep_hierarchy = "yes" *)
-    // csa_tree #(
-    //     .VectorSize(VectorSize),
-    //     .WIDTH_I(NORM_MAN_WIDTH),
-    //     .WIDTH_O(ACC_WIDTH-1)
-    // ) u_tree (
-    //     .operands_i(man_align),
-    //     .sum_o(final_sum),
-    //     .carry_o(final_carry)
-    // );
-
-    // assign sum_all = final_sum + final_carry;
  
     logic signed [ACC_WIDTH-1:0] sum_all;
     always_comb begin
         sum_all = '0;
         for (int i = 0; i < VectorSize; i++) begin
-            sum_all += man_align[i];
+            sum_all += $signed(man_align[i]);
         end
     end
 
-    always_comb begin : sign_extract
+    // -------------------------------------------------------------------------
+    // Step 4: Normalize result
+    // -------------------------------------------------------------------------
+    logic [4:0] lead_shift; // normalization shift
+    logic signed [PROD_EXP_WIDTH-1:0] exp_adjust;
+
+    function automatic [4:0] leading_one_pos(input logic [ACC_WIDTH-1:0] val);
+        int i;
+        leading_one_pos = 0;
+        for (i = ACC_WIDTH-1; i >= 0; i--) begin
+            leading_one_pos += 1;
+            if (val[i]) begin
+                break;
+            end
+        end
+    endfunction
+
+    logic signed [ACC_WIDTH-1:0] mant_abs;
+    logic signed [ACC_WIDTH-1:0] mant_norm_abs;
+    always_comb begin
         sum_sgn = sum_all[ACC_WIDTH-1];
+        mant_abs = (sum_sgn) ? -sum_all[ACC_WIDTH-1:0] : sum_all[ACC_WIDTH-1:0];
+        lead_shift = leading_one_pos(mant_abs);
 
-        if (sum_sgn) begin
-            // 负数 → 取反 + 1，取高 NORM_MAN_WIDTH 位
-            sum_man = (~sum_all[ACC_WIDTH-1 -: NORM_MAN_WIDTH]) + 1'b1;
-        end else begin
-            sum_man = sum_all[ACC_WIDTH-1 -: NORM_MAN_WIDTH];
-        end
+        // Shift left until MSB = 1
+        mant_norm_abs = mant_abs << lead_shift;
+        sum_man = mant_norm_abs[ACC_WIDTH-1-:NORM_MAN_WIDTH];
+        exp_adjust    = -lead_shift + 1 + ACC_WIDTH -NORM_MAN_WIDTH;
+        scale_aligned = scale_exp + exp_adjust;
     end
+
 
 endmodule
 
@@ -117,8 +122,8 @@ module align_unit #(
     output logic signed [VectorSize-1:0][NORM_MAN_WIDTH-1:0] man_align
 );
 
-    logic signed [NORM_MAN_WIDTH-1:0] man_ext [VectorSize];
-    logic signed [NORM_MAN_WIDTH-1:0] shifted  [VectorSize];
+    logic signed [VectorSize-1:0][NORM_MAN_WIDTH-1:0] man_ext ;
+    logic signed [VectorSize-1:0][NORM_MAN_WIDTH-1:0] shifted ;
 
     generate
         for (genvar i = 0; i < VectorSize; i++) begin : G_ALIGN

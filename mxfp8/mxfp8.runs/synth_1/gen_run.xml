@@ -1,18 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7a12ticsg325-1L" LaunchTime="1763933925" LaunchIncrCheckpoint="$PSRCDIR/utils_1/imports/synth_1/mxfp8_dotp.dcp">
-  <File Type="PA-TCL" Name="mxfp8_dotp.tcl"/>
-  <File Type="REPORTS-TCL" Name="mxfp8_dotp_reports.tcl"/>
-  <File Type="RDS-RDS" Name="mxfp8_dotp.vds"/>
-  <File Type="RDS-PROPCONSTRS" Name="mxfp8_dotp_drc_synth.rpt"/>
-  <File Type="RDS-UTIL" Name="mxfp8_dotp_utilization_synth.rpt"/>
-  <File Type="RDS-UTIL-PB" Name="mxfp8_dotp_utilization_synth.pb"/>
-  <File Type="RDS-DCP" Name="mxfp8_dotp.dcp"/>
-  <File Type="VDS-TIMINGSUMMARY" Name="mxfp8_dotp_timing_summary_synth.rpt"/>
-  <File Type="VDS-TIMING-PB" Name="mxfp8_dotp_timing_summary_synth.pb"/>
+<GenRun Id="synth_1" LaunchPart="xc7a12ticsg325-1L" LaunchTime="1763936818" LaunchIncrCheckpoint="$PSRCDIR/utils_1/imports/synth_1/mxfp8_dotp.dcp">
+  <File Type="REPORTS-TCL" Name="add_comp_reports.tcl"/>
+  <File Type="RDS-UTIL" Name="add_comp_utilization_synth.rpt"/>
+  <File Type="RDS-UTIL-PB" Name="add_comp_utilization_synth.pb"/>
+  <File Type="PA-TCL" Name="add_comp.tcl"/>
+  <File Type="RDS-RDS" Name="add_comp.vds"/>
+  <File Type="RDS-DCP" Name="add_comp.dcp"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1" RelGenDir="$PGENDIR/sources_1">
     <Filter Type="Srcs"/>
+    <File Path="$PSRCDIR/sources_1/new/add_comp.sv">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
     <File Path="$PSRCDIR/sources_1/new/adder_tree.sv">
       <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -20,6 +25,7 @@
     </File>
     <File Path="$PSRCDIR/sources_1/new/mxfp8_pkg.sv">
       <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -27,6 +33,7 @@
     </File>
     <File Path="$PSRCDIR/sources_1/new/mxfp8_classifier.sv">
       <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -34,6 +41,7 @@
     </File>
     <File Path="$PSRCDIR/sources_1/new/mxfp8_mult.sv">
       <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -41,6 +49,7 @@
     </File>
     <File Path="$PSRCDIR/sources_1/new/stage8_fp32_accumulation.sv">
       <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -48,6 +57,7 @@
     </File>
     <File Path="$PSRCDIR/sources_1/new/mxfp8_dotp.sv">
       <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -69,14 +79,6 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PSRCDIR/sources_1/new/add_comp.sv">
-      <FileInfo>
-        <Attr Name="AutoDisabled" Val="1"/>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="implementation"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
     <File Path="$PSRCDIR/sources_1/new/stage7_normalize_accum.sv">
       <FileInfo>
         <Attr Name="AutoDisabled" Val="1"/>
@@ -87,7 +89,7 @@
     </File>
     <Config>
       <Option Name="DesignMode" Val="RTL"/>
-      <Option Name="TopModule" Val="mxfp8_dotp"/>
+      <Option Name="TopModule" Val="add_comp"/>
     </Config>
   </FileSet>
   <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1" RelGenDir="$PGENDIR/constrs_1">

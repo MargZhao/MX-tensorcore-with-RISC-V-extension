@@ -5,35 +5,34 @@ Running: C:/Xilinx/2025.1/Vivado/bin/unwrapped/win64.o/xelab.exe --incr --debug 
 Using 2 slave threads.
 Starting static elaboration
 Pass Through NonSizing Optimizer
-WARNING: [VRFC 10-3091] actual bit length 19 differs from formal bit length 21 for port 'sum_o' [C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/adder_tree.sv:79]
-WARNING: [VRFC 10-3091] actual bit length 19 differs from formal bit length 21 for port 'carry_o' [C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/adder_tree.sv:80]
-WARNING: [VRFC 10-3091] actual bit length 9 differs from formal bit length 8 for port 'a_exp' [C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/mxfp8_dotp.sv:186]
-WARNING: [VRFC 10-9986] replication constant must be positive [C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/adder_tree.sv:227]
+WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 6 for port 'sum_sgn' [C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/mxfp8_dotp.sv:178]
+WARNING: [VRFC 10-3091] actual bit length 26 differs from formal bit length 29 for port 'a_man' [C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/mxfp8_dotp.sv:199]
+WARNING: [VRFC 10-5024] signed/unsigned conversion for real expression [C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sim_1/new/tb_top.sv:303]
+WARNING: [VRFC 10-5024] signed/unsigned conversion for real expression [C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sim_1/new/tb_top.sv:315]
 Completed static elaboration
 Starting simulation data flow analysis
 WARNING: [XSIM 43-4100] "C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sim_1/new/tb_top.sv" Line 3. Module mxfp8_dotp_tb has a timescale but at least one module in design doesn't have timescale.
-WARNING: [XSIM 43-4100] "C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/mxfp8_dotp.sv" Line 23. Module mxfp8_dotp(VectorSize=32'b01000) has a timescale but at least one module in design doesn't have timescale.
-WARNING: [XSIM 43-4100] "C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/mxfp8_mult.sv" Line 21. Module mxfp8_mult(VectorSize=32'b01000,PROD_EXP_WIDTH=32'b01000) has a timescale but at least one module in design doesn't have timescale.
-WARNING: [XSIM 43-4100] "C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/stage8_fp32_accumulation.sv" Line 1. Module stage8_fp32_accumulator(MANT_WIDTH=32'b01000,NORM_MAN_WIDTH=32'b010000,EXP_WIDTH=32'b01000) has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/mxfp8_dotp.sv" Line 23. Module mxfp8_dotp_default has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/mxfp8_mult.sv" Line 21. Module mxfp8_mult has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/stage8_fp32_accumulation.sv" Line 1. Module stage8_fp32_accumulator(ACC_WIDTH=32'b011101,EXP_WIDTH=32'b01000,DST_MAN_WIDTH=32'b010111,SCALE_WIDTH=32'b01000) has a timescale but at least one module in design doesn't have timescale.
 WARNING: [XSIM 43-4100] "C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sim_1/new/tb_top.sv" Line 3. Module mxfp8_dotp_tb has a timescale but at least one module in design doesn't have timescale.
-WARNING: [XSIM 43-4100] "C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/mxfp8_dotp.sv" Line 23. Module mxfp8_dotp(VectorSize=32'b01000) has a timescale but at least one module in design doesn't have timescale.
-WARNING: [XSIM 43-4100] "C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/mxfp8_mult.sv" Line 21. Module mxfp8_mult(VectorSize=32'b01000,PROD_EXP_WIDTH=32'b01000) has a timescale but at least one module in design doesn't have timescale.
-WARNING: [XSIM 43-4100] "C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/stage8_fp32_accumulation.sv" Line 1. Module stage8_fp32_accumulator(MANT_WIDTH=32'b01000,NORM_MAN_WIDTH=32'b010000,EXP_WIDTH=32'b01000) has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/mxfp8_dotp.sv" Line 23. Module mxfp8_dotp_default has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/mxfp8_mult.sv" Line 21. Module mxfp8_mult has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/stage8_fp32_accumulation.sv" Line 1. Module stage8_fp32_accumulator(ACC_WIDTH=32'b011101,EXP_WIDTH=32'b01000,DST_MAN_WIDTH=32'b010111,SCALE_WIDTH=32'b01000) has a timescale but at least one module in design doesn't have timescale.
 WARNING: [XSIM 43-4100] "C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.sim/sim_1/behav/xsim/glbl.v" Line 6. Module glbl has a timescale but at least one module in design doesn't have timescale.
 WARNING: [XSIM 43-4100] "C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.sim/sim_1/behav/xsim/glbl.v" Line 6. Module glbl has a timescale but at least one module in design doesn't have timescale.
 Completed simulation data flow analysis
 Time Resolution for simulation is 1ps
 Compiling package xil_defaultlib.mxfp8_pkg
 Compiling module xil_defaultlib.mxfp8_classifier(NumOperands=32'...
-Compiling module xil_defaultlib.mxfp8_mult(VectorSize=32'b01000,...
-Compiling module xil_defaultlib.counter_5to3
-Compiling module xil_defaultlib.compressor_4to2(WIDTH_I=32'b0100...
-Compiling module xil_defaultlib.csa_tree(VectorSize=32'b0100,WID...
-Compiling module xil_defaultlib.compressor_4to2(WIDTH_I=32'b0101...
-Compiling module xil_defaultlib.csa_tree(VectorSize=32'b01000,WI...
-Compiling module xil_defaultlib.adder_tree(VectorSize=32'b01000)
-Compiling module xil_defaultlib.stage8_fp32_accumulator(MANT_WID...
-Compiling module xil_defaultlib.mxfp8_dotp(VectorSize=32'b01000)
+Compiling module xil_defaultlib.mxfp8_mult
+Compiling module xil_defaultlib.exp_max(VectorSize=4)
+Compiling module xil_defaultlib.exp_diff(VectorSize=4)
+Compiling module xil_defaultlib.barrel_shifter(WIDTH=26)
+Compiling module xil_defaultlib.align_unit(VectorSize=4,NORM_MAN...
+Compiling module xil_defaultlib.adder_tree(VectorSize=4,NORM_MAN...
+Compiling module xil_defaultlib.stage8_fp32_accumulator(ACC_WIDT...
+Compiling module xil_defaultlib.mxfp8_dotp_default
 Compiling module xil_defaultlib.mxfp8_dotp_tb
 Compiling module xil_defaultlib.glbl
 Built simulation snapshot mxfp8_dotp_tb_behav
