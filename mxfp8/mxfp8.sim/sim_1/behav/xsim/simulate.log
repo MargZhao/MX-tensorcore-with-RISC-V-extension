@@ -1,0 +1,15 @@
+Time resolution is 1 ps
+=== Starting FSM Controlled Accumulation Test ===
+=== WAIT FOR DONE ===
+[Time                35000] Golden: Init Accumulator
+[Time                35000] Step 0 Processed. Current Acc: 4.000000
+[Time                45000] Step 1 Processed. Current Acc: 2.000000
+=== Test Finished ===
+$finish called at time : 55 ns : File "C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sim_1/new/tb_top.sv" Line 179
+---------------------------------------------------
+CHECK: FSM Done. Comparing Results...
+DUT Result    : 40000000 (2.000000)
+Golden Result : 40000000 (2.000000)
+PASS: Sequential Accumulation matches!
+---------------------------------------------------
+INFO: xsimkernel Simulation Memory Usage: 18752 KB (Peak: 18752 KB), Simulation CPU Usage: 10092 ms

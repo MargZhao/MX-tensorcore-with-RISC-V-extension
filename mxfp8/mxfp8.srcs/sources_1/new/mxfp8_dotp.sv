@@ -43,7 +43,7 @@ module mxfp8_dotp#(
     ////////////control signals///////////
     input logic a_valid_i,
     input logic b_valid_i,
-    input logic init_save_i,
+    input logic init_save_i, //1 for the first element
     input logic acc_clr_i,
 
     ////////////output signals//////////
@@ -177,18 +177,44 @@ module mxfp8_dotp#(
             .sum_man(sum_man),
             .sum_sgn(sum_sgn));
 
+
+
     logic [DST_MAN_WIDTH-1:0] reg_man;
     logic signed [DST_EXP_WIDTH-1:0] reg_exp;
     logic reg_sgn;
+
     logic [DST_MAN_WIDTH-1:0] acc_man;
     logic signed [DST_EXP_WIDTH-1:0] acc_exp;
     logic acc_sgn;
+
+
+    // --- Feedback MUX Logic ---
+    // 当 init_save_i 为 1 时，我们要计算 "Current + 0"
+    // 所以我们将反馈给累加器的 reg 值屏蔽为 0 (Zero)
+    // 假设内部格式全0代表浮点0 (根据具体实现调整，通常是安全的)
+    
+    logic [DST_MAN_WIDTH-1:0]      feedback_man;
+    logic signed [DST_EXP_WIDTH-1:0] feedback_exp;
+    logic                          feedback_sgn;
+
+    always_comb begin
+        if (init_save_i) begin
+            feedback_sgn = 1'b0;
+            feedback_exp = '0; // 这里的 '0 需确保代表数值 0.0
+            feedback_man = '0;
+        end else begin
+            feedback_sgn = reg_sgn;
+            feedback_exp = reg_exp;
+            feedback_man = reg_man;
+        end
+    end
+
     logic acc_valid;
     assign acc_valid = a_valid_i & b_valid_i;
 
     (* keep_hierarchy = "yes" *)
     stage8_fp32_accumulator #(
-        .ACC_WIDTH(ACC_WIDTH),
+        .ACC_WIDTH(NORM_MAN_WIDTH),
         .EXP_WIDTH(DST_EXP_WIDTH),
         .DST_MAN_WIDTH(DST_MAN_WIDTH),
         .SCALE_WIDTH(SCALE_WIDTH)
@@ -197,38 +223,28 @@ module mxfp8_dotp#(
         .a_sgn(sum_sgn),
         .a_exp(scale_aligned),
         .a_man(sum_man), 
-        .b_sgn(reg_sgn),
-        .b_exp(reg_exp), 
-        .b_man(reg_man), 
+        .b_sgn(feedback_sgn),
+        .b_exp(feedback_exp), 
+        .b_man(feedback_man), 
         .out_sgn(acc_sgn), 
         .out_exp(acc_exp), 
         .out_man(acc_man)
     );
 
 
-    
-
     always_ff @(posedge clk_i) begin
         if (!rst_ni) begin
             reg_sgn <= 1'b0;
-            reg_exp  <= '0;
+            reg_exp <= '0;
             reg_man <= '0;
-        end else if (init_save_i) begin
-            reg_sgn <= sum_sgn;
-            reg_exp  <= scale_aligned;
-            reg_man <= sum_man[NORM_MAN_WIDTH-1 -:DST_MAN_WIDTH];
-        end else if (acc_valid) begin
-            reg_sgn <= acc_sgn;
-            reg_exp  <= acc_exp;
-            reg_man <= acc_man;
         end else if (acc_clr_i) begin
             reg_sgn <= '0;
             reg_exp  <= '0;
             reg_man <= '0;
-        end else begin
-            reg_sgn <= reg_sgn;
-            reg_exp  <= reg_exp;
-            reg_man <= reg_man;
+        end else if (acc_valid) begin
+            reg_sgn <= acc_sgn;
+            reg_exp  <= acc_exp;
+            reg_man <= acc_man;
         end
     end
 

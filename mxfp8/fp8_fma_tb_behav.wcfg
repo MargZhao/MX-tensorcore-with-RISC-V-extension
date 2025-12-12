@@ -3,106 +3,151 @@
    <wave_state>
    </wave_state>
    <db_ref_list>
-      <db_ref path="fp8_fma_tb_behav.wdb" id="1">
+      <db_ref path="mxfp8_dotp_tb_behav.wdb" id="1">
          <top_modules>
-            <top_module name="fp8_fma_tb" />
             <top_module name="glbl" />
+            <top_module name="mxfp8_dotp_tb" />
             <top_module name="mxfp8_pkg" />
          </top_modules>
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="0.000 ns"></ZoomStartTime>
-      <ZoomEndTime time="38.601 ns"></ZoomEndTime>
-      <Cursor1Time time="22.200 ns"></Cursor1Time>
+      <ZoomStartTime time="16.156 ns"></ZoomStartTime>
+      <ZoomEndTime time="46.107 ns"></ZoomEndTime>
+      <Cursor1Time time="23.606 ns"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
-      <NameColumnWidth column_width="354"></NameColumnWidth>
-      <ValueColumnWidth column_width="256"></ValueColumnWidth>
+      <NameColumnWidth column_width="238"></NameColumnWidth>
+      <ValueColumnWidth column_width="152"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="12" />
-   <wvobject fp_name="/fp8_fma_tb/clk_i" type="logic">
-      <obj_property name="ElementShortName">clk_i</obj_property>
-      <obj_property name="ObjectShortName">clk_i</obj_property>
+   <WVObjectSize size="30" />
+   <wvobject fp_name="/mxfp8_dotp_tb/dut/sum_sgn" type="logic">
+      <obj_property name="ElementShortName">sum_sgn</obj_property>
+      <obj_property name="ObjectShortName">sum_sgn</obj_property>
    </wvobject>
-   <wvobject fp_name="/fp8_fma_tb/rst_ni" type="logic">
-      <obj_property name="ElementShortName">rst_ni</obj_property>
-      <obj_property name="ObjectShortName">rst_ni</obj_property>
+   <wvobject fp_name="/mxfp8_dotp_tb/clk" type="logic">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
    </wvobject>
-   <wvobject fp_name="/fp8_fma_tb/clr" type="logic">
-      <obj_property name="ElementShortName">clr</obj_property>
-      <obj_property name="ObjectShortName">clr</obj_property>
-   </wvobject>
-   <wvobject fp_name="/fp8_fma_tb/operands_a_i" type="array">
+   <wvobject fp_name="/mxfp8_dotp_tb/operands_a_i" type="array">
       <obj_property name="ElementShortName">operands_a_i[3:0][7:0]</obj_property>
       <obj_property name="ObjectShortName">operands_a_i[3:0][7:0]</obj_property>
-      <wvobject fp_name="/fp8_fma_tb/operands_a_i[3]" type="array">
-         <obj_property name="ElementShortName">[3][7:0]</obj_property>
-         <obj_property name="ObjectShortName">[3][7:0]</obj_property>
-         <obj_property name="Radix">BINARYRADIX</obj_property>
-      </wvobject>
-      <wvobject fp_name="/fp8_fma_tb/operands_a_i[2]" type="array">
-         <obj_property name="ElementShortName">[2][7:0]</obj_property>
-         <obj_property name="ObjectShortName">[2][7:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/fp8_fma_tb/operands_a_i[1]" type="array">
-         <obj_property name="ElementShortName">[1][7:0]</obj_property>
-         <obj_property name="ObjectShortName">[1][7:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/fp8_fma_tb/operands_a_i[0]" type="array">
-         <obj_property name="ElementShortName">[0][7:0]</obj_property>
-         <obj_property name="ObjectShortName">[0][7:0]</obj_property>
-      </wvobject>
    </wvobject>
-   <wvobject fp_name="/fp8_fma_tb/operands_b_i" type="array">
+   <wvobject fp_name="/mxfp8_dotp_tb/operands_b_i" type="array">
       <obj_property name="ElementShortName">operands_b_i[3:0][7:0]</obj_property>
       <obj_property name="ObjectShortName">operands_b_i[3:0][7:0]</obj_property>
-      <wvobject fp_name="/fp8_fma_tb/operands_b_i[3]" type="array">
-         <obj_property name="ElementShortName">[3][7:0]</obj_property>
-         <obj_property name="ObjectShortName">[3][7:0]</obj_property>
-         <obj_property name="Radix">BINARYRADIX</obj_property>
-      </wvobject>
-      <wvobject fp_name="/fp8_fma_tb/operands_b_i[2]" type="array">
-         <obj_property name="ElementShortName">[2][7:0]</obj_property>
-         <obj_property name="ObjectShortName">[2][7:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/fp8_fma_tb/operands_b_i[1]" type="array">
-         <obj_property name="ElementShortName">[1][7:0]</obj_property>
-         <obj_property name="ObjectShortName">[1][7:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/fp8_fma_tb/operands_b_i[0]" type="array">
-         <obj_property name="ElementShortName">[0][7:0]</obj_property>
-         <obj_property name="ObjectShortName">[0][7:0]</obj_property>
-      </wvobject>
    </wvobject>
-   <wvobject fp_name="/fp8_fma_tb/dut/u_mxfp8_mult/A_mant" type="array">
-      <obj_property name="ElementShortName">A_mant[3:0][2:0]</obj_property>
-      <obj_property name="ObjectShortName">A_mant[3:0][2:0]</obj_property>
+   <wvobject fp_name="/mxfp8_dotp_tb/dut/scale_aligned" type="array">
+      <obj_property name="ElementShortName">scale_aligned[8:0]</obj_property>
+      <obj_property name="ObjectShortName">scale_aligned[8:0]</obj_property>
    </wvobject>
-   <wvobject fp_name="/fp8_fma_tb/dut/u_mxfp8_mult/B_mant" type="array">
-      <obj_property name="ElementShortName">B_mant[3:0][2:0]</obj_property>
-      <obj_property name="ObjectShortName">B_mant[3:0][2:0]</obj_property>
+   <wvobject fp_name="/mxfp8_dotp_tb/dut/sum_man" type="array">
+      <obj_property name="ElementShortName">sum_man[25:0]</obj_property>
+      <obj_property name="ObjectShortName">sum_man[25:0]</obj_property>
    </wvobject>
-   <wvobject fp_name="/fp8_fma_tb/dut/u_mxfp8_mult/A_exp" type="array">
-      <obj_property name="ElementShortName">A_exp[3:0][4:0]</obj_property>
-      <obj_property name="ObjectShortName">A_exp[3:0][4:0]</obj_property>
+   <wvobject fp_name="/mxfp8_dotp_tb/dut/acc_sgn" type="logic">
+      <obj_property name="ElementShortName">acc_sgn</obj_property>
+      <obj_property name="ObjectShortName">acc_sgn</obj_property>
    </wvobject>
-   <wvobject fp_name="/fp8_fma_tb/dut/u_mxfp8_mult/B_exp" type="array">
-      <obj_property name="ElementShortName">B_exp[3:0][4:0]</obj_property>
-      <obj_property name="ObjectShortName">B_exp[3:0][4:0]</obj_property>
+   <wvobject fp_name="/mxfp8_dotp_tb/dut/acc_exp" type="array">
+      <obj_property name="ElementShortName">acc_exp[7:0]</obj_property>
+      <obj_property name="ObjectShortName">acc_exp[7:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
    </wvobject>
-   <wvobject fp_name="/fp8_fma_tb/dut/u_mxfp8_mult/bias" type="array">
-      <obj_property name="ElementShortName">bias[4:0]</obj_property>
-      <obj_property name="ObjectShortName">bias[4:0]</obj_property>
-      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   <wvobject fp_name="/mxfp8_dotp_tb/dut/acc_man" type="array">
+      <obj_property name="ElementShortName">acc_man[22:0]</obj_property>
+      <obj_property name="ObjectShortName">acc_man[22:0]</obj_property>
    </wvobject>
-   <wvobject fp_name="/fp8_fma_tb/dut/u_mxfp8_mult/man_prod" type="array">
-      <obj_property name="ElementShortName">man_prod[3:0][7:0]</obj_property>
-      <obj_property name="ObjectShortName">man_prod[3:0][7:0]</obj_property>
+   <wvobject fp_name="/mxfp8_dotp_tb/dut/reg_sgn" type="logic">
+      <obj_property name="ElementShortName">reg_sgn</obj_property>
+      <obj_property name="ObjectShortName">reg_sgn</obj_property>
+   </wvobject>
+   <wvobject fp_name="/mxfp8_dotp_tb/dut/reg_exp" type="array">
+      <obj_property name="ElementShortName">reg_exp[7:0]</obj_property>
+      <obj_property name="ObjectShortName">reg_exp[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/mxfp8_dotp_tb/dut/reg_man" type="array">
+      <obj_property name="ElementShortName">reg_man[22:0]</obj_property>
+      <obj_property name="ObjectShortName">reg_man[22:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/mxfp8_dotp_tb/dut/init_save_i" type="logic">
+      <obj_property name="ElementShortName">init_save_i</obj_property>
+      <obj_property name="ObjectShortName">init_save_i</obj_property>
+   </wvobject>
+   <wvobject fp_name="/mxfp8_dotp_tb/dut/sum_man" type="array">
+      <obj_property name="ElementShortName">sum_man[25:0]</obj_property>
+      <obj_property name="ObjectShortName">sum_man[25:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/mxfp8_dotp_tb/fsm_count" type="array">
+      <obj_property name="ElementShortName">fsm_count[4:0]</obj_property>
+      <obj_property name="ObjectShortName">fsm_count[4:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/mxfp8_dotp_tb/dut/u_fp32_acc/a_sgn" type="logic">
+      <obj_property name="ElementShortName">a_sgn</obj_property>
+      <obj_property name="ObjectShortName">a_sgn</obj_property>
+   </wvobject>
+   <wvobject fp_name="/mxfp8_dotp_tb/dut/u_fp32_acc/a_exp" type="array">
+      <obj_property name="ElementShortName">a_exp[8:0]</obj_property>
+      <obj_property name="ObjectShortName">a_exp[8:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/mxfp8_dotp_tb/dut/u_fp32_acc/a_man" type="array">
+      <obj_property name="ElementShortName">a_man[25:0]</obj_property>
+      <obj_property name="ObjectShortName">a_man[25:0]</obj_property>
       <obj_property name="Radix">BINARYRADIX</obj_property>
    </wvobject>
-   <wvobject fp_name="/fp8_fma_tb/dut/u_mxfp8_mult/exp_sum" type="array">
-      <obj_property name="ElementShortName">exp_sum[3:0][7:0]</obj_property>
-      <obj_property name="ObjectShortName">exp_sum[3:0][7:0]</obj_property>
+   <wvobject fp_name="/mxfp8_dotp_tb/dut/u_fp32_acc/b_sgn" type="logic">
+      <obj_property name="ElementShortName">b_sgn</obj_property>
+      <obj_property name="ObjectShortName">b_sgn</obj_property>
+   </wvobject>
+   <wvobject fp_name="/mxfp8_dotp_tb/dut/u_fp32_acc/b_exp" type="array">
+      <obj_property name="ElementShortName">b_exp[7:0]</obj_property>
+      <obj_property name="ObjectShortName">b_exp[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/mxfp8_dotp_tb/dut/u_fp32_acc/b_man" type="array">
+      <obj_property name="ElementShortName">b_man[22:0]</obj_property>
+      <obj_property name="ObjectShortName">b_man[22:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/mxfp8_dotp_tb/dut/u_fp32_acc/exp_diff" type="array">
+      <obj_property name="ElementShortName">exp_diff[7:0]</obj_property>
+      <obj_property name="ObjectShortName">exp_diff[7:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/mxfp8_dotp_tb/dut/u_fp32_acc/mant_a_shifted" type="array">
+      <obj_property name="ElementShortName">mant_a_shifted[26:0]</obj_property>
+      <obj_property name="ObjectShortName">mant_a_shifted[26:0]</obj_property>
+      <obj_property name="Radix">BINARYRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/mxfp8_dotp_tb/dut/u_fp32_acc/mant_b_shifted" type="array">
+      <obj_property name="ElementShortName">mant_b_shifted[26:0]</obj_property>
+      <obj_property name="ObjectShortName">mant_b_shifted[26:0]</obj_property>
+      <obj_property name="Radix">BINARYRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/mxfp8_dotp_tb/dut/u_fp32_acc/mant_sum_signed" type="array">
+      <obj_property name="ElementShortName">mant_sum_signed[27:0]</obj_property>
+      <obj_property name="ObjectShortName">mant_sum_signed[27:0]</obj_property>
+      <obj_property name="Radix">BINARYRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/mxfp8_dotp_tb/dut/u_fp32_acc/mant_abs" type="array">
+      <obj_property name="ElementShortName">mant_abs[26:0]</obj_property>
+      <obj_property name="ObjectShortName">mant_abs[26:0]</obj_property>
+      <obj_property name="Radix">BINARYRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/mxfp8_dotp_tb/dut/u_fp32_acc/lead_shift" type="array">
+      <obj_property name="ElementShortName">lead_shift[4:0]</obj_property>
+      <obj_property name="ObjectShortName">lead_shift[4:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/mxfp8_dotp_tb/dut/u_fp32_acc/exp_adjust" type="array">
+      <obj_property name="ElementShortName">exp_adjust[7:0]</obj_property>
+      <obj_property name="ObjectShortName">exp_adjust[7:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/mxfp8_dotp_tb/dut/u_fp32_acc/exp_large" type="array">
+      <obj_property name="ElementShortName">exp_large[7:0]</obj_property>
+      <obj_property name="ObjectShortName">exp_large[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/mxfp8_dotp_tb/dut/u_fp32_acc/out_exp" type="array">
+      <obj_property name="ElementShortName">out_exp[7:0]</obj_property>
+      <obj_property name="ObjectShortName">out_exp[7:0]</obj_property>
    </wvobject>
 </wave_config>
