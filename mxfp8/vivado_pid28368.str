@@ -1,0 +1,596 @@
+/*
+
+AMD Vivado v2025.1 (64-bit) [Major: 2025, Minor: 1]
+SW Build: 6140274 on Thu May 22 00:12:29 MDT 2025
+IP Build: 6138677 on Thu May 22 03:10:11 MDT 2025
+IP Build: 6138677 on Thu May 22 03:10:11 MDT 2025
+
+Process ID (PID): 28368
+License: Customer
+Mode: GUI Mode
+
+Current time: 	Wed Feb 18 16:26:58 CET 2026
+Time zone: 	Central European Standard Time (Europe/Berlin)
+
+OS: Windows 11
+OS Version: 10.0
+OS Architecture: amd64
+Available processors (cores): 8
+
+Screen size: 1920x1080
+Local screen bounds: x = 0, y = 0, width = 1920, height = 1008
+Screen resolution (DPI): 150
+Available screens: 2
+Default font: family=Dialog,name=Dialog,style=plain,size=18
+Scale size: 27
+OS font scaling: 150%
+Anti-Alias Enabled: false
+
+Java version: 	21.0.1 64-bit
+
+Java home: 	C:/Xilinx/2025.1/Vivado/tps/win64/jre21.0.1_12
+Java executable: 	C:/Xilinx/2025.1/Vivado/tps/win64/jre21.0.1_12/bin/java.exe
+Java arguments: 	[-Dsun.java2d.pmoffscreen=false, -Dhttps.protocols=TLSv1,TLSv1.1,TLSv1.2, -Dsun.java2d.xrender=false, -Dsun.java2d.d3d=false, -Dsun.awt.nopixfmt=true, -Dsun.java2d.dpiaware=true, -Dsun.java2d.uiScale.enabled=false, -Dswing.aatext=true, -XX:-UsePerfData, -Djdk.map.althashing.threshold=512, -XX:StringTableSize=4072, -XX:+UseStringDeduplication, -XX:MaxGCPauseMillis=200, -XX:ParallelGCThreads=4, -XX:+ParallelRefProcEnabled, --add-opens=java.desktop/javax.swing.plaf.synth=ALL-UNNAMED, --add-opens=java.base/java.nio=ALL-UNNAMED, --add-opens=java.desktop/sun.swing=ALL-UNNAMED, --add-opens=java.desktop/javax.swing=ALL-UNNAMED, --add-opens=java.desktop/javax.swing.tree=ALL-UNNAMED, --add-opens=java.desktop/javax.swing.plaf.basic=ALL-UNNAMED, --add-opens=java.desktop/javax.swing.plaf.synth=ALL-UNNAMED, --add-opens=java.desktop/javax.swing.plaf.basic=ALL-UNNAMED, --add-opens=java.desktop/javax.swing=ALL-UNNAMED, --add-opens=java.desktop/javax.swing.tree=ALL-UNNAMED, --add-opens=java.desktop/java.awt.event=ALL-UNNAMED, --add-exports=java.desktop/javax.swing.plaf.synth=ALL-UNNAMED, --add-exports=java.base/java.nio=ALL-UNNAMED, --add-exports=java.desktop/sun.swing=ALL-UNNAMED, --add-exports=java.desktop/javax.swing=ALL-UNNAMED, --add-exports=java.desktop/javax.swing.tree=ALL-UNNAMED, --add-exports=java.desktop/javax.swing.plaf.basic=ALL-UNNAMED, --add-exports=java.desktop/sun.swing=ALL-UNNAMED, --add-exports=java.desktop/sun.swing.table=ALL-UNNAMED, --add-exports=java.desktop/sun.swing.plaf.synth=ALL-UNNAMED, --add-exports=java.desktop/sun.awt.shell=ALL-UNNAMED, --add-exports=java.base/sun.security.action=ALL-UNNAMED, --add-exports=java.desktop/sun.font=ALL-UNNAMED, -XX:NewSize=80m, -XX:MaxNewSize=80m, -Xms812m, -Xmx6144m, -Xss10m]
+Java initial memory (-Xms): 	812 MB
+Java maximum memory (-Xmx):	 6 GB
+
+User name: 	Lenovo
+User home directory: C:/Users/Lenovo
+User working directory: C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8
+User country: 	CN
+User language: 	zh
+User locale: 	zh_CN
+
+RDI_BASEROOT: C:/Xilinx/2025.1
+HDI_APPROOT: C:/Xilinx/2025.1/Vivado
+RDI_DATADIR: C:/Xilinx/2025.1/Vivado/data
+RDI_BINDIR: C:/Xilinx/2025.1/Vivado/bin
+
+Vivado preferences file: C:/Users/Lenovo/AppData/Roaming/Xilinx/Vivado/2025.1/vivado.xml
+Vivado preferences directory: C:/Users/Lenovo/AppData/Roaming/Xilinx/Vivado/2025.1/
+Vivado layouts directory: C:/Users/Lenovo/AppData/Roaming/Xilinx/Vivado/2025.1/data/layouts
+PlanAhead jar file: 	C:/Xilinx/2025.1/Vivado/lib/classes/planAhead.jar
+Vivado log file: 	C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/vivado.log
+Vivado journal file: 	C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/vivado.jou
+Engine tmp dir: 	C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/.Xil/Vivado-28368-DESKTOP-A60D5EN
+Non-Default Parameters:	[]
+
+Xilinx & AMD Environment Variables
+--------------------------------------------------------------------------------------------
+RDI_APPROOT: C:/Xilinx/2025.1/Vivado
+RDI_ARGS:  -gui_launcher_event rodinguilauncherevent15624 "C:\master_thesis\MX-tensorcore-with-RISC-V-extension\mxfp8\mxfp8.xpr"
+RDI_ARGS_FUNCTION: RDI_EXEC_DEFAULT
+RDI_BASEROOT: C:/Xilinx/2025.1
+RDI_BINDIR: C:/Xilinx/2025.1/Vivado/bin
+RDI_BINROOT: C:/Xilinx/2025.1/Vivado/bin
+RDI_BUILD: yes
+RDI_CHECK_PROG: True
+RDI_DATADIR: C:/Xilinx/2025.1/Vivado/data
+RDI_INSTALLROOT: C:/Xilinx
+RDI_INSTALLVER: Vivado
+RDI_INSTALLVERSION: 2025.1
+RDI_ISE_PLATFORM: nt64
+RDI_JAVACEFROOT: C:/Xilinx/2025.1/Vivado/tps/win64/java-cef-95.0.4638.69
+RDI_JAVAFXROOT: C:/Xilinx/2025.1/Vivado/tps/win64/javafx-sdk-21.0.1
+RDI_JAVAROOT: C:/Xilinx/2025.1/Vivado/tps/win64/jre21.0.1_12
+RDI_JAVA_VERSION: 21.0.1_12
+RDI_LIBDIR: C:/Xilinx/2025.1/Vivado/lib/win64.o
+RDI_MINGW_LIB: C:/Xilinx/2025.1/Vivado\tps\mingw\6.2.0\win64.o\nt\bin;C:/Xilinx/2025.1/Vivado\tps\mingw\6.2.0\win64.o\nt\libexec\gcc\x86_64-w64-mingw32\6.2.0
+RDI_OPT_EXT: .o
+RDI_PLATFORM: win64
+RDI_PREPEND_PATH: C:/Xilinx/2025.1/Vitis/bin;C:/Xilinx/2025.1/Vivado/ids_lite/ISE/bin/nt64;C:/Xilinx/2025.1/Vivado/ids_lite/ISE/lib/nt64
+RDI_PROG: C:/Xilinx/2025.1/Vivado/bin/unwrapped/win64.o/vivado.exe
+RDI_PROGNAME: vivado.exe
+RDI_PYTHON3: C:/Xilinx/2025.1/Vivado\tps\win64\python-3.13.0
+RDI_PYTHON3_VERSION: 3.13.0
+RDI_PYTHONHOME: C:/Xilinx/2025.1/Vivado\tps\win64\python-3.13.0
+RDI_PYTHONPATH: C:/Xilinx/2025.1/Vivado\tps\win64\python-3.13.0;C:/Xilinx/2025.1/Vivado\tps\win64\python-3.13.0\bin;C:/Xilinx/2025.1/Vivado\tps\win64\python-3.13.0\lib;C:/Xilinx/2025.1/Vivado\tps\win64\python-3.13.0\lib\site-packages
+RDI_PYTHON_LD_LIBPATH: C:/Xilinx/2025.1/Vivado\tps\win64\python-3.13.0\lib
+RDI_SESSION_INFO: C:\master_thesis\MX-tensorcore-with-RISC-V-extension\mxfp8:DESKTOP-A60D5EN-Wed02-18-2026_16-25-55.20
+RDI_SHARED_DATA: C:/Xilinx/SharedData/2025.1/data
+RDI_TPS_ROOT: C:/Xilinx/2025.1/Vivado/tps/win64
+RDI_USE_JDK21: True
+RDI_VERBOSE: False
+XILINX: C:/Xilinx/2025.1/Vivado/ids_lite/ISE
+XILINX_DSP: C:/Xilinx/2025.1/Vivado/ids_lite/ISE
+XILINX_HLS: C:/Xilinx/2025.1/Vitis
+XILINX_PLANAHEAD: C:/Xilinx/2025.1/Vivado
+XILINX_SDK: C:/Xilinx/2025.1/Vitis
+XILINX_VITIS: C:/Xilinx/2025.1/Vitis
+XILINX_VIVADO: C:/Xilinx/2025.1/Vivado
+_RDI_BINROOT: C:\Xilinx\2025.1\Vivado\bin
+_RDI_CWD: C:\master_thesis\MX-tensorcore-with-RISC-V-extension\mxfp8
+
+
+GUI allocated memory:	812 MB
+GUI max memory:		6,144 MB
+Engine allocated memory: 740 MB
+
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+
+*/
+
+// TclEventType: START_GUI
+// WARNING: HSwingWorker (Monitor File Timestamp Swing Worker) is taking 902 ms to process. Increasing delay to 2000 ms.
+// Tcl Message: start_gui 
+// WARNING: HEventQueue.dispatchEvent() is taking  1304 ms.
+// TclEventType: PROJECT_OPEN_DIALOG
+// Opening Vivado Project: C:\master_thesis\MX-tensorcore-with-RISC-V-extension\mxfp8\mxfp8.xpr. Version: Vivado v2025.1 
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// TclEventType: FLOW_ADDED
+// Tcl Message: open_project C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.xpr 
+// HMemoryUtils.trashcanNow. Engine heap size: 765 MB. GUI used memory: 75 MB. Current time: 2/18/26, 4:26:59 PM CET
+// TclEventType: MSGMGR_MOVEMSG
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: FILE_SET_NEW
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_CURRENT
+// TclEventType: PROJECT_DASHBOARD_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_NEW
+// Tcl Message: open_project C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.xpr 
+// Tcl Message: INFO: [filemgmt 56-3] Default IP Output Path : Could not find the directory 'C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.gen/sources_1'. 
+// Tcl Message: Scanning sources... Finished scanning sources 
+// Tcl Message: INFO: [Common 17-14] Message 'Board 49-26' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings. 
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1704] No user IP repositories specified 
+// TclEventType: PROJECT_NEW
+// [GUI Memory]: 137 MB (+141292kb) [00:00:54]
+// [Engine Memory]: 956 MB (+851028kb) [00:00:54]
+// [Engine Memory]: 1,005 MB (+1368kb) [00:00:56]
+// WARNING: HEventQueue.dispatchEvent() is taking  5908 ms.
+// Tcl Message: INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/2025.1/Vivado/data/ip'. 
+// HMemoryUtils.trashcanNow. Engine heap size: 1,013 MB. GUI used memory: 80 MB. Current time: 2/18/26, 4:27:20 PM CET
+// Project name: mxfp8; location: C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8; part: xc7a12ticsg325-1L
+// Tcl Message: open_project: Time (s): cpu = 00:00:46 ; elapsed = 00:00:27 . Memory (MB): peak = 1628.668 ; gain = 274.895 
+dismissDialog("Open Project"); // bk (Open Project Progress)
+// [GUI Memory]: 148 MB (+4243kb) [00:01:02]
+// TclEventType: DG_GRAPH_GENERATED
+// Tcl Message: update_compile_order -fileset sources_1 
+// Elapsed time: 10 seconds
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, controller (controller.sv)]", 4); // E (PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE)
+collapseTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, controller (controller.sv)]", 4); // E (PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE)
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, mxdotp_mxfull (mxdotp_anchor.sv)]", 3); // E (PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE)
+collapseTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, mxdotp_mxfull (mxdotp_anchor.sv)]", 3); // E (PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE)
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, mxfp8_dotp (mxfp8_dotp.sv)]", 2); // E (PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE)
+collapseTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, mxfp8_dotp (mxfp8_dotp.sv)]", 2); // E (PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE)
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, mxfp8_dotp (mxfp8_dotp.sv)]", 2); // E (PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE)
+collapseTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, mxfp8_dotp (mxfp8_dotp.sv)]", 2); // E (PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE)
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, mxfp8_dotp (mxfp8_dotp.sv)]", 2); // E (PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE)
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, mxfp8_dotp (mxfp8_dotp.sv), u_adder_tree : adder_tree (adder_tree.sv)]", 6); // E (PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE)
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, csa_tree (csa_tree.sv)]", 1); // E (PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE)
+collapseTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, csa_tree (csa_tree.sv)]", 1); // E (PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE)
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, mxdotp_mxfull (mxdotp_anchor.sv)]", 11); // E (PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE)
+// PAPropertyPanels.initPanels (mxfp8_mult.sv) elapsed time: 0.3s
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, mxdotp_mxfull (mxdotp_anchor.sv), u_mxfp8_mult : mxfp8_mult (mxfp8_mult.sv)]", 14, false); // E (PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, mxdotp_mxfull (mxdotp_anchor.sv), u_mxfp8_classifier_b : mxfp8_classifier (mxfp8_classifier.sv)]", 13, false); // E (PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, mxdotp_mxfull (mxdotp_anchor.sv), u_mxfp8_classifier_a : mxfp8_classifier (mxfp8_classifier.sv)]", 12, false); // E (PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE)
+collapseTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, mxfp8_dotp (mxfp8_dotp.sv), u_adder_tree : adder_tree (adder_tree.sv)]", 6); // E (PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, mxdotp_mxfull (mxdotp_anchor.sv), u_mxfp8_mult : mxfp8_mult (mxfp8_mult.sv)]", 11, false); // E (PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, mxfp8_dotp (mxfp8_dotp.sv)]", 2, true); // E (PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, mxfp8_dotp (mxfp8_dotp.sv)]", 2, true, false, false, false, false, true); // E (PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE) - Double Click - Node
+// Launch External Editor: 'C:/Users/Lenovo/AppData/Local/Programs/Microsoft VS Code/Code.exe "C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/mxfp8_dotp.sv"'
+// WARNING: HSwingWorker (Refresh Filesets Swing Worker) is taking 13704 ms. Increasing delay to 41112 ms.
+// WARNING: HSwingWorker (Refresh Filesets Swing Worker) is taking 96 ms. Decreasing delay to 2096 ms.
+// WARNING: HSwingWorker (Refresh Filesets Swing Worker) is taking 1165 ms. Increasing delay to 3495 ms.
+// Elapsed time: 74 seconds
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, mxfp8_dotp (mxfp8_dotp.sv)]", 2); // E (PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'PAResourceItoN.MsgLongTask_MESSAGE_LONG_TASK/L.f': 02m:22s
+// TclEventType: DG_GRAPH_GENERATED
+// Elapsed Time for: 'PAResourceItoN.MsgLongTask_MESSAGE_LONG_TASK/L.f': 02m:26s
+// Elapsed time: 124 seconds
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources]", 16); // E (PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE)
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1]", 17); // E (PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE)
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, mxfp8_dotp_tb (tb_top.sv)]", 18); // E (PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, mxfp8_dotp_tb (tb_top.sv)]", 18, true); // E (PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, mxfp8_dotp_tb (tb_top.sv)]", 18, true, false, false, false, false, true); // E (PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE) - Double Click - Node
+// Launch External Editor: 'C:/Users/Lenovo/AppData/Local/Programs/Microsoft VS Code/Code.exe "C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sim_1/new/tb_top.sv"'
+// Elapsed time: 21 seconds
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, controller (controller.sv)]", 12); // E (PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE)
+// Elapsed time: 114 seconds
+selectButton((HResource) null, "RDIResource.FrameControlsPanel_MINIMIZE_Design_Runs"); // P.a (RDIResource.FrameControlsPanel_MINIMIZE_Design_Runs)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'PAResourceItoN.MsgLongTask_MESSAGE_LONG_TASK/L.f': 07m:16s
+// TclEventType: DG_GRAPH_GENERATED
+// Elapsed Time for: 'PAResourceItoN.MsgLongTask_MESSAGE_LONG_TASK/L.f': 07m:19s
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'PAResourceItoN.MsgLongTask_MESSAGE_LONG_TASK/L.f': 08m:25s
+// TclEventType: DG_GRAPH_GENERATED
+// Elapsed Time for: 'PAResourceItoN.MsgLongTask_MESSAGE_LONG_TASK/L.f': 08m:27s
+// Elapsed time: 125 seconds
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Simulation, Run Simulation]", 10, false); // g (PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, Flow Navigator Tree)
+selectMenuItem(PAResourceCommand.PACommandNames_SIMULATION_RUN_BEHAVIORAL, "Run Behavioral Simulation"); // ap (PAResourceCommand.PACommandNames_SIMULATION_RUN_BEHAVIORAL, simulation_run_behavioral_menu)
+// Run Command: PAResourceCommand.PACommandNames_SIMULATION_RUN_BEHAVIORAL
+// TclEventType: LAUNCH_SIM
+// TclEventType: PAUSE_COMPOSITE_FILE_CHANGE_GUI
+// Tcl Message: launch_simulation 
+// Tcl Message: Command: launch_simulation  
+// Tcl Message: INFO: [Vivado 12-12493] Simulation top is 'mxfp8_dotp_tb' 
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// Tcl Message: INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.sim/sim_1/behav/xsim' INFO: [SIM-utils-51] Simulation object is 'sim_1' INFO: [SIM-utils-72] Using boost library from 'C:/Xilinx/2025.1/Vivado/tps/boost_1_72_0' INFO: [SIM-utils-54] Inspecting design source files for 'mxfp8_dotp_tb' in fileset 'sim_1'... INFO: [USF-XSim-97] Finding global include files... INFO: [USF-XSim-98] Fetching design files from 'sim_1'... INFO: [USF-XSim-2] XSim::Compile design 
+// Tcl Message: INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.sim/sim_1/behav/xsim' 
+// Tcl Message: "xvlog --incr --relax -L uvm -prj mxfp8_dotp_tb_vlog.prj" 
+// TclEventType: LAUNCH_SIM_LOG
+// Tcl Message: INFO: [USF-XSim-69] 'compile' step finished in '4' seconds INFO: [USF-XSim-3] XSim::Elaborate design INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.sim/sim_1/behav/xsim' 
+// Tcl Message: "xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L uvm -L unisims_ver -L unimacro_ver -L secureip --snapshot mxfp8_dotp_tb_behav xil_defaultlib.mxfp8_dotp_tb xil_defaultlib.glbl -log elaborate.log" 
+// Tcl Message: Compiling module xil_defaultlib.controller Compiling module xil_defaultlib.mxfp8_classifier(NumOperands=32'... Compiling module xil_defaultlib.mxfp8_mult Compiling module xil_defaultlib.exp_max(VectorSize=4) Compiling module xil_defaultlib.exp_diff(VectorSize=4) Compiling module xil_defaultlib.barrel_shifter(WIDTH=26) Compiling module xil_defaultlib.align_unit(VectorSize=4,NORM_MAN... Compiling module xil_defaultlib.adder_tree(VectorSize=4,NORM_MAN... Compiling module xil_defaultlib.stage8_fp32_accumulator(ACC_WIDT... Compiling module xil_defaultlib.mxfp8_dotp_default Compiling module xil_defaultlib.mxfp8_dotp_tb Compiling module xil_defaultlib.glbl 
+// TclEventType: LAUNCH_SIM
+// TclEventType: LOAD_FEATURE
+// Tcl Message: Built simulation snapshot mxfp8_dotp_tb_behav 
+// Tcl Message: run_program: Time (s): cpu = 00:00:01 ; elapsed = 00:00:18 . Memory (MB): peak = 1628.668 ; gain = 0.000 
+// Tcl Message: INFO: [USF-XSim-69] 'elaborate' step finished in '18' seconds INFO: [USF-XSim-4] XSim::Simulate design INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.sim/sim_1/behav/xsim' INFO: [USF-XSim-98] *** Running xsim 
+// Tcl Message:    with args "mxfp8_dotp_tb_behav -key {Behavioral:sim_1:Functional:mxfp8_dotp_tb} -tclbatch {mxfp8_dotp_tb.tcl} -view {C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/fp8_fma_tb_behav.wcfg} -log {simulate.log}" 
+// Tcl Message: INFO: [USF-XSim-8] Loading simulator feature 
+// TclEventType: SIMULATION_CREATE_SIMULATION_OBJECT
+// TclEventType: SIMULATION_UPDATE_SIMULATION_STATE
+// TclEventType: SIMULATION_UPDATE_SCOPE_TREE
+// TclEventType: SIMULATION_UPDATE_STACKS
+// TclEventType: SIMULATION_UPDATE_OBJECT_TREE
+// TclEventType: SIMULATION_UPDATE_PROTOCOL_INSTANCE_TREE
+// PAPropertyPanels.initPanels (tb_top.sv) elapsed time: 0.2s
+// WARNING: HEventQueue.dispatchEvent() is taking  2030 ms.
+// Tcl Message: Time resolution is 1 ps 
+// TclEventType: SIMULATION_UPDATE_SCOPE_TREE
+// HMemoryUtils.trashcanNow. Engine heap size: 1,026 MB. GUI used memory: 86 MB. Current time: 2/18/26, 4:36:24 PM CET
+// TclEventType: SIMULATION_UPDATE_SCOPE_TREE
+// TclEventType: SIMULATION_UPDATE_STACKS
+// TclEventType: SIMULATION_UPDATE_OBJECT_TREE
+// TclEventType: SIMULATION_UPDATE_PROTOCOL_INSTANCE_TREE
+// TclEventType: SIMULATION_UPDATE_SCOPE_TREE
+// TclEventType: SIMULATION_UPDATE_STACKS
+// TclEventType: SIMULATION_UPDATE_OBJECT_TREE
+// TclEventType: SIMULATION_UPDATE_PROTOCOL_INSTANCE_TREE
+// Elapsed time: 30 seconds
+closeView(PAResourceOtoP.PAViews_PROJECT_SUMMARY, "Project Summary"); // x (PAResourceOtoP.PAViews_PROJECT_SUMMARY, PlanAheadTabProject Summary)
+// TclEventType: SIMULATION_UPDATE_SCOPE_TREE
+// TclEventType: SIMULATION_UPDATE_STACKS
+// TclEventType: SIMULATION_UPDATE_OBJECT_TREE
+// TclEventType: SIMULATION_UPDATE_PROTOCOL_INSTANCE_TREE
+// TclEventType: SIMULATION_UPDATE_SCOPE_TREE
+// TclEventType: SIMULATION_UPDATE_STACKS
+// TclEventType: SIMULATION_UPDATE_OBJECT_TREE
+// TclEventType: SIMULATION_UPDATE_PROTOCOL_INSTANCE_TREE
+// TclEventType: WAVEFORM_UPDATE_TITLE
+// TclEventType: WAVEFORM_OPEN_WCFG
+// TclEventType: SIMULATION_UPDATE_SCOPE_TREE
+// TclEventType: SIMULATION_UPDATE_STACKS
+// TclEventType: SIMULATION_UPDATE_OBJECT_TREE
+// TclEventType: SIMULATION_UPDATE_PROTOCOL_INSTANCE_TREE
+// TclEventType: WAVEFORM_OPEN_WCFG
+// TclEventType: WAVEFORM_DELAYED_MODEL_EVENT
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// Tcl Message: open_wave_config C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/fp8_fma_tb_behav.wcfg 
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: SIMULATION_UPDATE_SIMULATION_STATE
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: SIMULATION_UPDATE_SIMULATION_STATE
+// TclEventType: SIMULATION_CLEAR_CURRENT_LINE
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: SIMULATION_UPDATE_LATEST_TIME
+// TclEventType: SIMULATION_OBJECT_TREE_RESTORED
+// TclEventType: WAVEFORM_MODEL_EVENT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,032 MB. GUI used memory: 87 MB. Current time: 2/18/26, 4:36:26 PM CET
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: SIMULATION_UPDATE_LATEST_TIME
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: SIMULATION_CURRENT_SCOPE_CHANGED
+// TclEventType: SIMULATION_CURRENT_STACK_CHANGED
+// Tcl Message: source mxfp8_dotp_tb.tcl 
+// Tcl Message: # set curr_wave [current_wave_config] # if { [string length $curr_wave] == 0 } { #   if { [llength [get_objects]] > 0} { #     add_wave / #     set_property needs_save false [current_wave_config] #   } else { #      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console." #   } # } # run 1000ns 
+// Tcl Message: === Starting FSM Controlled Accumulation Test === === WAIT FOR DONE === [Time                35000] Golden: Init Accumulator [Time                35000] Step 0 Processed. Current Acc: 4.000000 [Time                45000] Step 1 Processed. Current Acc: 2.000000 === Test Finished === $finish called at time : 55 ns : File "C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sim_1/new/tb_top.sv" Line 179 
+// TclEventType: SIMULATION_CURRENT_STACK_CHANGED
+// TclEventType: SIMULATION_UPDATE_STACK_FRAMES
+// TclEventType: SIMULATION_CURRENT_STACK_FRAME_CHANGED
+// TclEventType: SIMULATION_UPDATE_LOCALS
+// TclEventType: SIMULATION_UPDATE_SCOPE_TREE
+// TclEventType: SIMULATION_UPDATE_STACKS
+// TclEventType: SIMULATION_UPDATE_OBJECT_TREE
+// TclEventType: SIMULATION_STOPPED
+// TclEventType: SIMULATION_UPDATE_SIMULATION_STATE
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_MODEL_EVENT
+// Tcl Message: xsim: Time (s): cpu = 00:00:09 ; elapsed = 00:00:07 . Memory (MB): peak = 1651.539 ; gain = 7.820 
+// Tcl Message: INFO: [USF-XSim-96] XSim completed. Design snapshot 'mxfp8_dotp_tb_behav' loaded. INFO: [USF-XSim-97] XSim simulation ran for 1000ns 
+// Tcl Message: launch_simulation: Time (s): cpu = 00:00:13 ; elapsed = 00:00:34 . Memory (MB): peak = 1651.539 ; gain = 22.871 
+// Elapsed Time for: 'PAResourceItoN.MsgLongTask_MESSAGE_LONG_TASK/h': 33s
+// 'd' command handler elapsed time: 33 seconds
+dismissDialog("Run Simulation"); // e (Run Simulation Progress)
+// TclEventType: SIMULATION_UPDATE_SCOPE_TREE
+// TclEventType: SIMULATION_UPDATE_STACKS
+// TclEventType: SIMULATION_UPDATE_OBJECT_TREE
+// TclEventType: SIMULATION_UPDATE_PROTOCOL_INSTANCE_TREE
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// [GUI Memory]: 158 MB (+2436kb) [00:10:09]
+// TclEventType: SIMULATION_UPDATE_SCOPE_TREE
+// TclEventType: SIMULATION_UPDATE_STACKS
+// TclEventType: SIMULATION_UPDATE_OBJECT_TREE
+// TclEventType: SIMULATION_UPDATE_PROTOCOL_INSTANCE_TREE
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// Elapsed time: 64 seconds
+selectButton((HResource) null, "RDIResource.FrameControlsPanel_MINIMIZE_Scope"); // P.a (RDIResource.FrameControlsPanel_MINIMIZE_Scope)
+selectButton((HResource) null, "RDIResource.FrameControlsPanel_MINIMIZE_Objects"); // P.a (RDIResource.FrameControlsPanel_MINIMIZE_Objects)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "tb_top.sv", 1); // o (PlanAheadTabBaseWorkspace_JideTabbedPane)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "fp8_fma_tb_behav.wcfg", 0); // o (PlanAheadTabBaseWorkspace_JideTabbedPane)
+selectButton(RDIResource.GraphicalView_ZOOM_FIT, "Waveform View_zoom_fit"); // C (RDIResource.GraphicalView_ZOOM_FIT, Waveform View_zoom_fit)
+// HMemoryUtils.trashcanNow. Engine heap size: 1,055 MB. GUI used memory: 89 MB. Current time: 2/18/26, 4:37:37 PM CET
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 1,055 MB. GUI used memory: 89 MB. Current time: 2/18/26, 4:37:37 PM CET
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 1,055 MB. GUI used memory: 89 MB. Current time: 2/18/26, 4:37:38 PM CET
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 1,055 MB. GUI used memory: 89 MB. Current time: 2/18/26, 4:37:39 PM CET
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+selectGraphicalView(RDIResource.RDIViews_WAVEFORM_VIEWER, 770, 184); // b (RDIResource.RDIViews_WAVEFORM_VIEWER, PlanAheadTabWaveform View_viewer)
+/********** leftMouseClick (1499, -610, true); // b (RDIResource.RDIViews_WAVEFORM_VIEWER, PlanAheadTabWaveform View_viewer) **********/
+// TclEventType: WAVEFORM_SELECTED_WAVE_OBJECT_NAMES
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_SELECTED_WAVE_OBJECT_NAMES
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_MOVE_CURSOR
+// HMemoryUtils.trashcanNow. Engine heap size: 1,055 MB. GUI used memory: 89 MB. Current time: 2/18/26, 4:37:41 PM CET
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 1,055 MB. GUI used memory: 89 MB. Current time: 2/18/26, 4:37:42 PM CET
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 1,055 MB. GUI used memory: 89 MB. Current time: 2/18/26, 4:37:42 PM CET
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+selectGraphicalView(RDIResource.RDIViews_WAVEFORM_VIEWER, 1070, 271); // b (RDIResource.RDIViews_WAVEFORM_VIEWER, PlanAheadTabWaveform View_viewer)
+/********** leftMouseClick (1699, -552, true); // b (RDIResource.RDIViews_WAVEFORM_VIEWER, PlanAheadTabWaveform View_viewer) **********/
+// TclEventType: WAVEFORM_SELECTED_WAVE_OBJECT_NAMES
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_SELECTED_WAVE_OBJECT_NAMES
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_MOVE_CURSOR
+// HMemoryUtils.trashcanNow. Engine heap size: 1,055 MB. GUI used memory: 89 MB. Current time: 2/18/26, 4:38:28 PM CET
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// [Engine Memory]: 1,055 MB (+0kb) [00:12:07]
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'PAResourceItoN.MsgLongTask_MESSAGE_LONG_TASK/L.f': 12m:45s
+// TclEventType: DG_GRAPH_GENERATED
+// Elapsed Time for: 'PAResourceItoN.MsgLongTask_MESSAGE_LONG_TASK/L.f': 12m:49s
+// HMemoryUtils.trashcanNow. Engine heap size: 1,095 MB. GUI used memory: 88 MB. Current time: 2/18/26, 4:41:13 PM CET
+// Elapsed time: 207 seconds
+unMinimizeFrame(PAResourceOtoP.PAViews_SOURCES, "Sources"); // S (PAResourceOtoP.PAViews_SOURCES, Sources)
+// TclEventType: SIMULATION_UPDATE_SCOPE_TREE
+// TclEventType: SIMULATION_UPDATE_STACKS
+// TclEventType: SIMULATION_UPDATE_SCOPE_TREE
+// TclEventType: SIMULATION_UPDATE_STACKS
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+unMinimizeFrame(PAResourceOtoP.PAViews_OBJECTS, "Objects"); // S (PAResourceOtoP.PAViews_OBJECTS, Objects)
+// TclEventType: SIMULATION_UPDATE_OBJECT_TREE
+// TclEventType: SIMULATION_UPDATE_PROTOCOL_INSTANCE_TREE
+// TclEventType: SIMULATION_UPDATE_OBJECT_TREE
+// TclEventType: SIMULATION_UPDATE_PROTOCOL_INSTANCE_TREE
+// HMemoryUtils.trashcanNow. Engine heap size: 1,095 MB. GUI used memory: 90 MB. Current time: 2/18/26, 4:41:14 PM CET
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: SIMULATION_UPDATE_SCOPE_TREE
+// TclEventType: SIMULATION_UPDATE_STACKS
+// TclEventType: SIMULATION_UPDATE_OBJECT_TREE
+// TclEventType: SIMULATION_UPDATE_PROTOCOL_INSTANCE_TREE
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 1,095 MB. GUI used memory: 88 MB. Current time: 2/18/26, 4:41:16 PM CET
+// TclEventType: SIMULATION_UPDATE_SCOPE_TREE
+// TclEventType: SIMULATION_UPDATE_STACKS
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 1,095 MB. GUI used memory: 88 MB. Current time: 2/18/26, 4:41:22 PM CET
+// TclEventType: SIMULATION_UPDATE_SCOPE_TREE
+// TclEventType: SIMULATION_UPDATE_STACKS
+// Elapsed time: 10 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, mxdotp_mxfull (mxdotp_anchor.sv)]", 8, true); // E (PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, mxdotp_mxfull (mxdotp_anchor.sv)]", 8, true, false, false, false, true, false); // E (PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE) - Popup Trigger - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, mxdotp_mxfull (mxdotp_anchor.sv)]", 8, true); // E (PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, mxdotp_mxfull (mxdotp_anchor.sv)]", 8, true, false, false, false, true, false); // E (PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE) - Popup Trigger - Node
+selectMenuItem(RDIResourceCommand.RDICommands_DELETE, "Remove File from Project..."); // ap (RDIResourceCommand.RDICommands_DELETE, global_delete_menu)
+// Run Command: RDIResourceCommand.RDICommands_DELETE
+selectButton(RDIResource.BaseDialog_OK, "OK", "Remove Sources"); // f (RDIResource.BaseDialog_OK)
+dismissDialog("Remove Sources"); // V (dialog0)
+// Tcl Message: export_ip_user_files -of_objects  [get_files C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/mxdotp_anchor.sv] -no_script -reset -force -quiet 
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: remove_files  C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/mxdotp_anchor.sv 
+// Elapsed Time for: 'PAResourceItoN.MsgLongTask_MESSAGE_LONG_TASK/L.f': 14m:13s
+// TclEventType: DG_GRAPH_GENERATED
+// Elapsed Time for: 'PAResourceItoN.MsgLongTask_MESSAGE_LONG_TASK/L.f': 14m:15s
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, add_comp (add_comp.sv)]", 10, false); // E (PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, add_comp (add_comp.sv)]", 10, false, false, false, false, false, true); // E (PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE) - Double Click
+// Launch External Editor: 'C:/Users/Lenovo/AppData/Local/Programs/Microsoft VS Code/Code.exe "C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/add_comp.sv"'
+// Elapsed time: 20 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, stage7_normalize_accum (stage7_normalize_accum.sv)]", 11, false); // E (PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE)
+// Elapsed time: 28 seconds
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, csa_tree (csa_tree.sv)]", 1); // E (PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, csa_tree (csa_tree.sv)]", 1, true); // E (PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, csa_tree (csa_tree.sv)]", 1, true, false, false, false, true, false); // E (PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE) - Popup Trigger - Node
+selectMenuItem(RDIResourceCommand.RDICommands_DELETE, "Remove File from Project..."); // ap (RDIResourceCommand.RDICommands_DELETE, global_delete_menu)
+// Run Command: RDIResourceCommand.RDICommands_DELETE
+selectButton(RDIResource.BaseDialog_OK, "OK", "Remove Sources"); // f (RDIResource.BaseDialog_OK)
+dismissDialog("Remove Sources"); // V (dialog1)
+// Tcl Message: export_ip_user_files -of_objects  [get_files C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/csa_tree.sv] -no_script -reset -force -quiet 
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: remove_files  C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/csa_tree.sv 
+// Elapsed Time for: 'PAResourceItoN.MsgLongTask_MESSAGE_LONG_TASK/L.f': 15m:13s
+// TclEventType: DG_GRAPH_GENERATED
+// Elapsed Time for: 'PAResourceItoN.MsgLongTask_MESSAGE_LONG_TASK/L.f': 15m:15s
+// Elapsed time: 14 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, controller (controller.sv)]", 7, true); // E (PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE) - Node
+// Elapsed time: 20 seconds
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, mxfp8_dotp (mxfp8_dotp.sv), u_adder_tree : adder_tree (adder_tree.sv)]", 5); // E (PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE)
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, mxfp8_dotp (mxfp8_dotp.sv), u_adder_tree : adder_tree (adder_tree.sv), u_align : align_unit (adder_tree.sv)]", 8); // E (PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE)
+collapseTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, mxfp8_dotp (mxfp8_dotp.sv), u_adder_tree : adder_tree (adder_tree.sv), u_align : align_unit (adder_tree.sv)]", 8); // E (PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE)
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, mxfp8_dotp (mxfp8_dotp.sv), u_adder_tree : adder_tree (adder_tree.sv), u_align : align_unit (adder_tree.sv)]", 8); // E (PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE)
+// Launch External Editor: 'C:/Users/Lenovo/AppData/Local/Programs/Microsoft VS Code/Code.exe "C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/controller.sv"'
+collapseTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, mxfp8_dotp (mxfp8_dotp.sv), u_adder_tree : adder_tree (adder_tree.sv), u_align : align_unit (adder_tree.sv)]", 8); // E (PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE)
+// Elapsed time: 54 seconds
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, mxfp8_dotp (mxfp8_dotp.sv), u_adder_tree : adder_tree (adder_tree.sv), u_align : align_unit (adder_tree.sv)]", 8); // E (PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE)
+collapseTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, mxfp8_dotp (mxfp8_dotp.sv), u_adder_tree : adder_tree (adder_tree.sv), u_align : align_unit (adder_tree.sv)]", 8); // E (PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE)
+// TclEventType: FILE_SET_CHANGE
+// WARNING: HSwingWorker (Monitor File Timestamp Swing Worker) is taking 840 ms to process. Increasing delay to 2000 ms.
+// TclEventType: FILE_SET_CHANGE
+// WARNING: HSwingWorker (Refresh Filesets Swing Worker) is taking 1943 ms. Increasing delay to 5829 ms.
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'PAResourceItoN.MsgLongTask_MESSAGE_LONG_TASK/L.f': 17m:43s
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'PAResourceItoN.MsgLongTask_MESSAGE_LONG_TASK/L.f': 17m:45s
+// Tcl Message: update_compile_order -fileset sources_1 
+// Elapsed Time for: 'PAResourceItoN.MsgLongTask_MESSAGE_LONG_TASK/L.f': 17m:47s
+// TclEventType: DG_GRAPH_GENERATED
+// Elapsed Time for: 'PAResourceItoN.MsgLongTask_MESSAGE_LONG_TASK/L.f': 17m:49s
+// Elapsed time: 65 seconds
+selectButton(RDIResource.BaseDialog_OK, "OK", "Invalid Top Module"); // f (RDIResource.BaseDialog_OK)
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+dismissDialog("Invalid Top Module"); // s (dialog2)
+// TclEventType: DG_GRAPH_GENERATED
+// Elapsed Time for: 'PAResourceItoN.MsgLongTask_MESSAGE_LONG_TASK/L.f': 17m:53s
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'PAResourceItoN.MsgLongTask_MESSAGE_LONG_TASK/L.f': 17m:55s
+// Tcl Message: update_compile_order -fileset sources_1 
+// TclEventType: SIMULATION_UPDATE_SCOPE_TREE
+// TclEventType: SIMULATION_UPDATE_STACKS
+// TclEventType: SIMULATION_UPDATE_OBJECT_TREE
+// TclEventType: SIMULATION_UPDATE_PROTOCOL_INSTANCE_TREE
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 1,095 MB. GUI used memory: 90 MB. Current time: 2/18/26, 4:45:13 PM CET
+// Elapsed Time for: 'PAResourceItoN.MsgLongTask_MESSAGE_LONG_TASK/L.f': 17m:57s
+// TclEventType: DG_GRAPH_GENERATED
+// Elapsed Time for: 'PAResourceItoN.MsgLongTask_MESSAGE_LONG_TASK/L.f': 17m:59s
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, mxfp8_dotp (mxfp8_dotp.sv), u_fp32_acc : xil_defaultlib.fp32_accumulator]", 10, false); // E (PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE)
+collapseTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, mxfp8_dotp (mxfp8_dotp.sv), u_adder_tree : adder_tree (adder_tree.sv)]", 6); // E (PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE)
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, mxfp8_dotp (mxfp8_dotp.sv), u_adder_tree : adder_tree (adder_tree.sv)]", 6); // E (PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE)
+collapseTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, mxfp8_dotp (mxfp8_dotp.sv), u_adder_tree : adder_tree (adder_tree.sv)]", 6); // E (PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE)
+collapseTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, mxfp8_dotp (mxfp8_dotp.sv)]", 2); // E (PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE)
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, mxfp8_dotp (mxfp8_dotp.sv)]", 2); // E (PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE)
+// Launch External Editor: 'C:/Users/Lenovo/AppData/Local/Programs/Microsoft VS Code/Code.exe "C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/mxfp8_dotp.sv"'
+// Elapsed time: 15 seconds
+collapseTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, mxfp8_dotp (mxfp8_dotp.sv)]", 2); // E (PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE)
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, mxfp8_dotp (mxfp8_dotp.sv)]", 2); // E (PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, mxfp8_dotp (mxfp8_dotp.sv), u_fp32_acc : xil_defaultlib.fp32_accumulator]", 7, false); // E (PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, mxfp8_dotp (mxfp8_dotp.sv), u_fp32_acc : xil_defaultlib.fp32_accumulator]", 7, false, false, false, false, false, true); // E (PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE) - Double Click
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, mxfp8_dotp (mxfp8_dotp.sv), u_adder_tree : adder_tree (adder_tree.sv)]", 6); // E (PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE)
+collapseTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, mxfp8_dotp (mxfp8_dotp.sv), u_adder_tree : adder_tree (adder_tree.sv)]", 6); // E (PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, mxfp8_dotp (mxfp8_dotp.sv), u_mxfp8_mult : mxfp8_mult (mxfp8_mult.sv)]", 5, false); // E (PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE)
+selectButton(PAResourceTtoZ.TaskBanner_CLOSE, (String) null); // k (PAResourceTtoZ.TaskBanner_CLOSE)
+closeTask("Simulation", "Behavioral Simulation - Functional - sim_1 - mxfp8_dotp_tb", "DesignTask.SIMULATION");
+selectButton(RDIResource.BaseDialog_OK, "OK", "Confirm Close"); // f (RDIResource.BaseDialog_OK)
+// TclEventType: WAVEFORM_CLOSE_WCFG
+dismissDialog("Confirm Close"); // x (dialog3)
+// TclEventType: SIMULATION_CLOSE_SIMULATION
+// Tcl Message: close_sim 
+// Tcl Message: INFO: [Simtcl 6-16] Simulation closed 
+dismissDialog("Close"); // bk (Close Progress)
+// Elapsed time: 10 seconds
+collapseTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, mxfp8_dotp (mxfp8_dotp.sv)]", 2); // E (PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE)
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, mxfp8_dotp (mxfp8_dotp.sv)]", 2); // E (PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, mxfp8_dotp (mxfp8_dotp.sv), u_fp32_acc : xil_defaultlib.fp32_accumulator]", 7, false); // E (PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, mxfp8_dotp (mxfp8_dotp.sv)]", 2, true); // E (PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, mxfp8_dotp (mxfp8_dotp.sv)]", 2, true, false, false, false, false, true); // E (PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE) - Double Click - Node
+// Launch External Editor: 'C:/Users/Lenovo/AppData/Local/Programs/Microsoft VS Code/Code.exe "C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/mxfp8_dotp.sv"'
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, mxfp8_dotp (mxfp8_dotp.sv)]", 2, true); // E (PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, mxfp8_dotp (mxfp8_dotp.sv)]", 2, true, false, false, false, false, true); // E (PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE) - Double Click - Node
+unMinimizeFrame(PAResourceOtoP.PAViews_TCL_CONSOLE, "Tcl Console"); // S (PAResourceOtoP.PAViews_TCL_CONSOLE, Tcl Console)
+// Tcl (Dont Echo) Command: 'rdi::info_commands {loa*}'
+// Tcl (Dont Echo) Command: 'rdi::info_commands {load*}'
+// Tcl (Dont Echo) Command: 'rdi::info_commands {loa*}'
+// Tcl (Dont Echo) Command: 'rdi::info_commands {l*}'
+// Tcl (Dont Echo) Command: 'rdi::info_commands {fi*}'
+// Tcl (Dont Echo) Command: 'rdi::info_commands {file*}'
+// Tcl (Dont Echo) Command: 'rdi::info_commands {add*}'
+// Elapsed time: 24 seconds
+setText(RDIResource.CommandsInput_TYPE_TCL_COMMAND_HERE, "add", true); // h.b (RDIResource.CommandsInput_TYPE_TCL_COMMAND_HERE)
+// Elapsed time: 11 seconds
+setText(RDIResource.CommandsInput_TYPE_TCL_COMMAND_HERE, (String) null); // h.b (RDIResource.CommandsInput_TYPE_TCL_COMMAND_HERE)
+// Elapsed time: 18 seconds
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, mxfp8_dotp (mxfp8_dotp.sv), u_adder_tree : adder_tree (adder_tree.sv)]", 6); // E (PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE)
+collapseTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, mxfp8_dotp (mxfp8_dotp.sv), u_adder_tree : adder_tree (adder_tree.sv)]", 6); // E (PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, mxfp8_dotp (mxfp8_dotp.sv), u_fp32_acc : xil_defaultlib.fp32_accumulator]", 7, false); // E (PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, mxfp8_dotp (mxfp8_dotp.sv), u_fp32_acc : xil_defaultlib.fp32_accumulator]", 7, false, false, false, false, true, false); // E (PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE) - Popup Trigger
+selectMenu(PAResourceCommand.PACommandNames_AUTO_UPDATE_HIER, "Hierarchy Update"); // am (PAResourceCommand.PACommandNames_AUTO_UPDATE_HIER, Hierarchy Update)
+selectMenu(PAResourceCommand.PACommandNames_AUTO_UPDATE_HIER, "Hierarchy Update"); // am (PAResourceCommand.PACommandNames_AUTO_UPDATE_HIER, Hierarchy Update)
+selectMenu(PAResourceQtoS.SrcMenu_IP_HIERARCHY, "IP Hierarchy"); // am (PAResourceQtoS.SrcMenu_IP_HIERARCHY, IP Hierarchy)
+selectMenuItem(PAResourceQtoS.SrcMenu_REFRESH_HIERARCHY, "Refresh Hierarchy"); // ap (PAResourceQtoS.SrcMenu_REFRESH_HIERARCHY)
+// Elapsed Time for: 'PAResourceItoN.MsgLongTask_MESSAGE_LONG_TASK/L.f': 19m:53s
+// TclEventType: DG_GRAPH_GENERATED
+// Elapsed Time for: 'PAResourceItoN.MsgLongTask_MESSAGE_LONG_TASK/L.f': 19m:55s
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, mxfp8_dotp (mxfp8_dotp.sv), u_fp32_acc : xil_defaultlib.fp32_accumulator]", 7, false, false, false, false, true, false); // E (PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE) - Popup Trigger
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, mxfp8_dotp (mxfp8_dotp.sv), u_fp32_acc : xil_defaultlib.fp32_accumulator]", 7, false, false, false, false, true, false); // E (PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE) - Popup Trigger
+selectMenu(PAResourceCommand.PACommandNames_AUTO_UPDATE_HIER, "Hierarchy Update"); // am (PAResourceCommand.PACommandNames_AUTO_UPDATE_HIER, Hierarchy Update)
+// [GUI Memory]: 166 MB (+412kb) [00:20:57]
+selectMenu(PAResourceQtoS.SrcMenu_IP_HIERARCHY, "IP Hierarchy"); // am (PAResourceQtoS.SrcMenu_IP_HIERARCHY, IP Hierarchy)
+selectMenu(PAResourceQtoS.SrcMenu_IP_HIERARCHY, "IP Hierarchy"); // am (PAResourceQtoS.SrcMenu_IP_HIERARCHY, IP Hierarchy)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, mxfp8_dotp (mxfp8_dotp.sv), u_fp32_acc : xil_defaultlib.fp32_accumulator]", 7, false); // E (PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, mxfp8_dotp (mxfp8_dotp.sv), u_fp32_acc : xil_defaultlib.fp32_accumulator]", 7, false, false, false, false, false, true); // E (PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE) - Double Click
+// Elapsed time: 20 seconds
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, mxfp8_dotp (mxfp8_dotp.sv), u_adder_tree : adder_tree (adder_tree.sv)]", 6); // E (PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE)
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, mxfp8_dotp (mxfp8_dotp.sv), u_adder_tree : adder_tree (adder_tree.sv), u_align : align_unit (adder_tree.sv)]", 9); // E (PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'PAResourceItoN.MsgLongTask_MESSAGE_LONG_TASK/L.f': 22m:23s
+// TclEventType: DG_GRAPH_GENERATED
+// Elapsed Time for: 'PAResourceItoN.MsgLongTask_MESSAGE_LONG_TASK/L.f': 22m:25s
+// HMemoryUtils.trashcanNow. Engine heap size: 1,095 MB. GUI used memory: 93 MB. Current time: 2/18/26, 5:15:15 PM CET
+// WARNING: HEventQueue.dispatchEvent() is taking  670139 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  1314 ms.
+// Elapsed time: 2908 seconds
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Simulation, Run Simulation]", 10, false); // g (PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, Flow Navigator Tree)
+selectMenuItem(PAResourceCommand.PACommandNames_SIMULATION_RUN_BEHAVIORAL, "Run Behavioral Simulation"); // ap (PAResourceCommand.PACommandNames_SIMULATION_RUN_BEHAVIORAL, simulation_run_behavioral_menu)
+// Run Command: PAResourceCommand.PACommandNames_SIMULATION_RUN_BEHAVIORAL
+// TclEventType: LAUNCH_SIM
+// TclEventType: PAUSE_COMPOSITE_FILE_CHANGE_GUI
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// Tcl Message: launch_simulation 
+// Tcl Message: Command: launch_simulation  
+// Tcl Message: INFO: [Vivado 12-12493] Simulation top is 'mxfp8_dotp_tb' INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.sim/sim_1/behav/xsim' INFO: [SIM-utils-51] Simulation object is 'sim_1' INFO: [SIM-utils-72] Using boost library from 'C:/Xilinx/2025.1/Vivado/tps/boost_1_72_0' INFO: [SIM-utils-54] Inspecting design source files for 'mxfp8_dotp_tb' in fileset 'sim_1'... INFO: [USF-XSim-97] Finding global include files... INFO: [USF-XSim-98] Fetching design files from 'sim_1'... INFO: [USF-XSim-2] XSim::Compile design INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.sim/sim_1/behav/xsim' 
+// Tcl Message: "xvlog --incr --relax -L uvm -prj mxfp8_dotp_tb_vlog.prj" 
+// TclEventType: LAUNCH_SIM_LOG
+// Tcl Message: INFO: [USF-XSim-69] 'compile' step finished in '3' seconds INFO: [USF-XSim-3] XSim::Elaborate design INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.sim/sim_1/behav/xsim' 
+// Tcl Message: "xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L uvm -L unisims_ver -L unimacro_ver -L secureip --snapshot mxfp8_dotp_tb_behav xil_defaultlib.mxfp8_dotp_tb xil_defaultlib.glbl -log elaborate.log" 
+// TclEventType: LAUNCH_SIM
+// Tcl Message: INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds INFO: [USF-XSim-99] Step results log file:'C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.sim/sim_1/behav/xsim/elaborate.log' 
+// Tcl Message: ERROR: [USF-XSim-62] 'elaborate' step failed with error(s). Please check the Tcl console output or 'C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.sim/sim_1/behav/xsim/elaborate.log' file for more information. ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation. 
+// Tcl Message: ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors. 
+// CommandFailedException: ERROR: [Common 17-69] Command failed: ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.  
+// HOptionPane Error: 'ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.  (Run Simulation)'
+// 'd' command handler elapsed time: 6 seconds
+selectButton("OptionPane.button", "OK", "Run Simulation"); // JButton (OptionPane.button)
+selectButton(PAResourceAtoD.CmdMsgDialog_OPEN_MESSAGES_VIEW, "Open Messages View", "Critical Messages"); // a (PAResourceAtoD.CmdMsgDialog_OPEN_MESSAGES_VIEW)
+// Run Command: PAResourceCommand.PACommandNames_MESSAGE_WINDOW
+dismissDialog("Critical Messages"); // a (dialog4)
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Simulation, sim_1, [VRFC 10-2063] Module <fp32_accumulator> not found while processing module instance <u_fp32_acc> [C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/mxfp8_dotp.sv:215]. ]", 8, false); // u.d (PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE)
+messagesViewCrossProbe(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "src;-;C:\master_thesis\MX-tensorcore-with-RISC-V-extension\mxfp8\mxfp8.srcs\sources_1\new\mxfp8_dotp.sv;-;;-;16;-;line;-;215;-;;-;16;-;"); // u.d (PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE)
+// Launch External Editor: 'C:/Users/Lenovo/AppData/Local/Programs/Microsoft VS Code/Code.exe "C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/mxfp8_dotp.sv"'
+// Tcl (Dont Echo) Command: 'rdi::info_commands {add*}'
+// Tcl (Dont Echo) Command: 'rdi::info_commands {add_*}'
+// Tcl (Dont Echo) Command: 'rdi::info_commands {add_fi*}'
+// Tcl (Dont Echo) Command: 'rdi::info_commands bd::match_path'
+// Elapsed time: 55 seconds
+setText(RDIResource.CommandsInput_TYPE_TCL_COMMAND_HERE, "add_files C:/", true); // h.b (RDIResource.CommandsInput_TYPE_TCL_COMMAND_HERE)
+setText(RDIResource.CommandsInput_TYPE_TCL_COMMAND_HERE, "add_files C:/master_thesis/", true); // h.b (RDIResource.CommandsInput_TYPE_TCL_COMMAND_HERE)

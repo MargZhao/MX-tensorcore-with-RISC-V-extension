@@ -122,7 +122,7 @@ module mxfp8_dotp#(
     logic [VectorSize-1:0][PROD_MAN_WIDTH-1:0]  man_prod;
     logic signed [VectorSize-1:0][PROD_EXP_WIDTH-1:0] exp_sum;
     logic        [VectorSize-1:0]sign_prod;   
-    (* keep_hierarchy = "yes" *)
+
     mxfp8_mult #(
         .VectorSize       (VectorSize),
         .PROD_MAN_WIDTH   (PROD_MAN_WIDTH),
@@ -134,8 +134,8 @@ module mxfp8_dotp#(
         .B_exp          (b_exp_i),
         .A_sign         (a_sign_i),
         .B_sign         (b_sign_i),
-        .A_isnormal    (a_isnormal),
-        .B_isnormal    (b_isnormal), 
+        .A_isnormal     (a_isnormal),
+        .B_isnormal     (b_isnormal), 
         .src_fmt_i      (src_fmt_i),
         .man_prod       (man_prod),
         .exp_sum        (exp_sum),
@@ -160,7 +160,7 @@ module mxfp8_dotp#(
     logic signed [SCALE_WIDTH:0] scale_aligned;
     logic signed [NORM_MAN_WIDTH-1:0] sum_man;
     logic sum_sgn;
-    (* keep_hierarchy = "yes" *)
+    
     adder_tree#(.VectorSize(VectorSize), 
                 .PROD_EXP_WIDTH(PROD_EXP_WIDTH), 
                 .PROD_MAN_WIDTH(PROD_MAN_WIDTH),
@@ -193,9 +193,9 @@ module mxfp8_dotp#(
     // 所以我们将反馈给累加器的 reg 值屏蔽为 0 (Zero)
     // 假设内部格式全0代表浮点0 (根据具体实现调整，通常是安全的)
     
-    logic [DST_MAN_WIDTH-1:0]      feedback_man;
+    logic [DST_MAN_WIDTH-1:0]        feedback_man;
     logic signed [DST_EXP_WIDTH-1:0] feedback_exp;
-    logic                          feedback_sgn;
+    logic                            feedback_sgn;
 
     always_comb begin
         if (init_save_i) begin
@@ -213,7 +213,7 @@ module mxfp8_dotp#(
     assign acc_valid = a_valid_i & b_valid_i;
 
     (* keep_hierarchy = "yes" *)
-    stage8_fp32_accumulator #(
+    fp32_accumulator #(
         .ACC_WIDTH(NORM_MAN_WIDTH),
         .EXP_WIDTH(DST_EXP_WIDTH),
         .DST_MAN_WIDTH(DST_MAN_WIDTH),

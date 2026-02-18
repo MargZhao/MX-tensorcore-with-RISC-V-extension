@@ -1,5 +1,4 @@
-(* keep_hierarchy = "yes" *)
-module stage8_fp32_accumulator#(
+module fp32_accumulator#(
     parameter ACC_WIDTH = 32,
     parameter EXP_WIDTH  = 8,
     parameter DST_MAN_WIDTH = 23,

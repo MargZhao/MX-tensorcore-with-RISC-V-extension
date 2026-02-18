@@ -1,7 +1,4 @@
-Running: xsim.dir/mxfp8_dotp_tb_behav/xsimk.exe -simmode gui -wdb mxfp8_dotp_tb_behav.wdb -simrunnum 0 -socket 50180
+Running: xsim.dir/mxfp8_dotp_tb_behav/xsimk.exe -simmode gui -wdb mxfp8_dotp_tb_behav.wdb -simrunnum 0 -socket 49974
 Design successfully loaded
-Design Loading Memory Usage: 9520 KB (Peak: 9520 KB)
+Design Loading Memory Usage: 9492 KB (Peak: 9492 KB)
 Design Loading CPU Usage: 15 ms
-Simulation completed
-Simulation Memory Usage: 18752 KB (Peak: 18752 KB)
-Simulation CPU Usage: 10092 ms
