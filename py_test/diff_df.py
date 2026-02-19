@@ -12,7 +12,7 @@ matrix_col_dim = 32 * 16
 matrix_row_dim = 32 * 16
 
 variation_list = [1]
-df_list = [4, 40, 400, 4000]
+df_list = [4,40,400,4000]
 normalized = True
 
 #################################metrics############################################

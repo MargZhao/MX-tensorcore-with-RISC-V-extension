@@ -13,9 +13,9 @@ np.random.seed(int(datetime.now().timestamp()))
 matrix_col_dim = 32*16
 matrix_row_dim = 32*16
 
-variation = 1
+variation = 10
 variance = variation / 3
-df = 3
+df = 3000
 normalized = True
 
 block_size_list = [ 8, 16, 32, 64]
