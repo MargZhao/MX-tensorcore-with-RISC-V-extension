@@ -312,3 +312,126 @@ INFO: [USF-XSim-99] Step results log file:'C:/master_thesis/MX-tensorcore-with-R
 ERROR: [USF-XSim-62] 'elaborate' step failed with error(s). Please check the Tcl console output or 'C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.sim/sim_1/behav/xsim/elaborate.log' file for more information.
 ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
 ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+add_files C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/fp32_accumulation.sv
+C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/fp32_accumulation.sv
+update_compile_order -fileset sources_1
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-12493] Simulation top is 'mxfp8_dotp_tb'
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from 'C:/Xilinx/2025.1/Vivado/tps/boost_1_72_0'
+INFO: [SIM-utils-54] Inspecting design source files for 'mxfp8_dotp_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -L uvm -prj mxfp8_dotp_tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/adder_tree.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module adder_tree
+INFO: [VRFC 10-311] analyzing module align_unit
+INFO: [VRFC 10-311] analyzing module exp_max
+INFO: [VRFC 10-311] analyzing module exp_diff
+INFO: [VRFC 10-311] analyzing module barrel_shifter
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/controller.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module controller
+INFO: [VRFC 10-311] analyzing module ceiling_counter
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/fp32_accumulation.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module fp32_accumulator
+WARNING: [VRFC 10-3380] identifier 'mant_abs' is used before its declaration [C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/fp32_accumulation.sv:90]
+WARNING: [VRFC 10-3380] identifier 'mant_abs' is used before its declaration [C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/fp32_accumulation.sv:92]
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/mxfp8_pkg.sv" into library xil_defaultlib
+WARNING: [VRFC 10-9547] assignment pattern cannot be used in static casting [C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/mxfp8_pkg.sv:31]
+WARNING: [VRFC 10-9547] assignment pattern cannot be used in static casting [C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/mxfp8_pkg.sv:32]
+WARNING: [VRFC 10-9547] assignment pattern cannot be used in static casting [C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/mxfp8_pkg.sv:33]
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/mxfp8_classifier.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mxfp8_classifier
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/mxfp8_dotp.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mxfp8_dotp
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/mxfp8_mult.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mxfp8_mult
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sim_1/new/tb_top.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mxfp8_dotp_tb
+WARNING: [VRFC 10-3248] data object 'acc_golden' is already declared [C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sim_1/new/tb_top.sv:58]
+WARNING: [VRFC 10-9364] second declaration of 'acc_golden' is ignored [C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sim_1/new/tb_top.sv:58]
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.sim/sim_1/behav/xsim'
+"xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L uvm -L unisims_ver -L unimacro_ver -L secureip --snapshot mxfp8_dotp_tb_behav xil_defaultlib.mxfp8_dotp_tb xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator v2025.1.0
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+Running: C:/Xilinx/2025.1/Vivado/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L uvm -L unisims_ver -L unimacro_ver -L secureip --snapshot mxfp8_dotp_tb_behav xil_defaultlib.mxfp8_dotp_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 6 for port 'sum_sgn' [C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/mxfp8_dotp.sv:178]
+Completed static elaboration
+Starting simulation data flow analysis
+WARNING: [XSIM 43-4099] "C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/adder_tree.sv" Line 1. Module adder_tree(VectorSize=4,NORM_MAN_WIDTH=26) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/adder_tree.sv" Line 166. Module exp_max(VectorSize=4) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/adder_tree.sv" Line 181. Module exp_diff(VectorSize=4) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/adder_tree.sv" Line 112. Module align_unit(VectorSize=4,NORM_MAN_WIDTH=26) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/adder_tree.sv" Line 196. Module barrel_shifter(WIDTH=26) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/adder_tree.sv" Line 196. Module barrel_shifter(WIDTH=26) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/adder_tree.sv" Line 196. Module barrel_shifter(WIDTH=26) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/adder_tree.sv" Line 196. Module barrel_shifter(WIDTH=26) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/adder_tree.sv" Line 1. Module adder_tree(VectorSize=4,NORM_MAN_WIDTH=26) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/adder_tree.sv" Line 166. Module exp_max(VectorSize=4) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/adder_tree.sv" Line 181. Module exp_diff(VectorSize=4) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/adder_tree.sv" Line 112. Module align_unit(VectorSize=4,NORM_MAN_WIDTH=26) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/adder_tree.sv" Line 196. Module barrel_shifter(WIDTH=26) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/adder_tree.sv" Line 196. Module barrel_shifter(WIDTH=26) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/adder_tree.sv" Line 196. Module barrel_shifter(WIDTH=26) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/adder_tree.sv" Line 196. Module barrel_shifter(WIDTH=26) doesn't have a timescale but at least one module in design has a timescale.
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package xil_defaultlib.mxfp8_pkg
+Compiling module xil_defaultlib.ceiling_counter(Width=5)
+Compiling module xil_defaultlib.controller
+Compiling module xil_defaultlib.mxfp8_classifier(NumOperands=32'...
+Compiling module xil_defaultlib.mxfp8_mult
+Compiling module xil_defaultlib.exp_max(VectorSize=4)
+Compiling module xil_defaultlib.exp_diff(VectorSize=4)
+Compiling module xil_defaultlib.barrel_shifter(WIDTH=26)
+Compiling module xil_defaultlib.align_unit(VectorSize=4,NORM_MAN...
+Compiling module xil_defaultlib.adder_tree(VectorSize=4,NORM_MAN...
+Compiling module xil_defaultlib.fp32_accumulator(ACC_WIDTH=32'b0...
+Compiling module xil_defaultlib.mxfp8_dotp_default
+Compiling module xil_defaultlib.mxfp8_dotp_tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot mxfp8_dotp_tb_behav
+run_program: Time (s): cpu = 00:00:00 ; elapsed = 00:00:11 . Memory (MB): peak = 1693.789 ; gain = 0.000
+INFO: [USF-XSim-69] 'elaborate' step finished in '11' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "mxfp8_dotp_tb_behav -key {Behavioral:sim_1:Functional:mxfp8_dotp_tb} -tclbatch {mxfp8_dotp_tb.tcl} -view {C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/fp8_fma_tb_behav.wcfg} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Time resolution is 1 ps
+open_wave_config C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/fp8_fma_tb_behav.wcfg
+WARNING: Simulation object /mxfp8_dotp_tb/dut/u_fp32_acc/mant_sum_signed was not found in the design.
+source mxfp8_dotp_tb.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+=== Starting FSM Controlled Accumulation Test ===
+=== WAIT FOR DONE ===
+[Time                35000] Golden: Init Accumulator
+[Time                35000] Step 0 Processed. Current Acc: 4.000000
+[Time                45000] Step 1 Processed. Current Acc: 2.000000
+=== Test Finished ===
+$finish called at time : 55 ns : File "C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sim_1/new/tb_top.sv" Line 179
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'mxfp8_dotp_tb_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:01 ; elapsed = 00:00:15 . Memory (MB): peak = 1693.789 ; gain = 0.000
+close [ open C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/onedotproduct.sv w ]
+add_files C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sources_1/new/onedotproduct.sv
+update_compile_order -fileset sources_1

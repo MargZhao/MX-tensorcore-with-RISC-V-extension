@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <GenRun Id="synth_1" LaunchPart="xc7a12ticsg325-1L" LaunchTime="1763936818" LaunchIncrCheckpoint="$PSRCDIR/utils_1/imports/synth_1/mxfp8_dotp.dcp">
   <File Type="REPORTS-TCL" Name="add_comp_reports.tcl"/>
-  <File Type="RDS-UTIL" Name="add_comp_utilization_synth.rpt"/>
-  <File Type="RDS-UTIL-PB" Name="add_comp_utilization_synth.pb"/>
+  <File Type="RDS-UTIL" Name="mxfp8_dotp_utilization_synth.rpt"/>
+  <File Type="RDS-UTIL-PB" Name="mxfp8_dotp_utilization_synth.pb"/>
   <File Type="PA-TCL" Name="add_comp.tcl"/>
   <File Type="RDS-RDS" Name="add_comp.vds"/>
   <File Type="RDS-DCP" Name="add_comp.dcp"/>

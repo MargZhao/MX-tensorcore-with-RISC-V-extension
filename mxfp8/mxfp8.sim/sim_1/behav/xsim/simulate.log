@@ -1,0 +1,13 @@
+Time resolution is 1 ps
+
+--- Test 1: 1.0 * 1.0 ---
+Time: 61000 | In: (3c, 3c) | Result: 3f800000 | Done: 1
+
+--- Test 2: Adding 2.0 ---
+Time: 81000 | In: (40, 3c) | Result: 3f800000 | Done: 0
+
+--- Test 3: Changing Scale to 2.0x ---
+Time: 101000 | In: (00, 00) | Result: 40400000 | Done: 0
+
+Simulation Finished.
+$finish called at time : 210 ns : File "C:/master_thesis/MX-tensorcore-with-RISC-V-extension/mxfp8/mxfp8.srcs/sim_1/new/tb_onedotproduct.sv" Line 109
